@@ -18,7 +18,14 @@ import numpy as np
 import math
 import matplotlib.patches as mpatches
 import scipy.interpolate
+import CheckArrayTest as chk
 
+def find_nearest(array,value):
+    idx = np.searchsorted(array, value, side="left")
+    if idx > 0 and (idx == len(array) or math.fabs(value - array[idx-1]) < math.fabs(value - array[idx])):
+        return array[idx-1]
+    else:
+        return array[idx]
 
 class Pencil_Analysis(object):
 
@@ -1737,17 +1744,17 @@ class Pencil_Analysis(object):
 
                         DirEcc = (round(eccentricity[0], 1))
                         if DirEcc == 0.1:
-                            plt.xlim([0,
-                                      time[np.where(np.logical_and(time >= 349, time <= 350))[0]]])
+                            nearest = find_nearest(time,350)
+                            plt.xlim([0, time[nearest]-1])
                         elif DirEcc == 0.3:
-                            plt.xlim([0,
-                                      time[np.where(np.logical_and(time >= 349, time <= 350))[0]]])
+                            nearest = find_nearest(time, 350)
+                            plt.xlim([0, time[nearest]-1])
                         elif DirEcc == 0.5:
-                            plt.xlim([0,
-                                      time[np.where(np.logical_and(time >= 1999, time <= 2000))[0]]])
+                            nearest = find_nearest(time, 2000)
+                            plt.xlim([0, time[nearest]-1])
                         elif DirEcc == 0.7:
-                            plt.xlim([0,
-                                      time[np.where(np.logical_and(time >= 2999, time <= 3000))[0]]])
+                            nearest = find_nearest(time, 3000)
+                            plt.xlim([0, time[nearest]-1])
 
                         DirMass = data_frame[n]['par1']
 
