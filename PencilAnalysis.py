@@ -1734,21 +1734,22 @@ class Pencil_Analysis(object):
                         plt.ylabel('Temperature')
                         plt.tight_layout()
                         plt.grid(True)
-                        if eccentricity == 0.1:
+
+                        DirEcc = (round(eccentricity[0], 1))
+                        if DirEcc == 0.1:
                             plt.xlim([0,
                                       time[np.where(np.logical_and(time >= 349, time <= 350))[0]]])
-                        elif eccentricity == 0.3:
+                        elif DirEcc == 0.3:
                             plt.xlim([0,
                                       time[np.where(np.logical_and(time >= 349, time <= 350))[0]]])
-                        elif eccentricity == 0.5:
+                        elif DirEcc == 0.5:
                             plt.xlim([0,
                                       time[np.where(np.logical_and(time >= 1999, time <= 2000))[0]]])
-                        elif eccentricity == 0.7:
+                        elif DirEcc == 0.7:
                             plt.xlim([0,
                                       time[np.where(np.logical_and(time >= 2999, time <= 3000))[0]]])
 
                         DirMass = data_frame[n]['par1']
-                        DirEcc = (round(eccentricity[0], 1))
 
                         DirMass_patches = mpatches.Patch(
                             color='white', label='q :'+str(DirMass))
