@@ -1745,16 +1745,16 @@ class Pencil_Analysis(object):
                         DirEcc = (round(eccentricity[0], 1))
                         if DirEcc == 0.1:
                             nearest = find_nearest(time,350)
-                            plt.xlim([0, time[nearest-1]])
+                            plt.xlim([0, time[:nearest-1]])
                         elif DirEcc == 0.3:
                             nearest = find_nearest(time, 350)
-                            plt.xlim([0, time[nearest-1]])
+                            plt.xlim([0, time[:nearest-1]])
                         elif DirEcc == 0.5:
                             nearest = find_nearest(time, 2000)
-                            plt.xlim([0, time[nearest-1]])
+                            plt.xlim([0, time[:nearest-1]])
                         elif DirEcc == 0.7:
                             nearest = find_nearest(time, 3000)
-                            plt.xlim([0, time[nearest-1]])
+                            plt.xlim([0, time[:nearest-1]])
 
                         DirMass = data_frame[n]['par1']
 
