@@ -19,6 +19,7 @@ import math
 import matplotlib.patches as mpatches
 import scipy.interpolate
 import CheckArrayTest as chk
+import pandas as pd
 
 def find_nearest(array,value):
     idx = np.searchsorted(array, value, side="left")
@@ -1741,20 +1742,11 @@ class Pencil_Analysis(object):
                         plt.ylabel('Temperature')
                         plt.tight_layout()
                         plt.grid(True)
+                        plt.xlim([0, time[len(time)]])
 
-                        DirEcc = (round(eccentricity[0], 1))
-                        if DirEcc == 0.1:
-                            nearest = find_nearest(time,350)
-                            plt.xlim([0, time[nearest-1]])
-                        elif DirEcc == 0.3:
-                            nearest = find_nearest(time, 350)
-                            plt.xlim([0, time[nearest-1]])
-                        elif DirEcc == 0.5:
-                            nearest = find_nearest(time, 2000)
-                            plt.xlim([0, time[nearest-1]])
-                        elif DirEcc == 0.7:
-                            nearest = find_nearest(time, 3000)
-                            plt.xlim([0, time[nearest-1]])
+                        data = [time,(GlobalTemp_Mean[:]-GlobalTemp_Mean[0])]
+                        df = pd.DataFrame(my_array, columns=['time', 'GlobalTemp Normalizied'])
+                        df.to_csv(str(data_frame[n]['DirName'] + "_" + "time_GTN"+".csv"), sep='\t')
 
                         DirMass = data_frame[n]['par1']
 
