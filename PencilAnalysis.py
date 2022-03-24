@@ -1748,6 +1748,8 @@ class Pencil_Analysis(object):
                         df = pd.DataFrame(data)
                         df.to_csv(str(data_frame[n]['DirName'] + "_" + "time_GTN"+".csv"), sep='\t')
 
+                        DirEcc = (round(eccentricity[0], 1))
+
                         DirMass = data_frame[n]['par1']
 
                         DirMass_patches = mpatches.Patch(
