@@ -1742,7 +1742,7 @@ class Pencil_Analysis(object):
                         plt.ylabel('Temperature')
                         plt.tight_layout()
                         plt.grid(True)
-                        plt.xlim([0, time[len(time)]-1])
+                        plt.xlim([0, time[len(time)-1]])
 
                         data = [time,(GlobalTemp_Mean[:]-GlobalTemp_Mean[0])]
                         df = pd.DataFrame(my_array, columns=['time', 'GlobalTemp Normalizied'])
