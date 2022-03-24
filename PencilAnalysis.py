@@ -1745,7 +1745,7 @@ class Pencil_Analysis(object):
                         plt.xlim([0, time[len(time)-1]])
 
                         data = [time,(GlobalTemp_Mean[:]-GlobalTemp_Mean[0])]
-                        df = pd.DataFrame(data, columns=['time', 'GlobalTemp Normalizied'])
+                        df = pd.DataFrame(data)
                         df.to_csv(str(data_frame[n]['DirName'] + "_" + "time_GTN"+".csv"), sep='\t')
 
                         DirMass = data_frame[n]['par1']
