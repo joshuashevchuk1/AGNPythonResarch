@@ -1,5 +1,6 @@
 import pencil_old as pc
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 import numpy as np
 import os
 from pylab import *
@@ -54,11 +55,15 @@ def plotRun(ivar):
     rad2d, theta2d = np.meshgrid(rad, theta)
     x2d = rad2d*np.cos(theta2d)
     y2d = rad2d*np.sin(theta2d)
-    #plt.plot(ff.x,np.log(np.sum(dfT**2,axis=0)))
-    plt.contourf(x2d,y2d,dfT,256)
+    plt.plot(ff.x,np.log(np.sum(dfT**2,axis=0)))
+    #plt.contourf(x2d,y2d,dfT,256)
     #
-    #plt.savefig(name+"-log-" + str(ivar)+".png")
-    plt.savefig(name+"-ivar-" + str(ivar)+".png")
+    plt.grid(True)
+    Dir_gamma_patches = mpatches.Patch(
+        color='white', label=r'$\gamma$ :' + str(np.mean(np.log(np.sum(dfT ** 2, axis=0)))))
+    plt.legend(handles=[Dir_gamma_patches], loc=2)
+    plt.savefig(name+"-log-" + str(ivar)+".png")
+    #plt.savefig(name+"-ivar-" + str(ivar)+".png")
     plt.close()
 
 plots()
