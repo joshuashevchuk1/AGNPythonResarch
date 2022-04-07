@@ -18,7 +18,7 @@ def plots():
         os.chdir(dir_run_list[i])
         print("current cwd is " + os.path.split(os.getcwd())[1])
         try:
-            plots(inital_ivar)
+            plotRuns(inital_ivar)
             os.chdir(root)
         except:
             print("============")
