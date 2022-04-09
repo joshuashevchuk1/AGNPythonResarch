@@ -7,7 +7,7 @@ from pylab import *
 import sys
 import traceback
 
-CONST_INTERVAL=5
+CONST_INTERVAL=100
 max_orbits = 500
 inital_ivar = 0
 
