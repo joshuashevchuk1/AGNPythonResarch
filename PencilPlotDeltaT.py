@@ -34,7 +34,11 @@ def plotRuns(ivar):
     print("entering plotRuns")
     DTarray=[]
     while ivar <= max_orbits:
-        DTarray = getRunData(ivar,DTarray)
+        try:
+            DTarray = getRunData(ivar,DTarray)
+        except:
+            print("bad run or no run")
+            traceback.print_exc()
         ivar = ivar + CONST_INTERVAL
     plotCollectedData(DTarray)
     print("leaving plotRuns")
