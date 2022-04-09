@@ -7,9 +7,10 @@ from pylab import *
 import sys
 import traceback
 
-CONST_INTERVAL=100
+CONST_INTERVAL = 5
 max_orbits = 500
 inital_ivar = 0
+
 
 def plots():
     root = os.getcwd()  # root dir is fucked up due to a space
@@ -19,7 +20,7 @@ def plots():
         os.chdir(dir_run_list[i])
         print("current cwd is " + os.path.split(os.getcwd())[1])
         try:
-            plotRuns(inital_ivar)
+            plotRuns(inital_ivar, str(os.path.split(os.getcwd())[1]))
             os.chdir(root)
         except:
             print("============")
@@ -29,29 +30,32 @@ def plots():
             os.chdir(root)
     os.chdir(root)
 
-def plotRuns(ivar):
+
+def plotRuns(ivar, dir):
     print("============")
     print("entering plotRuns")
-    DTarray=[]
+    DTarray = []
     while ivar <= max_orbits:
         try:
-            DTarray = getRunData(ivar,DTarray)
+            DTarray = getRunData(ivar, DTarray)
         except:
             print("bad run or no run")
             traceback.print_exc()
         ivar = ivar + CONST_INTERVAL
-    plotCollectedData(DTarray)
+    plotCollectedData(DTarray, dir)
     print("leaving plotRuns")
     print("============")
 
+
 def getRunData(ivar, paramDTarray):
-    ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"],quiet=True)
-    ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"],quiet=True)
+    ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
+    ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
     paramDTarray.append(np.mean(np.log(np.sum(dfT ** 2, axis=0))))
     return paramDTarray
 
-def plotCollectedData(paramDTarray):
+
+def plotCollectedData(paramDTarray, dir):
     print("entering plotCollectedData")
     plt.plot(paramDTarray)
     plt.grid(True)
@@ -60,8 +64,9 @@ def plotCollectedData(paramDTarray):
         label=r'$\gamma$ :'
               + str(paramDTarray))
     plt.legend(handles=[dir_gamma_patches], loc=2)
-    plt.savefig("DeltaT" + "-temp-" + ".png")
+    plt.savefig("DeltaT-" + str(dir) + "-temp-" + ".png")
     plt.close()
     print("leaving plotCollectedData")
+
 
 plots()
