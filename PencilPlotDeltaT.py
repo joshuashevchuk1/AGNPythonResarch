@@ -5,6 +5,7 @@ import numpy as np
 import os
 from pylab import *
 import sys
+import traceback
 
 CONST_INTERVAL=5
 max_orbits = 500
@@ -24,6 +25,7 @@ def plots():
             print("============")
             print("ignoring run")
             print("============")
+            traceback.print_exc()
             os.chdir(root)
     os.chdir(root)
 
@@ -39,8 +41,8 @@ def plotRuns(ivar):
     print("============")
 
 def getRunData(ivar, paramDTarray):
-    ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"])
-    ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"])
+    ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"],quiet=True)
+    ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"],quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
     paramDTarray.append(np.log(np.sum(dfT ** 2, axis=0)))
     return paramDTarray
@@ -54,7 +56,7 @@ def plotCollectedData(paramDTarray):
         label=r'$\gamma$ :'
               + str(paramDTarray))
     plt.legend(handles=[dir_gamma_patches], loc=2)
-    plt.savefig(name + "-log-" + str(ivar) + ".png")
+    plt.savefig("DeltaT" + "-temp-" + ".png")
     plt.close()
     print("leaving plotCollectedData")
 
