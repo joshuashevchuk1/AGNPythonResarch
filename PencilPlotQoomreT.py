@@ -67,7 +67,7 @@ def plotCollectedData(paramDTarray, dir):
         label=r'$\gamma$ :'
               + str(paramDTarray))
     #plt.legend(handles=[dir_gamma_patches], loc=2)
-    plt.savefig("DeltaT-" + str(dir) + "-temp-max-" + ".png")
+    plt.savefig("ToomreQ-" + str(dir) + "-temp-max-" + ".png")
     plt.close()
     print("leaving plotCollectedData")
 
