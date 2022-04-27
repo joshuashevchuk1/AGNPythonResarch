@@ -53,7 +53,8 @@ def getRunData(ivar, paramDTarray):
     dfT = ff.TT[:] - ff0.TT[:]
     dfV = ff.uy[:]*ff.x- ff0.uy[:]*ff0.x
     diskTemp = np.mean(np.log(np.sum(dfT ** 2, axis=0)))
-    ToomreQ = (dfV * np.sqrt(diskTemp))/(np.pi)
+    diskV = np.mean(np.log(np.sum(dfV **2,axis=0)))
+    ToomreQ = (diskV * np.sqrt(diskTemp))/(np.pi)
     paramDTarray.append(ToomreQ)
     return paramDTarray
 
