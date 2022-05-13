@@ -838,19 +838,17 @@ class Pencil_Data(object):
                         #
                         while i <= len(rad)-1:
                             try:
+                                local_disk_mass= 0.5*np.abs(phi[j])*((rad[i+1]**2)-(rad[i]**2))*rho[i][j]
                                 KE.append(
-                                    0.5*np.abs(phi[j]) *
-                                    ((rad[i+1]**2)-(rad[i]**2))
-                                    * (ux[j][i]**2+uy[j][j]**2)
-                                    * 0.5*rho[i][j]
+                                    local_disk_mass * (ux[j][i]**2+uy[j][j]**2)
+                                    * 0.5
                                 )
                                 UE.append(
-                                    rho[i][j]
+                                    local_disk_mass
                                     / rad[i]
                                 )
                                 UINT.append(
-                                    (rho[i][j]
-                                     * TT[i][j])
+                                     TT[i][j]
                                     / gamma
                                 )
                                 FE.append(
