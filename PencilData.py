@@ -453,10 +453,10 @@ class Pencil_Data(object):
             indexTimeCutOff = 0;
 
             for i in range(len(ecc)):
-                print("ecc[i] is",ecc[i])
-                if ecc[i] <= 0.01:
-                    indexTimeCutOff = i
-                    break
+                if ecc_int != 0:
+                    if ecc[i] <= 0.01:
+                        indexTimeCutOff = i
+                        break
 
             timeCutOff = time[indexTimeCutOff]
 
