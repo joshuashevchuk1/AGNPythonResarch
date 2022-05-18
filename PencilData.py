@@ -16,7 +16,7 @@ def func(X, A, B):
     # basic function to be used outside of the class
     # has issues with scipy if used inside the class
 
-    return A*np.exp(-B*X)
+    return A * np.exp(-B * X)
 
 
 class Pencil_Data(object):
@@ -236,17 +236,17 @@ class Pencil_Data(object):
 
                 for index in range(len(store)):
                     if i == int(store[index]):
-                        i = i+di
+                        i = i + di
                     else:
                         while i <= int(store[index]):
                             if i == int(store[index]):
-                                i = i+di
+                                i = i + di
                             else:
-                                missing.append('missing VAR'+str(i))
+                                missing.append('missing VAR' + str(i))
                                 count = count + 1
-                                i = i+di
+                                i = i + di
                     if i == len(store):
-                        missing.append('end with :'+str(count)+' missing')
+                        missing.append('end with :' + str(count) + ' missing')
 
                 os.chdir('..')
                 os.chdir('..')
@@ -274,7 +274,7 @@ class Pencil_Data(object):
             # ======================================
 
             ts = pc.read_ts()
-            t = ts.t/2*math.pi
+            t = ts.t / 2 * math.pi
             N = 850
             tmax = t.max()
 
@@ -284,10 +284,10 @@ class Pencil_Data(object):
             # use Orbit_Len to properly get the length of the interval
             # for Orbits from the time series
 
-            time = t/2*math.pi
+            time = t / 2 * math.pi
             len_t = len(ts.t)
 
-            Max_Orbits = np.round((time[len(time)-1]))
+            Max_Orbits = np.round((time[len(time) - 1]))
 
             n = 1
             dn = 1
@@ -297,13 +297,13 @@ class Pencil_Data(object):
 
             Orbit_Len = []
 
-            while i <= len(time)-1:
-                if np.round(n*2.0*math.pi) == np.round(t[i]):
+            while i <= len(time) - 1:
+                if np.round(n * 2.0 * math.pi) == np.round(t[i]):
                     Orbit_Len.append(len(t[:i]))
-                    n = n+dn
-                    i = i+di
+                    n = n + dn
+                    i = i + di
                 else:
-                    i = i+di
+                    i = i + di
 
             # if Calc_Energy == False:
             #	Orbit_Len = None
@@ -322,17 +322,17 @@ class Pencil_Data(object):
             par1 = par.pmass[1]
             par2 = par.pmass[0]
             gamma = par.gamma
-            Gamma0 = (q/h)**2
+            Gamma0 = (q / h) ** 2
             alpha = par.density_power_law
             beta = par.temperature_power_law
-            kernel = np.ones((N,))/N
+            kernel = np.ones((N,)) / N
             time = np.convolve(t, kernel, mode='valid')
             torqint = np.convolve(ts.torqint_2, kernel, mode='valid')
             torqext = np.convolve(ts.torqext_2, kernel, mode='valid')
-            torqtotal = torqext[:]+torqint[:]
+            torqtotal = torqext[:] + torqint[:]
             rsmooth = par.r_smooth[1]
             gravC = par.g0
-            EntropyIndex = beta-((gamma-1)*alpha)
+            EntropyIndex = beta - ((gamma - 1) * alpha)
             SpecificHeat = par.cp
             Sigma = par.rho0
             Mstar = par.pmass[0]
@@ -366,18 +366,18 @@ class Pencil_Data(object):
 
                 DGlobalTemp_Mean = []
 
-                while D <= len(GlobalTemp_Mean)-2:
+                while D <= len(GlobalTemp_Mean) - 2:
                     DGlobalTemp_Mean.append(
-                        GlobalTemp_Mean[D+1]-GlobalTemp_Mean[D])
-                    D = D+dD
+                        GlobalTemp_Mean[D + 1] - GlobalTemp_Mean[D])
+                    D = D + dD
 
-                DGTemp_Mean = sum(DGlobalTemp_Mean)/len(DGlobalTemp_Mean)
+                DGTemp_Mean = sum(DGlobalTemp_Mean) / len(DGlobalTemp_Mean)
                 GTM_Sigma = np.std(GlobalTemp_Mean)
 
                 if Orbit == None:
                     GTM_Sigma_O = 0
                 else:
-                    GTM_Sigma_O = np.std(GlobalTemp_Mean[:int(2*np.pi*Orbit)])
+                    GTM_Sigma_O = np.std(GlobalTemp_Mean[:int(2 * np.pi * Orbit)])
 
             else:
 
@@ -396,31 +396,31 @@ class Pencil_Data(object):
 
             # ======================================
 
-            v2 = LinearVelocity**2 + AngularVelocity**2
-            semi_major = 1./(2/radius-v2)
-            DArclength = radius**2*(AngularVelocity/radius)
-            ep1 = (DArclength**2)/semi_major
-            eccentricity = (1-ep1)**0.5
-            Omegap = 1./semi_major**1.5
-            Kepler_F = np.sqrt(gravC*Mstar/radius)
-            aspect_ratio = cs/Kepler_F
-            Hill_Radius = semi_major*((q/3.0)**(1.0/3.0))
-            xrq2 = radius*np.cos(Omega)
-            yrq2 = radius*np.sin(Omega)
+            v2 = LinearVelocity ** 2 + AngularVelocity ** 2
+            semi_major = 1. / (2 / radius - v2)
+            DArclength = radius ** 2 * (AngularVelocity / radius)
+            ep1 = (DArclength ** 2) / semi_major
+            eccentricity = (1 - ep1) ** 0.5
+            Omegap = 1. / semi_major ** 1.5
+            Kepler_F = np.sqrt(gravC * Mstar / radius)
+            aspect_ratio = cs / Kepler_F
+            Hill_Radius = semi_major * ((q / 3.0) ** (1.0 / 3.0))
+            xrq2 = radius * np.cos(Omega)
+            yrq2 = radius * np.sin(Omega)
             ecc_int = par.eccentricity
-            #Sigmap = 1.
+            # Sigmap = 1.
             disk_mass = 25
-            Sigmap = disk_mass*Sigma*radius**-alpha
-            eh = eccentricity/aspect_ratio
+            Sigmap = disk_mass * Sigma * radius ** -alpha
+            eh = eccentricity / aspect_ratio
             mstar = 1
-            twave = (mstar * aspect_ratio**4) / \
-                (q * Sigmap * semi_major**2 * Omegap)
-            te = (twave/0.780) * (1 - 0.14*eh**2 + 0.06*eh**3)
-            CN_line = ecc_int*np.exp(-t/te)
+            twave = (mstar * aspect_ratio ** 4) / \
+                    (q * Sigmap * semi_major ** 2 * Omegap)
+            te = (twave / 0.780) * (1 - 0.14 * eh ** 2 + 0.06 * eh ** 3)
+            CN_line = ecc_int * np.exp(-t / te)
             ecc = eccentricity
             ecc_int = par.eccentricity
             ecc_rate = np.gradient(eccentricity)
-            ecc_ang = par1*np.sqrt(semi_major)*np.sqrt(1-ecc**2)
+            ecc_ang = par1 * np.sqrt(semi_major) * np.sqrt(1 - ecc ** 2)
 
             # for convience in calculating the longitude of the perihelion
             # i introduced ecc as variable and sma as a variable
@@ -435,21 +435,32 @@ class Pencil_Data(object):
                 # r=1
                 i = 0
                 di = 1
-                while i <= len(ecc)-1:
-
-                    fixed_ecc.append(ecc[i]+0.000000000000009)
+                while i <= len(ecc) - 1:
+                    fixed_ecc.append(ecc[i] + 0.000000000000009)
                     true_angle.append(
-                        (1.0/fixed_ecc[i])*((sma[i]*(1.0-fixed_ecc[i]**2.0)/radius[i])-1.0))
+                        (1.0 / fixed_ecc[i]) * ((sma[i] * (1.0 - fixed_ecc[i] ** 2.0) / radius[i]) - 1.0))
 
-                    i = i+di
+                    i = i + di
             else:
-                true_angle = (1.0/ecc)*((sma*(1.0-ecc**2.0)/radius)-1.0)
+                true_angle = (1.0 / ecc) * ((sma * (1.0 - ecc ** 2.0) / radius) - 1.0)
 
-            true_anomaly = ((np.arccos(true_angle))*180/np.pi)-180
+            true_anomaly = ((np.arccos(true_angle)) * 180 / np.pi) - 180
             long_perihelion = np.absolute(
-                Omega*(180/np.pi))+true_anomaly  # arguement of perihelion
+                Omega * (180 / np.pi)) + true_anomaly  # arguement of perihelion
             # turn the arguement of perihelion into radians so that we can compare it to other papers
-            long_perihelion = long_perihelion*(np.pi/180)
+            long_perihelion = long_perihelion * (np.pi / 180)
+
+            indexTimeCutOff = 0;
+
+            for i in range(len(ecc)):
+                print("ecc[i] is" + ecc[i])
+                if ecc[i] <= 0.01:
+                    indexTimeCutOff = i
+                    break
+
+            timeCutOff = time[indexTimeCutOff]
+
+            print('timeCutOff: ', timeCutOff)
 
             ecc = None
             sma = None
@@ -487,8 +498,8 @@ class Pencil_Data(object):
                     theta = ff.y
                     rad_grid = ff.x
                     rad2d, theta2d = np.meshgrid(rad, theta)
-                    x2d = rad2d*np.cos(theta2d)
-                    y2d = rad2d*np.sin(theta2d)
+                    x2d = rad2d * np.cos(theta2d)
+                    y2d = rad2d * np.sin(theta2d)
                     x_grid = ff.x
                     y_grid = ff.y
                     Init_Temp = ff.TT
@@ -499,8 +510,8 @@ class Pencil_Data(object):
                     theta = ff.y
                     rad_grid = ff.x
                     rad2d, theta2d = np.meshgrid(rad, theta)
-                    x2d = rad2d*np.cos(theta2d)
-                    y2d = rad2d*np.sin(theta2d)
+                    x2d = rad2d * np.cos(theta2d)
+                    y2d = rad2d * np.sin(theta2d)
                     x_grid = ff.x
                     y_grid = ff.y
                     rho = ff.rho
@@ -593,16 +604,16 @@ class Pencil_Data(object):
                 tempdata = None
             else:
                 try:
-                    while i <= MaxOrbits-step:
+                    while i <= MaxOrbits - step:
                         ff = pc.read_var(trimall=True, ivar=i, magic=["TT"], quiet=True)
-                        while f <= len(ff.TT)-1:
+                        while f <= len(ff.TT) - 1:
                             for value in ff.TT[f]:
                                 placedata.append(value)
-                            f = f+df
+                            f = f + df
                         f = 0
                         tempdata.append(placedata)
                         placedata = []
-                        i = i+di
+                        i = i + di
                 except:
                     print('================')
                     print('No tempdata to be found')
@@ -626,16 +637,16 @@ class Pencil_Data(object):
                 densitydata = None
             else:
                 try:
-                    while i <= MaxOrbits-step:
+                    while i <= MaxOrbits - step:
                         ff = pc.read_var(trimall=True, ivar=i, quiet=True)
-                        while f <= len(ff.rho)-1:
+                        while f <= len(ff.rho) - 1:
                             for value in ff.rho[f]:
                                 placedata.append(value)
-                            f = f+df
+                            f = f + df
                         f = 0
                         densitydata.append(placedata)
                         placedata = []
-                        i = i+di
+                        i = i + di
                 except:
                     print('================')
                     print('No tempdata to be found')
@@ -672,7 +683,7 @@ class Pencil_Data(object):
                 # vars for dynamic contour plots
                 # vars for midplane slices
                 try:
-                    while Standard_Orbit <= Max_Orbits-Dynamic:
+                    while Standard_Orbit <= Max_Orbits - Dynamic:
 
                         if Calc_Temp == True:
                             fv = pc.read_var(
@@ -693,7 +704,7 @@ class Pencil_Data(object):
                             Dynamic_Density.append(rho_fv)
                             Dynamic_Shock.append(shock_fv)
 
-                        Standard_Orbit = Standard_Orbit+Dynamic
+                        Standard_Orbit = Standard_Orbit + Dynamic
                 except:
                     print('================')
                     print('Dynamic Loop error')
@@ -707,8 +718,8 @@ class Pencil_Data(object):
             if Calc_Energy == True:
                 # ======================================
 
-                    # intialize all vars for energy array
-                    # be careful in the case of isothermal disks
+                # intialize all vars for energy array
+                # be careful in the case of isothermal disks
 
                 ecc = eccentricity
 
@@ -791,7 +802,7 @@ class Pencil_Data(object):
                 Int = 0
                 dInt = 1
 
-                Orbit = MaxOrbits-2
+                Orbit = MaxOrbits - 2
                 # Orbit=1
 
                 KE_Sum = []
@@ -805,11 +816,11 @@ class Pencil_Data(object):
                     try:
                         if Calc_Temp == True:
                             ff = pc.read_var(
-                                trimall=True, ivar=Int, magic=["TT"],  quiet=True)
+                                trimall=True, ivar=Int, magic=["TT"], quiet=True)
                             TT = ff.TT
                         else:
                             ff = pc.read_var(
-                                trimall=True, ivar=Int, magic=["TT"],  quiet=True)
+                                trimall=True, ivar=Int, magic=["TT"], quiet=True)
                         rad = ff.x
                         phi = ff.y
                         uu = ff.uu
@@ -826,18 +837,18 @@ class Pencil_Data(object):
                         FE = []
                     except:
                         # moving on to next ivar
-                        Int = Int+dInt
+                        Int = Int + dInt
 
-                    while j <= len(phi)-1:
+                    while j <= len(phi) - 1:
                         #
                         #
                         #
                         #
-                        while i <= len(rad)-1:
+                        while i <= len(rad) - 1:
                             try:
-                                local_disk_mass= 0.5*np.abs(phi[j])*((rad[i+1]**2)-(rad[i]**2))*rho[i][j]
+                                local_disk_mass = 0.5 * np.abs(phi[j]) * ((rad[i + 1] ** 2) - (rad[i] ** 2)) * rho[i][j]
                                 KE.append(
-                                    local_disk_mass * (ux[j][i]**2+uy[j][j]**2)
+                                    local_disk_mass * (ux[j][i] ** 2 + uy[j][j] ** 2)
                                     * 0.5
                                 )
                                 UE.append(
@@ -845,19 +856,19 @@ class Pencil_Data(object):
                                     / rad[i]
                                 )
                                 UINT.append(
-                                     TT[i][j]
+                                    TT[i][j]
                                     / gamma
                                 )
                                 FE.append(
                                     rho[i][j]
-                                    / rad[i]**2
+                                    / rad[i] ** 2
                                 )
-                                i = i+di
+                                i = i + di
                             except:
                                 # out of bound
-                                i = i+di
+                                i = i + di
                         i = 0
-                        j = j+dj
+                        j = j + dj
                     #
                     #
                     #
@@ -866,14 +877,14 @@ class Pencil_Data(object):
                     KE_Sum.append(np.sum(KE[:]))
                     UE_Sum.append(np.sum(UE[:]))
                     UINT_Sum.append(np.sum(UINT[:]))
-                    Int = Int+dInt
+                    Int = Int + dInt
                 i = 0
                 di = 1
                 Total_Disk_Energy = []
 
-                while i <= len(KE_Sum)-1:
-                    Total_Disk_Energy.append(KE_Sum[i]+UINT_Sum[i]-UE_Sum[i])
-                    i = i+di
+                while i <= len(KE_Sum) - 1:
+                    Total_Disk_Energy.append(KE_Sum[i] + UINT_Sum[i] - UE_Sum[i])
+                    i = i + di
                 #
                 #
                 #
@@ -889,24 +900,24 @@ class Pencil_Data(object):
                     #
                     if ecc_int == 0.0:
 
-                            # the case is simple
+                        # the case is simple
 
-                        OE = -0.5*par1/ts.xq2
+                        OE = -0.5 * par1 / ts.xq2
 
                         OE_Sum = []
 
                         i = 0
                         di = 1
 
-                        while i <= len(Orbit_Len)-2:
+                        while i <= len(Orbit_Len) - 2:
                             OE_Sum.append(
                                 np.sum(
                                     OE[
-                                        Orbit_Len[i]:Orbit_Len[i+1]
+                                    Orbit_Len[i]:Orbit_Len[i + 1]
                                     ]
                                 )
                             )
-                            i = i+di
+                            i = i + di
                     #
                     #
                     #
@@ -922,7 +933,7 @@ class Pencil_Data(object):
                         # ----------------------------------------------
                         i = 0
                         di = 1
-                        while i <= len(Orbit_Len)-len(torqtotal)-1:
+                        while i <= len(Orbit_Len) - len(torqtotal) - 1:
                             #
                             #
                             #
@@ -964,12 +975,12 @@ class Pencil_Data(object):
                             )
                             VEC_Sum.append(
                                 np.sqrt(
-                                    radius[Orbit_Len[i]]**2
+                                    radius[Orbit_Len[i]] ** 2
                                     +
-                                    Omega[Orbit_Len[i]]**2
+                                    Omega[Orbit_Len[i]] ** 2
                                 )
                             )
-                            i = i+di
+                            i = i + di
                         #
                         #
                         #
@@ -978,20 +989,20 @@ class Pencil_Data(object):
                         #
                         #
                         i = 0
-                        i = i+di
-                        while i <= len(FE_Sum)-1:
+                        i = i + di
+                        while i <= len(FE_Sum) - 1:
                             try:
                                 WE_Sum.append(
                                     VEC_Sum[i]
                                     *
                                     FE_Sum[i])
-                                i = i+di
+                                i = i + di
                             except:
                                 #
                                 # loop error
                                 #
                                 print('loop error')
-                                i = i+di
+                                i = i + di
                         #
                         #
                         #
@@ -1002,7 +1013,7 @@ class Pencil_Data(object):
                         OE_Sum = []
                         i = 0
                         di = 1
-                        while i <= Orbit-2:
+                        while i <= Orbit - 2:
                             #
                             #
                             #
@@ -1011,21 +1022,20 @@ class Pencil_Data(object):
                                 #
                                 #
                                 OE_Sum.append(
-                                    (2/WE_Sum[i])
+                                    (2 / WE_Sum[i])
                                     *
                                     (
-                                        (
-                                            (ECC_Rate[i]*ECC_Sum[i])
-                                            /
-                                            (1-ECC_Sum[i]**2)
-                                        )
-                                        +
-                                        (
-                                            (TOR_Sum[i])
-                                            /
-                                            (ECC_Ang[i])
-                                        )
-
+                                            (
+                                                    (ECC_Rate[i] * ECC_Sum[i])
+                                                    /
+                                                    (1 - ECC_Sum[i] ** 2)
+                                            )
+                                            +
+                                            (
+                                                    (TOR_Sum[i])
+                                                    /
+                                                    (ECC_Ang[i])
+                                            )
 
                                     )
                                 )
@@ -1037,11 +1047,11 @@ class Pencil_Data(object):
                                 # index error
                                 #
                                 print('loop error')
-                                i = i+di
+                                i = i + di
                             #
                             #
                             #
-                            i = i+di
+                            i = i + di
 
                 else:
                     print('===================================')
@@ -1072,47 +1082,40 @@ class Pencil_Data(object):
                 if Calc_OEnergy == True:
                     OE_time = np.arange(0, len(OE_Sum), 1)
 
-                # fits
-
-                #KE_fit                      = KE_rate*KE_time+KE_Sum[0]
-                #UE_fit                      = UE_rate*UE_time+UE_Sum[0]
-                #UINT_fit                    = UINT_rate*UINT_time+UINT_Sum[0]
-                #OE_fit                      = OE_rate*OE_time+OE_Sum[0]
-
                 # attempt to make a fit by using the gradient of every energy array
 
                 i = 0
                 di = 1
 
-                while i <= len(KE_time)-1:
+                while i <= len(KE_time) - 1:
                     KE_fit.append((KE_rate)
-                                  * KE_time[i]+KE_Sum[0])
-                    i = i+di
+                                  * KE_time[i] + KE_Sum[0])
+                    i = i + di
 
                 i = 0
                 di = 1
 
-                while i <= len(UE_time)-1:
+                while i <= len(UE_time) - 1:
                     UE_fit.append(UE_rate
-                                  * UE_time[i]+UE_Sum[0])
-                    i = i+di
+                                  * UE_time[i] + UE_Sum[0])
+                    i = i + di
 
                 i = 0
                 di = 1
 
-                while i <= len(UINT_time)-1:
+                while i <= len(UINT_time) - 1:
                     UINT_fit.append(UINT_rate
-                                    * UINT_time[i]+UINT_Sum[0])
-                    i = i+di
+                                    * UINT_time[i] + UINT_Sum[0])
+                    i = i + di
 
                 i = 0
                 di = 1
 
                 if Calc_OEnergy == True:
-                    while i <= len(OE_time)-1:
+                    while i <= len(OE_time) - 1:
                         OE_fit.append(
-                            OE_Grad[i]*np.sin(OE_Sum[i]+OE_time[i])+OE_Sum[0])
-                        i = i+di
+                            OE_Grad[i] * np.sin(OE_Sum[i] + OE_time[i]) + OE_Sum[0])
+                        i = i + di
 
                 #
                 #
@@ -1121,40 +1124,40 @@ class Pencil_Data(object):
                 i = 0
                 di = 1
 
-                while i <= len(KE_fit)-2:
-                    dKE_fit.append((KE_fit)[i+1]-(KE_fit)[i])
-                    i = i+di
+                while i <= len(KE_fit) - 2:
+                    dKE_fit.append((KE_fit)[i + 1] - (KE_fit)[i])
+                    i = i + di
                 i = 0
                 di = 1
 
-                while i <= len(UE_fit)-2:
-                    dUE_fit.append((UE_fit)[i+1]-(UE_fit)[i])
-                    i = i+di
+                while i <= len(UE_fit) - 2:
+                    dUE_fit.append((UE_fit)[i + 1] - (UE_fit)[i])
+                    i = i + di
                 i = 0
                 di = 1
 
-                while i <= len(UINT_fit)-2:
-                    dUINT_fit.append((UINT_fit)[i+1]-(UINT_fit)[i])
-                    i = i+di
+                while i <= len(UINT_fit) - 2:
+                    dUINT_fit.append((UINT_fit)[i + 1] - (UINT_fit)[i])
+                    i = i + di
                 i = 0
                 di = 1
 
                 if Calc_OEnergy == True:
-                    while i <= len(OE_fit)-2:
-                        dOE_fit.append((OE_fit)[i+1]-(OE_fit)[i])
-                        i = i+di
+                    while i <= len(OE_fit) - 2:
+                        dOE_fit.append((OE_fit)[i + 1] - (OE_fit)[i])
+                        i = i + di
 
-                KE_fit_rate = sum(dKE_fit)/len(dKE_fit)
-                UE_fit_rate = sum(dUE_fit)/len(dUE_fit)
-                UINT_fit_rate = sum(dUINT_fit)/len(dUINT_fit)
+                KE_fit_rate = sum(dKE_fit) / len(dKE_fit)
+                UE_fit_rate = sum(dUE_fit) / len(dUE_fit)
+                UINT_fit_rate = sum(dUINT_fit) / len(dUINT_fit)
                 if Calc_OEnergy == True:
-                    OE_fit_rate = sum(dOE_fit)/len(dOE_fit)
+                    OE_fit_rate = sum(dOE_fit) / len(dOE_fit)
 
-                KE_error = np.abs((KE_fit_rate-KE_rate)/KE_rate)
-                UE_error = np.abs((UE_fit_rate-UE_rate)/UE_rate)
-                UINT_error = np.abs((UINT_fit_rate-UINT_rate)/UINT_rate)
+                KE_error = np.abs((KE_fit_rate - KE_rate) / KE_rate)
+                UE_error = np.abs((UE_fit_rate - UE_rate) / UE_rate)
+                UINT_error = np.abs((UINT_fit_rate - UINT_rate) / UINT_rate)
                 if Calc_OEnergy == True:
-                    OE_error = np.abs((OE_fit_rate-OE_rate)/OE_rate)
+                    OE_error = np.abs((OE_fit_rate - OE_rate) / OE_rate)
 
                 # averages
 
@@ -1273,18 +1276,18 @@ class Pencil_Data(object):
                 i = 0
                 di = 1
                 dj = 1
-                while j <= len(theta_q)-1:
-                    while i <= len(rad_q)-1:
+                while j <= len(theta_q) - 1:
+                    while i <= len(rad_q) - 1:
                         # append toomre Q value at that point
-                        Toomre[j][i] = ((cs))/(grav_const*pi*rho_q[j][i])
-                        print('working at radius:'+str(i))
-                        print('working at theta:'+str(j))
-                        i = i+di
+                        Toomre[j][i] = ((cs)) / (grav_const * pi * rho_q[j][i])
+                        print('working at radius:' + str(i))
+                        print('working at theta:' + str(j))
+                        i = i + di
                     print('===========================')
                     print('moving to next theta')
                     print('===========================')
                     i = 0
-                    j = j+dj
+                    j = j + dj
                 print('===========================')
                 print('done with toomre')
                 print('===========================')
@@ -1301,7 +1304,7 @@ class Pencil_Data(object):
             #
             # ======================================
 
-            tanaka = (-0.85 - alpha - 0.9*beta)*Gamma0
+            tanaka = (-0.85 - alpha - 0.9 * beta) * Gamma0
 
             tanaka_array = np.repeat(tanaka, len(time))
 
@@ -1313,19 +1316,19 @@ class Pencil_Data(object):
             # for H(n) where n > 0
             #
 
-            #radial_coord    = 0
+            # radial_coord    = 0
             radial_coord = 1
 
             n = 1
             dn = 1
 
-            size = 15+n
+            size = 15 + n
             Herm_Array = []
 
             while n <= size:
                 coef = np.repeat(1, n)
                 Herm_Array.append(herm.hermval(0, coef))
-                n = n+dn
+                n = n + dn
 
             #   generate enthalpy fourier-hermite coefficents
             #   fourier-hermite coefficents found in TW2002 and TW2004
@@ -1333,8 +1336,8 @@ class Pencil_Data(object):
             #   TW2002: 1, 2, 3, 5, 6, 13, 14, 15, 17, 20, 22, 35
             #   TW2004:
 
-            initial_pressure = Sigma*cs
-            episilonCS = cs/semi_major*Omegap
+            initial_pressure = Sigma * cs
+            episilonCS = cs / semi_major * Omegap
 
             # ======================================
             #
@@ -1347,19 +1350,18 @@ class Pencil_Data(object):
 
             wavenumber_array = []
 
-            while m <= size-1:
-                wavenumber_array.append(m*episilonCS)
-                m = m+dm
+            while m <= size - 1:
+                wavenumber_array.append(m * episilonCS)
+                m = m + dm
 
             q = 0
             dq = 1
 
-            wavenumber_check = 1
             wavenumber_check = []
 
-            while q <= size-1:
-                wavenumber_check.append(2*q/3*wavenumber_array[q])
-                q = q+dq
+            while q <= size - 1:
+                wavenumber_check.append(2 * q / 3 * wavenumber_array[q])
+                q = q + dq
 
             wavex = []
             wavey = []
@@ -1367,11 +1369,10 @@ class Pencil_Data(object):
             i = 0
             di = 1
 
-            while i <= size-1:
-
-                wavex.append(x2d[5]+wavenumber_check[i][15])
-                wavey.append(y2d[5]+wavenumber_check[i][15])
-                i = i+di
+            while i <= size - 1:
+                wavex.append(x2d[5] + wavenumber_check[i][15])
+                wavey.append(y2d[5] + wavenumber_check[i][15])
+                i = i + di
 
             # ======================================
 
@@ -1379,8 +1380,8 @@ class Pencil_Data(object):
             pi = np.pi
 
             Num = 3
-            lower_limit = 1e10*-pi
-            upper_limit = 1e10*pi
+            lower_limit = 1e10 * -pi
+            upper_limit = 1e10 * pi
 
             Z, w = self.Quadab(Num, lower_limit, upper_limit)
 
@@ -1389,42 +1390,42 @@ class Pencil_Data(object):
             Mu_coef = 0.0
             for k in range(Num):
                 Mu_coef += w[k] * \
-                    self.fourier_hermite_function((Z[k]), radial_coord, 1, I)
+                           self.fourier_hermite_function((Z[k]), radial_coord, 1, I)
 
             # Mu_coef must converge
 
-            Mu_coef = Mu_coef*2/upper_limit
+            Mu_coef = Mu_coef * 2 / upper_limit
 
             # get the second enthalpy fourier-hermite coef
 
             Num = 3
-            lower_limit = 1e10*-pi
-            upper_limit = 1e10*pi
+            lower_limit = 1e10 * -pi
+            upper_limit = 1e10 * pi
 
             Z, w = self.Quadab(Num, lower_limit, upper_limit)
 
             Mu_coef2 = 0.0
             for k in range(Num):
                 Mu_coef2 += w[k] * \
-                    self.fourier_hermite_function(
-                        (Z[k]), radial_coord, Mu_coef, I)
+                            self.fourier_hermite_function(
+                                (Z[k]), radial_coord, Mu_coef, I)
 
-            Mu_coef2 = Mu_coef2*2/upper_limit
+            Mu_coef2 = Mu_coef2 * 2 / upper_limit
 
             # get the third enthalpy fourier-hermite coef
 
             Num = 3
-            lower_limit = 1e10*-pi
-            upper_limit = 1e10*pi
+            lower_limit = 1e10 * -pi
+            upper_limit = 1e10 * pi
 
             Z, w = self.Quadab(Num, lower_limit, upper_limit)
 
             Mu_coef3 = 0.0
             for k in range(Num):
-                Mu_coef3 += w[k]*self.fourier_hermite_function(
+                Mu_coef3 += w[k] * self.fourier_hermite_function(
                     (Z[k]), radial_coord, Mu_coef2, I)
 
-            Mu_coef3 = Mu_coef3*2/upper_limit
+            Mu_coef3 = Mu_coef3 * 2 / upper_limit
 
             # ======================================
             #
@@ -1459,11 +1460,13 @@ class Pencil_Data(object):
                 'true_angle': true_angle,
                 'DGTemp_Mean': DGTemp_Mean, 'gamma': gamma, 'par1': par1, 'par2': par2,
                 'GlobalTemp_Mean': GlobalTemp_Mean, 'GTM_Sigma': GTM_Sigma, 'GTM_Sigma_O': GTM_Sigma_O,
-                'wavex': wavex, 'wavey': wavey, 'wavenumber_array': wavenumber_array, 'wavenumber_check': wavenumber_check,
+                'wavex': wavex, 'wavey': wavey, 'wavenumber_array': wavenumber_array,
+                'wavenumber_check': wavenumber_check,
                 'episilonCS': episilonCS, 'Mu_coef2': Mu_coef2, 'Mu_coef3': Mu_coef3,
                 'ts': ts, 't': t, 'kernel': kernel, 'time': time,
                 'torqint': torqint, 'torqext': torqext,
-                'q': q, 'Mstar': Mstar, 'Gamma0': Gamma0, 'alpha': alpha, 'beta': beta, 'rsmooth': rsmooth, 'gravC': gravC,
+                'q': q, 'Mstar': Mstar, 'Gamma0': Gamma0, 'alpha': alpha, 'beta': beta, 'rsmooth': rsmooth,
+                'gravC': gravC,
                 'EntropyIndex': EntropyIndex, 'SpecificHeat': SpecificHeat,
                 'Sigma': Sigma,
                 'LinearVelocity': LinearVelocity, 'AngularVelocity': AngularVelocity,
@@ -1474,7 +1477,8 @@ class Pencil_Data(object):
                 'cs': cs, 'initial_pressure': initial_pressure, 'Mu_coef': Mu_coef,
                 'torqtotal': torqtotal, 'tmax': tmax, 'xrq2': xrq2, 'yrq2': yrq2, 'MaxOrbits': MaxOrbits,
                 'tempdata': tempdata, 'Calc_Temp': self.Calc_Temp, 'step': step,
-                'x2d': x2d, 'y2d': y2d, 'Calc_Density': self.Calc_Density, 'densitydata': densitydata
+                'x2d': x2d, 'y2d': y2d, 'Calc_Density': self.Calc_Density, 'densitydata': densitydata,
+                'timeCutOff': timeCutOff
             }
 
             os.chdir('..')
@@ -1507,10 +1511,10 @@ class Pencil_Data(object):
         #
         # ======================================
 
-        os.chdir('AGNRun'+str(Directory_Number))
+        os.chdir('AGNRun' + str(Directory_Number))
 
         ts = pc.read_ts()
-        t = ts.t/2/np.pi
+        t = ts.t / 2 / np.pi
         N = 50
 
         # ======================================
@@ -1524,13 +1528,13 @@ class Pencil_Data(object):
         else:
             q = par.pmass[0]
 
-        Gamma0 = (q/h)**2
+        Gamma0 = (q / h) ** 2
         alpha = par.density_power_law
         beta = par.temperature_power_law
 
         # ======================================
 
-        kernel = np.ones((N,))/N
+        kernel = np.ones((N,)) / N
         time = np.convolve(t, kernel, mode='valid')
         torqint = np.convolve(ts.torqint_2, kernel, mode='valid')
         torqext = np.convolve(ts.torqext_2, kernel, mode='valid')
@@ -1628,33 +1632,33 @@ class Pencil_Data(object):
 
     def Quadw(self, Num):
 
-        a = np.linspace(3, 4*Num-1, Num)/(4*Num+2)
-        x = np.cos(np.pi*a+1/(8*Num*Num*np.tan(a)))
+        a = np.linspace(3, 4 * Num - 1, Num) / (4 * Num + 2)
+        x = np.cos(np.pi * a + 1 / (8 * Num * Num * np.tan(a)))
         epsilon = 1e-15
         delta = 1.0
         while delta > epsilon:
             p0 = np.ones(Num, float)
             p1 = np.copy(x)
             for k in range(1, Num):
-                p0, p1 = p1, ((2*k+1)*x*p1-k*p0)/(k+1)
-            dp = (Num+1)*(p0-x*p1)/(1-x*x)
-            dx = p1/dp
+                p0, p1 = p1, ((2 * k + 1) * x * p1 - k * p0) / (k + 1)
+            dp = (Num + 1) * (p0 - x * p1) / (1 - x * x)
+            dx = p1 / dp
             x -= dx
             delta = max(abs(dx))
 
-        w = 2*(Num+1)*(Num+1)/(Num*Num*(1-x*x)*dp*dp)
+        w = 2 * (Num + 1) * (Num + 1) / (Num * Num * (1 - x * x) * dp * dp)
 
         return x, w
 
     def Quadab(self, Num, a, b):
         Z, w = self.Quadw(Num)
-        return 0.5*(b-a)*Z+0.5*(b+a), 0.5*(b-a)*w
+        return 0.5 * (b - a) * Z + 0.5 * (b + a), 0.5 * (b - a) * w
 
     def fourier_hermite_function(self, Z, radial_coord, Mu_coef, i):
         if radial_coord == 0:
             return 1
         else:
-            return np.exp((-Z**2.0)/2.0)*(1.0/2.0*np.pi*i)*Mu_coef
+            return np.exp((-Z ** 2.0) / 2.0) * (1.0 / 2.0 * np.pi * i) * Mu_coef
 
     def make_grid_toomre(self, Orbit):
         # takes ivar (orbit from dsnap)
@@ -1668,6 +1672,6 @@ class Pencil_Data(object):
         uy_q = ff_q.uy  # disk grid points in vtheta
         rho_q = ff_q.rho  # disk surface density
         rad2d_q, theta2d_q = np.meshgrid(rad_q, theta_q)
-        x2d_q = rad2d_q*np.cos(theta2d_q)
-        y2d_q = rad2d_q*np.sin(theta2d_q)
+        x2d_q = rad2d_q * np.cos(theta2d_q)
+        y2d_q = rad2d_q * np.sin(theta2d_q)
         return rad_q, theta_q, rho_q
