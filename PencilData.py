@@ -127,8 +127,8 @@ class Pencil_Data(object):
         #	       updated script to include optimzation. Now everything does not have to be calculated at once
         #
         #   6/4/2019   added mean temprature vs time calculation
-        #	       investigating optimization schema to fix runtime issues
-        #	       optimization schema on hold until more recent problems are dealt with.
+        #	           investigating optimization schema to fix runtime issues
+        #	           optimization schema on hold until more recent problems are dealt with.
         #
         #   6/5/2019   fixed energy plot
         #
@@ -136,8 +136,8 @@ class Pencil_Data(object):
         #	       convolved energy plot data
         #
         #   6/13/2019  applied standard orbit to pencil data
-        #	       it shall now be used for dynamic contour plots
-        #	       and midplane slices.
+        #	           it shall now be used for dynamic contour plots
+        #	           and midplane slices.
         #
         #   6/17/2019  added energy plot fitting
         #              added energy plot rates
@@ -145,7 +145,7 @@ class Pencil_Data(object):
         #   6/18/2019  continued to build on fitting procedure
         #
         #   6/20/2019  fixed error in fitting procedure
-        #	       fixed bug in energy plots
+        #	           fixed bug in energy plots
         #
         #   6/24/2019  fixed an issue with Energy plotting not displaying properly
         #              fixed an issue with Dynamic plotting not working at all
@@ -183,14 +183,12 @@ class Pencil_Data(object):
         #   5/19/2020  Fixed Toomre Q calculations. It should now display a reasonable Toomre Q calc("should")
         #              Updated kernel size. It should be N=850 by default.
         #
-        #   6/5/2020   Simone's birthday is tommorrow. Happy birthday love.
-        #	       Added Calc Orbital Energy logical
-        # 	       This is seperate from all other energy calculations and requires
-        # 	       a consitency check.
-        #	       Fixed any issues with not properly using Calc Orbital Energy Logical
-        #	       It is under Calc_OEnergy. So it is changed accordingly.
-        #              Fixed synatx issues. Sigmap now properly calculated in case of
-        #              rho0 not being 1
+        #   6/5/2020   Simone's birthday is tommorrow. Happy birthday love. Added Calc Orbital Energy logical
+        # 	            This is seperate from all other energy calculations and requires a consitency check.
+        #	            Fixed any issues with not properly using Calc Orbital Energy Logical
+        #	            It is under Calc_OEnergy. So it is changed accordingly.
+        #               Fixed synatx issues. Sigmap now properly calculated in case of
+        #               rho0 not being 1
         #
         #  6/6/2020    Added relative temperature calculations to all plotting
         #              relative vales should be calculated using the following formula
@@ -279,7 +277,6 @@ class Pencil_Data(object):
             t = ts.t/2*math.pi
             N = 850
             tmax = t.max()
-            #MaxOrbits      = int(round(tmax))
 
             # DEBUG CALC ENERGY
 
@@ -485,7 +482,7 @@ class Pencil_Data(object):
 
             try:
                 if Calc_Temp == True:
-                    ff = pc.read_var(trimall=True, ivar=0, magic=['TT'])
+                    ff = pc.read_var(trimall=True, ivar=0, magic=['TT'], quiet=True)
                     rad = ff.x
                     theta = ff.y
                     rad_grid = ff.x
@@ -497,7 +494,7 @@ class Pencil_Data(object):
                     Init_Temp = ff.TT
                     rho = ff.rho
                 else:
-                    ff = pc.read_var(trimall=True, ivar=0)
+                    ff = pc.read_var(trimall=True, ivar=0, quiet=True)
                     rad = ff.x
                     theta = ff.y
                     rad_grid = ff.x
@@ -528,7 +525,7 @@ class Pencil_Data(object):
             try:
                 if Calc_Temp == True:
                     ivar = Orbit
-                    fv = pc.read_var(trimall=True, ivar=ivar, magic=['TT'])
+                    fv = pc.read_var(trimall=True, ivar=ivar, magic=['TT'], quiet=True)
                     rho_fv = fv.rho
                     temp_fv = fv.TT
                     shock_fv = fv.shock
@@ -541,7 +538,7 @@ class Pencil_Data(object):
                     # print(rho_fv)
                 else:
                     ivar = Orbit
-                    fv = pc.read_var(trimall=True, ivar=ivar)
+                    fv = pc.read_var(trimall=True, ivar=ivar, quiet=True)
                     rho_fv = fv.rho
                     shock_fv = fv.shock
                     avgrho_fv = np.transpose(rho_fv)
@@ -553,7 +550,7 @@ class Pencil_Data(object):
                 try:
                     if Calc_Temp == True:
                         ivar = 20
-                        fv = pc.read_var(trimall=True, ivar=ivar, magic=['TT'])
+                        fv = pc.read_var(trimall=True, ivar=ivar, magic=['TT'], quiet=True)
                         rho_fv = fv.rho
                         temp_fv = fv.TT
                         shock_fv = fv.shock
@@ -565,7 +562,7 @@ class Pencil_Data(object):
                         avgshock_fv = np.mean(avgshock_fv, axis=1)
                     else:
                         ivar = 20
-                        fv = pc.read_var(trimall=True, ivar=ivar)
+                        fv = pc.read_var(trimall=True, ivar=ivar, quiet=True)
                         rho_fv = fv.rho
                         shock_fv = fv.shock
                         avgrho_fv = np.transpose(rho_fv)
@@ -597,7 +594,7 @@ class Pencil_Data(object):
             else:
                 try:
                     while i <= MaxOrbits-step:
-                        ff = pc.read_var(trimall=True, ivar=i, magic=["TT"])
+                        ff = pc.read_var(trimall=True, ivar=i, magic=["TT"], quiet=True)
                         while f <= len(ff.TT)-1:
                             for value in ff.TT[f]:
                                 placedata.append(value)
@@ -630,7 +627,7 @@ class Pencil_Data(object):
             else:
                 try:
                     while i <= MaxOrbits-step:
-                        ff = pc.read_var(trimall=True, ivar=i)
+                        ff = pc.read_var(trimall=True, ivar=i, quiet=True)
                         while f <= len(ff.rho)-1:
                             for value in ff.rho[f]:
                                 placedata.append(value)
@@ -679,7 +676,7 @@ class Pencil_Data(object):
 
                         if Calc_Temp == True:
                             fv = pc.read_var(
-                                trimall=True, ivar=Standard_Orbit, magic=['TT'])
+                                trimall=True, ivar=Standard_Orbit, magic=['TT'], quiet=True)
                             rho_fv = fv.rho
                             temp_fv = fv.TT
                             shock_fv = fv.shock
@@ -689,7 +686,7 @@ class Pencil_Data(object):
                             Dynamic_Shock.append(shock_fv)
 
                         else:
-                            fv = pc.read_var(trimall=True, ivar=Standard_Orbit)
+                            fv = pc.read_var(trimall=True, ivar=Standard_Orbit, quiet=True)
                             rho_fv = fv.rho
                             shock_fv = fv.shock
 
@@ -808,11 +805,11 @@ class Pencil_Data(object):
                     try:
                         if Calc_Temp == True:
                             ff = pc.read_var(
-                                trimall=True, ivar=Int, magic=["TT"])
+                                trimall=True, ivar=Int, magic=["TT"],  quiet=True)
                             TT = ff.TT
                         else:
                             ff = pc.read_var(
-                                trimall=True, ivar=Int, magic=["TT"])
+                                trimall=True, ivar=Int, magic=["TT"],  quiet=True)
                         rad = ff.x
                         phi = ff.y
                         uu = ff.uu
@@ -1259,7 +1256,7 @@ class Pencil_Data(object):
                 # make grid elements
                 # uncomment below if the disk is not isothermal
                 # ff=pc.read_var(trimall=True,ivar=ivar,magic=['TT'])
-                ff_q = pc.read_var(trimall=True, ivar=Orbit)
+                ff_q = pc.read_var(trimall=True, ivar=Orbit, quiet=True)
                 rad_q = ff_q.x  # disk grid points in r
                 theta_q = ff_q.y  # disk grid points in theta
                 rho_q = ff_q.rho  # disk surface density
@@ -1304,10 +1301,6 @@ class Pencil_Data(object):
             #
             # ======================================
 
-            # twave = Mstar * aspect_ratio**4 / \
-            #    (q*Sigma * semi_major**2 * Omegap)
-            #eh              = eccentricity/aspect_ratio
-            #CN2008_te       = twave/0.780 * ( 1 - 0.14*eh**2 + 0.06*eh**3)
             tanaka = (-0.85 - alpha - 0.9*beta)*Gamma0
 
             tanaka_array = np.repeat(tanaka, len(time))
@@ -1515,7 +1508,6 @@ class Pencil_Data(object):
         # ======================================
 
         os.chdir('AGNRun'+str(Directory_Number))
-        ts = pc.read_ts()
 
         ts = pc.read_ts()
         t = ts.t/2/np.pi
@@ -1595,7 +1587,7 @@ class Pencil_Data(object):
             print('=======================')
             print('No EccDecayCN2008_editWL.py')
             print('=======================')
-            # traceback.print_exc()
+            traceback.print_exc()
             os.chdir('..')
 
     def pingTorque(self, Directory_Path):
@@ -1610,7 +1602,7 @@ class Pencil_Data(object):
             print('=======================')
             print('No Torque.py')
             print('=======================')
-            # traceback.print_exc()
+            traceback.print_exc()
             os.chdir('..')
 
     def pingTemp(self, Directory_Path):
@@ -1625,7 +1617,7 @@ class Pencil_Data(object):
             print('=======================')
             print('No PingTemp.py')
             print('=======================')
-            # traceback.print_exc()
+            traceback.print_exc()
             os.chdir('..')
 
     # ======================================
