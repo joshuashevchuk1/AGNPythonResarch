@@ -3852,6 +3852,9 @@ class Pencil_Analysis(object):
                         color='white', label=r'$\alpha$ :'+str(alpha))
                     Dir_beta_patches = mpatches.Patch(
                         color='white', label=r'$\beta$ :'+str(beta))
+                    Dir_cutoff_patches = mpatches.Patch(
+                        color='white', label=r'$\beta$ :' + str(cut_off))
+
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -3861,7 +3864,8 @@ class Pencil_Analysis(object):
                                         Dir_rsmooth_patches,
                                         Dir_gamma_patches,
                                         Dir_alpha_patches,
-                                        Dir_beta_patches], loc=2)
+                                        Dir_beta_patches,
+                                        Dir_cutoff_patches], loc=2)
 
                     # =========================
 
