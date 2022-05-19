@@ -1707,6 +1707,9 @@ class Pencil_Analysis(object):
                             logging.info('========================')
 
                         time = data_frame[n]['t']
+                        cut_off = data_frame[n]['indexTimeCutOff']
+                        time = time[:cut_off]
+
                         GlobalTemp_Mean = data_frame[n]['GlobalTemp_Mean']
                         TTm = data_frame[n]['TTm']
                         TTm_rate = data_frame[n]['TTm_rate']
@@ -1736,7 +1739,7 @@ class Pencil_Analysis(object):
                         print(TTm)
 
                         plt.plot(
-                            time, (GlobalTemp_Mean[:]-GlobalTemp_Mean[0]), color='purple', ls=':')
+                            time/(np.pi*2), (GlobalTemp_Mean[:]-GlobalTemp_Mean[0]), color='purple', ls=':')
                         plt.title('Mean disk temperature vs time')
                         plt.xlabel(r'$t/T_0$')
                         plt.ylabel('Temperature')
@@ -1744,7 +1747,7 @@ class Pencil_Analysis(object):
                         plt.grid(True)
                         plt.xlim([0, time[len(time)-1]])
 
-                        data = [time,(GlobalTemp_Mean[:]-GlobalTemp_Mean[0])]
+                        data = [time/(np.pi*2),(GlobalTemp_Mean[:]-GlobalTemp_Mean[0])]
                         df = pd.DataFrame(data)
                         df.to_csv(str(data_frame[n]['DirName'] + "_" + "time_GTN"+".csv"), sep='\t')
 
@@ -1775,6 +1778,8 @@ class Pencil_Analysis(object):
                             color='white', label=r'$\beta$ :'+str(beta))
                         Dir_TTm_patches = mpatches.Patch(
                             color='white', label=r'$\beta$ :'+str(TTm_rate))
+                        Dir_cutoff_patches = mpatches.Patch(
+                            color='white', label=r'$\beta$ :' + str(cut_off))
 
                         plt.legend(handles=[DirMass_patches,
                                             DirEcc_patches,
@@ -1785,7 +1790,8 @@ class Pencil_Analysis(object):
                                             Dir_gamma_patches,
                                             Dir_alpha_patches,
                                             Dir_beta_patches,
-                                            Dir_TTm_patches], loc=2)
+                                            Dir_TTm_patches,
+                                            Dir_cutoff_patches], loc=2)
 
                         # =========================
 

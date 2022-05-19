@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="change to np.pi">
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="added cutoff patches for Torque">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
     </list>
@@ -324,7 +324,28 @@
       <option name="project" value="LOCAL" />
       <updated>1652948548549</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="removed commented out code">
+      <created>1652949931974</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1652949931974</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added cut off for Torques">
+      <created>1652950209002</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1652950209002</updated>
+    </task>
+    <task id="LOCAL-00034" summary="added cutoff patches for Torque">
+      <created>1652950283507</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1652950283507</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -361,6 +382,9 @@
     <MESSAGE value="only use index for cutoff." />
     <MESSAGE value="no calc right now" />
     <MESSAGE value="change to np.pi" />
-    <option name="LAST_COMMIT_MESSAGE" value="change to np.pi" />
+    <MESSAGE value="removed commented out code" />
+    <MESSAGE value="added cut off for Torques" />
+    <MESSAGE value="added cutoff patches for Torque" />
+    <option name="LAST_COMMIT_MESSAGE" value="added cutoff patches for Torque" />
   </component>
 </project>
