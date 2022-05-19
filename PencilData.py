@@ -1478,7 +1478,7 @@ class Pencil_Data(object):
                 'torqtotal': torqtotal, 'tmax': tmax, 'xrq2': xrq2, 'yrq2': yrq2, 'MaxOrbits': MaxOrbits,
                 'tempdata': tempdata, 'Calc_Temp': self.Calc_Temp, 'step': step,
                 'x2d': x2d, 'y2d': y2d, 'Calc_Density': self.Calc_Density, 'densitydata': densitydata,
-                'timeCutOff': timeCutOff
+                'timeCutOff': timeCutOff,'indexTimeCutOff':indexTimeCutOff
             }
 
             os.chdir('..')

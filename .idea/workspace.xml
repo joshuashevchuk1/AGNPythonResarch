@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="check for ecc_int" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="short" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -265,7 +265,35 @@
       <option name="project" value="LOCAL" />
       <updated>1652865416892</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="turn everything off for testing">
+      <created>1652945495229</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1652945495229</updated>
+    </task>
+    <task id="LOCAL-00025" summary="test out cut off">
+      <created>1652945691565</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1652945691565</updated>
+    </task>
+    <task id="LOCAL-00026" summary="bug">
+      <created>1652945915253</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1652945915253</updated>
+    </task>
+    <task id="LOCAL-00027" summary="short">
+      <created>1652945954005</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1652945954005</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -294,6 +322,10 @@
     <MESSAGE value="added time cutOff" />
     <MESSAGE value="print issues" />
     <MESSAGE value="check for ecc_int" />
-    <option name="LAST_COMMIT_MESSAGE" value="check for ecc_int" />
+    <MESSAGE value="turn everything off for testing" />
+    <MESSAGE value="test out cut off" />
+    <MESSAGE value="bug" />
+    <MESSAGE value="short" />
+    <option name="LAST_COMMIT_MESSAGE" value="short" />
   </component>
 </project>
