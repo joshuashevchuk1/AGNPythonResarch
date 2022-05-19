@@ -2102,16 +2102,18 @@ class Pencil_Analysis(object):
                         logging.info(n)
                         logging.info('========================')
 
+
+                    time = data_frame[n]['time']
+                    time = time[:cut_off]
+
                     fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
                     fig.subplots_adjust(bottom=0.07, top=0.95)
-                    ax1.plot(data_frame[n]['time'], data_frame[n]
+                    ax1.plot(time, data_frame[n]
                              ['torqint'], '--', label='Inner')
-                    ax1.plot(data_frame[n]['time'], data_frame[n]
+                    ax1.plot(time, data_frame[n]
                              ['torqext'], '--', label='Outer')
-                    ax1.plot(data_frame[n]['time'], data_frame[n]
+                    ax1.plot(time, data_frame[n]
                              ['torqtotal'], label='Total')
-                    # ax1.plot(data_frame[n]['time'], data_frame[n]['tanaka'],
-                    #         linestyle=':', label='Tanaka et  al. 2002')
                     ax1.set_aspect('auto')
                     plt.xlim([0, data_frame[n]['tmax']])
                     plt.tight_layout()

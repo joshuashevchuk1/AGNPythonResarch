@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="short" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="change to np.pi">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -293,7 +296,35 @@
       <option name="project" value="LOCAL" />
       <updated>1652945954005</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="index time cutoff">
+      <created>1652946473338</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1652946473338</updated>
+    </task>
+    <task id="LOCAL-00029" summary="only use index for cutoff.">
+      <created>1652946579611</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1652946579611</updated>
+    </task>
+    <task id="LOCAL-00030" summary="no calc right now">
+      <created>1652946651814</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1652946651814</updated>
+    </task>
+    <task id="LOCAL-00031" summary="change to np.pi">
+      <created>1652948548549</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1652948548549</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -326,6 +357,10 @@
     <MESSAGE value="test out cut off" />
     <MESSAGE value="bug" />
     <MESSAGE value="short" />
-    <option name="LAST_COMMIT_MESSAGE" value="short" />
+    <MESSAGE value="index time cutoff" />
+    <MESSAGE value="only use index for cutoff." />
+    <MESSAGE value="no calc right now" />
+    <MESSAGE value="change to np.pi" />
+    <option name="LAST_COMMIT_MESSAGE" value="change to np.pi" />
   </component>
 </project>
