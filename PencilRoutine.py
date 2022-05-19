@@ -79,8 +79,8 @@ else:
 
 #PA                                              =   PA.Pencil_Analysis(PD.Pencil_Data(),Orbit=None,step=10,TempSigma=True)
 PA = PA.Pencil_Analysis(PD.Pencil_Data(),
-                        Orbit=5,
-                        MaxOrbits=5,
+                        Orbit=50,
+                        MaxOrbits=50,
                         step=None,
                         TempSigma=False,
                         Calc_Energy=False,
@@ -88,7 +88,7 @@ PA = PA.Pencil_Analysis(PD.Pencil_Data(),
                         Calc_Dynamics=False,
                         Orbit_standard=None,
                         Calc_Rates_Energy=False,
-                        Calc_Temp=False,
+                        Calc_Temp=True,
                         Calc_ToomreQ=False)
 
 #PAP                                             =   PAP.Pencil_Post_Analysis(PD.Pencil_Data(),Orbit=30,step=10,TempSigma=True)
