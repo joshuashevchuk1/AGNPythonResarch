@@ -1739,7 +1739,7 @@ class Pencil_Analysis(object):
                         print(TTm)
 
                         plt.plot(
-                            time/(np.pi*2), (GlobalTemp_Mean[:]-GlobalTemp_Mean[0]), color='purple', ls=':')
+                            time/(np.pi*2), (GlobalTemp_Mean[:len(time)]-GlobalTemp_Mean[0]), color='purple', ls=':')
                         plt.title('Mean disk temperature vs time')
                         plt.xlabel(r'$t/T_0$')
                         plt.ylabel('Temperature')
@@ -1747,9 +1747,6 @@ class Pencil_Analysis(object):
                         plt.grid(True)
                         plt.xlim([0, time[len(time)-1]])
 
-                        data = [time/(np.pi*2),(GlobalTemp_Mean[:]-GlobalTemp_Mean[0])]
-                        df = pd.DataFrame(data)
-                        df.to_csv(str(data_frame[n]['DirName'] + "_" + "time_GTN"+".csv"), sep='\t')
 
                         DirEcc = (round(eccentricity[0], 1))
 
@@ -2114,16 +2111,16 @@ class Pencil_Analysis(object):
                     # init for cut_off
                     cut_off = data_frame[n]['indexTimeCutOff']
                     time = time[:cut_off]
+                    torqint = data_frame[n]['torqint']
+                    torqext = data_frame[n]['torqext']
+                    torqtotal = data_frame[n]['torqtotal']
                     #
 
                     fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
                     fig.subplots_adjust(bottom=0.07, top=0.95)
-                    ax1.plot(time, data_frame[n]
-                             ['torqint'], '--', label='Inner')
-                    ax1.plot(time, data_frame[n]
-                             ['torqext'], '--', label='Outer')
-                    ax1.plot(time, data_frame[n]
-                             ['torqtotal'], label='Total')
+                    ax1.plot(time, torqint[:len(time)], '--', label='Inner')
+                    ax1.plot(time, torqext[:len(time)], '--', label='Outer')
+                    ax1.plot(time, torqtotal[:len(time)], label='Total')
                     ax1.set_aspect('auto')
                     plt.xlim([0, data_frame[n]['tmax']])
                     plt.tight_layout()
