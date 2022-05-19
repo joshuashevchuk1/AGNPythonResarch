@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="added cutoff patches for Torque">
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="added cutoff patches for TTm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PencilData.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilData.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652950283507</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="added cutoff patches for TTm">
+      <created>1652950603488</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1652950603488</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -360,7 +367,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bad data" />
     <MESSAGE value="proper loop and get deltaT" />
     <MESSAGE value="missed spelling" />
     <MESSAGE value="issue with PencilPlotDeltaT" />
@@ -385,6 +391,7 @@
     <MESSAGE value="removed commented out code" />
     <MESSAGE value="added cut off for Torques" />
     <MESSAGE value="added cutoff patches for Torque" />
-    <option name="LAST_COMMIT_MESSAGE" value="added cutoff patches for Torque" />
+    <MESSAGE value="added cutoff patches for TTm" />
+    <option name="LAST_COMMIT_MESSAGE" value="added cutoff patches for TTm" />
   </component>
 </project>
