@@ -83,12 +83,12 @@ PA = PA.Pencil_Analysis(PD.Pencil_Data(),
                         MaxOrbits=5,
                         step=None,
                         TempSigma=False,
-                        Calc_Energy=True,
+                        Calc_Energy=False,
                         Calc_OEnergy=False,
                         Calc_Dynamics=False,
                         Orbit_standard=None,
                         Calc_Rates_Energy=False,
-                        Calc_Temp=True,
+                        Calc_Temp=False,
                         Calc_ToomreQ=False)
 
 #PAP                                             =   PAP.Pencil_Post_Analysis(PD.Pencil_Data(),Orbit=30,step=10,TempSigma=True)
