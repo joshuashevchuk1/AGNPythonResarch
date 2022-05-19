@@ -460,6 +460,7 @@ class Pencil_Data(object):
 
             timeCutOff = time[indexTimeCutOff]
 
+            print('indexTimeCutOff',indexTimeCutOff)
             print('timeCutOff: ', timeCutOff)
 
             ecc = None
