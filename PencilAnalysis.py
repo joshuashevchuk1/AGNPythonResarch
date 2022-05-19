@@ -3766,6 +3766,8 @@ class Pencil_Analysis(object):
                     time = data_frame[n]['time']
                     eccentricity = data_frame[n]['eccentricity']
                     semi_major = data_frame[n]['semi_major']
+                    cut_off = data_frame[n]['timeCutOff']
+                    time = time[:cut_off]
                     xrq2 = data_frame[n]['xrq2']
                     yrq2 = data_frame[n]['yrq2']
 
