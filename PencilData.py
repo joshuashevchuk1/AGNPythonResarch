@@ -458,7 +458,7 @@ class Pencil_Data(object):
                         indexTimeCutOff = i
                         break
 
-            timeCutOff = time[indexTimeCutOff]
+            timeCutOff = time[indexTimeCutOff]/(np.pi*2)
 
             print('indexTimeCutOff',indexTimeCutOff)
             print('timeCutOff: ', timeCutOff)
