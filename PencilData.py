@@ -820,7 +820,7 @@ class Pencil_Data(object):
                             TT = ff.TT
                         else:
                             ff = pc.read_var(
-                                trimall=True, ivar=Int, magic=["TT"], quiet=True)
+                                trimall=True, ivar=Int, quiet=True)
                         rad = ff.x
                         phi = ff.y
                         uu = ff.uu
