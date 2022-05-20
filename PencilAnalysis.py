@@ -2110,7 +2110,6 @@ class Pencil_Analysis(object):
 
                     # init for cut_off
                     cut_off = data_frame[n]['indexTimeCutOff']
-                    time = time[:cut_off]
                     torqint = data_frame[n]['torqint']
                     torqext = data_frame[n]['torqext']
                     torqtotal = data_frame[n]['torqtotal']
@@ -3779,7 +3778,6 @@ class Pencil_Analysis(object):
                     eccentricity = data_frame[n]['eccentricity']
                     semi_major = data_frame[n]['semi_major']
                     cut_off = data_frame[n]['indexTimeCutOff']
-                    time = time[:cut_off]
                     xrq2 = data_frame[n]['xrq2']
                     yrq2 = data_frame[n]['yrq2']
 
@@ -3856,7 +3854,7 @@ class Pencil_Analysis(object):
                     Dir_beta_patches = mpatches.Patch(
                         color='white', label=r'$\beta$ :'+str(beta))
                     Dir_cutoff_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :' + str(cut_off))
+                        color='white', label=r'$t_{c}$ :' + str(time[cut_off]/(np.pi*2)))
 
 
                     plt.legend(handles=[DirMass_patches,
