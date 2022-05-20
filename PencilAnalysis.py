@@ -2191,7 +2191,7 @@ class Pencil_Analysis(object):
                     plt.title(r'Torques')
                     plt.xlabel(r'$t/T_0$')
                     plt.ylabel(r'$\Gamma$')
-                    plt.xlim([0, time[cut_off]])
+                    plt.xlim([0, time[cut_off-1]])
                     plt.subplots_adjust(bottom=0.05, top=0.95)
                     plt.savefig('Standard_Torque_' +
                                 str(data_frame[n]['DirName'])+'.png')
