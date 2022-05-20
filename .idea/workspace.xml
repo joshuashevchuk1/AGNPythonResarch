@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="max time check" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="missed conversion" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -377,7 +377,35 @@
       <option name="project" value="LOCAL" />
       <updated>1653026496427</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="max time">
+      <created>1653030251457</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1653030251457</updated>
+    </task>
+    <task id="LOCAL-00041" summary="label was wrong">
+      <created>1653030935920</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1653030935920</updated>
+    </task>
+    <task id="LOCAL-00042" summary="change to how i want to plot">
+      <created>1653031603500</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1653031603500</updated>
+    </task>
+    <task id="LOCAL-00043" summary="missed conversion">
+      <created>1653031767990</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1653031767990</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -392,10 +420,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="look at max" />
-    <MESSAGE value="fix for plotting correctly." />
-    <MESSAGE value="chanes to energy calc" />
-    <MESSAGE value="set runs for python" />
     <MESSAGE value="plot all" />
     <MESSAGE value="added quiets" />
     <MESSAGE value="added time cutOff" />
@@ -417,6 +441,10 @@
     <MESSAGE value="start to plot more" />
     <MESSAGE value="temp" />
     <MESSAGE value="max time check" />
-    <option name="LAST_COMMIT_MESSAGE" value="max time check" />
+    <MESSAGE value="max time" />
+    <MESSAGE value="label was wrong" />
+    <MESSAGE value="change to how i want to plot" />
+    <MESSAGE value="missed conversion" />
+    <option name="LAST_COMMIT_MESSAGE" value="missed conversion" />
   </component>
 </project>
