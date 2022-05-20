@@ -420,6 +420,7 @@ class Pencil_Analysis(object):
                     plt.plot(
                         np.abs(OE_Sum[:]), color='orange', label='Orbital', ls=':')
                     plt.yscale('log')
+                    plt.xlim([0,time[cut_off]])
                     plt.xlabel('time (Orbits)', fontweight='bold')
                     plt.ylabel('Joule (Code units)', fontweight='bold')
                     plt.tight_layout()
@@ -2188,6 +2189,7 @@ class Pencil_Analysis(object):
                     plt.title(r'Torques')
                     plt.xlabel(r'$t/T_0$')
                     plt.ylabel(r'$\Gamma$')
+                    plt.xlim([0, time[cut_off]])
                     plt.subplots_adjust(bottom=0.05, top=0.95)
                     plt.savefig('Standard_Torque_' +
                                 str(data_frame[n]['DirName'])+'.png')
