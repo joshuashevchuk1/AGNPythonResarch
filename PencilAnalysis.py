@@ -2111,7 +2111,6 @@ class Pencil_Analysis(object):
 
                     # init for cut_off
                     cut_off = data_frame[n]['indexTimeCutOff']
-                    cut_off_large = data_frame[n]['indexTimeCutOffLarge']
                     time = time[:cut_off]
                     torqint = data_frame[n]['torqint']
                     torqext = data_frame[n]['torqext']
@@ -2123,7 +2122,6 @@ class Pencil_Analysis(object):
                     ax1.plot(time, torqint[:len(time)], '--', label='Inner')
                     ax1.plot(time, torqext[:len(time)], '--', label='Outer')
                     ax1.plot(time, torqtotal[:len(time)], label='Total')
-                    ax1.plot(time[cut_off_large],':',label=r'$\varepsilon$',color='black')
                     ax1.set_aspect('auto')
                     plt.xlim([0, time.max()])
                     plt.tight_layout()
