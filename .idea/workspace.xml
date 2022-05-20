@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="missed conversion" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="include cutoff for orbital and torque again">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -405,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653031767990</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="include cutoff for orbital and torque again">
+      <created>1653032643813</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1653032643813</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -420,7 +430,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="plot all" />
     <MESSAGE value="added quiets" />
     <MESSAGE value="added time cutOff" />
     <MESSAGE value="print issues" />
@@ -445,6 +454,7 @@
     <MESSAGE value="label was wrong" />
     <MESSAGE value="change to how i want to plot" />
     <MESSAGE value="missed conversion" />
-    <option name="LAST_COMMIT_MESSAGE" value="missed conversion" />
+    <MESSAGE value="include cutoff for orbital and torque again" />
+    <option name="LAST_COMMIT_MESSAGE" value="include cutoff for orbital and torque again" />
   </component>
 </project>
