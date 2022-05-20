@@ -1745,7 +1745,7 @@ class Pencil_Analysis(object):
                         plt.ylabel('Temperature')
                         plt.tight_layout()
                         plt.grid(True)
-                        plt.xlim([0, time[len(time)-1]])
+                        plt.xlim([0, time.max()])
 
 
                         DirEcc = (round(eccentricity[0], 1))
@@ -2122,7 +2122,7 @@ class Pencil_Analysis(object):
                     ax1.plot(time, torqext[:len(time)], '--', label='Outer')
                     ax1.plot(time, torqtotal[:len(time)], label='Total')
                     ax1.set_aspect('auto')
-                    plt.xlim([0, data_frame[n]['tmax']])
+                    plt.xlim([0, time.max()])
                     plt.tight_layout()
                     plt.grid(True)
 
