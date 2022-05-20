@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="include cutoff for orbital and torque again">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="missed cutoff time" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -415,7 +412,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653032643813</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="don't calculate TTm right now.">
+      <created>1653032723148</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1653032723148</updated>
+    </task>
+    <task id="LOCAL-00046" summary="missed cutoff time">
+      <created>1653032992661</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1653032992661</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -430,8 +441,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added quiets" />
-    <MESSAGE value="added time cutOff" />
     <MESSAGE value="print issues" />
     <MESSAGE value="check for ecc_int" />
     <MESSAGE value="turn everything off for testing" />
@@ -455,6 +464,8 @@
     <MESSAGE value="change to how i want to plot" />
     <MESSAGE value="missed conversion" />
     <MESSAGE value="include cutoff for orbital and torque again" />
-    <option name="LAST_COMMIT_MESSAGE" value="include cutoff for orbital and torque again" />
+    <MESSAGE value="don't calculate TTm right now." />
+    <MESSAGE value="missed cutoff time" />
+    <option name="LAST_COMMIT_MESSAGE" value="missed cutoff time" />
   </component>
 </project>

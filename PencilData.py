@@ -451,6 +451,7 @@ class Pencil_Data(object):
             long_perihelion = long_perihelion * (np.pi / 180)
 
             indexTimeCutOff = 0;
+            indexTimeCutOffLarge = 0;
 
             for i in range(len(ecc)):
                 if ecc_int != 0:
@@ -458,7 +459,14 @@ class Pencil_Data(object):
                         indexTimeCutOff = i
                         break
 
+            for i in range(len(ecc)):
+                if ecc_int != 0:
+                    if ecc[i] <= 0.1:
+                        indexTimeCutOffLarge = i
+                        break
+
             timeCutOff = time[indexTimeCutOff]/(np.pi*2)
+            timeCutOffLarge = time[indexTimeCutOffLarge]/(np.pi*2)
 
             print('indexTimeCutOff',indexTimeCutOff)
             print('timeCutOff: ', timeCutOff)
@@ -1479,7 +1487,7 @@ class Pencil_Data(object):
                 'torqtotal': torqtotal, 'tmax': tmax, 'xrq2': xrq2, 'yrq2': yrq2, 'MaxOrbits': MaxOrbits,
                 'tempdata': tempdata, 'Calc_Temp': self.Calc_Temp, 'step': step,
                 'x2d': x2d, 'y2d': y2d, 'Calc_Density': self.Calc_Density, 'densitydata': densitydata,
-                'timeCutOff': timeCutOff,'indexTimeCutOff':indexTimeCutOff
+                'timeCutOff': timeCutOff,'indexTimeCutOff':indexTimeCutOff, 'indexTimeCutOffLarge':indexTimeCutOffLarge,'timeCutOffLarge':timeCutOffLarge
             }
 
             os.chdir('..')
