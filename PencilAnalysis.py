@@ -1708,7 +1708,7 @@ class Pencil_Analysis(object):
 
                         time = data_frame[n]['t']
                         cut_off = data_frame[n]['indexTimeCutOff']
-                        time = time[:cut_off]
+                        #time = time[:cut_off]
 
                         GlobalTemp_Mean = data_frame[n]['GlobalTemp_Mean']
                         TTm = data_frame[n]['TTm']
