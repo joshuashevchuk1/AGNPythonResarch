@@ -2170,7 +2170,7 @@ class Pencil_Analysis(object):
                     Dir_beta_patches = mpatches.Patch(
                         color='white', label=r'$\beta$ :'+str(beta))
                     Dir_cutoff_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(cut_off))
+                        color='white', label=r'$t_{c}$ :'+str(time[cut_off]))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
