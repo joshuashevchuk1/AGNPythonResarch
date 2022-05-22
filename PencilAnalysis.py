@@ -1701,7 +1701,7 @@ class Pencil_Analysis(object):
 
                         time = data_frame[n]['t']
                         cut_off = data_frame[n]['indexTimeCutOff']
-                        #time = time[:cut_off]
+                        time = time[:cut_off]
 
                         GlobalTemp_Mean = data_frame[n]['GlobalTemp_Mean']
                         TTm = data_frame[n]['TTm']
@@ -1727,12 +1727,14 @@ class Pencil_Analysis(object):
                         alpha = data_frame[n]['alpha']
                         beta = data_frame[n]['beta']
 
+                        deltaTemp = GlobalTemp_Mean[:]-GlobalTemp_Mean[0]
+
                         # DEBUG
                         print(GlobalTemp_Mean)
                         print(TTm)
 
                         plt.plot(
-                            time, (GlobalTemp_Mean[:]-GlobalTemp_Mean[0]), color='purple', ls=':')
+                            time, deltaTemp[:len(time)], color='purple', ls=':')
                         plt.title('Mean disk temperature vs time')
                         plt.xlabel(r'$t/T_0$')
                         plt.ylabel('Temperature')
