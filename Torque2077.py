@@ -9,6 +9,23 @@ def initData():
     t = ts.t / 2 * math.pi
     N = 850
 
+    par = pc.read_param()
+    h = par.cs0
+    if (par.iprimary == 1):
+        q = par.pmass[1]
+    else:
+        q = par.pmass[0]
+
+    par1 = par.pmass[1]
+    par2 = par.pmass[0]
+    gamma = par.gamma
+    Gamma0 = (q / h) ** 2
+    alpha = par.density_power_law
+    beta = par.temperature_power_law
+    Sigma = par.rho0
+    Mstar = par.pmass[0]
+    cs = par.cs0  # sound speed
+
     kernel = np.ones((N,)) / N
     time = np.convolve(t, kernel, mode='valid')
     torqint = np.convolve(ts.torqint_2, kernel, mode='valid')
@@ -39,7 +56,8 @@ def initData():
 
     timeCutOff = time[indexTimeCutOff] / (np.pi * 2)
 
-    vars_dict = {'ts':ts,'time':time,'torqint':torqint,'torqext':torqext,'torqtotal':torqtotal,'timeCutOff':timeCutOff}
+    vars_dict = {'ts':ts,'time':time,'torqint':torqint,'torqext':torqext,'torqtotal':torqtotal,'timeCutOff':timeCutOff
+                 'Gamma0':Gamma0,'Omega':Omega,'Sigma':Sigma,'cs':cs}
     return vars_dict
 
 def plotData():
