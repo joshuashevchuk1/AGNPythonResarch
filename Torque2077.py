@@ -62,14 +62,14 @@ def initData():
 
 def plotData():
     data_frame = initData()
-    time = data_frame[n]['time']
+    time = data_frame['time']
 
     # init for cut_off
-    cut_off = data_frame[n]['indexTimeCutOff']
+    cut_off = data_frame['indexTimeCutOff']
     time = time[:cut_off]
-    torqint = data_frame[n]['torqint']
-    torqext = data_frame[n]['torqext']
-    torqtotal = data_frame[n]['torqtotal']
+    torqint = data_frame['torqint']
+    torqext = data_frame['torqext']
+    torqtotal = data_frame['torqtotal']
     #
 
     fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
@@ -88,16 +88,16 @@ def plotData():
 
     # use this information when adding important parameters to the run
 
-    eccentricity = data_frame[n]['eccentricity']
-    sound_speed = data_frame[n]['cs']
-    initial_pressure = data_frame[n]['initial_pressure']
-    Sigma = data_frame[n]['Sigma']
-    rsmooth = data_frame[n]['rsmooth']
-    gamma = data_frame[n]['gamma']
-    alpha = data_frame[n]['alpha']
-    beta = data_frame[n]['beta']
+    eccentricity = data_frame['eccentricity']
+    sound_speed = data_frame['cs']
+    initial_pressure = data_frame['initial_pressure']
+    Sigma = data_frame['Sigma']
+    rsmooth = data_frame['rsmooth']
+    gamma = data_frame['gamma']
+    alpha = data_frame['alpha']
+    beta = data_frame['beta']
 
-    DirMass = data_frame[n]['par1']
+    DirMass = data_frame['par1']
     DirEcc = (round(eccentricity[0], 1))
 
     DirMass_patches = mpatches.Patch(
