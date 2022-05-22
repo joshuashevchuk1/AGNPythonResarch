@@ -1766,7 +1766,7 @@ class Pencil_Analysis(object):
                         Dir_beta_patches = mpatches.Patch(
                             color='white', label=r'$\beta$ :'+str(beta))
                         Dir_TTm_patches = mpatches.Patch(
-                            color='white', label=r'$t_{m}$ :'+str(deltaTemp[:len(time)].max()))
+                            color='white', label=r'$t_{m}$ :'+str(np.round(deltaTemp[:len(time)].max())))
                         Dir_cutoff_patches = mpatches.Patch(
                             color='white', label=r'$t_{c}$ :' + str(time[cut_off - 1]))
 
