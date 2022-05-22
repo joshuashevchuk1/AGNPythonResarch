@@ -1740,7 +1740,7 @@ class Pencil_Analysis(object):
                         print(TTm)
 
                         plt.plot(
-                            time/(np.pi*2), (GlobalTemp_Mean[:len(time)]-GlobalTemp_Mean[0]), color='purple', ls=':')
+                            time, (GlobalTemp_Mean[:]-GlobalTemp_Mean[0]), color='purple', ls=':')
                         plt.title('Mean disk temperature vs time')
                         plt.xlabel(r'$t/T_0$')
                         plt.ylabel('Temperature')
