@@ -113,8 +113,7 @@ def plotData():
     plt.ylabel(r'$\Gamma$')
     plt.xlim([0, time[cut_off - 1]])
     plt.subplots_adjust(bottom=0.05, top=0.95)
-    plt.savefig('Standard_Torque_' +
-                str(data_frame[n]['DirName']) + '.png')
+    plt.savefig('Standard_Torque_' + '2077' + '.png')
     plt.close(fig)
 
 plotData()
