@@ -56,7 +56,7 @@ def initData():
 
     timeCutOff = time[indexTimeCutOff] / (np.pi * 2)
 
-    vars_dict = {'ts':ts,'time':time,'torqint':torqint,'torqext':torqext,'torqtotal':torqtotal,'timeCutOff':timeCutOff
+    vars_dict = {'ts':ts,'time':time,'torqint':torqint,'torqext':torqext,'torqtotal':torqtotal,'timeCutOff':timeCutOff,
                  'Gamma0':Gamma0,'Omega':Omega,'Sigma':Sigma,'cs':cs}
     return vars_dict
 
