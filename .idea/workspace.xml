@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="another conversion error">
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="routine checkup">
+      <change afterPath="$PROJECT_DIR$/Torque2077.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,20 +106,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00004" summary="issue with PencilPlotDeltaT">
-      <created>1649480845727</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1649480845727</updated>
-    </task>
-    <task id="LOCAL-00005" summary="issue with PencilPlotDeltaT">
-      <created>1649480938602</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1649480938602</updated>
     </task>
     <task id="LOCAL-00006" summary="mean">
       <created>1649483277342</created>
@@ -449,7 +436,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653036349878</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="routine checkup">
+      <created>1653180123023</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1653180123023</updated>
+    </task>
+    <task id="LOCAL-00054" summary="routine checkup">
+      <created>1653180183697</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1653180183697</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,7 +465,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="index time cutoff" />
     <MESSAGE value="only use index for cutoff." />
     <MESSAGE value="no calc right now" />
     <MESSAGE value="change to np.pi" />
@@ -489,6 +489,7 @@
     <MESSAGE value="torque problem" />
     <MESSAGE value="remove large cut off" />
     <MESSAGE value="another conversion error" />
-    <option name="LAST_COMMIT_MESSAGE" value="another conversion error" />
+    <MESSAGE value="routine checkup" />
+    <option name="LAST_COMMIT_MESSAGE" value="routine checkup" />
   </component>
 </project>
