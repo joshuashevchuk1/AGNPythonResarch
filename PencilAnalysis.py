@@ -330,11 +330,8 @@ class Pencil_Analysis(object):
                     aspect_ratio = data_frame[n]['aspect_ratio']
                     initial_pressure = data_frame[n]['initial_pressure']
                     Sigma = data_frame[n]['Sigma']
-                    EntropyIndex = data_frame[n]['EntropyIndex']
-                    SpecificHeat = data_frame[n]['SpecificHeat']
                     rsmooth = data_frame[n]['rsmooth']
                     gamma = data_frame[n]['gamma']
-                    Gamma0 = data_frame[n]['Gamma0']
                     alpha = data_frame[n]['alpha']
                     beta = data_frame[n]['beta']
 
@@ -347,13 +344,10 @@ class Pencil_Analysis(object):
                         color='white', label=r'$\varepsilon$ :'+str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
                         color='white', label='sound speed :'+str(sound_speed))
-                    Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
                         color='white', label='inital pressure :'+str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
                         color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex  		 = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
                         color='white', label='potential smoothing :'+str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
@@ -370,7 +364,6 @@ class Pencil_Analysis(object):
                         color='purple', label='Internal')
                     OE_Sum_Label = mpatches.Patch(
                         color='orange', label='Orbital')
-                    Total_Label = mpatches.Patch(color='blue', label='Total')
                     fit_Label = mpatches.Patch(color='black', label='fit')
                     KE_rate_Label = mpatches.Patch(
                         color='white', label='Pencil derivative :'+str(KE_rate))
@@ -420,7 +413,6 @@ class Pencil_Analysis(object):
                     plt.plot(
                         np.abs(OE_Sum[:]), color='orange', label='Orbital', ls=':')
                     plt.yscale('log')
-                    plt.xlim([0,time[cut_off]])
                     plt.xlabel('time (Orbits)', fontweight='bold')
                     plt.ylabel('Joule (Code units)', fontweight='bold')
                     plt.tight_layout()
