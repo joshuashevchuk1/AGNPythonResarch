@@ -1753,13 +1753,10 @@ class Pencil_Analysis(object):
                             color='white', label=r'$\varepsilon$ :'+str(DirEcc))
                         Dirsound_speed_patches = mpatches.Patch(
                             color='white', label='sound speed :'+str(sound_speed))
-                        Diraspect_ratio_patches = mpatches.Patch(
-                            color='white', label='aspect_ratio :'+str(aspect_ratio))
                         Dirinitial_pressure_patches = mpatches.Patch(
                             color='white', label='inital pressure :'+str(initial_pressure))
                         DirSigma_patches = mpatches.Patch(
                             color='white', label=r'$\Sigma$ :'+str(Sigma))
-                        #DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                         Dir_rsmooth_patches = mpatches.Patch(
                             color='white', label='potential smoothing :'+str(rsmooth))
                         Dir_gamma_patches = mpatches.Patch(
