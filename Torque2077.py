@@ -7,6 +7,9 @@ def initData():
     # get only torque data and eccentricity data
     ts = pc.read_ts()
     t = ts.t / 2 * math.pi
+    N = 850
+
+    kernel = np.ones((N,)) / N
     time = np.convolve(t, kernel, mode='valid')
     torqint = np.convolve(ts.torqint_2, kernel, mode='valid')
     torqext = np.convolve(ts.torqext_2, kernel, mode='valid')
