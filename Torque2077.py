@@ -15,7 +15,12 @@ def initData():
     torqext = np.convolve(ts.torqext_2, kernel, mode='valid')
     torqtotal = torqext[:] + torqint[:]
 
-    indexTimeCutOff = 0;
+    indexTimeCutOff = 0
+
+    radius = ts.xq2
+    Omega = ts.yq2
+    LinearVelocity = ts.vxq2
+    AngularVelocity = ts.vyq2
 
     v2 = LinearVelocity ** 2 + AngularVelocity ** 2
     semi_major = 1. / (2 / radius - v2)
