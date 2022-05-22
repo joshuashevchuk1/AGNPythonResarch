@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="routine checkup">
-      <change afterPath="$PROJECT_DIR$/Torque2077.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="only TTm rn">
+      <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,83 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00006" summary="mean">
-      <created>1649483277342</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1649483277342</updated>
-    </task>
-    <task id="LOCAL-00007" summary="mean">
-      <created>1649496581568</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1649496581568</updated>
-    </task>
-    <task id="LOCAL-00008" summary="mean">
-      <created>1649655684767</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1649655684767</updated>
-    </task>
-    <task id="LOCAL-00009" summary="look at max">
-      <created>1649658841796</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1649658841796</updated>
-    </task>
-    <task id="LOCAL-00010" summary="look at max">
-      <created>1649658890322</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1649658890322</updated>
-    </task>
-    <task id="LOCAL-00011" summary="look at max">
-      <created>1649742265653</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1649742265653</updated>
-    </task>
-    <task id="LOCAL-00012" summary="look at max">
-      <created>1650950440056</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1650950440056</updated>
-    </task>
-    <task id="LOCAL-00013" summary="look at max">
-      <created>1650950860833</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1650950860833</updated>
-    </task>
-    <task id="LOCAL-00014" summary="fix for plotting correctly.">
-      <created>1651024676147</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1651024676147</updated>
-    </task>
-    <task id="LOCAL-00015" summary="fix for plotting correctly.">
-      <created>1651024907037</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1651024907037</updated>
-    </task>
-    <task id="LOCAL-00016" summary="chanes to energy calc">
-      <created>1652417232019</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1652417232020</updated>
     </task>
     <task id="LOCAL-00017" summary="set runs for python">
       <created>1652418127348</created>
@@ -450,7 +372,84 @@
       <option name="project" value="LOCAL" />
       <updated>1653180183697</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Torque2077.py">
+      <created>1653212246358</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1653212246359</updated>
+    </task>
+    <task id="LOCAL-00056" summary="standarad torque fix">
+      <created>1653212285034</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1653212285034</updated>
+    </task>
+    <task id="LOCAL-00057" summary="kernal">
+      <created>1653212395991</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1653212395992</updated>
+    </task>
+    <task id="LOCAL-00058" summary="missing params">
+      <created>1653212461930</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1653212461930</updated>
+    </task>
+    <task id="LOCAL-00059" summary="missing params">
+      <created>1653212671417</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1653212671417</updated>
+    </task>
+    <task id="LOCAL-00060" summary="missing params">
+      <created>1653212706849</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1653212706849</updated>
+    </task>
+    <task id="LOCAL-00061" summary="missing params">
+      <created>1653212819308</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1653212819308</updated>
+    </task>
+    <task id="LOCAL-00062" summary="missing params">
+      <created>1653212913176</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1653212913176</updated>
+    </task>
+    <task id="LOCAL-00063" summary="calc energy problems">
+      <created>1653213048711</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1653213048711</updated>
+    </task>
+    <task id="LOCAL-00064" summary="plot accordingly">
+      <created>1653213503089</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1653213503089</updated>
+    </task>
+    <task id="LOCAL-00065" summary="only TTm rn">
+      <created>1653213542848</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1653213542848</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -465,13 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="only use index for cutoff." />
-    <MESSAGE value="no calc right now" />
-    <MESSAGE value="change to np.pi" />
-    <MESSAGE value="removed commented out code" />
-    <MESSAGE value="added cut off for Torques" />
-    <MESSAGE value="added cutoff patches for Torque" />
-    <MESSAGE value="added cutoff patches for TTm" />
     <MESSAGE value="fix to kinetic energy in polar coordinates" />
     <MESSAGE value="start to plot more" />
     <MESSAGE value="temp" />
@@ -490,6 +482,13 @@
     <MESSAGE value="remove large cut off" />
     <MESSAGE value="another conversion error" />
     <MESSAGE value="routine checkup" />
-    <option name="LAST_COMMIT_MESSAGE" value="routine checkup" />
+    <MESSAGE value="Torque2077.py" />
+    <MESSAGE value="standarad torque fix" />
+    <MESSAGE value="kernal" />
+    <MESSAGE value="missing params" />
+    <MESSAGE value="calc energy problems" />
+    <MESSAGE value="plot accordingly" />
+    <MESSAGE value="only TTm rn" />
+    <option name="LAST_COMMIT_MESSAGE" value="only TTm rn" />
   </component>
 </project>
