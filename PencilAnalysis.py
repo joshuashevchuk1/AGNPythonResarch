@@ -2812,6 +2812,7 @@ class Pencil_Analysis(object):
                     avgrho_fv = data_frame[n]['avgrho_fv']
                     avgtemp_fv = data_frame[n]['avgtemp_fv']
                     avgshock_fv = data_frame[n]['avgshock_fv']
+                    Standard_Orbit = data_frame[n]['Standard_Orbit']
 
                     ncolors = 256
 
@@ -2890,7 +2891,7 @@ class Pencil_Analysis(object):
                     plt.suptitle('t='+str(data_frame[n]['ivar']))
                     plt.subplots_adjust(bottom=0.05, top=0.95)
                     plt.savefig('Standard_Contour_Density_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '_' + str(Standard_Orbit)+'.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -2978,7 +2979,7 @@ class Pencil_Analysis(object):
                         plt.suptitle('t='+str(data_frame[n]['ivar']))
                         plt.subplots_adjust(bottom=0.05, top=0.95)
                         plt.savefig('Standard_Contour_Temp_' +
-                                    str(data_frame[n]['DirName'])+'.png')
+                                    str(data_frame[n]['DirName'])  + '_' + str(Standard_Orbit) +'.png')
                         # too many figs may be open.
                         # close plots once done
                         plt.close(fig)
@@ -3065,7 +3066,7 @@ class Pencil_Analysis(object):
                     plt.suptitle('t='+str(data_frame[n]['ivar']))
                     plt.subplots_adjust(bottom=0.05, top=0.95)
                     plt.savefig('Standard_Contour_Shock_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName'])  + '_' + str(Standard_Orbit) +'.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
