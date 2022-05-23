@@ -1,7 +1,7 @@
 import numpy
 import os
 import sys
-import PencilData as PD
+import PencilContoursData as PD
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import traceback
@@ -67,6 +67,7 @@ class Pencil_Analysis(object):
                 var_dir_list = self.var_dir_list
                 Orbit = self.Orbit
                 Calc_Temp = self.Calc_Temp
+                Calc_Density = self.Calc_Density
 
                 var_dir_list = []
                 dir_run_list = next(os.walk('.'))[1]
