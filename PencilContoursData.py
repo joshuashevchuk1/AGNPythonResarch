@@ -21,16 +21,14 @@ class Pencil_Data(object):
     def grepDATA(self,
                  Directory_Path,
                  Orbit=None,
-                 MaxOrbits=10,
                  Calc_Temp=False,
                  Calc_Density=False,
-                 step=None,
-                 Orbit_standard=None,
-                 Calc_Energy=False,
-                 Calc_OEnergy=False,
-                 Calc_Dynamics=False,
-                 Calc_Rates_Energy=False,
-                 Calc_ToomreQ=False):
+                ):
+
+        self.Directory_Path = Directory_Path
+        self.Orbit = Orbit
+        self.Calc_Temp = Calc_Temp
+        self.Calc_Density = Calc_Density
 
         try:
             vars_dict = {}

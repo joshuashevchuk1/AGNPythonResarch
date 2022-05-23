@@ -72,3 +72,17 @@ PA = PA.Pencil_Analysis(PD.Pencil_Data(),
                         Calc_ToomreQ=False)
 
 var_dir_list = PA.Make_Vars()
+
+i = 0
+di = 1
+
+varmaxtimes = []
+
+while i <= len(var_dir_list)-1:
+    try:
+        varmaxtimes.append(max(var_dir_list[i]['t']))
+    except:
+        print('no time series')
+    i = i+di
+
+print(varmaxtimes)
