@@ -25,6 +25,17 @@ class Pencil_Analysis(object):
                  Calc_Temp=False,
                  Calc_Density=False):
 
+        self.Dir_beta_patches = None
+        self.Dir_alpha_patches = None
+        self.Dir_gamma_patches = None
+        self.Dir_rsmooth_patches = None
+        self.DirSigma_patches = None
+        self.Dirinitial_pressure_patches = None
+        self.Diraspect_ratio_patches = None
+        self.Dirsound_speed_patches = None
+        self.DirEcc_patches = None
+        self.DirMass_patches = None
+        self.DirName = None
         self.DirEcc = None
         self.DirMass = None
         self.beta = None
@@ -123,6 +134,8 @@ class Pencil_Analysis(object):
             logging.info('========================')
 
     def initDirVars(self, data_frame , n):
+
+        self.DirName = data_frame[n]['DirName']
         self.rad_grid = data_frame[n]['rad_grid']
         self.x2d = data_frame[n]['x2d']
         self.y2d = data_frame[n]['y2d']
@@ -151,6 +164,27 @@ class Pencil_Analysis(object):
         self.DirMass = data_frame[n]['par1']
         self.DirEcc = (round(eccentricity[0], 1))
 
+        self.DirMass_patches = mpatches.Patch(
+            color='white', label='q :' + str(self.DirMass))
+        self.DirEcc_patches = mpatches.Patch(
+            color='white', label=r'$\varepsilon$ :' + str(self.DirEcc))
+        self.Dirsound_speed_patches = mpatches.Patch(
+            color='white', label='sound speed :' + str(self.sound_speed))
+        self.Diraspect_ratio_patches = mpatches.Patch(
+            color='white', label='aspect_ratio :' + str(self.aspect_ratio))
+        self.Dirinitial_pressure_patches = mpatches.Patch(
+            color='white', label='inital pressure :' + str(self.initial_pressure))
+        self.DirSigma_patches = mpatches.Patch(
+            color='white', label=r'$\Sigma$ :' + str(self.Sigma))
+        self.Dir_rsmooth_patches = mpatches.Patch(
+            color='white', label='potential smoothing :' + str(self.rsmooth))
+        self.Dir_gamma_patches = mpatches.Patch(
+            color='white', label=r'$\gamma$ :' + str(self.gamma))
+        self.Dir_alpha_patches = mpatches.Patch(
+            color='white', label=r'$\alpha$ :' + str(self.alpha))
+        self.Dir_beta_patches = mpatches.Patch(
+            color='white', label=r'$\beta$ :' + str(self.beta))
+
     def pingContour(self, data_frame):
         try:
             n = 0
@@ -172,6 +206,28 @@ class Pencil_Analysis(object):
 
     def pingContourDensity(self):
         try:
+            fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
+            fig.subplots_adjust(bottom=0.07, top=0.95)
+            PL2 = ax1.contourf(x2d, y2d, rho_fv, ncolors)
+            ax1.set_aspect('equal')
+            plt.legend(handles=[DirMass_patches,
+                                DirEcc_patches,
+                                Dirsound_speed_patches,
+                                Dirinitial_pressure_patches,
+                                DirSigma_patches,
+                                Dir_rsmooth_patches,
+                                Dir_gamma_patches,
+                                Dir_alpha_patches,
+                                Dir_beta_patches], loc=2)
+            cax = plt.axes([0.85, 0.1, 0.075, 0.8])
+            cax.set_aspect(20)
+            cax.set_ylabel('Density in code units', fontsize=10)
+            plt.colorbar(PL2, cax=cax)
+            plt.suptitle('t=' + str(data_frame[n]['ivar']))
+            plt.subplots_adjust(bottom=0.05, top=0.95)
+            plt.savefig('Standard_Contour_Density_' +
+                        self.DirName + '_' + str(Standard_Orbit) + '.png')
+            plt.close(fig)
             self.returnToRoot()
         except:
             print('================')
@@ -182,6 +238,28 @@ class Pencil_Analysis(object):
 
     def pingContourTemp(self):
         try:
+            fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
+            fig.subplots_adjust(bottom=0.07, top=0.95)
+            PL2 = ax1.contourf(x2d, y2d, temp_fv, ncolors)
+            ax1.set_aspect('equal')
+            plt.legend(handles=[DirMass_patches,
+                                DirEcc_patches,
+                                Dirsound_speed_patches,
+                                Dirinitial_pressure_patches,
+                                DirSigma_patches,
+                                Dir_rsmooth_patches,
+                                Dir_gamma_patches,
+                                Dir_alpha_patches,
+                                Dir_beta_patches], loc=2)
+            cax = plt.axes([0.85, 0.1, 0.075, 0.8])
+            cax.set_aspect(20)
+            cax.set_ylabel('Density in code units', fontsize=10)
+            plt.colorbar(PL2, cax=cax)
+            plt.suptitle('t=' + str(data_frame[n]['ivar']))
+            plt.subplots_adjust(bottom=0.05, top=0.95)
+            plt.savefig('Standard_Contour_Density_' +
+                        self.DirName + '_' + str(Standard_Orbit) + '.png')
+            plt.close(fig)
             self.returnToRoot()
         except:
             print('================')
