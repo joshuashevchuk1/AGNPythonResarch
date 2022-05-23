@@ -128,7 +128,7 @@ class Pencil_Data(object):
         sma = semi_major
 
         try:
-            if Calc_Temp == True:
+            if self.Calc_Temp:
                 ff = pc.read_var(trimall=True, ivar=0, magic=['TT'], quiet=True)
                 rad = ff.x
                 theta = ff.y
