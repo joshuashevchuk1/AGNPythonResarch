@@ -16,6 +16,7 @@ global t
 class Pencil_Data(object):
 
     def __init__(self):
+        self.t = None
         print('================')
         print('initalize vars')
         print('================')
@@ -38,7 +39,7 @@ class Pencil_Data(object):
 
         try:
             self.initVars()
-            vars_dict = {'t':t}
+            vars_dict = {'t':self.t}
             os.chdir('..')
             return vars_dict
         except:
@@ -54,3 +55,5 @@ class Pencil_Data(object):
     def initVars(self):
         ts = pc.read_ts()
         t = ts.t / 2 * math.pi
+
+        self.t = t
