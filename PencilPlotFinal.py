@@ -14,7 +14,7 @@ def plots():
     while (ivar <= maxOrbits):
         plotRuns(dir_run_list,ivar,root) # run correct python file and save plots locally
         moveImages(dir_run_list,ivar,root) # copy over images into PencilAnalysis
-        ivar = ivar + 50
+        ivar = ivar + 5
     os.chdir(root)    
 
 def plotRuns(dir_run_list,ivar,root):
