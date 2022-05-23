@@ -30,8 +30,15 @@ class Pencil_Data(object):
         self.Calc_Temp = Calc_Temp
         self.Calc_Density = Calc_Density
 
+        print(os.getcwd())
+        os.chdir(self.Directory_Path)
+        print(os.getcwd())
+
         try:
-            vars_dict = {}
+            ts = pc.read_ts()
+            t = ts.t / 2 * math.pi
+
+            vars_dict = {'t':t}
             os.chdir('..')
             return vars_dict
         except:
