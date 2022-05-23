@@ -25,6 +25,7 @@ class Pencil_Analysis(object):
                  Calc_Temp=False,
                  Calc_Density=False):
 
+        self.ivar = None
         self.Dir_beta_patches = None
         self.Dir_alpha_patches = None
         self.Dir_gamma_patches = None
@@ -163,6 +164,7 @@ class Pencil_Analysis(object):
         self.beta = data_frame[n]['beta']
         self.DirMass = data_frame[n]['par1']
         self.DirEcc = (round(eccentricity[0], 1))
+        self.ivar = data_frame[n]['ivar']
 
         self.DirMass_patches = mpatches.Patch(
             color='white', label='q :' + str(self.DirMass))
@@ -223,7 +225,7 @@ class Pencil_Analysis(object):
             cax.set_aspect(20)
             cax.set_ylabel('Density in code units', fontsize=10)
             plt.colorbar(PL2, cax=cax)
-            plt.suptitle('t=' + str(data_frame[n]['ivar']))
+            plt.suptitle('t=' + str(self.ivar))
             plt.subplots_adjust(bottom=0.05, top=0.95)
             plt.savefig('Standard_Contour_Density_' +
                         self.DirName + '_' + str(Standard_Orbit) + '.png')
@@ -255,7 +257,7 @@ class Pencil_Analysis(object):
             cax.set_aspect(20)
             cax.set_ylabel('Density in code units', fontsize=10)
             plt.colorbar(PL2, cax=cax)
-            plt.suptitle('t=' + str(data_frame[n]['ivar']))
+            plt.suptitle('t=' + str(self.ivar))
             plt.subplots_adjust(bottom=0.05, top=0.95)
             plt.savefig('Standard_Contour_Density_' +
                         self.DirName + '_' + str(Standard_Orbit) + '.png')
