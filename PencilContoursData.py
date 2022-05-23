@@ -127,6 +127,8 @@ class Pencil_Data(object):
         ecc_int = par.eccentricity
         sma = semi_major
 
+        gravC = par.g0
+
         try:
             if self.Calc_Temp:
                 ff = pc.read_var(trimall=True, ivar=0, magic=['TT'], quiet=True)
