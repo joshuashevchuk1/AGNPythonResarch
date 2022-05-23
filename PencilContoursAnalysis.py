@@ -122,7 +122,7 @@ class Pencil_Analysis(object):
             logging.info(n)
             logging.info('========================')
 
-    def initDirVars(self, data_frame):
+    def initDirVars(self, data_frame , n):
         self.rad_grid = data_frame[n]['rad_grid']
         self.x2d = data_frame[n]['x2d']
         self.y2d = data_frame[n]['y2d']
@@ -158,7 +158,7 @@ class Pencil_Analysis(object):
             while n <= len(data_frame) - 1:
                 print("starting data loop")
                 self.initLoopEntry(data_frame)
-                self.initDirVars(data_frame)
+                self.initDirVars(data_frame,n)
                 self.pingContourDensity()
                 self.pingContourTemp()
                 n = n + dn
