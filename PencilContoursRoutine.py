@@ -1,8 +1,7 @@
 import numpy as np
 import os
-import PencilData as PD
-import PencilAnalysis as PA
-import PencilPostAnalysis as PAP
+import PencilContoursData as PD
+import PencilContoursAnalysis as PA
 import matplotlib.pyplot as plt
 import configparser
 import logging
@@ -58,3 +57,18 @@ else:
         print('logging file failed to make')
         print('=====================================================')
         traceback.print_exc()
+
+PA = PA.Pencil_Analysis(PD.Pencil_Data(),
+                        Orbit=0,
+                        MaxOrbits=5,
+                        step=None,
+                        TempSigma=False,
+                        Calc_Energy=False,
+                        Calc_OEnergy=False,
+                        Calc_Dynamics=True,
+                        Orbit_standard=0,
+                        Calc_Rates_Energy=False,
+                        Calc_Temp=True,
+                        Calc_ToomreQ=False)
+
+var_dir_list = PA.Make_Vars()
