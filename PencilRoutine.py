@@ -79,14 +79,14 @@ else:
 
 #PA                                              =   PA.Pencil_Analysis(PD.Pencil_Data(),Orbit=None,step=10,TempSigma=True)
 PA = PA.Pencil_Analysis(PD.Pencil_Data(),
-                        Orbit=50,
+                        Orbit=0,
                         MaxOrbits=350,
                         step=None,
                         TempSigma=False,
-                        Calc_Energy=True,
+                        Calc_Energy=False,
                         Calc_OEnergy=False,
                         Calc_Dynamics=True,
-                        Orbit_standard=None,
+                        Orbit_standard=0,
                         Calc_Rates_Energy=False,
                         Calc_Temp=True,
                         Calc_ToomreQ=False)
@@ -98,13 +98,13 @@ var_dir_list = PA.Make_Vars()
 #temp_dir_list, ecc_dir_list, name_dir_list      =   PA.Make_TempVars(var_dir_list)
 #temp_distribution , temp_ecc, temp_name         =   PA.Get_TempDistribution(temp_dir_list,ecc_dir_list,name_dir_list)
 
-#PA.pingContour(var_dir_list)
+PA.pingContour(var_dir_list)
 #PA.pingContour_Dynamic(var_dir_list)
 #PA.pingContour_Midplane(var_dir_list)
 #PA.pingTorque(var_dir_list)
 #PA.pingEcc(var_dir_list)
 #PA.pingOrbital(var_dir_list)
-PA.pingTTm(var_dir_list)
+#PA.pingTTm(var_dir_list)
 #PA.pingTempBoxPlot(var_dir_list)
 #PA.pingGTM_Sigma(var_dir_list)
 #PA.pingGTM_Sigma_O(var_dir_list)
