@@ -10,12 +10,22 @@ from scipy.optimize import curve_fit
 import logging
 import re
 
-global t
-
-
 class Pencil_Data(object):
 
     def __init__(self):
+        self.rsmooth = None
+        self.Calc_Density = None
+        self.Calc_Temp = None
+        self.Directory_Path = None
+        self.Orbit = None
+        self.theta2d = None
+        self.rad2d = None
+        self.rad_grid = None
+        self.y_grid = None
+        self.x_grid = None
+        self.y2d = None
+        self.x2d = None
+        self.rho = None
         self.sma = None
         self.ecc_int = None
         self.ecc = None
@@ -60,7 +70,7 @@ class Pencil_Data(object):
         try:
             self.initVars()
             vars_dict = {'t':self.t,'N':self.N,'sma':self.sma,'ecc_int':self.ecc_int,'ecc':self.ecc,
-                         'gravC':self.gravC}
+                         'gravC':self.gravC,'x2d':self.x2d,'y2d':self.y2d}
             os.chdir('..')
             return vars_dict
         except:
@@ -79,6 +89,8 @@ class Pencil_Data(object):
         # calculated values
         # ======================================
 
+        global rho, x2d, y2d, x_grid, y_grid, rad_grid, rad2d, theta2d
+
         ts = pc.read_ts()
         t = ts.t / 2 * math.pi
 
@@ -87,7 +99,7 @@ class Pencil_Data(object):
 
         par = pc.read_param()
         h = par.cs0
-        if (par.iprimary == 1):
+        if par.iprimary == 1:
             q = par.pmass[1]
         else:
             q = par.pmass[0]
@@ -115,6 +127,36 @@ class Pencil_Data(object):
         ecc_int = par.eccentricity
         sma = semi_major
 
+        try:
+            if Calc_Temp == True:
+                ff = pc.read_var(trimall=True, ivar=0, magic=['TT'], quiet=True)
+                rad = ff.x
+                theta = ff.y
+                rad_grid = ff.x
+                rad2d, theta2d = np.meshgrid(rad, theta)
+                x2d = rad2d * np.cos(theta2d)
+                y2d = rad2d * np.sin(theta2d)
+                x_grid = ff.x
+                y_grid = ff.y
+                Init_Temp = ff.TT
+                rho = ff.rho
+            else:
+                ff = pc.read_var(trimall=True, ivar=0, quiet=True)
+                rad = ff.x
+                theta = ff.y
+                rad_grid = ff.x
+                rad2d, theta2d = np.meshgrid(rad, theta)
+                x2d = rad2d * np.cos(theta2d)
+                y2d = rad2d * np.sin(theta2d)
+                x_grid = ff.x
+                y_grid = ff.y
+                rho = ff.rho
+        except:
+            print('================')
+            print('No var data to be found')
+            print('================')
+            traceback.print_exc()
+
         # ======================================
 
         # ======================================
@@ -138,3 +180,13 @@ class Pencil_Data(object):
         self.ecc = ecc
         self.ecc_int = ecc_int
         self.sma = sma
+        self.rho = rho
+        self.x2d = x2d
+        self.y2d = y2d
+        self.x_grid = x_grid
+        self.y_grid = y_grid
+        self.rad_grid = rad_grid
+        self.rad2d = rad2d
+        self.theta2d = theta2d
+        self.rsmooth = rsmooth
+

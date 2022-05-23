@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="more plots" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="more things to add" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,62 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00038" summary="temp">
-      <created>1652951680482</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1652951680482</updated>
-    </task>
-    <task id="LOCAL-00039" summary="max time check">
-      <created>1653026496427</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1653026496427</updated>
-    </task>
-    <task id="LOCAL-00040" summary="max time">
-      <created>1653030251457</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1653030251457</updated>
-    </task>
-    <task id="LOCAL-00041" summary="label was wrong">
-      <created>1653030935920</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1653030935920</updated>
-    </task>
-    <task id="LOCAL-00042" summary="change to how i want to plot">
-      <created>1653031603500</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1653031603500</updated>
-    </task>
-    <task id="LOCAL-00043" summary="missed conversion">
-      <created>1653031767990</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1653031767990</updated>
-    </task>
-    <task id="LOCAL-00044" summary="include cutoff for orbital and torque again">
-      <created>1653032643813</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1653032643813</updated>
-    </task>
-    <task id="LOCAL-00045" summary="don't calculate TTm right now.">
-      <created>1653032723148</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1653032723148</updated>
     </task>
     <task id="LOCAL-00046" summary="missed cutoff time">
       <created>1653032992661</created>
@@ -447,7 +391,63 @@
       <option name="project" value="LOCAL" />
       <updated>1653276160475</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="more plots">
+      <created>1653276292524</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1653276292524</updated>
+    </task>
+    <task id="LOCAL-00088" summary="more plots">
+      <created>1653276409241</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1653276409241</updated>
+    </task>
+    <task id="LOCAL-00089" summary="useful analysis changes for when plotting into refactor">
+      <created>1653277547895</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1653277547895</updated>
+    </task>
+    <task id="LOCAL-00090" summary="more plotting checks and simplifications">
+      <created>1653277792765</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1653277792765</updated>
+    </task>
+    <task id="LOCAL-00091" summary="more plotting checks and simplifications">
+      <created>1653277944241</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1653277944241</updated>
+    </task>
+    <task id="LOCAL-00092" summary="missing params, bugs">
+      <created>1653278020375</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1653278020375</updated>
+    </task>
+    <task id="LOCAL-00093" summary="even more refactoring setup">
+      <created>1653278925602</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1653278925602</updated>
+    </task>
+    <task id="LOCAL-00094" summary="more things to add">
+      <created>1653279021412</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1653279021412</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,11 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="don't calculate TTm right now." />
-    <MESSAGE value="missed cutoff time" />
-    <MESSAGE value="added large index cutoff time" />
-    <MESSAGE value="added large cutoff line" />
-    <MESSAGE value="found bug in cutoffline" />
     <MESSAGE value="torque problem" />
     <MESSAGE value="remove large cut off" />
     <MESSAGE value="another conversion error" />
@@ -487,6 +482,11 @@
     <MESSAGE value="max orbits" />
     <MESSAGE value="just plot the fucking contours" />
     <MESSAGE value="more plots" />
-    <option name="LAST_COMMIT_MESSAGE" value="more plots" />
+    <MESSAGE value="useful analysis changes for when plotting into refactor" />
+    <MESSAGE value="more plotting checks and simplifications" />
+    <MESSAGE value="missing params, bugs" />
+    <MESSAGE value="even more refactoring setup" />
+    <MESSAGE value="more things to add" />
+    <option name="LAST_COMMIT_MESSAGE" value="more things to add" />
   </component>
 </project>
