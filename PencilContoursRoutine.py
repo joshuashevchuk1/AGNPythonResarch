@@ -65,6 +65,8 @@ PA = PA.Pencil_Analysis(PD.Pencil_Data(),
 
 var_dir_list = PA.Make_Vars()
 
+PA.pingContour(var_dir_list)
+
 i = 0
 di = 1
 
