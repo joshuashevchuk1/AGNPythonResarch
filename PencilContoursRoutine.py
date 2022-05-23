@@ -60,8 +60,8 @@ else:
 
 PA = PA.Pencil_Analysis(PD.Pencil_Data(),
                         Orbit=0,
-                        step=None,
-                        Calc_Temp=True)
+                        Calc_Temp=True,
+                        Calc_Density=True)
 
 var_dir_list = PA.Make_Vars()
 
