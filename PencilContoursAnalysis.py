@@ -13,6 +13,7 @@ import scipy.interpolate
 import CheckArrayTest as chk
 import pandas as pd
 
+
 class Pencil_Analysis(object):
 
     def __init__(self,
@@ -24,6 +25,18 @@ class Pencil_Analysis(object):
                  Calc_Temp=False,
                  Calc_Density=False):
 
+        self.DirEcc = None
+        self.DirMass = None
+        self.beta = None
+        self.alpha = None
+        self.gamma = None
+        self.rsmooth = None
+        self.Sigma = None
+        self.initial_pressure = None
+        self.aspect_ratio = None
+        self.sound_speed = None
+        self.eccentricity = None
+        self.ncolors = None
         self.Standard_Orbit = None
         self.avgshock_fv = None
         self.avgtemp_fv = None
@@ -37,8 +50,7 @@ class Pencil_Analysis(object):
         self.y2d = None
         self.x2d = None
         self.rad_grid = None
-        
-        
+
         self.Orbit = Orbit
         self.data_functions = data_functions
         self.dir_run_list = dir_run_list
@@ -53,36 +65,37 @@ class Pencil_Analysis(object):
         logging.info('constructor intializied')
 
     def returnToRoot(self):
+        print('returning to root')
         os.chdir('..')
 
     def Make_Vars(self):
-                print('================')
-                print('Making Vars')
-                print('================')
+        print('================')
+        print('Making Vars')
+        print('================')
 
-                data_functions = self.data_functions
-                Orbit = self.Orbit
-                Calc_Temp = self.Calc_Temp
-                Calc_Density = self.Calc_Density
+        data_functions = self.data_functions
+        Orbit = self.Orbit
+        Calc_Temp = self.Calc_Temp
+        Calc_Density = self.Calc_Density
 
-                var_dir_list = []
-                dir_run_list = next(os.walk('.'))[1]
+        var_dir_list = []
+        dir_run_list = next(os.walk('.'))[1]
 
-                i = 0
-                di = 1
+        i = 0
+        di = 1
 
-                while i <= len(dir_run_list) - 1:
-                    var_dir_list.append(
-                        data_functions.grepDATA(
-                            dir_run_list[i],
-                            Orbit,
-                            Calc_Temp=Calc_Temp,
-                            Calc_Density=Calc_Density)
-                    )
-                    i = i + di
-                return var_dir_list
+        while i <= len(dir_run_list) - 1:
+            var_dir_list.append(
+                data_functions.grepDATA(
+                    dir_run_list[i],
+                    Orbit,
+                    Calc_Temp=Calc_Temp,
+                    Calc_Density=Calc_Density)
+            )
+            i = i + di
+        return var_dir_list
 
-    def initLoopEntry(self,data_frame):
+    def initLoopEntry(self, data_frame):
         try:
             os.system('mkdir Pencil_Analysis')
             os.chdir('Pencil_Analysis')
@@ -109,7 +122,7 @@ class Pencil_Analysis(object):
             logging.info(n)
             logging.info('========================')
 
-    def initDirVars(self,data_frame):
+    def initDirVars(self, data_frame):
         self.rad_grid = data_frame[n]['rad_grid']
         self.x2d = data_frame[n]['x2d']
         self.y2d = data_frame[n]['y2d']
@@ -124,7 +137,21 @@ class Pencil_Analysis(object):
         self.avgshock_fv = data_frame[n]['avgshock_fv']
         self.Standard_Orbit = data_frame[n]['Standard_Orbit']
 
-    def pingContour(self,data_frame):
+        self.ncolors = 256
+
+        self.eccentricity = data_frame[n]['eccentricity']
+        self.sound_speed = data_frame[n]['cs']
+        self.aspect_ratio = data_frame[n]['aspect_ratio']
+        self.initial_pressure = data_frame[n]['initial_pressure']
+        self.Sigma = data_frame[n]['Sigma']
+        self.rsmooth = data_frame[n]['rsmooth']
+        self.gamma = data_frame[n]['gamma']
+        self.alpha = data_frame[n]['alpha']
+        self.beta = data_frame[n]['beta']
+        self.DirMass = data_frame[n]['par1']
+        self.DirEcc = (round(eccentricity[0], 1))
+
+    def pingContour(self, data_frame):
         try:
             n = 0
             dn = 1
@@ -132,8 +159,8 @@ class Pencil_Analysis(object):
                 print("starting data loop")
                 self.initLoopEntry(data_frame)
                 self.initDirVars(data_frame)
-                self.pingContourDensity(data_frame)
-                self.pingContourTemp(data_frame)
+                self.pingContourDensity()
+                self.pingContourTemp()
                 n = n + dn
         except:
             print('================')
@@ -143,7 +170,7 @@ class Pencil_Analysis(object):
             self.returnToRoot()
             return False
 
-    def pingContourDensity(self, data_frame):
+    def pingContourDensity(self):
         try:
             self.returnToRoot()
         except:
@@ -152,8 +179,8 @@ class Pencil_Analysis(object):
             print('================')
             traceback.print_exc()
             self.returnToRoot()
-            
-    def pingContourTemp(self, data_frame):
+
+    def pingContourTemp(self):
         try:
             self.returnToRoot()
         except:
