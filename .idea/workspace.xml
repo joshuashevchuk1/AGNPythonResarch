@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="orbit check and only plot contour" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="more plots" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,104 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00024" summary="turn everything off for testing">
-      <created>1652945495229</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1652945495229</updated>
-    </task>
-    <task id="LOCAL-00025" summary="test out cut off">
-      <created>1652945691565</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1652945691565</updated>
-    </task>
-    <task id="LOCAL-00026" summary="bug">
-      <created>1652945915253</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1652945915253</updated>
-    </task>
-    <task id="LOCAL-00027" summary="short">
-      <created>1652945954005</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1652945954005</updated>
-    </task>
-    <task id="LOCAL-00028" summary="index time cutoff">
-      <created>1652946473338</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1652946473338</updated>
-    </task>
-    <task id="LOCAL-00029" summary="only use index for cutoff.">
-      <created>1652946579611</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1652946579611</updated>
-    </task>
-    <task id="LOCAL-00030" summary="no calc right now">
-      <created>1652946651814</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1652946651814</updated>
-    </task>
-    <task id="LOCAL-00031" summary="change to np.pi">
-      <created>1652948548549</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1652948548549</updated>
-    </task>
-    <task id="LOCAL-00032" summary="removed commented out code">
-      <created>1652949931974</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1652949931974</updated>
-    </task>
-    <task id="LOCAL-00033" summary="added cut off for Torques">
-      <created>1652950209002</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1652950209002</updated>
-    </task>
-    <task id="LOCAL-00034" summary="added cutoff patches for Torque">
-      <created>1652950283507</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1652950283507</updated>
-    </task>
-    <task id="LOCAL-00035" summary="added cutoff patches for TTm">
-      <created>1652950603488</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1652950603488</updated>
-    </task>
-    <task id="LOCAL-00036" summary="fix to kinetic energy in polar coordinates">
-      <created>1652950830044</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1652950830044</updated>
-    </task>
-    <task id="LOCAL-00037" summary="start to plot more">
-      <created>1652951464902</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1652951464902</updated>
     </task>
     <task id="LOCAL-00038" summary="temp">
       <created>1652951680482</created>
@@ -447,7 +349,105 @@
       <option name="project" value="LOCAL" />
       <updated>1653269130849</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="max orbits">
+      <created>1653271810559</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1653271810560</updated>
+    </task>
+    <task id="LOCAL-00074" summary="just plot the fucking contours">
+      <created>1653272444059</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1653272444059</updated>
+    </task>
+    <task id="LOCAL-00075" summary="just plot the fucking contours">
+      <created>1653272562121</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1653272562121</updated>
+    </task>
+    <task id="LOCAL-00076" summary="just plot the fucking contours">
+      <created>1653274833341</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1653274833341</updated>
+    </task>
+    <task id="LOCAL-00077" summary="just plot the fucking contours">
+      <created>1653275225549</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1653275225549</updated>
+    </task>
+    <task id="LOCAL-00078" summary="just plot the fucking contours">
+      <created>1653275389564</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1653275389564</updated>
+    </task>
+    <task id="LOCAL-00079" summary="just plot the fucking contours">
+      <created>1653275418800</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1653275418800</updated>
+    </task>
+    <task id="LOCAL-00080" summary="just plot the fucking contours">
+      <created>1653275559142</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1653275559142</updated>
+    </task>
+    <task id="LOCAL-00081" summary="more plots">
+      <created>1653275648586</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1653275648586</updated>
+    </task>
+    <task id="LOCAL-00082" summary="more plots">
+      <created>1653275676199</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1653275676199</updated>
+    </task>
+    <task id="LOCAL-00083" summary="more plots">
+      <created>1653275780816</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1653275780816</updated>
+    </task>
+    <task id="LOCAL-00084" summary="more plots">
+      <created>1653275878014</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1653275878014</updated>
+    </task>
+    <task id="LOCAL-00085" summary="more plots">
+      <created>1653276030026</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1653276030026</updated>
+    </task>
+    <task id="LOCAL-00086" summary="more plots">
+      <created>1653276160475</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1653276160475</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,9 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change to how i want to plot" />
-    <MESSAGE value="missed conversion" />
-    <MESSAGE value="include cutoff for orbital and torque again" />
     <MESSAGE value="don't calculate TTm right now." />
     <MESSAGE value="missed cutoff time" />
     <MESSAGE value="added large index cutoff time" />
@@ -487,6 +484,9 @@
     <MESSAGE value="round max temp" />
     <MESSAGE value="name on contour plots" />
     <MESSAGE value="orbit check and only plot contour" />
-    <option name="LAST_COMMIT_MESSAGE" value="orbit check and only plot contour" />
+    <MESSAGE value="max orbits" />
+    <MESSAGE value="just plot the fucking contours" />
+    <MESSAGE value="more plots" />
+    <option name="LAST_COMMIT_MESSAGE" value="more plots" />
   </component>
 </project>

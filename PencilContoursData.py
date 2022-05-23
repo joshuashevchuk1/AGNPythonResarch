@@ -10,9 +10,10 @@ from scipy.optimize import curve_fit
 import logging
 import re
 
-class Pencil_Data(object):
+global t
 
-    global t
+
+class Pencil_Data(object):
 
     def __init__(self):
         print('================')
@@ -36,7 +37,7 @@ class Pencil_Data(object):
         print(os.getcwd())
 
         try:
-            initVars(self)
+            self.initVars()
             vars_dict = {'t':t}
             os.chdir('..')
             return vars_dict
