@@ -56,3 +56,33 @@ class Pencil_Analysis(object):
                             level=logging.DEBUG, format=' %(asctime)s,%(message)s ',
                             datefmt=' %m/%d/%Y %I:%M:%S %p ')
         logging.info('constructor intializied')
+
+    def Make_Vars(self):
+                print('================')
+                print('Making Vars')
+                print('================')
+
+                data_functions = self.data_functions
+                dir_run_list = self.dir_run_list
+                var_dir_list = self.var_dir_list
+                Orbit = self.Orbit
+                Calc_Temp = self.Calc_Temp
+
+                var_dir_list = []
+                dir_run_list = next(os.walk('.'))[1]
+
+                i = 0
+                di = 1
+
+                while i <= len(dir_run_list) - 1:
+                    var_dir_list.append(
+                        data_functions.grepDATA(
+                            dir_run_list[i],
+                            Orbit,
+                            Calc_Temp=Calc_Temp,
+                            Calc_Density=Calc_Density)
+                    )
+                    data_functions.pingGit(dir_run_list[i])
+                    data_functions.pingTemp(dir_run_list[i])
+                    i = i + di
+                return var_dir_list
