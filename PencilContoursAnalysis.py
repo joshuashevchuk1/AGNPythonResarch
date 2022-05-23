@@ -95,7 +95,7 @@ class Pencil_Analysis(object):
             i = i + di
         return var_dir_list
 
-    def initLoopEntry(self, data_frame):
+    def initLoopEntry(self, data_frame,n):
         try:
             os.system('mkdir Pencil_Analysis')
             os.chdir('Pencil_Analysis')
@@ -157,7 +157,7 @@ class Pencil_Analysis(object):
             dn = 1
             while n <= len(data_frame) - 1:
                 print("starting data loop")
-                self.initLoopEntry(data_frame)
+                self.initLoopEntry(data_frame,n)
                 self.initDirVars(data_frame,n)
                 self.pingContourDensity()
                 self.pingContourTemp()
