@@ -1403,11 +1403,8 @@ class Pencil_Analysis(object):
                     aspect_ratio = data_frame[n]['aspect_ratio']
                     initial_pressure = data_frame[n]['initial_pressure']
                     Sigma = data_frame[n]['Sigma']
-                    EntropyIndex = data_frame[n]['EntropyIndex']
-                    SpecificHeat = data_frame[n]['SpecificHeat']
                     rsmooth = data_frame[n]['rsmooth']
                     gamma = data_frame[n]['gamma']
-                    Gamma0 = data_frame[n]['Gamma0']
                     alpha = data_frame[n]['alpha']
                     beta = data_frame[n]['beta']
 
@@ -2553,13 +2550,6 @@ class Pencil_Analysis(object):
                         logging.info(n)
                         logging.info('========================')
 
-                    rad_grid = data_frame[n]['rad_grid']
-
-                    x2d = data_frame[n]['x2d']
-                    y2d = data_frame[n]['y2d']
-                    xrq2 = data_frame[n]['xrq2']
-                    yrq2 = data_frame[n]['yrq2']
-
                     rho_fv = data_frame[n]['rho_fv']
                     shock_fv = data_frame[n]['shock_fv']
                     x_grid = data_frame[n]['x_grid']
@@ -2604,13 +2594,10 @@ class Pencil_Analysis(object):
                         color='white', label=r'$\varepsilon$ :'+str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
                         color='white', label='sound speed :'+str(sound_speed))
-                    Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
                         color='white', label='inital pressure :'+str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
                         color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
                         color='white', label='potential smoothing :'+str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
@@ -2838,11 +2825,8 @@ class Pencil_Analysis(object):
                     aspect_ratio = data_frame[n]['aspect_ratio']
                     initial_pressure = data_frame[n]['initial_pressure']
                     Sigma = data_frame[n]['Sigma']
-                    EntropyIndex = data_frame[n]['EntropyIndex']
-                    SpecificHeat = data_frame[n]['SpecificHeat']
                     rsmooth = data_frame[n]['rsmooth']
                     gamma = data_frame[n]['gamma']
-                    Gamma0 = data_frame[n]['Gamma0']
                     alpha = data_frame[n]['alpha']
                     beta = data_frame[n]['beta']
 
@@ -2926,11 +2910,8 @@ class Pencil_Analysis(object):
                         aspect_ratio = data_frame[n]['aspect_ratio']
                         initial_pressure = data_frame[n]['initial_pressure']
                         Sigma = data_frame[n]['Sigma']
-                        EntropyIndex = data_frame[n]['EntropyIndex']
-                        SpecificHeat = data_frame[n]['SpecificHeat']
                         rsmooth = data_frame[n]['rsmooth']
                         gamma = data_frame[n]['gamma']
-                        Gamma0 = data_frame[n]['Gamma0']
                         alpha = data_frame[n]['alpha']
                         beta = data_frame[n]['beta']
 
@@ -2943,13 +2924,10 @@ class Pencil_Analysis(object):
                             color='white', label=r'$\varepsilon$ :'+str(DirEcc))
                         Dirsound_speed_patches = mpatches.Patch(
                             color='white', label='sound speed :'+str(sound_speed))
-                        Diraspect_ratio_patches = mpatches.Patch(
-                            color='white', label='aspect_ratio :'+str(aspect_ratio))
                         Dirinitial_pressure_patches = mpatches.Patch(
                             color='white', label='inital pressure :'+str(initial_pressure))
                         DirSigma_patches = mpatches.Patch(
                             color='white', label=r'$\Sigma$ :'+str(Sigma))
-                        #DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                         Dir_rsmooth_patches = mpatches.Patch(
                             color='white', label='potential smoothing :'+str(rsmooth))
                         Dir_gamma_patches = mpatches.Patch(
@@ -2974,7 +2952,6 @@ class Pencil_Analysis(object):
                         # cax=plt.axes([0.85,0.1,0.075,0.8])
                         # cax.set_label('Kelvin')
                         # cax.set_aspect(20)
-                        #cax.set_ylabel('Temp in code units',fontsize=10)
                         plt.colorbar(PL2, ax=ax1)
                         plt.suptitle('t='+str(data_frame[n]['ivar']))
                         plt.subplots_adjust(bottom=0.05, top=0.95)
@@ -3010,14 +2987,10 @@ class Pencil_Analysis(object):
 
                     eccentricity = data_frame[n]['eccentricity']
                     sound_speed = data_frame[n]['cs']
-                    aspect_ratio = data_frame[n]['aspect_ratio']
                     initial_pressure = data_frame[n]['initial_pressure']
                     Sigma = data_frame[n]['Sigma']
-                    EntropyIndex = data_frame[n]['EntropyIndex']
-                    SpecificHeat = data_frame[n]['SpecificHeat']
                     rsmooth = data_frame[n]['rsmooth']
                     gamma = data_frame[n]['gamma']
-                    Gamma0 = data_frame[n]['Gamma0']
                     alpha = data_frame[n]['alpha']
                     beta = data_frame[n]['beta']
 
@@ -3030,13 +3003,10 @@ class Pencil_Analysis(object):
                         color='white', label=r'$\varepsilon$ :'+str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
                         color='white', label='sound speed :'+str(sound_speed))
-                    Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
                         color='white', label='inital pressure :'+str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
                         color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
                         color='white', label='potential smoothing :'+str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
@@ -3059,7 +3029,6 @@ class Pencil_Analysis(object):
                     # =========================
 
                     cax = plt.axes([0.85, 0.1, 0.075, 0.8])
-                    # cax.set_label('Kelvin')
                     cax.set_aspect(20)
                     cax.set_ylabel('shock in code units', fontsize=10)
                     plt.colorbar(PL2, cax=cax)
@@ -3097,14 +3066,10 @@ class Pencil_Analysis(object):
 
                     eccentricity = data_frame[n]['eccentricity']
                     sound_speed = data_frame[n]['cs']
-                    aspect_ratio = data_frame[n]['aspect_ratio']
                     initial_pressure = data_frame[n]['initial_pressure']
                     Sigma = data_frame[n]['Sigma']
-                    EntropyIndex = data_frame[n]['EntropyIndex']
-                    SpecificHeat = data_frame[n]['SpecificHeat']
                     rsmooth = data_frame[n]['rsmooth']
                     gamma = data_frame[n]['gamma']
-                    Gamma0 = data_frame[n]['Gamma0']
                     alpha = data_frame[n]['alpha']
                     beta = data_frame[n]['beta']
 
@@ -3117,13 +3082,10 @@ class Pencil_Analysis(object):
                         color='white', label=r'$\varepsilon$ :'+str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
                         color='white', label='sound speed :'+str(sound_speed))
-                    Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
                         color='white', label='inital pressure :'+str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
                         color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
                         color='white', label='potential smoothing :'+str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
@@ -3146,7 +3108,6 @@ class Pencil_Analysis(object):
                     # =========================
 
                     cax = plt.axes([0.85, 0.1, 0.075, 0.8])
-                    # cax.set_label('Kelvin')
                     cax.set_aspect(20)
                     cax.set_ylabel('Density in code units', fontsize=10)
                     plt.colorbar(PL2, cax=cax)
@@ -3368,11 +3329,8 @@ class Pencil_Analysis(object):
                     aspect_ratio = data_frame[n]['aspect_ratio']
                     initial_pressure = data_frame[n]['initial_pressure']
                     Sigma = data_frame[n]['Sigma']
-                    EntropyIndex = data_frame[n]['EntropyIndex']
-                    SpecificHeat = data_frame[n]['SpecificHeat']
                     rsmooth = data_frame[n]['rsmooth']
                     gamma = data_frame[n]['gamma']
-                    Gamma0 = data_frame[n]['Gamma0']
                     alpha = data_frame[n]['alpha']
                     beta = data_frame[n]['beta']
 
@@ -3385,13 +3343,10 @@ class Pencil_Analysis(object):
                         color='white', label=r'$\varepsilon$ :'+str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
                         color='white', label='sound speed :'+str(sound_speed))
-                    Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
                         color='white', label='inital pressure :'+str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
                         color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
                         color='white', label='potential smoothing :'+str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
@@ -3450,11 +3405,8 @@ class Pencil_Analysis(object):
                         aspect_ratio = data_frame[n]['aspect_ratio']
                         initial_pressure = data_frame[n]['initial_pressure']
                         Sigma = data_frame[n]['Sigma']
-                        EntropyIndex = data_frame[n]['EntropyIndex']
-                        SpecificHeat = data_frame[n]['SpecificHeat']
                         rsmooth = data_frame[n]['rsmooth']
                         gamma = data_frame[n]['gamma']
-                        Gamma0 = data_frame[n]['Gamma0']
                         alpha = data_frame[n]['alpha']
                         beta = data_frame[n]['beta']
 
@@ -3467,13 +3419,10 @@ class Pencil_Analysis(object):
                             color='white', label=r'$\varepsilon$ :'+str(DirEcc))
                         Dirsound_speed_patches = mpatches.Patch(
                             color='white', label='sound speed :'+str(sound_speed))
-                        Diraspect_ratio_patches = mpatches.Patch(
-                            color='white', label='aspect_ratio :'+str(aspect_ratio))
                         Dirinitial_pressure_patches = mpatches.Patch(
                             color='white', label='inital pressure :'+str(initial_pressure))
                         DirSigma_patches = mpatches.Patch(
                             color='white', label=r'$\Sigma$ :'+str(Sigma))
-                        #DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                         Dir_rsmooth_patches = mpatches.Patch(
                             color='white', label='potential smoothing :'+str(rsmooth))
                         Dir_gamma_patches = mpatches.Patch(
@@ -3535,11 +3484,8 @@ class Pencil_Analysis(object):
                     aspect_ratio = data_frame[n]['aspect_ratio']
                     initial_pressure = data_frame[n]['initial_pressure']
                     Sigma = data_frame[n]['Sigma']
-                    EntropyIndex = data_frame[n]['EntropyIndex']
-                    SpecificHeat = data_frame[n]['SpecificHeat']
                     rsmooth = data_frame[n]['rsmooth']
                     gamma = data_frame[n]['gamma']
-                    Gamma0 = data_frame[n]['Gamma0']
                     alpha = data_frame[n]['alpha']
                     beta = data_frame[n]['beta']
 
@@ -3552,13 +3498,10 @@ class Pencil_Analysis(object):
                         color='white', label=r'$\varepsilon$ :'+str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
                         color='white', label='sound speed :'+str(sound_speed))
-                    Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
                         color='white', label='inital pressure :'+str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
                         color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
                         color='white', label='potential smoothing :'+str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
@@ -3651,7 +3594,6 @@ class Pencil_Analysis(object):
                     plt.title(r'$\varepsilon$ Decay')
                     plt.xlabel(r'$t/T_0$')
                     plt.ylabel(r'$\varepsilon$')
-                    # plt.yscale('log')
                     plt.xlim([0, data_frame[n]['tmax']])
                     plt.tight_layout()
                     plt.grid(True)
@@ -3667,11 +3609,8 @@ class Pencil_Analysis(object):
                     aspect_ratio = data_frame[n]['aspect_ratio']
                     initial_pressure = data_frame[n]['initial_pressure']
                     Sigma = data_frame[n]['Sigma']
-                    EntropyIndex = data_frame[n]['EntropyIndex']
-                    SpecificHeat = data_frame[n]['SpecificHeat']
                     rsmooth = data_frame[n]['rsmooth']
                     gamma = data_frame[n]['gamma']
-                    Gamma0 = data_frame[n]['Gamma0']
                     alpha = data_frame[n]['alpha']
                     beta = data_frame[n]['beta']
 
@@ -3684,13 +3623,10 @@ class Pencil_Analysis(object):
                         color='white', label=r'$\varepsilon$ :'+str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
                         color='white', label='sound speed :'+str(sound_speed))
-                    Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
                         color='white', label='inital pressure :'+str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
                         color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
                         color='white', label='potential smoothing :'+str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
@@ -3818,11 +3754,8 @@ class Pencil_Analysis(object):
                     aspect_ratio = data_frame[n]['aspect_ratio']
                     initial_pressure = data_frame[n]['initial_pressure']
                     Sigma = data_frame[n]['Sigma']
-                    EntropyIndex = data_frame[n]['EntropyIndex']
-                    SpecificHeat = data_frame[n]['SpecificHeat']
                     rsmooth = data_frame[n]['rsmooth']
                     gamma = data_frame[n]['gamma']
-                    Gamma0 = data_frame[n]['Gamma0']
                     alpha = data_frame[n]['alpha']
                     beta = data_frame[n]['beta']
 
@@ -3835,13 +3768,10 @@ class Pencil_Analysis(object):
                         color='white', label=r'$\varepsilon$ :'+str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
                         color='white', label='sound speed :'+str(sound_speed))
-                    Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
                         color='white', label='inital pressure :'+str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
                         color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
                         color='white', label='potential smoothing :'+str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
@@ -3947,11 +3877,8 @@ class Pencil_Analysis(object):
                     aspect_ratio = data_frame[n]['aspect_ratio']
                     initial_pressure = data_frame[n]['initial_pressure']
                     Sigma = data_frame[n]['Sigma']
-                    EntropyIndex = data_frame[n]['EntropyIndex']
-                    SpecificHeat = data_frame[n]['SpecificHeat']
                     rsmooth = data_frame[n]['rsmooth']
                     gamma = data_frame[n]['gamma']
-                    Gamma0 = data_frame[n]['Gamma0']
                     alpha = data_frame[n]['alpha']
                     beta = data_frame[n]['beta']
 
@@ -3964,13 +3891,10 @@ class Pencil_Analysis(object):
                         color='white', label=r'$\varepsilon$ :'+str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
                         color='white', label='sound speed :'+str(sound_speed))
-                    Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
                         color='white', label='inital pressure :'+str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
                         color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
                         color='white', label='potential smoothing :'+str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
@@ -4012,10 +3936,8 @@ class Pencil_Analysis(object):
                     logging.info('Temp Box Plot Data error')
                     logging.info('========================')
                     logging.info('========================')
-                    # logging.info(data_frame[n]['DirName'])
                     logging.info('========================')
                     logging.info('========================')
-                    # logging.info(str(traceback.print_exc()))
                     logging.info('========================')
                     os.chdir('..')
                 n = n+dn
