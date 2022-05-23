@@ -10,7 +10,7 @@ def plots():
     root = os.getcwd() # root dir is fucked up due to a space
     dir_run_list = next(os.walk('.'))[1]
     maxOrbits = 500
-    ivar = 0 
+    ivar = 1
     while (ivar <= maxOrbits):
         plotRuns(dir_run_list,ivar,root) # run correct python file and save plots locally
         moveImages(dir_run_list,ivar,root) # copy over images into PencilAnalysis
