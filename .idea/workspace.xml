@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="round max temp" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="orbit check and only plot contour" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,20 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00022" summary="print issues">
-      <created>1652865242534</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1652865242534</updated>
-    </task>
-    <task id="LOCAL-00023" summary="check for ecc_int">
-      <created>1652865416892</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1652865416892</updated>
     </task>
     <task id="LOCAL-00024" summary="turn everything off for testing">
       <created>1652945495229</created>
@@ -447,7 +433,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653255427405</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="name on contour plots">
+      <created>1653269021513</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1653269021513</updated>
+    </task>
+    <task id="LOCAL-00072" summary="orbit check and only plot contour">
+      <created>1653269130849</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1653269130849</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,8 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="max time" />
-    <MESSAGE value="label was wrong" />
     <MESSAGE value="change to how i want to plot" />
     <MESSAGE value="missed conversion" />
     <MESSAGE value="include cutoff for orbital and torque again" />
@@ -487,6 +485,8 @@
     <MESSAGE value="ignore missing results" />
     <MESSAGE value="woops" />
     <MESSAGE value="round max temp" />
-    <option name="LAST_COMMIT_MESSAGE" value="round max temp" />
+    <MESSAGE value="name on contour plots" />
+    <MESSAGE value="orbit check and only plot contour" />
+    <option name="LAST_COMMIT_MESSAGE" value="orbit check and only plot contour" />
   </component>
 </project>
