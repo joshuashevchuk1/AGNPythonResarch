@@ -58,12 +58,9 @@ def plotRun(ivar):
     #plt.plot(ff.x,np.log(np.sum(dfT**2,axis=0)))
     plt.contourf(x2d,y2d,dfT,256)
     #
-    plt.grid(True)
-    Dir_gamma_patches = mpatches.Patch(
-        color='white', label=r'$\gamma$ :' + str(np.mean(np.log(np.sum(dfT ** 2, axis=0)))))
     plt.legend(handles=[Dir_gamma_patches], loc=2)
-    plt.savefig(name+"-log-" + str(ivar)+".png")
-    #plt.savefig(name+"-ivar-" + str(ivar)+".png")
+    #plt.savefig(name+"-log-" + str(ivar)+".png")
+    plt.savefig(name+"-ivar-" + str(ivar)+".png")
     plt.close()
 
 plots()
