@@ -18,21 +18,11 @@ class Pencil_Analysis(object):
     def __init__(self,
                  data_functions,
                  Orbit=None,
-                 MaxOrbits=None,
-                 Orbit_standard=None,
-                 step=None,
-                 TempSigma=False,
                  dir_run_list=None,
                  var_dir_list=None,
                  temp_dir_list=None,
-                 Calc_DTTm=None,
                  Calc_Temp=False,
-                 Calc_Density=False,
-                 Calc_Energy=False,
-                 Calc_OEnergy=False,
-                 Calc_Dynamics=False,
-                 Calc_Rates_Energy=False,
-                 Calc_ToomreQ=False):
+                 Calc_Density=False):
 
         self.Orbit = Orbit
         self.data_functions = data_functions
@@ -53,8 +43,6 @@ class Pencil_Analysis(object):
                 print('================')
 
                 data_functions = self.data_functions
-                dir_run_list = self.dir_run_list
-                var_dir_list = self.var_dir_list
                 Orbit = self.Orbit
                 Calc_Temp = self.Calc_Temp
                 Calc_Density = self.Calc_Density
@@ -73,7 +61,5 @@ class Pencil_Analysis(object):
                             Calc_Temp=Calc_Temp,
                             Calc_Density=Calc_Density)
                     )
-                    data_functions.pingGit(dir_run_list[i])
-                    data_functions.pingTemp(dir_run_list[i])
                     i = i + di
                 return var_dir_list
