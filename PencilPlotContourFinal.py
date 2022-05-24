@@ -9,7 +9,7 @@ import sys
 # plot denisty, shock and temperature for the local orbit
 
 def plot():
-    ivar = [0,5,10]
+    ivar = [1,25,100,150,350]
     for i in range(len(ivar)):
         plotRuns(ivar[i])
 
@@ -35,7 +35,7 @@ def plotRunDensity(ivar):
     cax = plt.axes([0.85, 0.1, 0.075, 0.8])
     cax.set_aspect(20)
     cax.set_ylabel('Density in code units', fontsize=10)
-    plt.colorbar(PL2, cax=cax)
+    #plt.colorbar(PL2, cax=cax)
     plt.savefig(name+"-density-ivar-" + str(ivar)+".png")
     plt.close()
 
@@ -57,7 +57,7 @@ def plotRunTemperature(ivar):
     cax = plt.axes([0.85, 0.1, 0.075, 0.8])
     cax.set_aspect(20)
     cax.set_ylabel('temperature in code units', fontsize=10)
-    plt.colorbar(PL2, cax=cax)
+    #plt.colorbar(PL2, cax=cax)
     plt.savefig(name+"-temperature-ivar-" + str(ivar)+".png")
     plt.close()
 
