@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="contour?">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="important 3 contours">
+      <change beforePath="$PROJECT_DIR$/PencilPlotContourFinal.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilPlotContourFinal.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,83 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00052" summary="another conversion error">
-      <created>1653036349878</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1653036349878</updated>
-    </task>
-    <task id="LOCAL-00053" summary="routine checkup">
-      <created>1653180123023</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1653180123023</updated>
-    </task>
-    <task id="LOCAL-00054" summary="routine checkup">
-      <created>1653180183697</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1653180183697</updated>
-    </task>
-    <task id="LOCAL-00055" summary="Torque2077.py">
-      <created>1653212246358</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1653212246359</updated>
-    </task>
-    <task id="LOCAL-00056" summary="standarad torque fix">
-      <created>1653212285034</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1653212285034</updated>
-    </task>
-    <task id="LOCAL-00057" summary="kernal">
-      <created>1653212395991</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1653212395992</updated>
-    </task>
-    <task id="LOCAL-00058" summary="missing params">
-      <created>1653212461930</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1653212461930</updated>
-    </task>
-    <task id="LOCAL-00059" summary="missing params">
-      <created>1653212671417</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1653212671417</updated>
-    </task>
-    <task id="LOCAL-00060" summary="missing params">
-      <created>1653212706849</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1653212706849</updated>
-    </task>
-    <task id="LOCAL-00061" summary="missing params">
-      <created>1653212819308</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1653212819308</updated>
-    </task>
-    <task id="LOCAL-00062" summary="missing params">
-      <created>1653212913176</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1653212913176</updated>
     </task>
     <task id="LOCAL-00063" summary="calc energy problems">
       <created>1653213048711</created>
@@ -449,7 +372,84 @@
       <option name="project" value="LOCAL" />
       <updated>1653296194730</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="contour?">
+      <created>1653373851470</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1653373851470</updated>
+    </task>
+    <task id="LOCAL-00102" summary="fucking contour I swear">
+      <created>1653374075928</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1653374075928</updated>
+    </task>
+    <task id="LOCAL-00103" summary="fucking contour I swear">
+      <created>1653374168827</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1653374168827</updated>
+    </task>
+    <task id="LOCAL-00104" summary="fucking contour I swear">
+      <created>1653374291381</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1653374291381</updated>
+    </task>
+    <task id="LOCAL-00105" summary="ivar array changes">
+      <created>1653374541080</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1653374541080</updated>
+    </task>
+    <task id="LOCAL-00106" summary="color only last plot">
+      <created>1653374653109</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1653374653109</updated>
+    </task>
+    <task id="LOCAL-00107" summary="important 3 contours">
+      <created>1653375264851</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1653375264851</updated>
+    </task>
+    <task id="LOCAL-00108" summary="important 3 contours">
+      <created>1653375380997</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1653375380997</updated>
+    </task>
+    <task id="LOCAL-00109" summary="important 3 contours">
+      <created>1653375484836</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1653375484836</updated>
+    </task>
+    <task id="LOCAL-00110" summary="important 3 contours">
+      <created>1653375988087</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1653375988087</updated>
+    </task>
+    <task id="LOCAL-00111" summary="important 3 contours">
+      <created>1653376089097</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1653376089097</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,10 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="routine checkup" />
-    <MESSAGE value="Torque2077.py" />
-    <MESSAGE value="standarad torque fix" />
-    <MESSAGE value="kernal" />
     <MESSAGE value="missing params" />
     <MESSAGE value="calc energy problems" />
     <MESSAGE value="plot accordingly" />
@@ -489,6 +485,10 @@
     <MESSAGE value="add more" />
     <MESSAGE value="bug fixing" />
     <MESSAGE value="contour?" />
-    <option name="LAST_COMMIT_MESSAGE" value="contour?" />
+    <MESSAGE value="fucking contour I swear" />
+    <MESSAGE value="ivar array changes" />
+    <MESSAGE value="color only last plot" />
+    <MESSAGE value="important 3 contours" />
+    <option name="LAST_COMMIT_MESSAGE" value="important 3 contours" />
   </component>
 </project>
