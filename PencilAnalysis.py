@@ -3705,7 +3705,7 @@ class Pencil_Analysis(object):
                         logging.info(n)
                         logging.info('========================')
 
-                    time = data_frame[n]['time']
+                    time = data_frame[n]['t']
                     eccentricity = data_frame[n]['eccentricity']
                     semi_major = data_frame[n]['semi_major']
                     cut_off = data_frame[n]['indexTimeCutOff']
