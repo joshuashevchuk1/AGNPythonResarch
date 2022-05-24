@@ -104,13 +104,6 @@
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
     </task>
-    <task id="LOCAL-00065" summary="only TTm rn">
-      <created>1653213542848</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1653213542848</updated>
-    </task>
     <task id="LOCAL-00066" summary="fix to TTm">
       <created>1653214918699</created>
       <option name="number" value="00066" />
@@ -447,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653376757634</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="important 3 contours">
+      <created>1653383376470</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1653383376470</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

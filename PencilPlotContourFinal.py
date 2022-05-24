@@ -63,7 +63,7 @@ def plotRunDensity(ivar, color):
         cax.set_ylabel('Density in code units', fontsize=10)
         plt.colorbar(PL2, cax=cax)
 
-    plt.suptitle('t= ' + str(ivar))
+    plt.suptitle('ivar= ' + str(ivar))
     plt.savefig(name + "-density-ivar-" + str(ivar) + ".png")
     plt.close()
 
@@ -89,7 +89,7 @@ def plotRunTemperature(ivar, color):
         cax.set_ylabel('temperature in code units', fontsize=10)
         plt.colorbar(PL2, cax=cax)
 
-    plt.suptitle('t= ' + str(ivar))
+    plt.suptitle('ivar= ' + str(ivar))
     plt.savefig(name + "-temperature-ivar-" + str(ivar) + ".png")
     plt.close()
 
