@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="important 3 contours">
-      <change beforePath="$PROJECT_DIR$/PencilPlotContourFinal.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilPlotContourFinal.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="important 3 contours" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,20 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00063" summary="calc energy problems">
-      <created>1653213048711</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1653213048711</updated>
-    </task>
-    <task id="LOCAL-00064" summary="plot accordingly">
-      <created>1653213503089</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1653213503089</updated>
     </task>
     <task id="LOCAL-00065" summary="only TTm rn">
       <created>1653213542848</created>
@@ -449,7 +433,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653376089097</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="important 3 contours">
+      <created>1653376226254</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1653376226254</updated>
+    </task>
+    <task id="LOCAL-00113" summary="important 3 contours">
+      <created>1653376757634</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1653376757634</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
