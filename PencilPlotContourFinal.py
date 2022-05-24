@@ -9,7 +9,7 @@ import sys
 # plot denisty, shock and temperature for the local orbit
 
 def plot():
-    ivar = [1,25,100,150,350]
+    ivar = [1,50,100]
     for i in range(len(ivar)):
         plotRuns(ivar[i],False)
         if i == len(ivar):
