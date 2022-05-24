@@ -16,21 +16,6 @@ def plot():
 def plotRuns(ivar):
     plotRunTemperature(ivar)
     plotRunDensity(ivar)
-    plotRunShock(ivar)
-
-def plotRunShock(ivar):
-    name = os.path.split(os.getcwd())[1]
-    ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
-    ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
-    dfs = ff.shock[:] - ff0.shock[:]
-    rad = ff.x
-    theta = ff.y
-    rad2d, theta2d = np.meshgrid(rad, theta)
-    x2d = rad2d * np.cos(theta2d)
-    y2d = rad2d * np.sin(theta2d)
-    plt.contourf(x2d, y2d, dfs, 256)
-    plt.savefig(name + "-density-ivar-" + str(ivar) + ".png")
-    plt.close()
 
 def plotRunDensity(ivar):
     name = os.path.split(os.getcwd())[1]
@@ -42,7 +27,16 @@ def plotRunDensity(ivar):
     rad2d, theta2d = np.meshgrid(rad, theta)
     x2d = rad2d*np.cos(theta2d)
     y2d = rad2d*np.sin(theta2d)
-    plt.contourf(x2d,y2d,dfrho,256)
+    fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
+    fig.subplots_adjust(bottom=0.07, top=0.95)
+    PL2 = ax1.contourf(x2d, y2d, dfrho, 256)
+    ax1.set_aspect('equal')
+
+    cax = plt.axes([0.85, 0.1, 0.075, 0.8])
+    cax.set_aspect(20)
+    cax.set_ylabel('Density in code units', fontsize=10)
+    plt.colorbar(PL2, cax=cax)
+
     plt.legend(handles=[Dir_gamma_patches], loc=2)
     plt.savefig(name+"-density-ivar-" + str(ivar)+".png")
     plt.close()
@@ -57,6 +51,15 @@ def plotRunTemperature(ivar):
     rad2d, theta2d = np.meshgrid(rad, theta)
     x2d = rad2d*np.cos(theta2d)
     y2d = rad2d*np.sin(theta2d)
-    plt.contourf(x2d,y2d,dfT,256)
+    fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
+    fig.subplots_adjust(bottom=0.07, top=0.95)
+    PL2 = ax1.contourf(x2d, y2d, dfT, 256)
+    ax1.set_aspect('equal')
+
+    cax = plt.axes([0.85, 0.1, 0.075, 0.8])
+    cax.set_aspect(20)
+    cax.set_ylabel('temperature in code units', fontsize=10)
+    plt.colorbar(PL2, cax=cax)
+
     plt.savefig(name+"-temperature-ivar-" + str(ivar)+".png")
     plt.close()
