@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="important 3 contours" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="ivar is not time" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,13 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00066" summary="fix to TTm">
-      <created>1653214918699</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1653214918699</updated>
     </task>
     <task id="LOCAL-00067" summary="ignore missing results">
       <created>1653214983833</created>
@@ -447,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653383376470</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="ivar is not time">
+      <created>1653385021754</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1653385021754</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,7 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="missing params" />
     <MESSAGE value="calc energy problems" />
     <MESSAGE value="plot accordingly" />
     <MESSAGE value="only TTm rn" />
@@ -487,6 +486,7 @@
     <MESSAGE value="ivar array changes" />
     <MESSAGE value="color only last plot" />
     <MESSAGE value="important 3 contours" />
-    <option name="LAST_COMMIT_MESSAGE" value="important 3 contours" />
+    <MESSAGE value="ivar is not time" />
+    <option name="LAST_COMMIT_MESSAGE" value="ivar is not time" />
   </component>
 </project>
