@@ -37,7 +37,7 @@ def plotRunDensity(ivar, color):
     PL2 = ax1.contourf(x2d, y2d, dfrho, 256)
     ax1.set_aspect('equal')
 
-    if color == True:
+    if color is True:
         cax = plt.axes([0.85, 0.1, 0.075, 0.8])
         cax.set_aspect(20)
         cax.set_ylabel('Density in code units', fontsize=10)
@@ -62,7 +62,7 @@ def plotRunTemperature(ivar, color):
     PL2 = ax1.contourf(x2d, y2d, dfT, 256)
     ax1.set_aspect('equal')
 
-    if color == True:
+    if color is True:
         cax = plt.axes([0.85, 0.1, 0.075, 0.8])
         cax.set_aspect(20)
         cax.set_ylabel('temperature in code units', fontsize=10)
