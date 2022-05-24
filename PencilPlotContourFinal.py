@@ -13,7 +13,7 @@ def plot():
     ivar = [1, 50, 100]
     for i in range(len(ivar)):
         plotRuns(ivar[i], False)
-        if i == ivar[len(ivar)-1]:
+        if i == 100:
             plotRuns(ivar[i], True)
 
 
