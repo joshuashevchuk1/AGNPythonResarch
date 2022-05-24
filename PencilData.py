@@ -422,6 +422,9 @@ class Pencil_Data(object):
             ecc_rate = np.gradient(eccentricity)
             ecc_ang = par1 * np.sqrt(semi_major) * np.sqrt(1 - ecc ** 2)
 
+            print('len of ecc is ',str(len(ecc)))
+            print('t.max() is ',t.max())
+
             # for convience in calculating the longitude of the perihelion
             # i introduced ecc as variable and sma as a variable
             # these should be set to none after they have been used for convience
