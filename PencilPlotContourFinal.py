@@ -9,9 +9,9 @@ import sys
 # plot denisty, shock and temperature for the local orbit
 
 def plot():
-    ivar_array = [0,5,10]
-    for i in range(len(ivar_array)):
-        plotRuns(ivar)
+    ivar = [0,5,10]
+    for i in range(len(ivar)):
+        plotRuns(ivar[i])
 
 def plotRuns(ivar):
     plotRunTemperature(ivar)
