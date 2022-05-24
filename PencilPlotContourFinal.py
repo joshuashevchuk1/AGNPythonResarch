@@ -10,6 +10,26 @@ import sys
 # plot denisty, shock and temperature for the local orbit
 
 def plot():
+    root = os.getcwd() # root dir is fucked up due to a space
+    dir_run_list = next(os.walk('.'))[1]
+    print("============")
+    print("entering plotRuns")
+    for i in range(len(dir_run_list)):
+        print("dir_run_list is " + dir_run_list[i])
+        os.chdir(dir_run_list[i])
+        print("current cwd is " + os.path.split(os.getcwd())[1])
+        try:
+            plotRun()
+            os.chdir(root)
+        except:
+            print("============")
+            print("ignoring run")
+            print("============")
+            os.chdir(root)
+    print("leaving plotRuns")
+    print("============")
+
+def plotRun():
     ivar = [1, 50, 100]
     for i in range(len(ivar)):
         plotRuns(ivar[i], False)
