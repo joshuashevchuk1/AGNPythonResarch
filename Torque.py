@@ -1,4 +1,4 @@
-import pencil_new as pc
+import pencil_old as pc
 import pylab as plt
 import numpy as np
 import math
@@ -73,5 +73,9 @@ plt.tight_layout()
 plt.grid(True)
 
 plt.savefig('TorqueSGDEV.png')
+
+print('len(t)',len(t))
+print('len(ts.torqint_2)',len(ts.torqint_2))
+print('len(ts.torqext_2)',len(ts.torqext_2))
 
 # plt.show()
