@@ -671,7 +671,7 @@ class Pencil_Data(object):
             # |
             # |
             # ======================================
-            if Standard_Orbit is None or Calc_Dynamics is false:
+            if Standard_Orbit is None or Calc_Dynamics is False:
                 # ======================================
 
                 # keep vars used in Dynamic Loop here
