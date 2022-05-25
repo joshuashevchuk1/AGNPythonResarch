@@ -462,6 +462,7 @@ class Pencil_Data(object):
             timeCutOff = t[indexTimeCutOff]/(np.pi*2)
             timeCutOffLarge = t[indexTimeCutOffLarge]/(np.pi*2)
 
+            print('number of snapshots',t.max()/(np.pi*2))
             print('indexTimeCutOff',indexTimeCutOff)
             print('t[indexTimeCutOff]',t[indexTimeCutOff])
             print('t[indexTimeCutOff]/(np.pi*2)',t[indexTimeCutOff]/(np.pi*2))
