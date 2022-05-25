@@ -1700,6 +1700,9 @@ class Pencil_Analysis(object):
                         cut_off = data_frame[n]['indexTimeCutOff']
                         time = time[:cut_off]
 
+                        print('time is ',time)
+                        print('time[:cut_off] is',time[:cut_off])
+
                         GlobalTemp_Mean = data_frame[n]['GlobalTemp_Mean']
                         TTm = data_frame[n]['TTm']
                         TTm_rate = data_frame[n]['TTm_rate']
@@ -1737,7 +1740,7 @@ class Pencil_Analysis(object):
                         plt.ylabel('Temperature')
                         plt.tight_layout()
                         plt.grid(True)
-                        plt.xlim([0, time.max()])
+                        plt.xlim([0, time[cut_off]])
 
 
                         DirEcc = (round(eccentricity[0], 1))
