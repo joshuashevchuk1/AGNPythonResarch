@@ -613,7 +613,7 @@ class Pencil_Data(object):
             else:
                 try:
                     print('Entering desnity ivar loop')
-                    if step != none:
+                    if step != None:
                         while i <= MaxOrbits - step:
                             ff = pc.read_var(trimall=True, ivar=i, magic=["TT"], quiet=True)
                             while f <= len(ff.TT) - 1:
@@ -650,7 +650,7 @@ class Pencil_Data(object):
             else:
                 try:
                     print('Entering temp ivar loop')
-                    if step != none:
+                    if step != None:
                         while i <= MaxOrbits - step:
                             ff = pc.read_var(trimall=True, ivar=i, quiet=True)
                             while f <= len(ff.rho) - 1:
@@ -665,7 +665,7 @@ class Pencil_Data(object):
                         print('step is none')
                 except:
                     print('================')
-                    print('No tempdata to be found')
+                    print('No densityData to be found')
                     print('================')
                     traceback.print_exc()
                     densitydata = None
