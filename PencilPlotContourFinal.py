@@ -32,17 +32,15 @@ def plot():
 def plotRun():
     ivar = [1, 50, 100]
     for i in range(len(ivar)):
-        plotRuns(ivar[i], False)
-        if i == 100:
-            plotRuns(ivar[i], True)
+        plotRuns(ivar[i])
 
 
-def plotRuns(ivar, color):
-    plotRunTemperature(ivar, color)
-    plotRunDensity(ivar, color)
+def plotRuns(ivar):
+    plotRunTemperature(ivar)
+    plotRunDensity(ivar)
 
 
-def plotRunDensity(ivar, color):
+def plotRunDensity(ivar):
     name = os.path.split(os.getcwd())[1]
     ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
@@ -63,12 +61,12 @@ def plotRunDensity(ivar, color):
         cax.set_ylabel('Density in code units', fontsize=10)
         plt.colorbar(PL2, cax=cax)
 
-    plt.suptitle('ivar= ' + str(ivar))
+    plt.suptitle('ivar= ' + str(ivar*2*np.pi))
     plt.savefig(name + "-density-ivar-" + str(ivar) + ".png")
     plt.close()
 
 
-def plotRunTemperature(ivar, color):
+def plotRunTemperature(ivar):
     name = os.path.split(os.getcwd())[1]
     ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
@@ -89,7 +87,7 @@ def plotRunTemperature(ivar, color):
         cax.set_ylabel('temperature in code units', fontsize=10)
         plt.colorbar(PL2, cax=cax)
 
-    plt.suptitle('ivar= ' + str(ivar))
+    plt.suptitle('t= ' + str(ivar*2*np.pi))
     plt.savefig(name + "-temperature-ivar-" + str(ivar) + ".png")
     plt.close()
 
