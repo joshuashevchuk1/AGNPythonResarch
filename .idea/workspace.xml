@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="plot orbitals at correct approximate time">
-      <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="no dynamics" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,20 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00072" summary="orbit check and only plot contour">
-      <created>1653269130849</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1653269130849</updated>
-    </task>
-    <task id="LOCAL-00073" summary="max orbits">
-      <created>1653271810559</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1653271810560</updated>
     </task>
     <task id="LOCAL-00074" summary="just plot the fucking contours">
       <created>1653272444059</created>
@@ -449,7 +433,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653439693990</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="time">
+      <created>1653440038214</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1653440038214</updated>
+    </task>
+    <task id="LOCAL-00122" summary="no dynamics">
+      <created>1653448232063</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1653448232063</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,8 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="only TTm rn" />
-    <MESSAGE value="fix to TTm" />
     <MESSAGE value="ignore missing results" />
     <MESSAGE value="woops" />
     <MESSAGE value="round max temp" />
@@ -489,6 +485,8 @@
     <MESSAGE value="ivar is not time" />
     <MESSAGE value="plot orbitals" />
     <MESSAGE value="plot orbitals at correct approximate time" />
-    <option name="LAST_COMMIT_MESSAGE" value="plot orbitals at correct approximate time" />
+    <MESSAGE value="time" />
+    <MESSAGE value="no dynamics" />
+    <option name="LAST_COMMIT_MESSAGE" value="no dynamics" />
   </component>
 </project>

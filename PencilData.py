@@ -462,12 +462,6 @@ class Pencil_Data(object):
                         indexTimeCutOff = i
                         break
 
-            for i in range(len(ecc)):
-                if ecc_int != 0:
-                    if ecc[i] <= 0.1:
-                        indexTimeCutOffLarge = i
-                        break
-
             timeCutOff = time[indexTimeCutOff]/(np.pi*2)
             timeCutOffLarge = time[indexTimeCutOffLarge]/(np.pi*2)
 
@@ -505,6 +499,7 @@ class Pencil_Data(object):
 
             try:
                 if Calc_Temp == True:
+                    print('entering Calc_temp')
                     ff = pc.read_var(trimall=True, ivar=0, magic=['TT'], quiet=True)
                     rad = ff.x
                     theta = ff.y
@@ -517,6 +512,7 @@ class Pencil_Data(object):
                     Init_Temp = ff.TT
                     rho = ff.rho
                 else:
+                    print('entering no Calc_temp')
                     ff = pc.read_var(trimall=True, ivar=0, quiet=True)
                     rad = ff.x
                     theta = ff.y
@@ -616,16 +612,20 @@ class Pencil_Data(object):
                 tempdata = None
             else:
                 try:
-                    while i <= MaxOrbits - step:
-                        ff = pc.read_var(trimall=True, ivar=i, magic=["TT"], quiet=True)
-                        while f <= len(ff.TT) - 1:
-                            for value in ff.TT[f]:
-                                placedata.append(value)
-                            f = f + df
-                        f = 0
-                        tempdata.append(placedata)
-                        placedata = []
-                        i = i + di
+                    print('Entering desnity ivar loop')
+                    if step != none:
+                        while i <= MaxOrbits - step:
+                            ff = pc.read_var(trimall=True, ivar=i, magic=["TT"], quiet=True)
+                            while f <= len(ff.TT) - 1:
+                                for value in ff.TT[f]:
+                                    placedata.append(value)
+                                f = f + df
+                            f = 0
+                            tempdata.append(placedata)
+                            placedata = []
+                            i = i + di
+                    else:
+                        print('step is none')
                 except:
                     print('================')
                     print('No tempdata to be found')
@@ -649,16 +649,20 @@ class Pencil_Data(object):
                 densitydata = None
             else:
                 try:
-                    while i <= MaxOrbits - step:
-                        ff = pc.read_var(trimall=True, ivar=i, quiet=True)
-                        while f <= len(ff.rho) - 1:
-                            for value in ff.rho[f]:
-                                placedata.append(value)
-                            f = f + df
-                        f = 0
-                        densitydata.append(placedata)
-                        placedata = []
-                        i = i + di
+                    print('Entering temp ivar loop')
+                    if step != none:
+                        while i <= MaxOrbits - step:
+                            ff = pc.read_var(trimall=True, ivar=i, quiet=True)
+                            while f <= len(ff.rho) - 1:
+                                for value in ff.rho[f]:
+                                    placedata.append(value)
+                                f = f + df
+                            f = 0
+                            densitydata.append(placedata)
+                            placedata = []
+                            i = i + di
+                    else:
+                        print('step is none')
                 except:
                     print('================')
                     print('No tempdata to be found')
