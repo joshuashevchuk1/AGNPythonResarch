@@ -1698,7 +1698,7 @@ class Pencil_Analysis(object):
 
                         time = data_frame[n]['t']
                         cut_off = data_frame[n]['indexTimeCutOff']
-                        time = time[:cut_off]
+                        time = time[:cut_off]/(2*np.pi)
 
                         print('time is ',time)
                         print('time[:cut_off] is',time[:cut_off])
@@ -1740,7 +1740,7 @@ class Pencil_Analysis(object):
                         plt.ylabel('Temperature')
                         plt.tight_layout()
                         plt.grid(True)
-                        plt.xlim([0, time[cut_off]])
+                        plt.xlim([0, time.max()])
 
 
                         DirEcc = (round(eccentricity[0], 1))
@@ -3712,7 +3712,7 @@ class Pencil_Analysis(object):
                     eccentricity = data_frame[n]['eccentricity']
                     semi_major = data_frame[n]['semi_major']
                     cut_off = data_frame[n]['indexTimeCutOff']
-                    time = time[:cut_off]
+                    time = time[:cut_off]/(2*np.pi)
 
                     xrq2 = data_frame[n]['xrq2']
                     yrq2 = data_frame[n]['yrq2']
