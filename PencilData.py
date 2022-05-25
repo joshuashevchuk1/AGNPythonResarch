@@ -459,10 +459,13 @@ class Pencil_Data(object):
                         indexTimeCutOff = i
                         break
 
-            timeCutOff = time[indexTimeCutOff]/(np.pi*2)
-            timeCutOffLarge = time[indexTimeCutOffLarge]/(np.pi*2)
+            timeCutOff = t[indexTimeCutOff]/(np.pi*2)
+            timeCutOffLarge = t[indexTimeCutOffLarge]/(np.pi*2)
 
             print('indexTimeCutOff',indexTimeCutOff)
+            print('t[indexTimeCutOff]',t[indexTimeCutOff])
+            print('t[indexTimeCutOff]/(np.pi*2)',t[indexTimeCutOff]/(np.pi*2))
+            print('ecc[indexTimeCutOff]',ecc[indexTimeCutOff])
             print('timeCutOff: ', timeCutOff)
 
             ecc = None

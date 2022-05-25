@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="bug">
-      <change beforePath="$PROJECT_DIR$/PencilData.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,20 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00078" summary="just plot the fucking contours">
-      <created>1653275389564</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1653275389564</updated>
-    </task>
-    <task id="LOCAL-00079" summary="just plot the fucking contours">
-      <created>1653275418800</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1653275418800</updated>
     </task>
     <task id="LOCAL-00080" summary="just plot the fucking contours">
       <created>1653275559142</created>
@@ -449,7 +435,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653462551065</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="no dynamics please">
+      <created>1653462832101</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1653462832101</updated>
+    </task>
+    <task id="LOCAL-00128" summary="bug">
+      <created>1653463695822</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1653463695822</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="woops" />
     <MESSAGE value="round max temp" />
     <MESSAGE value="name on contour plots" />
     <MESSAGE value="orbit check and only plot contour" />
@@ -488,6 +487,7 @@
     <MESSAGE value="plot orbitals at correct approximate time" />
     <MESSAGE value="time" />
     <MESSAGE value="no dynamics" />
+    <MESSAGE value="no dynamics please" />
     <MESSAGE value="bug" />
     <option name="LAST_COMMIT_MESSAGE" value="bug" />
   </component>
