@@ -671,7 +671,7 @@ class Pencil_Data(object):
             # |
             # |
             # ======================================
-            if Standard_Orbit == None:
+            if Standard_Orbit is None or Calc_Dynamics is false:
                 # ======================================
 
                 # keep vars used in Dynamic Loop here
@@ -697,7 +697,6 @@ class Pencil_Data(object):
                 # vars for midplane slices
                 try:
                     while Standard_Orbit <= Max_Orbits - Dynamic:
-
                         if Calc_Temp == True:
                             fv = pc.read_var(
                                 trimall=True, ivar=Standard_Orbit, magic=['TT'], quiet=True)
