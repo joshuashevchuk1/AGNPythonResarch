@@ -3730,10 +3730,10 @@ class Pencil_Analysis(object):
                     ax2.plot(xrq2, yrq2)
                     ax2.set_xlabel('xrq2')
                     ax2.set_ylabel('yrq2')
-                    ax3.plot(time/2*np.pi, semi_major[:len(time)], color='orange')
+                    ax3.plot(time, semi_major[:len(time)], color='orange')
                     ax3.set_xlabel('t')
                     ax3.set_ylabel('a')
-                    ax4.plot(time/2*np.pi, eccentricity[:len(time)], color='orange')
+                    ax4.plot(time, eccentricity[:len(time)], color='orange')
                     ax4.set_xlabel('t')
                     ax4.set_ylabel('e')
 

@@ -61,7 +61,7 @@ def plotRunDensity(ivar):
         cax.set_ylabel('Density in code units', fontsize=10)
         plt.colorbar(PL2, cax=cax)
 
-    plt.suptitle('ivar= ' + str(ivar*2*np.pi))
+    plt.suptitle('t= ' + str(ivar*2*np.pi))
     plt.savefig(name + "-density-ivar-" + str(ivar) + ".png")
     plt.close()
 
