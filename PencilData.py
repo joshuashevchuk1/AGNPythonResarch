@@ -271,7 +271,7 @@ class Pencil_Data(object):
             # ======================================
 
             ts = pc.read_ts()
-            t = ts.t / 2 * math.pi
+            t = ts.t
             N = 850
             tmax = t.max()
 
@@ -281,7 +281,7 @@ class Pencil_Data(object):
             # use Orbit_Len to properly get the length of the interval
             # for Orbits from the time series
 
-            time = t / 2 * math.pi
+            time = t/(2 * np.pi)
             len_t = len(ts.t)
 
             Max_Orbits = np.round((time[len(time) - 1]))
@@ -295,7 +295,7 @@ class Pencil_Data(object):
             Orbit_Len = []
 
             while i <= len(time) - 1:
-                if np.round(n * 2.0 * math.pi) == np.round(t[i]):
+                if np.round(n * 2.0 * np.pi) == np.round(t[i]):
                     Orbit_Len.append(len(t[:i]))
                     n = n + dn
                     i = i + di
