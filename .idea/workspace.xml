@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="no dynamics" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="bug">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,20 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00074" summary="just plot the fucking contours">
-      <created>1653272444059</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1653272444059</updated>
-    </task>
-    <task id="LOCAL-00075" summary="just plot the fucking contours">
-      <created>1653272562121</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1653272562121</updated>
     </task>
     <task id="LOCAL-00076" summary="just plot the fucking contours">
       <created>1653274833341</created>
@@ -447,7 +435,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653448232063</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="no dynamics">
+      <created>1653449286125</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1653449286125</updated>
+    </task>
+    <task id="LOCAL-00124" summary="bug">
+      <created>1653449401183</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1653449401183</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ignore missing results" />
     <MESSAGE value="woops" />
     <MESSAGE value="round max temp" />
     <MESSAGE value="name on contour plots" />
@@ -487,6 +488,7 @@
     <MESSAGE value="plot orbitals at correct approximate time" />
     <MESSAGE value="time" />
     <MESSAGE value="no dynamics" />
-    <option name="LAST_COMMIT_MESSAGE" value="no dynamics" />
+    <MESSAGE value="bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug" />
   </component>
 </project>

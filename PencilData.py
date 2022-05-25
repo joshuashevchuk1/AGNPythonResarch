@@ -59,10 +59,7 @@ class Pencil_Data(object):
 
         Standard_Orbit = Orbit_standard
 
-        if step == None:
-            step = 25
-        else:
-            self.step = step
+        self.step = step
 
         # ===========================================================================
         #
