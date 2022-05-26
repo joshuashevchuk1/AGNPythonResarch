@@ -78,7 +78,7 @@ def getCutOff():
                 break
 
     timeCutOff = t[indexTimeCutOff] / (np.pi * 2)
-    print('timeCutOff is ',timeCutOff)
+    print('timeCutOff is ',np.round(timeCutOff))
     print('leaving get cutoff')
     return timeCutOff
 
