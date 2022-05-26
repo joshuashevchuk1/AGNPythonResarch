@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="check some parameters/ bug">
-      <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="more plots plot" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,27 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00083" summary="more plots">
-      <created>1653275780816</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1653275780816</updated>
-    </task>
-    <task id="LOCAL-00084" summary="more plots">
-      <created>1653275878014</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1653275878014</updated>
-    </task>
-    <task id="LOCAL-00085" summary="more plots">
-      <created>1653276030026</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1653276030026</updated>
     </task>
     <task id="LOCAL-00086" summary="more plots">
       <created>1653276160475</created>
@@ -449,7 +426,28 @@
       <option name="project" value="LOCAL" />
       <updated>1653472522869</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="werid results">
+      <created>1653473202607</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1653473202607</updated>
+    </task>
+    <task id="LOCAL-00133" summary="corrections">
+      <created>1653473806448</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1653473806448</updated>
+    </task>
+    <task id="LOCAL-00134" summary="more plots plot">
+      <created>1653474135733</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1653474135733</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,9 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="orbit check and only plot contour" />
-    <MESSAGE value="max orbits" />
-    <MESSAGE value="just plot the fucking contours" />
     <MESSAGE value="more plots" />
     <MESSAGE value="useful analysis changes for when plotting into refactor" />
     <MESSAGE value="more plotting checks and simplifications" />
@@ -489,6 +484,9 @@
     <MESSAGE value="bug" />
     <MESSAGE value="check some parameters" />
     <MESSAGE value="check some parameters/ bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="check some parameters/ bug" />
+    <MESSAGE value="werid results" />
+    <MESSAGE value="corrections" />
+    <MESSAGE value="more plots plot" />
+    <option name="LAST_COMMIT_MESSAGE" value="more plots plot" />
   </component>
 </project>

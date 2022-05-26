@@ -8,7 +8,6 @@ import sys
 import traceback
 
 CONST_INTERVAL = 5
-max_orbits = 500
 inital_ivar = 0
 
 
@@ -34,6 +33,10 @@ def plots():
 def plotRuns(ivar, dir):
     print("============")
     print("entering plotRuns")
+
+    timeCutOff = getCutOff()
+    max_orbits = np.round(timeCutOff)
+
     DTarray = []
     while ivar <= max_orbits:
         try:
@@ -47,10 +50,38 @@ def plotRuns(ivar, dir):
     print("============")
 
 
+def getCutOff():
+    ts = pc.read_ts()
+    t = ts.t
+
+    radius = ts.xq2
+    LinearVelocity = ts.vxq2
+    AngularVelocity = ts.vyq2
+
+    v2 = LinearVelocity ** 2 + AngularVelocity ** 2
+    semi_major = 1. / (2 / radius - v2)
+    DArclength = radius ** 2 * (AngularVelocity / radius)
+    ep1 = (DArclength ** 2) / semi_major
+    eccentricity = (1 - ep1) ** 0.5
+    ecc_int = par.eccentricity
+    ecc = eccentricity
+
+    indexTimeCutOff = 0;
+
+    for i in range(len(ecc)):
+        if ecc_int != 0:
+            if ecc[i] <= 0.01:
+                indexTimeCutOff = i
+                break
+
+    timeCutOff = t[indexTimeCutOff] / (np.pi * 2)
+    return timeCutOff
+
 def getRunData(ivar, paramDTarray):
     ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
+
     paramDTarray.append(np.max(np.log(np.sum(dfT ** 2, axis=0))))
     return paramDTarray
 
@@ -59,12 +90,7 @@ def plotCollectedData(paramDTarray, dir):
     print("entering plotCollectedData")
     plt.plot(paramDTarray)
     plt.grid(True)
-    dir_gamma_patches = mpatches.Patch(
-        color='white',
-        label=r'$\gamma$ :'
-              + str(paramDTarray))
-    #plt.legend(handles=[dir_gamma_patches], loc=2)
-    plt.savefig("DeltaT-" + str(dir) + "-temp-max-" + ".png")
+    plt.savefig("Normal-T-" + str(dir) + "-temp-max-" + ".png")
     plt.close()
     print("leaving plotCollectedData")
 
