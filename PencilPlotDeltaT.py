@@ -7,7 +7,7 @@ from pylab import *
 import sys
 import traceback
 
-CONST_INTERVAL = 50
+CONST_INTERVAL = 1
 inital_ivar = 0
 
 
@@ -93,6 +93,7 @@ def getRunData(ivar, paramDTarray):
 
 def plotCollectedData(paramDTarray, dir):
     print("entering plotCollectedData")
+    print("paramDTArray is ",paramDTarray)
     plt.plot(paramDTarray)
     plt.grid(True)
     plt.savefig("Normal-T-" + str(dir) + "-temp-max-" + ".png")

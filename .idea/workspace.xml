@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="more plots plot" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="test interval" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,41 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00086" summary="more plots">
-      <created>1653276160475</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1653276160475</updated>
-    </task>
-    <task id="LOCAL-00087" summary="more plots">
-      <created>1653276292524</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1653276292524</updated>
-    </task>
-    <task id="LOCAL-00088" summary="more plots">
-      <created>1653276409241</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1653276409241</updated>
-    </task>
-    <task id="LOCAL-00089" summary="useful analysis changes for when plotting into refactor">
-      <created>1653277547895</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1653277547895</updated>
-    </task>
-    <task id="LOCAL-00090" summary="more plotting checks and simplifications">
-      <created>1653277792765</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1653277792765</updated>
     </task>
     <task id="LOCAL-00091" summary="more plotting checks and simplifications">
       <created>1653277944241</created>
@@ -447,7 +412,42 @@
       <option name="project" value="LOCAL" />
       <updated>1653474135733</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="more try cutoff">
+      <created>1653547534800</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1653547534800</updated>
+    </task>
+    <task id="LOCAL-00136" summary="more try cutoff">
+      <created>1653547669696</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1653547669696</updated>
+    </task>
+    <task id="LOCAL-00137" summary="cut off">
+      <created>1653547775371</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1653547775371</updated>
+    </task>
+    <task id="LOCAL-00138" summary="cut off">
+      <created>1653547787493</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1653547787493</updated>
+    </task>
+    <task id="LOCAL-00139" summary="test interval">
+      <created>1653547937717</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1653547937717</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,9 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="more plots" />
-    <MESSAGE value="useful analysis changes for when plotting into refactor" />
-    <MESSAGE value="more plotting checks and simplifications" />
     <MESSAGE value="missing params, bugs" />
     <MESSAGE value="even more refactoring setup" />
     <MESSAGE value="more things to add" />
@@ -487,6 +484,9 @@
     <MESSAGE value="werid results" />
     <MESSAGE value="corrections" />
     <MESSAGE value="more plots plot" />
-    <option name="LAST_COMMIT_MESSAGE" value="more plots plot" />
+    <MESSAGE value="more try cutoff" />
+    <MESSAGE value="cut off" />
+    <MESSAGE value="test interval" />
+    <option name="LAST_COMMIT_MESSAGE" value="test interval" />
   </component>
 </project>
