@@ -51,6 +51,7 @@ def plotRuns(ivar, dir):
 
 
 def getCutOff():
+    print('entering getCutOff')
     ts = pc.read_ts()
     t = ts.t
 
@@ -77,6 +78,8 @@ def getCutOff():
                 break
 
     timeCutOff = t[indexTimeCutOff] / (np.pi * 2)
+    print('timeCutOff is ',timeCutOff)
+    print('leaving get cutoff')
     return timeCutOff
 
 def getRunData(ivar, paramDTarray):
