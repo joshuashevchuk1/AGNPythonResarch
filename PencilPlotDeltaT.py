@@ -7,7 +7,7 @@ from pylab import *
 import sys
 import traceback
 
-CONST_INTERVAL = 5
+CONST_INTERVAL = 50
 inital_ivar = 0
 
 
