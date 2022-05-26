@@ -58,6 +58,8 @@ def getCutOff():
     LinearVelocity = ts.vxq2
     AngularVelocity = ts.vyq2
 
+    par = pc.read_param()
+
     v2 = LinearVelocity ** 2 + AngularVelocity ** 2
     semi_major = 1. / (2 / radius - v2)
     DArclength = radius ** 2 * (AngularVelocity / radius)
