@@ -7,9 +7,8 @@ from pylab import *
 import sys
 import traceback
 
-CONST_INTERVAL = 1
+CONST_INTERVAL = 10
 inital_ivar = 0
-
 
 def plots():
     root = os.getcwd()  # root dir is fucked up due to a space
@@ -51,6 +50,8 @@ def plotRuns(ivar, dir):
 
 
 def getCutOff():
+    global q
+    global ecc_int
     print('entering getCutOff')
     ts = pc.read_ts()
     t = ts.t
@@ -61,6 +62,11 @@ def getCutOff():
 
     par = pc.read_param()
 
+    if (par.iprimary == 1):
+        q = par.pmass[1]
+    else:
+        q = par.pmass[0]
+
     v2 = LinearVelocity ** 2 + AngularVelocity ** 2
     semi_major = 1. / (2 / radius - v2)
     DArclength = radius ** 2 * (AngularVelocity / radius)
@@ -69,7 +75,7 @@ def getCutOff():
     ecc_int = par.eccentricity
     ecc = eccentricity
 
-    indexTimeCutOff = 0;
+    indexTimeCutOff = 0
 
     for i in range(len(ecc)):
         if ecc_int != 0:
@@ -96,7 +102,7 @@ def plotCollectedData(paramDTarray, dir):
     print("paramDTArray is ",paramDTarray)
     plt.plot(paramDTarray)
     plt.grid(True)
-    plt.title('log temperature vs time')
+    plt.title('q = ' + q + ',' + r'$\varepsilon = ' + str(ecc_int))
     plt.xlabel(r'$t/T_0$')
     plt.ylabel('Temperature')
     plt.tight_layout()
