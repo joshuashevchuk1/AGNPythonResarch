@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="checking">
-      <change beforePath="$PROJECT_DIR$/PencilPlotDeltaT.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilPlotDeltaT.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="small fixes to plots" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,13 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00092" summary="missing params, bugs">
-      <created>1653278020375</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1653278020375</updated>
     </task>
     <task id="LOCAL-00093" summary="even more refactoring setup">
       <created>1653278925602</created>
@@ -449,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653550970266</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="small fixes to plots">
+      <created>1653642725191</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1653642725191</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,7 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="even more refactoring setup" />
     <MESSAGE value="more things to add" />
     <MESSAGE value="add more" />
     <MESSAGE value="bug fixing" />
@@ -489,6 +486,7 @@
     <MESSAGE value="cut off" />
     <MESSAGE value="test interval" />
     <MESSAGE value="checking" />
-    <option name="LAST_COMMIT_MESSAGE" value="checking" />
+    <MESSAGE value="small fixes to plots" />
+    <option name="LAST_COMMIT_MESSAGE" value="small fixes to plots" />
   </component>
 </project>
