@@ -102,7 +102,7 @@ def plotCollectedData(paramDTarray, dir):
     print("paramDTArray is ",paramDTarray)
     plt.plot(paramDTarray)
     plt.grid(True)
-    plt.title('q = ' + str(q) + ',' + r'$\varepsilon = ' + str(ecc_int))
+    plt.title('q = ' + str(q) + ',' + r'$\varepsilon$ = ' + str(ecc_int))
     plt.xlabel(r'$t/T_0$')
     plt.ylabel('Temperature')
     plt.tight_layout()

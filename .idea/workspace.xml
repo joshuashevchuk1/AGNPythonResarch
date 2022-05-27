@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="small fixes to plots" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="bug">
+      <change beforePath="$PROJECT_DIR$/PencilPlotDeltaT.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilPlotDeltaT.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,13 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00093" summary="even more refactoring setup">
-      <created>1653278925602</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1653278925602</updated>
     </task>
     <task id="LOCAL-00094" summary="more things to add">
       <created>1653279021412</created>
@@ -447,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653642725191</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="bug">
+      <created>1653643557032</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1653643557032</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -476,7 +478,6 @@
     <MESSAGE value="time" />
     <MESSAGE value="no dynamics" />
     <MESSAGE value="no dynamics please" />
-    <MESSAGE value="bug" />
     <MESSAGE value="check some parameters" />
     <MESSAGE value="check some parameters/ bug" />
     <MESSAGE value="werid results" />
@@ -487,6 +488,7 @@
     <MESSAGE value="test interval" />
     <MESSAGE value="checking" />
     <MESSAGE value="small fixes to plots" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fixes to plots" />
+    <MESSAGE value="bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug" />
   </component>
 </project>
