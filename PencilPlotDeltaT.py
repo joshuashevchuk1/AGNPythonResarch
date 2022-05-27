@@ -7,7 +7,7 @@ from pylab import *
 import sys
 import traceback
 
-CONST_INTERVAL = 10
+CONST_INTERVAL = 1
 inital_ivar = 0
 
 def plots():
