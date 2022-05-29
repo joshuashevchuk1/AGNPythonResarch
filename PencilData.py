@@ -818,8 +818,7 @@ class Pencil_Data(object):
                 Int = 0
                 dInt = 1
 
-                Orbit = MaxOrbits - 2
-                # Orbit=1
+                Orbit = np.round(timeCutOff)
 
                 KE_Sum = []
                 UE_Sum = []
