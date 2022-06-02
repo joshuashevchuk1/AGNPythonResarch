@@ -102,6 +102,11 @@ def plotCollectedData(paramDTarray, dir):
     print("paramDTArray is ",paramDTarray)
     plt.plot(paramDTarray)
     plt.grid(True)
+    Dir_max_patches = mpatches.Patch(
+        color='white', label=r'$t_{max}$ :' + paramDTarray.max())
+    Dir_min_patches = mpatches.Patch(
+        color='white', label=r'$t_{min}$ :' + paramDTarray.min())
+    plt.legend(handles=[Dir_gamma_patches], loc=2)
     plt.title('q = ' + str(q) + ',' + r'$\varepsilon$ = ' + str(ecc_int))
     plt.xlabel(r'$t/T_0$')
     plt.ylabel('Temperature')
