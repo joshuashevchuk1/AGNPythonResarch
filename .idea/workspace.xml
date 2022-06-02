@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="bug" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="min and max patches">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,20 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00096" summary="bug fixing">
-      <created>1653281080023</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1653281080023</updated>
-    </task>
-    <task id="LOCAL-00097" summary="bug fixing">
-      <created>1653281235173</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1653281235173</updated>
     </task>
     <task id="LOCAL-00098" summary="contour?">
       <created>1653281484119</created>
@@ -447,7 +435,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653645391979</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="min and max patches">
+      <created>1654151289014</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1654151289014</updated>
+    </task>
+    <task id="LOCAL-00146" summary="min and max patches">
+      <created>1654151303069</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1654151303069</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="more things to add" />
     <MESSAGE value="add more" />
     <MESSAGE value="bug fixing" />
     <MESSAGE value="contour?" />
@@ -487,6 +488,7 @@
     <MESSAGE value="checking" />
     <MESSAGE value="small fixes to plots" />
     <MESSAGE value="bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug" />
+    <MESSAGE value="min and max patches" />
+    <option name="LAST_COMMIT_MESSAGE" value="min and max patches" />
   </component>
 </project>
