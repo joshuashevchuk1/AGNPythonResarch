@@ -114,7 +114,7 @@ PA.pingTTm(var_dir_list)
 #PA.pingGTM_Sigma_3D_O(var_dir_list)
 #PA.ping_LongPerihelion(var_dir_list)
 #PA.ping_LongPerihelion_10_Orbits(var_dir_list)
-#PA.pingEnergy(var_dir_list)
+PA.pingEnergy(var_dir_list)
 #PA.pingToomreQ(var_dir_list)
 
 # PAP.pingContour(var_dir_list)
