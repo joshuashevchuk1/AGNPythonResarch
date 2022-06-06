@@ -116,12 +116,11 @@ def getRunData(ivar, paramDTarray):
     ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
-    T = dfT
+    T = np.max(np.log(np.sum(dfT ** 2, axis=0)))
     H = getAspectRatio()
     gamma = getGamma()
 
     scaleHeight = gamma*T/H
-    scaleHeight = np.max(np.log(np.sum(scaleHeight ** 2, axis=0)))
 
     paramDTarray.append(scaleHeight)
     return paramDTarray

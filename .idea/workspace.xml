@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="scale height added to PencilPlotDeltaH.py">
-      <change beforePath="$PROJECT_DIR$/PencilPlotDeltaT.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilPlotDeltaT.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="added scale height fixes to plots" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,20 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00100" summary="contour?">
-      <created>1653296194730</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1653296194730</updated>
-    </task>
-    <task id="LOCAL-00101" summary="contour?">
-      <created>1653373851470</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1653373851470</updated>
     </task>
     <task id="LOCAL-00102" summary="fucking contour I swear">
       <created>1653374075928</created>
@@ -449,7 +433,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654480408109</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="added scale height fixes to plots">
+      <created>1654480748459</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1654480748459</updated>
+    </task>
+    <task id="LOCAL-00150" summary="added scale height fixes to plots">
+      <created>1654480786108</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1654480786108</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,7 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="contour?" />
     <MESSAGE value="fucking contour I swear" />
     <MESSAGE value="ivar array changes" />
     <MESSAGE value="color only last plot" />
@@ -489,6 +486,7 @@
     <MESSAGE value="min and max patches" />
     <MESSAGE value="not numpy arrays" />
     <MESSAGE value="scale height added to PencilPlotDeltaH.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="scale height added to PencilPlotDeltaH.py" />
+    <MESSAGE value="added scale height fixes to plots" />
+    <option name="LAST_COMMIT_MESSAGE" value="added scale height fixes to plots" />
   </component>
 </project>
