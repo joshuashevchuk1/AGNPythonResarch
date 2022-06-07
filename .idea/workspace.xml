@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="too many params?">
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="truth array?!?!?!?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,13 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00104" summary="fucking contour I swear">
-      <created>1653374291381</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1653374291381</updated>
     </task>
     <task id="LOCAL-00105" summary="ivar array changes">
       <created>1653374541080</created>
@@ -449,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654561988950</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="truth array?!?!?!?">
+      <created>1654578602000</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1654578602000</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="color only last plot" />
     <MESSAGE value="important 3 contours" />
     <MESSAGE value="ivar is not time" />
     <MESSAGE value="plot orbitals" />
@@ -489,6 +488,7 @@
     <MESSAGE value="added scale height fixes to plots" />
     <MESSAGE value="apply fix" />
     <MESSAGE value="too many params?" />
-    <option name="LAST_COMMIT_MESSAGE" value="too many params?" />
+    <MESSAGE value="truth array?!?!?!?" />
+    <option name="LAST_COMMIT_MESSAGE" value="truth array?!?!?!?" />
   </component>
 </project>

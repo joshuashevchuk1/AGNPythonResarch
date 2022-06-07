@@ -292,31 +292,10 @@ class Pencil_Analysis(object):
                     Total = data_frame[n]['Total_Disk_Energy']
                     Total_Avg = data_frame[n]['Total_Disk_Energy_Avg']
                     OE_Sum = data_frame[n]['OE_Sum']
-                    eccentricity = data_frame[n]['eccentricity']
-                    OE_Sum_Avg = data_frame[n]['OE_Sum_Avg']
-                    KE_Sum_Avg = data_frame[n]['KE_Sum_Avg']
-                    UE_Sum_Avg = data_frame[n]['UE_Sum_Avg']
-                    UINT_Sum_Avg = data_frame[n]['UINT_Sum_Avg']
 
-                    KE_rate = data_frame[n]['KE_rate']
-                    UE_rate = data_frame[n]['UE_rate']
-                    UINT_rate = data_frame[n]['UINT_rate']
-                    OE_rate = data_frame[n]['OE_rate']
                     KE_fit = data_frame[n]['KE_fit']
                     UE_fit = data_frame[n]['UE_fit']
                     UINT_fit = data_frame[n]['UINT_fit']
-                    OE_fit = data_frame[n]['OE_fit']
-                    KE_fit_rate = data_frame[n]['KE_fit_rate']
-                    UE_fit_rate = data_frame[n]['UE_fit_rate']
-                    UINT_fit_rate = data_frame[n]['UINT_fit_rate']
-                    OE_fit_rate = data_frame[n]['OE_fit_rate']
-                    KE_error = data_frame[n]['KE_error']
-                    UE_error = data_frame[n]['UE_error']
-                    UINT_error = data_frame[n]['UINT_error']
-                    OE_error = data_frame[n]['OE_error']
-
-                    print(len(KE_Sum))
-                    # print(KE_fit)
 
                     # =========================
                     # legend handles
@@ -327,7 +306,6 @@ class Pencil_Analysis(object):
 
                     eccentricity = data_frame[n]['eccentricity']
                     sound_speed = data_frame[n]['cs']
-                    aspect_ratio = data_frame[n]['aspect_ratio']
                     initial_pressure = data_frame[n]['initial_pressure']
                     Sigma = data_frame[n]['Sigma']
                     rsmooth = data_frame[n]['rsmooth']
@@ -337,6 +315,9 @@ class Pencil_Analysis(object):
 
                     DirMass = data_frame[n]['par1']
                     DirEcc = (round(eccentricity[0], 1))
+
+                    time = data_frame[n]['time']
+                    cut_off = data_frame[n]['indexTimeCutOff']
 
                     DirMass_patches = mpatches.Patch(
                         color='white', label='q :'+str(DirMass))
@@ -364,31 +345,8 @@ class Pencil_Analysis(object):
                         color='purple', label='Internal')
                     OE_Sum_Label = mpatches.Patch(
                         color='orange', label='Orbital')
-                    fit_Label = mpatches.Patch(color='black', label='fit')
-                    KE_rate_Label = mpatches.Patch(
-                        color='white', label='Pencil derivative :'+str(KE_rate))
-                    UE_rate_Label = mpatches.Patch(
-                        color='white', label='Pencil derivative :'+str(UE_rate))
-                    UINT_rate_Label = mpatches.Patch(
-                        color='white', label='Pencil derivative :'+str(UINT_rate))
-                    OE_rate_Label = mpatches.Patch(
-                        color='white', label='Pencil derivative :'+str(OE_rate))
-                    KE_fr_Label = mpatches.Patch(
-                        color='white', label='fit derivative : '+str(KE_fit_rate))
-                    UE_fr_Label = mpatches.Patch(
-                        color='white', label='fit derivative : '+str(UE_fit_rate))
-                    UINT_fr_Label = mpatches.Patch(
-                        color='white', label='fit derivative : '+str(UINT_fit_rate))
-                    OE_fr_Label = mpatches.Patch(
-                        color='white', label='fit derivative : '+str(OE_fit_rate))
-                    KE_error_Label = mpatches.Patch(
-                        color='white', label='error :'+str(KE_error))
-                    UE_error_Label = mpatches.Patch(
-                        color='white', label='error :'+str(UE_error))
-                    UINT_error_Label = mpatches.Patch(
-                        color='white', label='error :'+str(UINT_error))
-                    OE_error_Label = mpatches.Patch(
-                        color='white', label='error :'+str(OE_error))
+                    Dir_cutoff_patches = mpatches.Patch(
+                        color='white', label=r'$t_{c}$ :' + str(time[cut_off - 1]))
 
                     # ---------------------------------------------------------------------
                     # =========================
@@ -429,7 +387,8 @@ class Pencil_Analysis(object):
                                         KE_Sum_Label,
                                         UE_Sum_Label,
                                         UINT_Sum_Label,
-                                        OE_Sum_Label], loc=2)
+                                        OE_Sum_Label,
+                                        Dir_cutoff_patches], loc=2)
                     plt.savefig('Standard_ErgMC_' +
                                 str(data_frame[n]['DirName'])+'.png')
                     plt.close()
@@ -454,33 +413,9 @@ class Pencil_Analysis(object):
                                         Dir_rsmooth_patches,
                                         Dir_gamma_patches,
                                         Dir_alpha_patches,
-                                        Dir_beta_patches], loc=2)
+                                        Dir_beta_patches,
+                                        Dir_cutoff_patches], loc=2)
                     plt.savefig('Standard_ErgTot_' +
-                                str(data_frame[n]['DirName'])+'.png')
-                    plt.close()
-
-                    # =========================
-                    # Total Energy with eccentricity
-                    # =========================
-
-                    plt.figure(figsize=(10, 10))
-                    plt.title('Energy Magnitude Comparison')
-                    plt.plot(eccentricity[:len(Total_Avg[:])], np.abs(
-                        Total_Avg[:]), color='blue', label='Total disk energy', ls=':')
-                    plt.xlabel('eccentricity', fontweight='bold')
-                    plt.ylabel('Joule (Code units)', fontweight='bold')
-                    plt.tight_layout()
-                    plt.grid(True)
-                    plt.legend(handles=[DirMass_patches,
-                                        DirEcc_patches,
-                                        Dirsound_speed_patches,
-                                        Dirinitial_pressure_patches,
-                                        DirSigma_patches,
-                                        Dir_rsmooth_patches,
-                                        Dir_gamma_patches,
-                                        Dir_alpha_patches,
-                                        Dir_beta_patches], loc=2)
-                    plt.savefig('Standard_ErgEcc_' +
                                 str(data_frame[n]['DirName'])+'.png')
                     plt.close()
 
@@ -509,10 +444,7 @@ class Pencil_Analysis(object):
                                         Dir_alpha_patches,
                                         Dir_beta_patches,
                                         UE_Sum_Label,
-                                        fit_Label,
-                                        UE_rate_Label,
-                                        UE_fr_Label,
-                                        UE_error_Label], loc=2)
+                                        Dir_cutoff_patches], loc=2)
                     plt.savefig('Standard_ErgUE_' +
                                 str(data_frame[n]['DirName'])+'.png')
                     plt.close()
@@ -542,10 +474,7 @@ class Pencil_Analysis(object):
                                         Dir_alpha_patches,
                                         Dir_beta_patches,
                                         KE_Sum_Label,
-                                        fit_Label,
-                                        KE_rate_Label,
-                                        KE_fr_Label,
-                                        KE_error_Label], loc=2)
+                                        Dir_cutoff_patches], loc=2)
                     plt.savefig('Standard_ErgKE_' +
                                 str(data_frame[n]['DirName'])+'.png')
                     plt.close()
@@ -576,44 +505,8 @@ class Pencil_Analysis(object):
                                         Dir_alpha_patches,
                                         Dir_beta_patches,
                                         UINT_Sum_Label,
-                                        fit_Label,
-                                        UINT_rate_Label,
-                                        UINT_fr_Label,
-                                        UINT_error_Label], loc=2)
+                                        Dir_cutoff_patches], loc=2)
                     plt.savefig('Standard_ErgUINT_' +
-                                str(data_frame[n]['DirName'])+'.png')
-                    plt.close()
-
-                    # ========================
-                    # Planet Orbital Energy
-                    # ========================
-
-                    plt.figure(figsize=(10, 10))
-                    plt.title('Orbital Energy')
-                    plt.plot(OE_Sum, color='orange',
-                             label='Orbital Energy', ls='--')
-                    if Calc_Rates_Energy == True:
-                        # plot rates and check error
-                        plt.plot(OE_fit, color='black', label='OE fit', ls=':')
-                    plt.xlabel('time (Orbits)', fontweight='bold')
-                    plt.ylabel('Joule (Code units)', fontweight='bold')
-                    plt.tight_layout()
-                    plt.grid(True)
-                    plt.legend(handles=[DirMass_patches,
-                                        DirEcc_patches,
-                                        Dirsound_speed_patches,
-                                        Dirinitial_pressure_patches,
-                                        DirSigma_patches,
-                                        Dir_rsmooth_patches,
-                                        Dir_gamma_patches,
-                                        Dir_alpha_patches,
-                                        Dir_beta_patches,
-                                        OE_Sum_Label,
-                                        fit_Label,
-                                        OE_rate_Label,
-                                        OE_fr_Label,
-                                        OE_error_Label], loc=2)
-                    plt.savefig('Standard_ErgOE_' +
                                 str(data_frame[n]['DirName'])+'.png')
                     plt.close()
 
