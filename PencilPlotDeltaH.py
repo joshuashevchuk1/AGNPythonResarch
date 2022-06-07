@@ -48,15 +48,8 @@ def plotRuns(ivar, dir):
     print("leaving plotRuns")
     print("============")
 
-def getGamma():
-    par = pc.read_param()
-    gamma = par.gamma
-
-    return gamma
-
-
 def getAspectRatio():
-
+    print('entering getAspectRatio')
     ts = pc.read_ts()
     t = ts.t
 
@@ -66,11 +59,12 @@ def getAspectRatio():
     gravC = par.g0
     Mstar = par.pmass[0]
     cs = par.cs0
+    gamma = par.gamma
 
     Kepler_F = np.sqrt(gravC * Mstar / radius)
     aspect_ratio = cs / Kepler_F
-
-    return aspect_ratio
+    print('Leaving getAspectRatio')
+    return aspect_ratio,gamma
 
 def getCutOff():
     global q
@@ -117,8 +111,7 @@ def getRunData(ivar, paramDTarray):
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
     T = np.max(np.log(np.sum(dfT ** 2, axis=0)))
-    H = getAspectRatio()
-    gamma = getGamma()
+    H,gamma = getAspectRatio()
 
     scaleHeight = gamma*T/H
 

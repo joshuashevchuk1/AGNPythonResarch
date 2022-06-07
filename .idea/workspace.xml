@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="added scale height fixes to plots" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="apply fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PencilPlotDeltaH.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilPlotDeltaH.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,13 +106,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00102" summary="fucking contour I swear">
-      <created>1653374075928</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1653374075928</updated>
     </task>
     <task id="LOCAL-00103" summary="fucking contour I swear">
       <created>1653374168827</created>
@@ -447,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654480786108</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="apply fix">
+      <created>1654484105625</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1654484105626</updated>
+    </task>
+    <option name="localTasksCounter" value="152" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,7 +465,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fucking contour I swear" />
     <MESSAGE value="ivar array changes" />
     <MESSAGE value="color only last plot" />
     <MESSAGE value="important 3 contours" />
@@ -487,6 +489,7 @@
     <MESSAGE value="not numpy arrays" />
     <MESSAGE value="scale height added to PencilPlotDeltaH.py" />
     <MESSAGE value="added scale height fixes to plots" />
-    <option name="LAST_COMMIT_MESSAGE" value="added scale height fixes to plots" />
+    <MESSAGE value="apply fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="apply fix" />
   </component>
 </project>
