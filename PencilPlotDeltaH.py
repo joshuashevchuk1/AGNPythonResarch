@@ -113,9 +113,7 @@ def getRunData(ivar, paramDTarray):
     T = np.max(np.log(np.sum(dfT ** 2, axis=0)))
     H,gamma = getAspectRatio()
 
-    scaleHeight = gamma*T/H
-
-    paramDTarray.append(scaleHeight)
+    paramDTarray.append(gamma*T/H)
     return paramDTarray
 
 
