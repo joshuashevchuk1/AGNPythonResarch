@@ -65,8 +65,9 @@ def getAspectRatio():
 
     Kepler_F = np.sqrt(gravC * Mstar / radius)
     aspect_ratio = cs / Kepler_F
+    scale_height = aspect_ratio*radius
     print('Leaving getAspectRatio')
-    return aspect_ratio,gamma
+    return aspect_ratio,gamma,scale_height
 
 def getCutOff():
     global q
@@ -112,7 +113,7 @@ def getRunData(ivar, paramDTarray):
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
     T = np.max(np.log(np.sum(dfT ** 2, axis=0)))
-    H,gamma = getAspectRatio()
+    H,gamma,h = getAspectRatio()
     H = np.max(np.log(np.sum(dfT ** 2, axis=0))) #don't forget about radius
     print('ivar is ',ivar)
     print('dft is',dfT)
@@ -122,7 +123,7 @@ def getRunData(ivar, paramDTarray):
     print('gamma is ',gamma)
     print('gamma*T/H is',gamma*T/H)
 
-    paramDTarray.append(gamma*T/H)
+    paramDTarray.append(h)
     return paramDTarray
 
 
