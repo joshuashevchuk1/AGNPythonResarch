@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="added cutoff information to Energy plots">
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="more checking on issues">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PencilPlotDeltaH.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilPlotDeltaH.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,20 +106,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00106" summary="color only last plot">
-      <created>1653374653109</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1653374653109</updated>
-    </task>
-    <task id="LOCAL-00107" summary="important 3 contours">
-      <created>1653375264851</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1653375264851</updated>
     </task>
     <task id="LOCAL-00108" summary="important 3 contours">
       <created>1653375380997</created>
@@ -449,7 +436,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654585452035</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="see issues">
+      <created>1654668595300</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1654668595300</updated>
+    </task>
+    <task id="LOCAL-00156" summary="more checking on issues">
+      <created>1654669053359</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1654669053360</updated>
+    </task>
+    <option name="localTasksCounter" value="157" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,8 +465,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ivar is not time" />
-    <MESSAGE value="plot orbitals" />
     <MESSAGE value="plot orbitals at correct approximate time" />
     <MESSAGE value="time" />
     <MESSAGE value="no dynamics" />
@@ -489,6 +488,8 @@
     <MESSAGE value="too many params?" />
     <MESSAGE value="truth array?!?!?!?" />
     <MESSAGE value="added cutoff information to Energy plots" />
-    <option name="LAST_COMMIT_MESSAGE" value="added cutoff information to Energy plots" />
+    <MESSAGE value="see issues" />
+    <MESSAGE value="more checking on issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="more checking on issues" />
   </component>
 </project>
