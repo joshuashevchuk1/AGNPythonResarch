@@ -7,7 +7,7 @@ from pylab import *
 import sys
 import traceback
 
-CONST_INTERVAL = 50
+CONST_INTERVAL = 15
 inital_ivar = 1
 
 def plots():
@@ -40,9 +40,11 @@ def plotRuns(ivar, dir):
     while ivar <= max_orbits:
         try:
             DTarray = getRunData(ivar, DTarray)
+            ivar = ivar + CONST_INTERVAL
         except:
             print("bad run or no run")
             traceback.print_exc()
+            ivar = ivar + CONST_INTERVAL
         ivar = ivar + CONST_INTERVAL
     plotCollectedData(DTarray, dir)
     print("leaving plotRuns")
@@ -101,7 +103,6 @@ def getCutOff():
                 break
 
     timeCutOff = t[indexTimeCutOff] / (np.pi * 2)
-
     print('timeCutOff is ',np.round(timeCutOff))
     print('leaving get cutoff')
     return timeCutOff
@@ -112,6 +113,8 @@ def getRunData(ivar, paramDTarray):
     dfT = ff.TT[:] - ff0.TT[:]
     T = np.max(np.log(np.sum(dfT ** 2, axis=0)))
     H,gamma = getAspectRatio()
+    print('ivar is ',ivar)
+    print('dft is',dfT)
     print('T is ',T)
     print('np.sum(dfT ** 2, axis=0)) is ', np.sum(dfT ** 2, axis=0))
     print('H is ',H)
