@@ -112,6 +112,9 @@ def getRunData(ivar, paramDTarray):
     dfT = ff.TT[:] - ff0.TT[:]
     T = np.max(np.log(np.sum(dfT ** 2, axis=0)))
     H,gamma = getAspectRatio()
+    print('H is ',H)
+    print('gamma is ',gamma)
+    print('gamma*T/H is',gamma*T/H)
 
     paramDTarray.append(gamma*T/H)
     return paramDTarray
