@@ -8,7 +8,7 @@ import sys
 import traceback
 
 CONST_INTERVAL = 50
-inital_ivar = 0
+inital_ivar = 1
 
 def plots():
     root = os.getcwd()  # root dir is fucked up due to a space
