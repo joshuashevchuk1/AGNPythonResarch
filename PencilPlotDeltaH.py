@@ -141,7 +141,7 @@ def plotCollectedData(paramDTarray, dir):
     plt.xlabel(r'$t/T_0$')
     plt.ylabel('h')
     plt.tight_layout()
-    plt.savefig("Normal-h-" + str(dir) + "-temp-max-" + ".png")
+    plt.savefig("Normal-h-new-" + str(dir) + "-temp-max-" + ".png")
     plt.close()
     print("leaving plotCollectedData")
 
