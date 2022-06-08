@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="truth array?!?!?!?">
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="added cutoff information to Energy plots">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,13 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00105" summary="ivar array changes">
-      <created>1653374541080</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1653374541080</updated>
     </task>
     <task id="LOCAL-00106" summary="color only last plot">
       <created>1653374653109</created>
@@ -449,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654578602000</updated>
     </task>
-    <option name="localTasksCounter" value="154" />
+    <task id="LOCAL-00154" summary="added cutoff information to Energy plots">
+      <created>1654585452035</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1654585452035</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="important 3 contours" />
     <MESSAGE value="ivar is not time" />
     <MESSAGE value="plot orbitals" />
     <MESSAGE value="plot orbitals at correct approximate time" />
@@ -489,6 +488,7 @@
     <MESSAGE value="apply fix" />
     <MESSAGE value="too many params?" />
     <MESSAGE value="truth array?!?!?!?" />
-    <option name="LAST_COMMIT_MESSAGE" value="truth array?!?!?!?" />
+    <MESSAGE value="added cutoff information to Energy plots" />
+    <option name="LAST_COMMIT_MESSAGE" value="added cutoff information to Energy plots" />
   </component>
 </project>
