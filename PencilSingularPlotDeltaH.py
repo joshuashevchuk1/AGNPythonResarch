@@ -37,6 +37,7 @@ def plotRuns(ivar):
             traceback.print_exc()
             ivar = ivar + CONST_INTERVAL
         ivar = ivar + CONST_INTERVAL
+
     plotCollectedData(DTarray)
     print("leaving plotRuns")
     print("============")
@@ -44,7 +45,6 @@ def plotRuns(ivar):
 def getAspectRatio():
     print('entering getAspectRatio')
     ts = pc.read_ts()
-    t = ts.t
 
     radius = ts.xq2
 
