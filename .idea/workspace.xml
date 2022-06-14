@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="debugging stupid bug">
-      <change beforePath="$PROJECT_DIR$/PencilSingularPlotDeltaH.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilSingularPlotDeltaH.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="messed up name" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,55 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00116" summary="plot orbitals">
-      <created>1653386605454</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1653386605454</updated>
-    </task>
-    <task id="LOCAL-00117" summary="plot orbitals">
-      <created>1653386762347</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1653386762347</updated>
-    </task>
-    <task id="LOCAL-00118" summary="plot orbitals">
-      <created>1653387455920</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1653387455920</updated>
-    </task>
-    <task id="LOCAL-00119" summary="plot orbitals">
-      <created>1653387998776</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1653387998776</updated>
-    </task>
-    <task id="LOCAL-00120" summary="plot orbitals at correct approximate time">
-      <created>1653439693990</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1653439693990</updated>
-    </task>
-    <task id="LOCAL-00121" summary="time">
-      <created>1653440038214</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1653440038214</updated>
-    </task>
-    <task id="LOCAL-00122" summary="no dynamics">
-      <created>1653448232063</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1653448232063</updated>
     </task>
     <task id="LOCAL-00123" summary="no dynamics">
       <created>1653449286125</created>
@@ -449,7 +398,56 @@
       <option name="project" value="LOCAL" />
       <updated>1655194533238</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="added runPlot()">
+      <created>1655194697969</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1655194697969</updated>
+    </task>
+    <task id="LOCAL-00166" summary="added runPlot()">
+      <created>1655195153236</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1655195153236</updated>
+    </task>
+    <task id="LOCAL-00167" summary="more oddities">
+      <created>1655195264928</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1655195264928</updated>
+    </task>
+    <task id="LOCAL-00168" summary="str issue">
+      <created>1655195363428</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1655195363428</updated>
+    </task>
+    <task id="LOCAL-00169" summary="Simplified">
+      <created>1655195650288</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1655195650288</updated>
+    </task>
+    <task id="LOCAL-00170" summary="Simplified DeltaH global">
+      <created>1655195974642</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1655195974642</updated>
+    </task>
+    <task id="LOCAL-00171" summary="messed up name">
+      <created>1655196103581</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1655196103581</updated>
+    </task>
+    <option name="localTasksCounter" value="172" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,12 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="corrections" />
-    <MESSAGE value="more plots plot" />
-    <MESSAGE value="more try cutoff" />
-    <MESSAGE value="cut off" />
-    <MESSAGE value="test interval" />
-    <MESSAGE value="checking" />
     <MESSAGE value="small fixes to plots" />
     <MESSAGE value="bug" />
     <MESSAGE value="min and max patches" />
@@ -489,6 +481,12 @@
     <MESSAGE value="h new" />
     <MESSAGE value="running into memory issues with python script. So just plot the current dir" />
     <MESSAGE value="debugging stupid bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="debugging stupid bug" />
+    <MESSAGE value="added runPlot()" />
+    <MESSAGE value="more oddities" />
+    <MESSAGE value="str issue" />
+    <MESSAGE value="Simplified" />
+    <MESSAGE value="Simplified DeltaH global" />
+    <MESSAGE value="messed up name" />
+    <option name="LAST_COMMIT_MESSAGE" value="messed up name" />
   </component>
 </project>

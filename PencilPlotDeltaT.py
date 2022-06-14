@@ -7,9 +7,6 @@ from pylab import *
 import sys
 import traceback
 
-CONST_INTERVAL = 1
-inital_ivar = 0
-
 def plots():
     root = os.getcwd()  # root dir is fucked up due to a space
     dir_run_list = next(os.walk('.'))[1]
@@ -111,9 +108,10 @@ def plotCollectedData(paramDTarray, dir):
     plt.xlabel(r'$t/T_0$')
     plt.ylabel('Temperature')
     plt.tight_layout()
-    plt.savefig("Normal-T-" + str(dir) + "-temp-max-" + ".png")
+    plt.savefig("Normal-T-" + str(dir) + "-temp-with-Helper-" + ".png")
     plt.close()
     print("leaving plotCollectedData")
 
-
+CONST_INTERVAL = 15
+inital_ivar = 0
 plots()
