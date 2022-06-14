@@ -10,6 +10,8 @@ import traceback
 CONST_INTERVAL = 15
 inital_ivar = 1
 
+runPlot()
+
 def plots():
         try:
             plotRuns(inital_ivar)
@@ -114,7 +116,7 @@ def getRunData(ivar, paramDTarray):
     print('gamma is ',gamma)
     print('gamma*T/H is',gamma*T/H)
 
-    paramDTarray.append(h)
+    paramDTarray=h
     return paramDTarray
 
 
