@@ -111,7 +111,7 @@ def plotCollectedData(paramDTarray, dir):
     print("leaving plotCollectedData")
 
 def run():
-    plotRuns()
+    plots()
 
 CONST_INTERVAL = 15
 inital_ivar = 1
