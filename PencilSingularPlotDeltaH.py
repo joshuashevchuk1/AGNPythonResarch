@@ -7,11 +7,6 @@ from pylab import *
 import sys
 import traceback
 
-CONST_INTERVAL = 15
-inital_ivar = 1
-
-runPlot()
-
 def plots():
         try:
             plotRuns(inital_ivar)
@@ -140,3 +135,8 @@ def plotCollectedData(paramDTarray):
 
 def runPlot():
     plots()
+
+
+CONST_INTERVAL = 15
+inital_ivar = 1
+runPlot()
