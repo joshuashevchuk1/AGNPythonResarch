@@ -89,10 +89,10 @@ def plotCollectedData(paramDTarray):
     plt.close()
     print("leaving plotCollectedData")
 
-def runPlot():
+def run():
     plotRuns()
 
 
 CONST_INTERVAL = 15
 inital_ivar = 1
-runPlot()
+run()
