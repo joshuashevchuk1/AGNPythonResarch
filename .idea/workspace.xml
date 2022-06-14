@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="messed up name" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="start at 1 to not lead to errors" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,20 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00123" summary="no dynamics">
-      <created>1653449286125</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1653449286125</updated>
-    </task>
-    <task id="LOCAL-00124" summary="bug">
-      <created>1653449401183</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1653449401183</updated>
     </task>
     <task id="LOCAL-00125" summary="bug">
       <created>1653462518135</created>
@@ -447,7 +433,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655196103581</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="try to calc scaleheight by hand first">
+      <created>1655196471180</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1655196471180</updated>
+    </task>
+    <task id="LOCAL-00173" summary="start at 1 to not lead to errors">
+      <created>1655196530326</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1655196530326</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,8 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="small fixes to plots" />
-    <MESSAGE value="bug" />
     <MESSAGE value="min and max patches" />
     <MESSAGE value="not numpy arrays" />
     <MESSAGE value="scale height added to PencilPlotDeltaH.py" />
@@ -487,6 +485,8 @@
     <MESSAGE value="Simplified" />
     <MESSAGE value="Simplified DeltaH global" />
     <MESSAGE value="messed up name" />
-    <option name="LAST_COMMIT_MESSAGE" value="messed up name" />
+    <MESSAGE value="try to calc scaleheight by hand first" />
+    <MESSAGE value="start at 1 to not lead to errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="start at 1 to not lead to errors" />
   </component>
 </project>
