@@ -136,5 +136,5 @@ def plotCollectedData(paramDTarray):
     plt.close()
     print("leaving plotCollectedData")
 
-
-plots()
+def runPlot():
+    plots()
