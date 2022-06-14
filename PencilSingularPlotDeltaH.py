@@ -7,35 +7,10 @@ from pylab import *
 import sys
 import traceback
 
-def plots():
-        try:
-            plotRuns(inital_ivar)
-        except:
-            print("============")
-            print("ignoring run")
-            print("============")
-            traceback.print_exc()
-
-
-def plotRuns(ivar):
+def plotRuns():
     print("============")
     print("entering plotRuns")
-
-    timeCutOff = getCutOff()
-    max_orbits = np.round(timeCutOff)
-
-    DTarray = []
-    while ivar <= max_orbits:
-        try:
-            DTarray = getRunData(ivar, DTarray)
-            ivar = ivar + CONST_INTERVAL
-        except:
-            print("bad run or no run")
-            traceback.print_exc()
-            ivar = ivar + CONST_INTERVAL
-        ivar = ivar + CONST_INTERVAL
-
-    plotCollectedData(DTarray)
+    plotCollectedData(getAspectRatio())
     print("leaving plotRuns")
     print("============")
 
@@ -49,13 +24,12 @@ def getAspectRatio():
     gravC = par.g0
     Mstar = par.pmass[0]
     cs = par.cs0
-    gamma = par.gamma
 
     Kepler_F = np.sqrt(gravC * Mstar / radius)
     aspect_ratio = cs / Kepler_F
-    scale_height = aspect_ratio*radius
+    aspect_ratio = aspect_ratio[:getCutOff()]
     print('Leaving getAspectRatio')
-    return aspect_ratio,gamma,scale_height
+    return aspect_ratio
 
 def getCutOff():
     global q
@@ -94,25 +68,7 @@ def getCutOff():
     timeCutOff = t[indexTimeCutOff] / (np.pi * 2)
     print('timeCutOff is ',np.round(timeCutOff))
     print('leaving get cutoff')
-    return timeCutOff
-
-def getRunData(ivar, paramDTarray):
-    ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
-    ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
-    dfT = ff.TT[:] - ff0.TT[:]
-    T = np.max(np.log(np.sum(dfT ** 2, axis=0)))
-    H,gamma,h = getAspectRatio()
-    H = np.max(np.log(np.sum(dfT ** 2, axis=0))) #don't forget about radius
-    print('ivar is ',ivar)
-    print('dft is',dfT)
-    print('T is ',T)
-    print('np.max(np.log(np.sum(dfT ** 2, axis=0)))', np.max(np.log(np.sum(dfT ** 2, axis=0))))
-    print('H is ',H)
-    print('gamma is ',gamma)
-    print('gamma*T/H is',gamma*T/H)
-
-    paramDTarray=h
-    return paramDTarray
+    return indexTimeCutOff
 
 
 def plotCollectedData(paramDTarray):
@@ -134,7 +90,7 @@ def plotCollectedData(paramDTarray):
     print("leaving plotCollectedData")
 
 def runPlot():
-    plots()
+    plotRuns()
 
 
 CONST_INTERVAL = 15
