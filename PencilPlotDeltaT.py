@@ -100,9 +100,9 @@ def plotCollectedData(paramDTarray, dir):
     plt.plot(paramDTarray)
     plt.grid(True)
     Dir_max_patches = mpatches.Patch(
-        color='white', label=r'$t_{max}$ :' + str(max(paramDTarray)))
+        color='white', label=r'$t_{max}$ :' + np.round(str(max(paramDTarray))))
     Dir_min_patches = mpatches.Patch(
-        color='white', label=r'$t_{min}$ :' + str(min(paramDTarray)))
+        color='white', label=r'$t_{min}$ :' + np.round(str(min(paramDTarray))))
     plt.legend(handles=[Dir_max_patches,Dir_min_patches], loc=2)
     plt.title('q = ' + str(q) + ',' + r'$\varepsilon$ = ' + str(ecc_int))
     plt.xlabel(r'$t/T_0$')
