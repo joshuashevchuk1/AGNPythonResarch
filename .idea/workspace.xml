@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="round min and max (too large)">
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="worked, changed CONST_INTERVAL">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PencilRoutine.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilRoutine.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,20 +106,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00129" summary="check some parameters">
-      <created>1653472023799</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1653472023799</updated>
-    </task>
-    <task id="LOCAL-00130" summary="check some parameters">
-      <created>1653472161581</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1653472161581</updated>
     </task>
     <task id="LOCAL-00131" summary="check some parameters/ bug">
       <created>1653472522869</created>
@@ -449,7 +436,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655280775976</updated>
     </task>
-    <option name="localTasksCounter" value="178" />
+    <task id="LOCAL-00178" summary="made mistake">
+      <created>1655882385388</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1655882385389</updated>
+    </task>
+    <task id="LOCAL-00179" summary="worked, changed CONST_INTERVAL">
+      <created>1655882609228</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1655882609228</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -464,8 +465,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="apply fix" />
-    <MESSAGE value="too many params?" />
     <MESSAGE value="truth array?!?!?!?" />
     <MESSAGE value="added cutoff information to Energy plots" />
     <MESSAGE value="see issues" />
@@ -489,6 +488,8 @@
     <MESSAGE value="1 orbit" />
     <MESSAGE value="forgot to add proper min" />
     <MESSAGE value="round min and max (too large)" />
-    <option name="LAST_COMMIT_MESSAGE" value="round min and max (too large)" />
+    <MESSAGE value="made mistake" />
+    <MESSAGE value="worked, changed CONST_INTERVAL" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked, changed CONST_INTERVAL" />
   </component>
 </project>
