@@ -11,7 +11,7 @@ lastPointArray=[]
 eccIntArray=[]
 qArray=[]
 q=0
-ecc=0
+ecc_int=0
 
 def plots():
     root = os.getcwd()  # root dir is fucked up due to a space
@@ -57,7 +57,7 @@ def addLastPoint(ivar):
     lastPoint = getRateOfLastPoint(DTarray)
     lastPointArray.append(lastPoint)
     qArray.append(q)
-    eccIntArray.append(ecc)
+    eccIntArray.append(ecc_int)
 
     print("leaving plotRuns")
     print("============")
