@@ -116,6 +116,6 @@ def getRateOfLastPoint(paramDTarray):
     return lastRate
 
 
-CONST_INTERVAL = 15
+CONST_INTERVAL = 5
 inital_ivar = 1
 plots()
