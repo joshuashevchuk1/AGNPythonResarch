@@ -25,7 +25,7 @@ def plots():
             os.chdir(root)
         except:
             print("============")
-            print("ignoring run")
+            print("ignoring run ",os.path.split(os.getcwd())[1])
             print("============")
             traceback.print_exc()
             os.chdir(root)
