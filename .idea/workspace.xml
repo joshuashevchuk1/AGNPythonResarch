@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="worked, changed CONST_INTERVAL">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PencilRoutine.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilRoutine.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="which run is a problem?" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,41 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00131" summary="check some parameters/ bug">
-      <created>1653472522869</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1653472522869</updated>
-    </task>
-    <task id="LOCAL-00132" summary="werid results">
-      <created>1653473202607</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1653473202607</updated>
-    </task>
-    <task id="LOCAL-00133" summary="corrections">
-      <created>1653473806448</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1653473806448</updated>
-    </task>
-    <task id="LOCAL-00134" summary="more plots plot">
-      <created>1653474135733</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1653474135733</updated>
-    </task>
-    <task id="LOCAL-00135" summary="more try cutoff">
-      <created>1653547534800</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1653547534800</updated>
     </task>
     <task id="LOCAL-00136" summary="more try cutoff">
       <created>1653547669696</created>
@@ -450,7 +412,42 @@
       <option name="project" value="LOCAL" />
       <updated>1655882609228</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="test out new script">
+      <created>1659424642406</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1659424642406</updated>
+    </task>
+    <task id="LOCAL-00181" summary="try again">
+      <created>1659425055263</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1659425055263</updated>
+    </task>
+    <task id="LOCAL-00182" summary="always have the first point">
+      <created>1659425161778</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1659425161778</updated>
+    </task>
+    <task id="LOCAL-00183" summary="small interval">
+      <created>1659425221490</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1659425221490</updated>
+    </task>
+    <task id="LOCAL-00184" summary="which run is a problem?">
+      <created>1659425465572</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1659425465572</updated>
+    </task>
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -465,11 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="truth array?!?!?!?" />
-    <MESSAGE value="added cutoff information to Energy plots" />
-    <MESSAGE value="see issues" />
-    <MESSAGE value="more checking on issues" />
-    <MESSAGE value="start intial ivar at least 1" />
     <MESSAGE value="werid bugs" />
     <MESSAGE value="get max of H, radius must be considered." />
     <MESSAGE value="just want the scale height. Too lazy to remove the other quantities" />
@@ -490,6 +482,11 @@
     <MESSAGE value="round min and max (too large)" />
     <MESSAGE value="made mistake" />
     <MESSAGE value="worked, changed CONST_INTERVAL" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked, changed CONST_INTERVAL" />
+    <MESSAGE value="test out new script" />
+    <MESSAGE value="try again" />
+    <MESSAGE value="always have the first point" />
+    <MESSAGE value="small interval" />
+    <MESSAGE value="which run is a problem?" />
+    <option name="LAST_COMMIT_MESSAGE" value="which run is a problem?" />
   </component>
 </project>

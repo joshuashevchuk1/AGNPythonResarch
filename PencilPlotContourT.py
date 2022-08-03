@@ -35,6 +35,25 @@ def plots():
     print("eccIntArray is ",eccIntArray)
     print("qArray is ",qArray)
 
+    plotContourRates(lastPointArray,eccIntArray,qArray)
+
+def plotContourRates(lastPointArray,eccIntArray,qArray):
+    name = os.path.split(os.getcwd())[1]
+    ncolors=256
+
+    fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
+    fig.subplots_adjust(bottom=0.07, top=0.95)
+    PL2 = ax1.contourf(eccIntArray, qArray, lastPointArray, ncolors)
+    ax1.set_aspect('equal')
+    cax = plt.axes([0.85, 0.1, 0.075, 0.8])
+    cax.set_aspect(20)
+    cax.set_ylabel('dT/dt', fontsize=10)
+    plt.colorbar(PL2, cax=cax)
+    plt.xlabel(r'$\epsilon')
+    plt.ylabel('q')
+
+    plt.savefig(name + "-RateContour-" + ".png")
+
 def addLastPoint(ivar):
     global lastPointArray
     global qArray
