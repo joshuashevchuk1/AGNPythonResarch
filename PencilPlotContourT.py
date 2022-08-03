@@ -36,9 +36,12 @@ def plots():
     print("eccIntArray is ",eccIntArray)
     print("qArray is ",qArray)
 
-    plotContourRates(lastPointArray,eccIntArray,qArray)
+    plotContourRates()
 
-def plotContourRates(lastPointArray,eccIntArray,qArray):
+def plotContourRates():
+    global lastPointArray
+    global qArray
+    global eccIntArray
     name = os.path.split(os.getcwd())[1]
     ncolors=256
 
