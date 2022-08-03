@@ -38,9 +38,6 @@ def plots():
 
     plotContourRates(lastPointArray,eccIntArray,qArray)
 
-
-def writeToJson():
-
 def plotContourRates(lastPointArray,eccIntArray,qArray):
     name = os.path.split(os.getcwd())[1]
     ncolors=256
