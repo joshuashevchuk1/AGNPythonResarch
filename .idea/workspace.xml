@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="plotContourRates function added">
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="contourf problems">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PencilPlotContourT.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilPlotContourT.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,27 +105,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00137" summary="cut off">
-      <created>1653547775371</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1653547775371</updated>
-    </task>
-    <task id="LOCAL-00138" summary="cut off">
-      <created>1653547787493</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1653547787493</updated>
-    </task>
-    <task id="LOCAL-00139" summary="test interval">
-      <created>1653547937717</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1653547937717</updated>
     </task>
     <task id="LOCAL-00140" summary="checking">
       <created>1653550970266</created>
@@ -450,7 +428,28 @@
       <option name="project" value="LOCAL" />
       <updated>1659506546701</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="contourf problems">
+      <created>1659507919049</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1659507919049</updated>
+    </task>
+    <task id="LOCAL-00187" summary="contourf problems">
+      <created>1659507986784</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1659507986784</updated>
+    </task>
+    <task id="LOCAL-00188" summary="contourf problems">
+      <created>1659508043394</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1659508043394</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -465,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="get max of H, radius must be considered." />
     <MESSAGE value="just want the scale height. Too lazy to remove the other quantities" />
     <MESSAGE value="h new" />
     <MESSAGE value="running into memory issues with python script. So just plot the current dir" />
@@ -490,6 +488,7 @@
     <MESSAGE value="small interval" />
     <MESSAGE value="which run is a problem?" />
     <MESSAGE value="plotContourRates function added" />
-    <option name="LAST_COMMIT_MESSAGE" value="plotContourRates function added" />
+    <MESSAGE value="contourf problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="contourf problems" />
   </component>
 </project>

@@ -47,7 +47,7 @@ def plotContourRates():
 
     eccIntArray,qArray = np.meshgrid(eccIntArray,qArray)
     lastPointArray = np.array(lastPointArray)
-    lastPointArray.reshape(len(eccIntArray),len(qArray))
+    lastPointArray.reshape((len(eccIntArray),len(qArray)))
 
     fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
     fig.subplots_adjust(bottom=0.07, top=0.95)
