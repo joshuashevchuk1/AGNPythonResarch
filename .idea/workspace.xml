@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="which run is a problem?" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="plotContourRates function added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PencilPlotContourT.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilPlotContourT.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,13 +106,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00136" summary="more try cutoff">
-      <created>1653547669696</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1653547669696</updated>
     </task>
     <task id="LOCAL-00137" summary="cut off">
       <created>1653547775371</created>
@@ -447,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659425465572</updated>
     </task>
-    <option name="localTasksCounter" value="185" />
+    <task id="LOCAL-00185" summary="plotContourRates function added">
+      <created>1659506546700</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1659506546701</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -462,7 +465,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="werid bugs" />
     <MESSAGE value="get max of H, radius must be considered." />
     <MESSAGE value="just want the scale height. Too lazy to remove the other quantities" />
     <MESSAGE value="h new" />
@@ -487,6 +489,7 @@
     <MESSAGE value="always have the first point" />
     <MESSAGE value="small interval" />
     <MESSAGE value="which run is a problem?" />
-    <option name="LAST_COMMIT_MESSAGE" value="which run is a problem?" />
+    <MESSAGE value="plotContourRates function added" />
+    <option name="LAST_COMMIT_MESSAGE" value="plotContourRates function added" />
   </component>
 </project>

@@ -6,6 +6,7 @@ import os
 from pylab import *
 import sys
 import traceback
+import json
 
 lastPointArray=[]
 eccIntArray=[]
@@ -37,9 +38,16 @@ def plots():
 
     plotContourRates(lastPointArray,eccIntArray,qArray)
 
+
+def writeToJson():
+
 def plotContourRates(lastPointArray,eccIntArray,qArray):
     name = os.path.split(os.getcwd())[1]
     ncolors=256
+
+    eccIntArray,qArray = np.meshgrid(eccIntArray,qArray)
+    lastPointArray = np.array(lastPointArray)
+    lastPointArray.reshape(len(eccIntArray),len(qArray))
 
     fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
     fig.subplots_adjust(bottom=0.07, top=0.95)
