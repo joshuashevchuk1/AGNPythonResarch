@@ -45,13 +45,9 @@ def plotContourRates():
     name = os.path.split(os.getcwd())[1]
     ncolors=256
 
-    eccIntArray,qArray = np.meshgrid(eccIntArray,qArray)
-    lastPointArray = np.array(lastPointArray)
-    lastPointArray.reshape((len(eccIntArray),len(qArray)))
-
     fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
     fig.subplots_adjust(bottom=0.07, top=0.95)
-    PL2 = ax1.contourf(eccIntArray, qArray, lastPointArray, ncolors)
+    PL2 = ax1.contour3D(eccIntArray, qArray, lastPointArray, ncolors)
     ax1.set_aspect('equal')
     cax = plt.axes([0.85, 0.1, 0.075, 0.8])
     cax.set_aspect(20)
