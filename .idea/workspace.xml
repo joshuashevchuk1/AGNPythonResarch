@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="contourf problems">
-      <change afterPath="$PROJECT_DIR$/ExamplePlotLib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.pyi" afterDir="false" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="added more example code">
+      <change afterPath="$PROJECT_DIR$/PencilScrapeData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ExamplePlotLib.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExamplePlotLib.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +15,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Unit Test" />
-        <option value="Python Script" />
         <option value="Python Stub" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -130,27 +130,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00142" summary="bug">
-      <created>1653643557032</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1653643557032</updated>
-    </task>
-    <task id="LOCAL-00143" summary="bug">
-      <created>1653644435662</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1653644435662</updated>
-    </task>
-    <task id="LOCAL-00144" summary="bug">
-      <created>1653645391979</created>
-      <option name="number" value="00144" />
-      <option name="presentableId" value="LOCAL-00144" />
-      <option name="project" value="LOCAL" />
-      <updated>1653645391979</updated>
     </task>
     <task id="LOCAL-00145" summary="min and max patches">
       <created>1654151289014</created>
@@ -474,7 +453,28 @@
       <option name="project" value="LOCAL" />
       <updated>1659514855486</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="added new ExamplePlotLib file for testing">
+      <created>1659594953267</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1659594953267</updated>
+    </task>
+    <task id="LOCAL-00192" summary="added more example code">
+      <created>1659594978422</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1659594978422</updated>
+    </task>
+    <task id="LOCAL-00193" summary="added more example code">
+      <created>1659595040989</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1659595040989</updated>
+    </task>
+    <option name="localTasksCounter" value="194" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -489,8 +489,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="just want the scale height. Too lazy to remove the other quantities" />
-    <MESSAGE value="h new" />
     <MESSAGE value="running into memory issues with python script. So just plot the current dir" />
     <MESSAGE value="debugging stupid bug" />
     <MESSAGE value="added runPlot()" />
@@ -514,6 +512,8 @@
     <MESSAGE value="which run is a problem?" />
     <MESSAGE value="plotContourRates function added" />
     <MESSAGE value="contourf problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="contourf problems" />
+    <MESSAGE value="added new ExamplePlotLib file for testing" />
+    <MESSAGE value="added more example code" />
+    <option name="LAST_COMMIT_MESSAGE" value="added more example code" />
   </component>
 </project>
