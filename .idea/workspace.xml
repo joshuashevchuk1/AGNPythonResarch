@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="added more example code">
-      <change afterPath="$PROJECT_DIR$/PencilScrapeData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="more testing">
       <change beforePath="$PROJECT_DIR$/ExamplePlotLib.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExamplePlotLib.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,13 +128,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00145" summary="min and max patches">
-      <created>1654151289014</created>
-      <option name="number" value="00145" />
-      <option name="presentableId" value="LOCAL-00145" />
-      <option name="project" value="LOCAL" />
-      <updated>1654151289014</updated>
     </task>
     <task id="LOCAL-00146" summary="min and max patches">
       <created>1654151303069</created>
@@ -474,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659595040989</updated>
     </task>
-    <option name="localTasksCounter" value="194" />
+    <task id="LOCAL-00194" summary="more testing">
+      <created>1659599123859</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1659599123860</updated>
+    </task>
+    <option name="localTasksCounter" value="195" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -489,7 +487,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="running into memory issues with python script. So just plot the current dir" />
     <MESSAGE value="debugging stupid bug" />
     <MESSAGE value="added runPlot()" />
     <MESSAGE value="more oddities" />
@@ -514,6 +511,7 @@
     <MESSAGE value="contourf problems" />
     <MESSAGE value="added new ExamplePlotLib file for testing" />
     <MESSAGE value="added more example code" />
-    <option name="LAST_COMMIT_MESSAGE" value="added more example code" />
+    <MESSAGE value="more testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="more testing" />
   </component>
 </project>

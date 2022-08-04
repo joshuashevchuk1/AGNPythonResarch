@@ -43,7 +43,7 @@ def saveData():
     global scrapDict
     data = scrapDict
     print('data is ',data)
-    with open('data.csv', 'w') as f:
+    with open('data.json', 'w') as f:
         json.dump(data, f)
 
 def init():
