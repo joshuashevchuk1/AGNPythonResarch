@@ -131,6 +131,6 @@ def getRateOfLastPoint(paramDTarray):
     return lastRate
 
 
-CONST_INTERVAL = 5
+CONST_INTERVAL = 1
 inital_ivar = 1
 scrape()
