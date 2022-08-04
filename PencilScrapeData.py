@@ -42,7 +42,7 @@ def scrape():
 def saveData():
     global scrapeDict
     data = scrapeDict
-    with open('data.json', 'w') as f:
+    with open('ScrapedData.json', 'w') as f:
         json.dump(data, f)
 
 
