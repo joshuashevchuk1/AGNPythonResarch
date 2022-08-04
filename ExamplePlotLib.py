@@ -13,7 +13,13 @@ z=[]
 
 def plot():
     init()
+    plotcontour()
 
+def plotcontour():
+    global x,y
+    x,y = np.meshgrid(x,y)
+    plt.contourf(x,y,z,256)
+    plt.show()
 
 def init():
     print('initializing arrays')
