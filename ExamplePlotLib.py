@@ -8,8 +8,8 @@ import traceback
 import json
 
 x=[]
-yarray=[]
-zarray=[]
+y=[]
+z=[]
 
 def plot():
     init()
