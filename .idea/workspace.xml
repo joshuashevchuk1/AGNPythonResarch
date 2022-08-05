@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="more testing">
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="good for prod">
+      <change afterPath="$PROJECT_DIR$/ContourLastPointRate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExamplePlotLib.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExamplePlotLib.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +50,7 @@
       <recent name="C:\Users\Joshua\PycharmProjects\AGNPythonResarch" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ExamplePlotLib">
+  <component name="RunManager" selected="Python.ContourLastPointRate">
     <configuration name="CheckArrayTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -91,6 +93,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="ContourLastPointRate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Joshua\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ContourLastPointRate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="ExamplePlotLib" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -114,6 +137,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ContourLastPointRate" />
         <item itemvalue="Python.ExamplePlotLib" />
         <item itemvalue="Python.CheckLine" />
         <item itemvalue="Python.CheckArrayTest" />
@@ -128,27 +152,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00146" summary="min and max patches">
-      <created>1654151303069</created>
-      <option name="number" value="00146" />
-      <option name="presentableId" value="LOCAL-00146" />
-      <option name="project" value="LOCAL" />
-      <updated>1654151303069</updated>
-    </task>
-    <task id="LOCAL-00147" summary="not numpy arrays">
-      <created>1654192920406</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1654192920406</updated>
-    </task>
-    <task id="LOCAL-00148" summary="scale height added to PencilPlotDeltaH.py">
-      <created>1654480408109</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1654480408109</updated>
     </task>
     <task id="LOCAL-00149" summary="added scale height fixes to plots">
       <created>1654480748459</created>
@@ -472,7 +475,28 @@
       <option name="project" value="LOCAL" />
       <updated>1659599123860</updated>
     </task>
-    <option name="localTasksCounter" value="195" />
+    <task id="LOCAL-00195" summary="use json.dumps and to data.json">
+      <created>1659599252745</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1659599252745</updated>
+    </task>
+    <task id="LOCAL-00196" summary="use json.dumps and to data.json">
+      <created>1659599302276</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1659599302276</updated>
+    </task>
+    <task id="LOCAL-00197" summary="good for prod">
+      <created>1659600465853</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1659600465854</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -487,8 +511,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debugging stupid bug" />
-    <MESSAGE value="added runPlot()" />
     <MESSAGE value="more oddities" />
     <MESSAGE value="str issue" />
     <MESSAGE value="Simplified" />
@@ -512,6 +534,8 @@
     <MESSAGE value="added new ExamplePlotLib file for testing" />
     <MESSAGE value="added more example code" />
     <MESSAGE value="more testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="more testing" />
+    <MESSAGE value="use json.dumps and to data.json" />
+    <MESSAGE value="good for prod" />
+    <option name="LAST_COMMIT_MESSAGE" value="good for prod" />
   </component>
 </project>
