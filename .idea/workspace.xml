@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="good for prod">
-      <change afterPath="$PROJECT_DIR$/ContourLastPointRate.py" afterDir="false" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="data for plots">
+      <change afterPath="$PROJECT_DIR$/PencilScrapAtGiven.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExamplePlotLib.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExamplePlotLib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ContourLastPointRate.py" beforeDir="false" afterPath="$PROJECT_DIR$/ContourLastPointRate.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,13 +152,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00149" summary="added scale height fixes to plots">
-      <created>1654480748459</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1654480748459</updated>
     </task>
     <task id="LOCAL-00150" summary="added scale height fixes to plots">
       <created>1654480786108</created>
@@ -496,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659600465854</updated>
     </task>
-    <option name="localTasksCounter" value="198" />
+    <task id="LOCAL-00198" summary="data for plots">
+      <created>1659665536170</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1659665536170</updated>
+    </task>
+    <option name="localTasksCounter" value="199" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -511,7 +511,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="more oddities" />
     <MESSAGE value="str issue" />
     <MESSAGE value="Simplified" />
     <MESSAGE value="Simplified DeltaH global" />
@@ -536,6 +535,7 @@
     <MESSAGE value="more testing" />
     <MESSAGE value="use json.dumps and to data.json" />
     <MESSAGE value="good for prod" />
-    <option name="LAST_COMMIT_MESSAGE" value="good for prod" />
+    <MESSAGE value="data for plots" />
+    <option name="LAST_COMMIT_MESSAGE" value="data for plots" />
   </component>
 </project>

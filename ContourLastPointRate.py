@@ -24,7 +24,8 @@ def plot():
 
 def plotcontour():
     global x,y,z
-    fig = plt.figure()
+    fig = plt.figure(figsize=(10, 10))
+    ax = fig.add_subplot(111)
 
     x=[0.1,0.3,0.5,0.7]
     y=[1e-4,2e-4]
@@ -36,10 +37,15 @@ def plotcontour():
     print('y is', y)
     print('z is ', z)
 
-    plt.contourf(x,y,z,256)
-    plt.xlabel(r'\epsilon ')
-    plt.ylabel('q')
-    plt.title('q vs e')
+    im = ax.contourf(x,y,z,256)
+
+    cax = plt.axes([0.9, 0.1, 0.075, 0.8])
+    cax.set_aspect(20)
+
+    fig.colorbar(im, cax=cax)
+    ax.set_ylabel('q', fontsize=14)
+    ax.set_xlabel(r'$\varepsilon$', fontsize=14)
+    plt.title(r'T(q,e,$t_{c})$')
     plt.show()
 
 def saveData():
