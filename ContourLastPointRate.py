@@ -38,7 +38,7 @@ def plotcontour():
     print('y is', y)
     print('z is ', z)
 
-    im = ax.contourf(x,y,z,256)
+    im = ax.contourf(x,y,z,20)
 
     cax = plt.axes([0.9, 0.1, 0.075, 0.8])
     cax.set_aspect(20)
