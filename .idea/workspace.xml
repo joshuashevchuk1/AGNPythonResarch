@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="added t=50 data" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,13 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00153" summary="truth array?!?!?!?">
-      <created>1654578602000</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1654578602000</updated>
     </task>
     <task id="LOCAL-00154" summary="added cutoff information to Energy plots">
       <created>1654585452035</created>
@@ -494,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659666563957</updated>
     </task>
-    <option name="localTasksCounter" value="202" />
+    <task id="LOCAL-00202" summary="added t=50 data">
+      <created>1659725303066</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1659725303066</updated>
+    </task>
+    <option name="localTasksCounter" value="203" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -509,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="messed up name" />
     <MESSAGE value="try to calc scaleheight by hand first" />
     <MESSAGE value="start at 1 to not lead to errors" />
     <MESSAGE value="helper issues" />
@@ -534,6 +531,7 @@
     <MESSAGE value="added more data to use, bunk scrape" />
     <MESSAGE value="try to scrap the data!" />
     <MESSAGE value="bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug" />
+    <MESSAGE value="added t=50 data" />
+    <option name="LAST_COMMIT_MESSAGE" value="added t=50 data" />
   </component>
 </project>
