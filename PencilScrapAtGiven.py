@@ -17,7 +17,6 @@ scrapeDict={}
 max_orbits = int(input('max Orbits? : '))
 
 def scrape():
-    initPars()
     root = os.getcwd()  # root dir is fucked up due to a space
     dir_run_list = next(os.walk('.'))[1]
     for i in range(len(dir_run_list)):
@@ -56,6 +55,8 @@ def addLastPoint(ivar,dir):
     global max_orbits
     print("============")
     print("entering plotRuns")
+
+    initPars()
 
     DTarray = []
     while ivar <= max_orbits:
