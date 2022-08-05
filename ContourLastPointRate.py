@@ -38,7 +38,7 @@ def plotcontour():
     print('y is', y)
     print('z is ', z)
 
-    im = ax.contourf(x,y,z,20)
+    im = ax.contourf(x,y,z,20,cmap='inferno')
 
     cax = plt.axes([0.9, 0.1, 0.075, 0.8])
     cax.set_aspect(20)
@@ -46,7 +46,7 @@ def plotcontour():
     fig.colorbar(im, cax=cax)
     ax.set_ylabel('q', fontsize=14)
     ax.set_xlabel(r'$\varepsilon$', fontsize=14)
-    plt.title(r'T(q,e,$t_{c})$')
+    plt.title(r'dT(q,e,$t_{c})/dt$')
     plt.show()
 
 def saveData():

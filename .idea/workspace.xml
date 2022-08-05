@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="add timeCutOff at ScarpGiven" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="plot at t=50" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,13 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00155" summary="see issues">
-      <created>1654668595300</created>
-      <option name="number" value="00155" />
-      <option name="presentableId" value="LOCAL-00155" />
-      <option name="project" value="LOCAL" />
-      <updated>1654668595300</updated>
     </task>
     <task id="LOCAL-00156" summary="more checking on issues">
       <created>1654669053359</created>
@@ -492,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659725875447</updated>
     </task>
-    <option name="localTasksCounter" value="204" />
+    <task id="LOCAL-00204" summary="plot at t=50">
+      <created>1659733637957</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1659733637957</updated>
+    </task>
+    <option name="localTasksCounter" value="205" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="start at 1 to not lead to errors" />
     <MESSAGE value="helper issues" />
     <MESSAGE value="1 orbit" />
     <MESSAGE value="forgot to add proper min" />
@@ -532,6 +531,7 @@
     <MESSAGE value="bug" />
     <MESSAGE value="added t=50 data" />
     <MESSAGE value="add timeCutOff at ScarpGiven" />
-    <option name="LAST_COMMIT_MESSAGE" value="add timeCutOff at ScarpGiven" />
+    <MESSAGE value="plot at t=50" />
+    <option name="LAST_COMMIT_MESSAGE" value="plot at t=50" />
   </component>
 </project>
