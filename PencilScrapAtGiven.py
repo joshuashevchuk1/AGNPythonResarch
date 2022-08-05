@@ -44,7 +44,7 @@ def scrape():
 def saveData():
     global scrapeDict
     data = scrapeDict
-    with open('ScrapedData.json', 'w') as f:
+    with open('ScrapedData_At'+str(max_orbits)+'.json', 'w') as f:
         json.dump(data, f)
 
 
