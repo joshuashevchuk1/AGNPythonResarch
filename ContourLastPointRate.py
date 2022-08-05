@@ -9,8 +9,8 @@ import json
 import scipy
 import scipy.interpolate
 
-x=[] # x=q
-y=[] # y=e
+x=[] # x=e
+y=[] # y=q
 z=[] # z=dT/dt
 scrapDict={}
 
@@ -31,7 +31,8 @@ def plotcontour():
     y=[1e-4,2e-4]
     x,y=np.meshgrid(x,y)
 
-    z=[[0.127410097,0.4729206,0.16347564,0.00195316089],[0.05088384,0.066684518512,0.02821483,0.0268524]] # numbers got from json files
+    #z=[[0.127410097,0.4729206,0.16347564,0.00195316089],[0.05088384,0.066684518512,0.02821483,0.0268524]] # numbers got from json files
+    z = [[0.0406,0.0399,0.04605,0.0374211],[0.02074,0.03729,0.048339,0.105674]] #t = 50
 
     print('x is ', x)
     print('y is', y)

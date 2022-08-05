@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="data for plots">
-      <change afterPath="$PROJECT_DIR$/PencilScrapAtGiven.py" afterDir="false" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ContourLastPointRate.py" beforeDir="false" afterPath="$PROJECT_DIR$/ContourLastPointRate.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,27 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00150" summary="added scale height fixes to plots">
-      <created>1654480786108</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1654480786108</updated>
-    </task>
-    <task id="LOCAL-00151" summary="apply fix">
-      <created>1654484105625</created>
-      <option name="number" value="00151" />
-      <option name="presentableId" value="LOCAL-00151" />
-      <option name="project" value="LOCAL" />
-      <updated>1654484105626</updated>
-    </task>
-    <task id="LOCAL-00152" summary="too many params?">
-      <created>1654561988949</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1654561988950</updated>
     </task>
     <task id="LOCAL-00153" summary="truth array?!?!?!?">
       <created>1654578602000</created>
@@ -496,7 +473,28 @@
       <option name="project" value="LOCAL" />
       <updated>1659665536170</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="added more data to use, bunk scrape">
+      <created>1659666325598</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1659666325598</updated>
+    </task>
+    <task id="LOCAL-00200" summary="try to scrap the data!">
+      <created>1659666401817</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1659666401818</updated>
+    </task>
+    <task id="LOCAL-00201" summary="bug">
+      <created>1659666563957</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1659666563957</updated>
+    </task>
+    <option name="localTasksCounter" value="202" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -511,9 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="str issue" />
-    <MESSAGE value="Simplified" />
-    <MESSAGE value="Simplified DeltaH global" />
     <MESSAGE value="messed up name" />
     <MESSAGE value="try to calc scaleheight by hand first" />
     <MESSAGE value="start at 1 to not lead to errors" />
@@ -536,6 +531,9 @@
     <MESSAGE value="use json.dumps and to data.json" />
     <MESSAGE value="good for prod" />
     <MESSAGE value="data for plots" />
-    <option name="LAST_COMMIT_MESSAGE" value="data for plots" />
+    <MESSAGE value="added more data to use, bunk scrape" />
+    <MESSAGE value="try to scrap the data!" />
+    <MESSAGE value="bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug" />
   </component>
 </project>
