@@ -400,18 +400,25 @@ class Pencil_Data(object):
             eccentricity = (1 - ep1) ** 0.5
             Omegap = 1. / semi_major ** 1.5
             Kepler_F = np.sqrt(gravC * Mstar / radius)
-            aspect_ratio = cs / Kepler_F
+
+            ScaleHeight = cs / Kepler_F
+
             Hill_Radius = semi_major * ((q / 3.0) ** (1.0 / 3.0))
             xrq2 = radius * np.cos(Omega)
             yrq2 = radius * np.sin(Omega)
+
             ecc_int = par.eccentricity
-            # Sigmap = 1.
-            disk_mass = 25
-            Sigmap = disk_mass * Sigma * radius ** -alpha
-            eh = eccentricity / aspect_ratio
+
+            aspect_ratio = ScaleHeight/radius
+
+            Sigmap = Sigma * radius ** -alpha
+
+            eh = eccentricity / ScaleHeight
+
             mstar = 1
-            twave = (mstar * aspect_ratio ** 4) / \
+            twave = (mstar * ScaleHeight ** 4) / \
                     (q * Sigmap * semi_major ** 2 * Omegap)
+
             te = (twave / 0.780) * (1 - 0.14 * eh ** 2 + 0.06 * eh ** 3)
             CN_line = ecc_int * np.exp(-t / te)
             ecc = eccentricity
@@ -1486,7 +1493,7 @@ class Pencil_Data(object):
                 'Sigma': Sigma,
                 'LinearVelocity': LinearVelocity, 'AngularVelocity': AngularVelocity,
                 'eccentricity': eccentricity, 'semi_major': semi_major,
-                'Hill_Radius': Hill_Radius, 'aspect_ratio': aspect_ratio,
+                'Hill_Radius': Hill_Radius, 'aspect_ratio': ScaleHeight,
                 'Kepler_F': Kepler_F, 'Omegap': Omegap,
                 'twave': twave, 'eh': eh, 'tanaka': tanaka, 'tanaka_array': tanaka_array, 'Herm_Array': Herm_Array[:],
                 'cs': cs, 'initial_pressure': initial_pressure, 'Mu_coef': Mu_coef,
