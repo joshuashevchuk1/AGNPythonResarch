@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="better name" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="more code fixes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,13 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00157" summary="more checking on issues">
-      <created>1654669408367</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1654669408367</updated>
     </task>
     <task id="LOCAL-00158" summary="start intial ivar at least 1">
       <created>1654669747039</created>
@@ -492,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659733896518</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="more code fixes">
+      <created>1659900973267</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1659900973268</updated>
+    </task>
+    <option name="localTasksCounter" value="207" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1 orbit" />
     <MESSAGE value="forgot to add proper min" />
     <MESSAGE value="round min and max (too large)" />
     <MESSAGE value="made mistake" />
@@ -532,6 +533,7 @@
     <MESSAGE value="add timeCutOff at ScarpGiven" />
     <MESSAGE value="plot at t=50" />
     <MESSAGE value="better name" />
-    <option name="LAST_COMMIT_MESSAGE" value="better name" />
+    <MESSAGE value="more code fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="more code fixes" />
   </component>
 </project>
