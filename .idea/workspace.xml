@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="added at 100">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ContourLastPointRate.py" beforeDir="false" afterPath="$PROJECT_DIR$/ContourLastPointRate.py" afterDir="false" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="more changes">
+      <change afterPath="$PROJECT_DIR$/PencilPlotDeltaTScraped.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,13 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00159" summary="werid bugs">
-      <created>1654670162148</created>
-      <option name="number" value="00159" />
-      <option name="presentableId" value="LOCAL-00159" />
-      <option name="project" value="LOCAL" />
-      <updated>1654670162148</updated>
     </task>
     <task id="LOCAL-00160" summary="get max of H, radius must be considered.">
       <created>1654670645198</created>
@@ -495,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660203236729</updated>
     </task>
-    <option name="localTasksCounter" value="208" />
+    <task id="LOCAL-00208" summary="more changes">
+      <created>1661413562565</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1661413562566</updated>
+    </task>
+    <option name="localTasksCounter" value="209" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -510,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="round min and max (too large)" />
     <MESSAGE value="made mistake" />
     <MESSAGE value="worked, changed CONST_INTERVAL" />
     <MESSAGE value="test out new script" />
@@ -535,6 +533,7 @@
     <MESSAGE value="better name" />
     <MESSAGE value="more code fixes" />
     <MESSAGE value="added at 100" />
-    <option name="LAST_COMMIT_MESSAGE" value="added at 100" />
+    <MESSAGE value="more changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="more changes" />
   </component>
 </project>
