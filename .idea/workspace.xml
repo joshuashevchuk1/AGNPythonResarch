@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="scrape!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PlotScrapedOneGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlotScrapedOneGraph.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,13 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00162" summary="h new">
-      <created>1654671143598</created>
-      <option name="number" value="00162" />
-      <option name="presentableId" value="LOCAL-00162" />
-      <option name="project" value="LOCAL" />
-      <updated>1654671143598</updated>
     </task>
     <task id="LOCAL-00163" summary="running into memory issues with python script. So just plot the current dir">
       <created>1655193942788</created>
@@ -494,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662100732893</updated>
     </task>
-    <option name="localTasksCounter" value="211" />
+    <task id="LOCAL-00211" summary="scrape!">
+      <created>1662101757080</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1662101757081</updated>
+    </task>
+    <option name="localTasksCounter" value="212" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
