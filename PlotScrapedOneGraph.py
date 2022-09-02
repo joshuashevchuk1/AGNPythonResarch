@@ -40,5 +40,5 @@ def plot():
 
     print("entering plot")
 
-
+setScrapedJson()
 plot()
