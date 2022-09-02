@@ -27,7 +27,7 @@ def plot():
     global scrapeDict
 
     for key in scrapeDict:
-        plt.plot(scrapeDict[key]["DTarray"], label=
+        plt.plot(np.gradient(scrapeDict[key]["DTarray"]), label=
         r"$\varepsilon$ = " +
         str(scrapeDict[key]["ecc_int"]) +
         "; q = " +

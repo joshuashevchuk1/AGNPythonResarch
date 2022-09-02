@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="try to plot them all" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="purrty grab">
+      <change beforePath="$PROJECT_DIR$/PlotScrapedOneGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlotScrapedOneGraph.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,20 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00166" summary="added runPlot()">
-      <created>1655195153236</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1655195153236</updated>
-    </task>
-    <task id="LOCAL-00167" summary="more oddities">
-      <created>1655195264928</created>
-      <option name="number" value="00167" />
-      <option name="presentableId" value="LOCAL-00167" />
-      <option name="project" value="LOCAL" />
-      <updated>1655195264928</updated>
     </task>
     <task id="LOCAL-00168" summary="str issue">
       <created>1655195363428</created>
@@ -492,7 +480,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662102855538</updated>
     </task>
-    <option name="localTasksCounter" value="215" />
+    <task id="LOCAL-00215" summary="try to plot them all!">
+      <created>1662103187592</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1662103187592</updated>
+    </task>
+    <task id="LOCAL-00216" summary="purrty grab">
+      <created>1662103408051</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1662103408051</updated>
+    </task>
+    <option name="localTasksCounter" value="217" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,8 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test out new script" />
-    <MESSAGE value="try again" />
     <MESSAGE value="always have the first point" />
     <MESSAGE value="small interval" />
     <MESSAGE value="which run is a problem?" />
@@ -532,6 +532,8 @@
     <MESSAGE value="more changes" />
     <MESSAGE value="scrape!" />
     <MESSAGE value="try to plot them all" />
-    <option name="LAST_COMMIT_MESSAGE" value="try to plot them all" />
+    <MESSAGE value="try to plot them all!" />
+    <MESSAGE value="purrty grab" />
+    <option name="LAST_COMMIT_MESSAGE" value="purrty grab" />
   </component>
 </project>
