@@ -27,7 +27,11 @@ def plot():
     global scrapeDict
 
     for key in scrapeDict:
-        plt.plot(scrapeDict[key]["DTarray"], label= r"$\varepsilon$ = " + str(scrapeDict[key]["ecc_int"]))
+        plt.plot(scrapeDict[key]["DTarray"], label=
+        r"$\varepsilon$ = " +
+        str(scrapeDict[key]["ecc_int"]) +
+        "; q = " +
+        str(scrapeDict[key]["q"]))
 
     plt.grid(True)
     plt.legend()
