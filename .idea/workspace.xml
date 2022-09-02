@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="scrape!">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlotScrapedOneGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlotScrapedOneGraph.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="try to plot them all" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,27 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00163" summary="running into memory issues with python script. So just plot the current dir">
-      <created>1655193942788</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1655193942789</updated>
-    </task>
-    <task id="LOCAL-00164" summary="debugging stupid bug">
-      <created>1655194533238</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1655194533238</updated>
-    </task>
-    <task id="LOCAL-00165" summary="added runPlot()">
-      <created>1655194697969</created>
-      <option name="number" value="00165" />
-      <option name="presentableId" value="LOCAL-00165" />
-      <option name="project" value="LOCAL" />
-      <updated>1655194697969</updated>
     </task>
     <task id="LOCAL-00166" summary="added runPlot()">
       <created>1655195153236</created>
@@ -495,7 +471,28 @@
       <option name="project" value="LOCAL" />
       <updated>1662101757081</updated>
     </task>
-    <option name="localTasksCounter" value="212" />
+    <task id="LOCAL-00212" summary="try to plot them all">
+      <created>1662102622339</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1662102622339</updated>
+    </task>
+    <task id="LOCAL-00213" summary="try to plot them all">
+      <created>1662102750958</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1662102750958</updated>
+    </task>
+    <task id="LOCAL-00214" summary="try to plot them all">
+      <created>1662102855538</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1662102855538</updated>
+    </task>
+    <option name="localTasksCounter" value="215" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -510,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="worked, changed CONST_INTERVAL" />
     <MESSAGE value="test out new script" />
     <MESSAGE value="try again" />
     <MESSAGE value="always have the first point" />
@@ -535,6 +531,7 @@
     <MESSAGE value="added at 100" />
     <MESSAGE value="more changes" />
     <MESSAGE value="scrape!" />
-    <option name="LAST_COMMIT_MESSAGE" value="scrape!" />
+    <MESSAGE value="try to plot them all" />
+    <option name="LAST_COMMIT_MESSAGE" value="try to plot them all" />
   </component>
 </project>

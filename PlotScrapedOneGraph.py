@@ -20,14 +20,14 @@ def plotCollectedData(paramDTarray):
 
 def setScrapedJson():
     global scrapeDict
-    with open('ScrapeDeltaTData_At'+str(max_orbits)+'.json', 'r') as f:
-        scrapeDict = json.loads(f)
+    with open('ScrapeDeltaTData_At'+str(max_orbits)+'.json') as f:
+        scrapeDict = json.load(f)
 
 def plot():
     global scrapeDict
 
-    for i in range(len(scrapeDict)):
-        plt.plot(scrapeDict[i]["DTarray"], label= r"$\varepsilon$ = " + str(scrapeDict[i]["ecc_int"]))
+    for key in scrapeDict:
+        plt.plot(scrapeDict[key]["DTarray"], label= r"$\varepsilon$ = " + str(scrapeDict[key]["ecc_int"]))
 
     plt.grid(True)
     plt.legend()
