@@ -39,3 +39,6 @@ def plot():
     plt.close()
 
     print("entering plot")
+
+
+plot()
