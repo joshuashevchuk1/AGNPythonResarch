@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="more changes">
-      <change afterPath="$PROJECT_DIR$/PencilPlotDeltaTScraped.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="scrape!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,13 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00160" summary="get max of H, radius must be considered.">
-      <created>1654670645198</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1654670645198</updated>
     </task>
     <task id="LOCAL-00161" summary="just want the scale height. Too lazy to remove the other quantities">
       <created>1654671127736</created>
@@ -494,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661413562566</updated>
     </task>
-    <option name="localTasksCounter" value="209" />
+    <task id="LOCAL-00209" summary="scrape!">
+      <created>1661413718287</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1661413718287</updated>
+    </task>
+    <option name="localTasksCounter" value="210" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -509,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="made mistake" />
     <MESSAGE value="worked, changed CONST_INTERVAL" />
     <MESSAGE value="test out new script" />
     <MESSAGE value="try again" />
@@ -534,6 +531,7 @@
     <MESSAGE value="more code fixes" />
     <MESSAGE value="added at 100" />
     <MESSAGE value="more changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="more changes" />
+    <MESSAGE value="scrape!" />
+    <option name="LAST_COMMIT_MESSAGE" value="scrape!" />
   </component>
 </project>
