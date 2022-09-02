@@ -9,7 +9,13 @@ import traceback
 import json
 
 scrapeDict={}
+max_orbits = 0
 
-def getScrapedJson():
-
+def setMaxOrbits():
     return none
+
+def setScrapedJson():
+    global scrapeDict
+    with open('ScrapeDeltaTData_At'+str(max_orbits)+'.json', 'r') as f:
+        scrapeDict = json.loads(f)
+
