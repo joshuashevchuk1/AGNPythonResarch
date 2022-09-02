@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="purrty grab">
-      <change beforePath="$PROJECT_DIR$/PlotScrapedOneGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlotScrapedOneGraph.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="purrty grab" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,13 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00168" summary="str issue">
-      <created>1655195363428</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1655195363428</updated>
     </task>
     <task id="LOCAL-00169" summary="Simplified">
       <created>1655195650288</created>
@@ -494,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662103408051</updated>
     </task>
-    <option name="localTasksCounter" value="217" />
+    <task id="LOCAL-00217" summary="purrty grab">
+      <created>1662147103664</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1662147103664</updated>
+    </task>
+    <option name="localTasksCounter" value="218" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

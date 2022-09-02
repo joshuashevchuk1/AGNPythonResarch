@@ -38,6 +38,7 @@ def plot():
     plt.title('data')
     plt.xlabel(r'$t/T_0$')
     plt.ylabel('Temperature')
+    plt.ylim(-0.05,0.05)
     plt.tight_layout()
     plt.savefig("ScrapedDeltaData_" + str(max_orbits) + "_plot" + ".png")
     plt.close()
