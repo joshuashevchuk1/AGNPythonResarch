@@ -27,18 +27,31 @@ def plot():
     global scrapeDict
 
     for key in scrapeDict:
-        plt.plot(np.gradient(scrapeDict[key]["DTarray"]), label=
-        r"$\varepsilon$ = " +
-        str(scrapeDict[key]["ecc_int"]) +
-        "; q = " +
-        str(scrapeDict[key]["q"]))
+
+        N=50
+
+        kernel = np.ones((N,))/N
+
+        temp = np.gradient(scrapeDict[key]["DTarray"])
+        temp = np.convolve(temp,kernel,mode='valid')
+            
+
+        qnum = scrapeDict[key]["q"]
+
+        q = "; q = " + str(scrapeDict[key]["q"])
+        ecc = r"$\varepsilon$ = " + str(scrapeDict[key]["ecc_int"])
+
+        if (qnum == 2e-4):
+            plt.plot(temp, label=ecc + q,ls=":")
+        else: 
+            plt.plot(temp, label=ecc + q)
 
     plt.grid(True)
     plt.legend()
     plt.title('data')
     plt.xlabel(r'$t/T_0$')
     plt.ylabel('Temperature')
-    plt.ylim(-0.05,0.05)
+    plt.ylim(0,0.05)
     plt.tight_layout()
     plt.savefig("ScrapedDeltaData_" + str(max_orbits) + "_plot" + ".png")
     plt.close()
