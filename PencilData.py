@@ -857,49 +857,52 @@ class Pencil_Data(object):
                         UE = []
                         UINT = []
                         FE = []
+
+                        while j <= len(phi) - 1:
+                            #
+                            #
+                            #
+                            #
+                            while i <= len(rad) - 1:
+                                try:
+                                    local_disk_mass = 0.5 * np.abs(phi[j]) * ((rad[i + 1] ** 2) - (rad[i] ** 2)) * \
+                                                      rho[i][j]
+                                    KE.append(
+                                        local_disk_mass * (ux[j][i] ** 2 + (rad[i] ** 2) * uy[j][j] ** 2)
+                                        * 0.5
+                                    )
+                                    UE.append(
+                                        local_disk_mass
+                                        / rad[i]
+                                    )
+                                    UINT.append(
+                                        TT[i][j]
+                                        / gamma
+                                    )
+                                    FE.append(
+                                        rho[i][j]
+                                        / rad[i] ** 2
+                                    )
+                                    i = i + di
+                                except:
+                                    # out of bound
+                                    i = i + di
+                            i = 0
+                            j = j + dj
+                            #
+                            #
+                            #
+                            #
+                        FE_Sum.append(np.sum(FE[:]))
+                        KE_Sum.append(np.sum(KE[:]))
+                        UE_Sum.append(np.sum(UE[:]))
+                        UINT_Sum.append(np.sum(UINT[:]))
+                        Int = Int + dInt
+
                     except:
                         # moving on to next ivar
                         Int = Int + dInt
 
-                    while j <= len(phi) - 1:
-                        #
-                        #
-                        #
-                        #
-                        while i <= len(rad) - 1:
-                            try:
-                                local_disk_mass = 0.5 * np.abs(phi[j]) * ((rad[i + 1] ** 2) - (rad[i] ** 2)) * rho[i][j]
-                                KE.append(
-                                    local_disk_mass * (ux[j][i] ** 2 + (rad[i] ** 2) * uy[j][j] ** 2)
-                                    * 0.5
-                                )
-                                UE.append(
-                                    local_disk_mass
-                                    / rad[i]
-                                )
-                                UINT.append(
-                                    TT[i][j]
-                                    / gamma
-                                )
-                                FE.append(
-                                    rho[i][j]
-                                    / rad[i] ** 2
-                                )
-                                i = i + di
-                            except:
-                                # out of bound
-                                i = i + di
-                        i = 0
-                        j = j + dj
-                    #
-                    #
-                    #
-                    #
-                    FE_Sum.append(np.sum(FE[:]))
-                    KE_Sum.append(np.sum(KE[:]))
-                    UE_Sum.append(np.sum(UE[:]))
-                    UINT_Sum.append(np.sum(UINT[:]))
-                    Int = Int + dInt
                 i = 0
                 di = 1
                 Total_Disk_Energy = []
