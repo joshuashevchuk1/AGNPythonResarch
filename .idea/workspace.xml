@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="purrty grab">
-      <change beforePath="$PROJECT_DIR$/Torque.py" beforeDir="false" afterPath="$PROJECT_DIR$/Torque.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="plot uno grapho" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,13 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00170" summary="Simplified DeltaH global">
-      <created>1655195974642</created>
-      <option name="number" value="00170" />
-      <option name="presentableId" value="LOCAL-00170" />
-      <option name="project" value="LOCAL" />
-      <updated>1655195974642</updated>
     </task>
     <task id="LOCAL-00171" summary="messed up name">
       <created>1655196103581</created>
@@ -494,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662147800290</updated>
     </task>
-    <option name="localTasksCounter" value="219" />
+    <task id="LOCAL-00219" summary="plot uno grapho">
+      <created>1664437597023</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1664437597023</updated>
+    </task>
+    <option name="localTasksCounter" value="220" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -509,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="always have the first point" />
     <MESSAGE value="small interval" />
     <MESSAGE value="which run is a problem?" />
     <MESSAGE value="plotContourRates function added" />
@@ -534,6 +531,7 @@
     <MESSAGE value="try to plot them all" />
     <MESSAGE value="try to plot them all!" />
     <MESSAGE value="purrty grab" />
-    <option name="LAST_COMMIT_MESSAGE" value="purrty grab" />
+    <MESSAGE value="plot uno grapho" />
+    <option name="LAST_COMMIT_MESSAGE" value="plot uno grapho" />
   </component>
 </project>
