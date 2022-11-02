@@ -1085,22 +1085,22 @@ class Pencil_Data(object):
                 # -----------------------------------------------
                 # gradients
                 # -----------------------------------------------
-                KE_Grad = np.gradient(KE_Sum[:])
-                UE_Grad = np.gradient(UE_Sum[:])
-                UINT_Grad = np.gradient(UINT_Sum[:])
+                if Calc_Rates_Energy:
+                    KE_Grad = np.gradient(KE_Sum[:])
+                    UE_Grad = np.gradient(UE_Sum[:])
+                    UINT_Grad = np.gradient(UINT_Sum[:])
                 if Calc_OEnergy == True:
                     OE_Grad = np.gradient(OE_Sum[:])
 
-                KE_Sum_Avg = np.convolve(KE_Sum, kernel, mode='valid')
-
-                KE_rate = np.mean(KE_Grad)
-                UE_rate = np.mean(UE_Grad)
-                UINT_rate = np.mean(UINT_Grad)
+                if Calc_Rates_Energy:
+                    KE_Sum_Avg = np.convolve(KE_Sum, kernel, mode='valid')
+                    KE_rate = np.mean(KE_Grad)
+                    UE_rate = np.mean(UE_Grad)
+                    UINT_rate = np.mean(UINT_Grad)
                 if Calc_OEnergy == True:
                     OE_rate = np.mean(OE_Grad)
 
                 # time arrays
-
                 KE_time = np.arange(0, len(KE_Sum), 1)
                 UE_time = np.arange(0, len(UE_Sum), 1)
                 UINT_time = np.arange(0, len(UINT_Sum), 1)
@@ -1172,15 +1172,17 @@ class Pencil_Data(object):
                         dOE_fit.append((OE_fit)[i + 1] - (OE_fit)[i])
                         i = i + di
 
-                KE_fit_rate = sum(dKE_fit) / len(dKE_fit)
-                UE_fit_rate = sum(dUE_fit) / len(dUE_fit)
-                UINT_fit_rate = sum(dUINT_fit) / len(dUINT_fit)
+                if Calc_Rates_Energy:
+                    KE_fit_rate = sum(dKE_fit) / len(dKE_fit)
+                    UE_fit_rate = sum(dUE_fit) / len(dUE_fit)
+                    UINT_fit_rate = sum(dUINT_fit) / len(dUINT_fit)
                 if Calc_OEnergy == True:
                     OE_fit_rate = sum(dOE_fit) / len(dOE_fit)
 
-                KE_error = np.abs((KE_fit_rate - KE_rate) / KE_rate)
-                UE_error = np.abs((UE_fit_rate - UE_rate) / UE_rate)
-                UINT_error = np.abs((UINT_fit_rate - UINT_rate) / UINT_rate)
+                if Calc_Rates_Energy:
+                    KE_error = np.abs((KE_fit_rate - KE_rate) / KE_rate)
+                    UE_error = np.abs((UE_fit_rate - UE_rate) / UE_rate)
+                    UINT_error = np.abs((UINT_fit_rate - UINT_rate) / UINT_rate)
                 if Calc_OEnergy == True:
                     OE_error = np.abs((OE_fit_rate - OE_rate) / OE_rate)
 
@@ -1192,9 +1194,10 @@ class Pencil_Data(object):
                 if Calc_OEnergy == True:
                     OE_Sum_Avg = np.convolve(OE_Sum, kernel, mode='valid')
 
-                KE_Grad_Avg = np.convolve(KE_Grad, kernel, mode='valid')
-                UE_Grad_Avg = np.convolve(UE_Grad, kernel, mode='valid')
-                UINT_Grad_Avg = np.convolve(UINT_Grad, kernel, mode='valid')
+                if Calc_Rates_Energy:
+                    KE_Grad_Avg = np.convolve(KE_Grad, kernel, mode='valid')
+                    UE_Grad_Avg = np.convolve(UE_Grad, kernel, mode='valid')
+                    UINT_Grad_Avg = np.convolve(UINT_Grad, kernel, mode='valid')
                 if Calc_OEnergy == True:
                     OE_Grad_Avg = np.convolve(OE_Grad, kernel, mode='valid')
 
