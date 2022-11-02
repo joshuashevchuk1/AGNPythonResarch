@@ -281,7 +281,7 @@ class Pencil_Data(object):
             # use Orbit_Len to properly get the length of the interval
             # for Orbits from the time series
 
-            time = t/(2 * np.pi)
+            time = t / (2 * np.pi)
             len_t = len(ts.t)
 
             Max_Orbits = np.round((time[len(time) - 1]))
@@ -409,7 +409,7 @@ class Pencil_Data(object):
 
             ecc_int = par.eccentricity
 
-            aspect_ratio = ScaleHeight/radius
+            aspect_ratio = ScaleHeight / radius
 
             Sigmap = Sigma * radius ** -alpha
 
@@ -426,8 +426,8 @@ class Pencil_Data(object):
             ecc_rate = np.gradient(eccentricity)
             ecc_ang = par1 * np.sqrt(semi_major) * np.sqrt(1 - ecc ** 2)
 
-            print('len of ecc is ',str(len(ecc)))
-            print('t.max() is ',t.max())
+            print('len of ecc is ', str(len(ecc)))
+            print('t.max() is ', t.max())
 
             # for convience in calculating the longitude of the perihelion
             # i introduced ecc as variable and sma as a variable
@@ -466,14 +466,14 @@ class Pencil_Data(object):
                         indexTimeCutOff = i
                         break
 
-            timeCutOff = t[indexTimeCutOff]/(np.pi*2)
-            timeCutOffLarge = t[indexTimeCutOffLarge]/(np.pi*2)
+            timeCutOff = t[indexTimeCutOff] / (np.pi * 2)
+            timeCutOffLarge = t[indexTimeCutOffLarge] / (np.pi * 2)
 
-            print('number of snapshots',t.max()/(np.pi*2))
-            print('indexTimeCutOff',indexTimeCutOff)
-            print('t[indexTimeCutOff]',t[indexTimeCutOff])
-            print('t[indexTimeCutOff]/(np.pi*2)',t[indexTimeCutOff]/(np.pi*2))
-            print('ecc[indexTimeCutOff]',ecc[indexTimeCutOff])
+            print('number of snapshots', t.max() / (np.pi * 2))
+            print('indexTimeCutOff', indexTimeCutOff)
+            print('t[indexTimeCutOff]', t[indexTimeCutOff])
+            print('t[indexTimeCutOff]/(np.pi*2)', t[indexTimeCutOff] / (np.pi * 2))
+            print('ecc[indexTimeCutOff]', ecc[indexTimeCutOff])
             print('timeCutOff: ', timeCutOff)
 
             ecc = None
@@ -835,6 +835,10 @@ class Pencil_Data(object):
                     #
                     #
                     #
+                    i = 0
+                    di = 1
+                    j = 0
+                    dj = 1
                     try:
                         if Calc_Temp == True:
                             ff = pc.read_var(
@@ -849,10 +853,6 @@ class Pencil_Data(object):
                         ux = ff.ux
                         uy = ff.uy
                         rho = ff.rho
-                        i = 0
-                        di = 1
-                        j = 0
-                        dj = 1
                         KE = []
                         UE = []
                         UINT = []
@@ -870,7 +870,7 @@ class Pencil_Data(object):
                             try:
                                 local_disk_mass = 0.5 * np.abs(phi[j]) * ((rad[i + 1] ** 2) - (rad[i] ** 2)) * rho[i][j]
                                 KE.append(
-                                    local_disk_mass * (ux[j][i] ** 2 + (rad[i]**2)*uy[j][j] ** 2)
+                                    local_disk_mass * (ux[j][i] ** 2 + (rad[i] ** 2) * uy[j][j] ** 2)
                                     * 0.5
                                 )
                                 UE.append(
@@ -1500,7 +1500,8 @@ class Pencil_Data(object):
                 'torqtotal': torqtotal, 'tmax': tmax, 'xrq2': xrq2, 'yrq2': yrq2, 'MaxOrbits': MaxOrbits,
                 'tempdata': tempdata, 'Calc_Temp': self.Calc_Temp, 'step': step,
                 'x2d': x2d, 'y2d': y2d, 'Calc_Density': self.Calc_Density, 'densitydata': densitydata,
-                'timeCutOff': timeCutOff,'indexTimeCutOff':indexTimeCutOff, 'indexTimeCutOffLarge':indexTimeCutOffLarge,'timeCutOffLarge':timeCutOffLarge
+                'timeCutOff': timeCutOff, 'indexTimeCutOff': indexTimeCutOff,
+                'indexTimeCutOffLarge': indexTimeCutOffLarge, 'timeCutOffLarge': timeCutOffLarge
             }
 
             os.chdir('..')
