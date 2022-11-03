@@ -81,9 +81,9 @@ else:
 PA = PA.Pencil_Analysis(PD.Pencil_Data(),
                         Orbit=5,
                         MaxOrbits=5,
-                        step=10,
+                        step=None,
                         TempSigma=False,
-                        Calc_Energy=True,
+                        Calc_Energy=False,
                         Calc_OEnergy=False,
                         Calc_Dynamics=False,
                         Orbit_standard=50,
@@ -99,13 +99,13 @@ var_dir_list = PA.Make_Vars()
 #temp_dir_list, ecc_dir_list, name_dir_list      =   PA.Make_TempVars(var_dir_list)
 #temp_distribution , temp_ecc, temp_name         =   PA.Get_TempDistribution(temp_dir_list,ecc_dir_list,name_dir_list)
 
-#PA.pingContour(var_dir_list)
+PA.pingContour(var_dir_list)
 #PA.pingContour_Dynamic(var_dir_list)
-#PA.pingContour_Midplane(var_dir_list)
-#PA.pingTorque(var_dir_list)
+PA.pingContour_Midplane(var_dir_list)
+PA.pingTorque(var_dir_list)
 #PA.pingEcc(var_dir_list)
-#PA.pingOrbital(var_dir_list)
-#PA.pingTTm(var_dir_list)
+PA.pingOrbital(var_dir_list)
+PA.pingTTm(var_dir_list)
 #PA.pingTempBoxPlot(var_dir_list)
 #PA.pingGTM_Sigma(var_dir_list)
 #PA.pingGTM_Sigma_O(var_dir_list)
@@ -114,7 +114,7 @@ var_dir_list = PA.Make_Vars()
 #PA.pingGTM_Sigma_3D_O(var_dir_list)
 #PA.ping_LongPerihelion(var_dir_list)
 #PA.ping_LongPerihelion_10_Orbits(var_dir_list)
-PA.pingEnergy(var_dir_list)
+#PA.pingEnergy(var_dir_list)
 #PA.pingToomreQ(var_dir_list)
 
 # PAP.pingContour(var_dir_list)
