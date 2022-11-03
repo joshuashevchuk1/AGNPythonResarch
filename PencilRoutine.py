@@ -80,7 +80,7 @@ else:
 #PA                                              =   PA.Pencil_Analysis(PD.Pencil_Data(),Orbit=None,step=10,TempSigma=True)
 PA = PA.Pencil_Analysis(PD.Pencil_Data(),
                         Orbit=5,
-                        MaxOrbits=50,
+                        MaxOrbits=5,
                         step=10,
                         TempSigma=False,
                         Calc_Energy=True,
