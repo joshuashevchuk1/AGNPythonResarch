@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="plot uno grapho" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="problems with energy plots">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,48 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00171" summary="messed up name">
-      <created>1655196103581</created>
-      <option name="number" value="00171" />
-      <option name="presentableId" value="LOCAL-00171" />
-      <option name="project" value="LOCAL" />
-      <updated>1655196103581</updated>
-    </task>
-    <task id="LOCAL-00172" summary="try to calc scaleheight by hand first">
-      <created>1655196471180</created>
-      <option name="number" value="00172" />
-      <option name="presentableId" value="LOCAL-00172" />
-      <option name="project" value="LOCAL" />
-      <updated>1655196471180</updated>
-    </task>
-    <task id="LOCAL-00173" summary="start at 1 to not lead to errors">
-      <created>1655196530326</created>
-      <option name="number" value="00173" />
-      <option name="presentableId" value="LOCAL-00173" />
-      <option name="project" value="LOCAL" />
-      <updated>1655196530326</updated>
-    </task>
-    <task id="LOCAL-00174" summary="helper issues">
-      <created>1655197204264</created>
-      <option name="number" value="00174" />
-      <option name="presentableId" value="LOCAL-00174" />
-      <option name="project" value="LOCAL" />
-      <updated>1655197204264</updated>
-    </task>
-    <task id="LOCAL-00175" summary="1 orbit">
-      <created>1655197769829</created>
-      <option name="number" value="00175" />
-      <option name="presentableId" value="LOCAL-00175" />
-      <option name="project" value="LOCAL" />
-      <updated>1655197769829</updated>
-    </task>
-    <task id="LOCAL-00176" summary="forgot to add proper min">
-      <created>1655248485760</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1655248485760</updated>
     </task>
     <task id="LOCAL-00177" summary="round min and max (too large)">
       <created>1655280775975</created>
@@ -492,7 +452,49 @@
       <option name="project" value="LOCAL" />
       <updated>1664437597023</updated>
     </task>
-    <option name="localTasksCounter" value="220" />
+    <task id="LOCAL-00220" summary="debug PencilRoutine.py">
+      <created>1667371479457</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1667371479457</updated>
+    </task>
+    <task id="LOCAL-00221" summary="debug PencilRoutine.py">
+      <created>1667371981807</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1667371981807</updated>
+    </task>
+    <task id="LOCAL-00222" summary="debug PencilRoutine.py">
+      <created>1667372145123</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1667372145123</updated>
+    </task>
+    <task id="LOCAL-00223" summary="rates energy is kinda a problem">
+      <created>1667372463531</created>
+      <option name="number" value="00223" />
+      <option name="presentableId" value="LOCAL-00223" />
+      <option name="project" value="LOCAL" />
+      <updated>1667372463531</updated>
+    </task>
+    <task id="LOCAL-00224" summary="problems with energy plots">
+      <created>1667372615900</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1667372615900</updated>
+    </task>
+    <task id="LOCAL-00225" summary="problems with energy plots">
+      <created>1667373372580</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1667373372580</updated>
+    </task>
+    <option name="localTasksCounter" value="226" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,9 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="small interval" />
-    <MESSAGE value="which run is a problem?" />
-    <MESSAGE value="plotContourRates function added" />
     <MESSAGE value="contourf problems" />
     <MESSAGE value="added new ExamplePlotLib file for testing" />
     <MESSAGE value="added more example code" />
@@ -532,6 +531,9 @@
     <MESSAGE value="try to plot them all!" />
     <MESSAGE value="purrty grab" />
     <MESSAGE value="plot uno grapho" />
-    <option name="LAST_COMMIT_MESSAGE" value="plot uno grapho" />
+    <MESSAGE value="debug PencilRoutine.py" />
+    <MESSAGE value="rates energy is kinda a problem" />
+    <MESSAGE value="problems with energy plots" />
+    <option name="LAST_COMMIT_MESSAGE" value="problems with energy plots" />
   </component>
 </project>
