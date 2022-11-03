@@ -825,7 +825,8 @@ class Pencil_Data(object):
                 Int = 0
                 dInt = 1
 
-                Orbit = np.round(timeCutOff)
+                #Orbit = np.round(timeCutOff)
+                Orbit = MaxOrbits
 
                 KE_Sum = []
                 UE_Sum = []
@@ -835,10 +836,6 @@ class Pencil_Data(object):
                     #
                     #
                     #
-                    i = 0
-                    di = 1
-                    j = 0
-                    dj = 1
                     try:
                         if Calc_Temp == True:
                             ff = pc.read_var(
@@ -857,6 +854,10 @@ class Pencil_Data(object):
                         UE = []
                         UINT = []
                         FE = []
+                        i = 0
+                        di = 1
+                        j = 0
+                        dj = 1
 
                         while j <= len(phi) - 1:
                             #

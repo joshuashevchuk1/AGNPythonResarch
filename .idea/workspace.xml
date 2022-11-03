@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="problems with energy plots">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="change step to 10 orbits" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,20 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00177" summary="round min and max (too large)">
-      <created>1655280775975</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1655280775976</updated>
-    </task>
-    <task id="LOCAL-00178" summary="made mistake">
-      <created>1655882385388</created>
-      <option name="number" value="00178" />
-      <option name="presentableId" value="LOCAL-00178" />
-      <option name="project" value="LOCAL" />
-      <updated>1655882385389</updated>
     </task>
     <task id="LOCAL-00179" summary="worked, changed CONST_INTERVAL">
       <created>1655882609228</created>
@@ -494,7 +478,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667373372580</updated>
     </task>
-    <option name="localTasksCounter" value="226" />
+    <task id="LOCAL-00226" summary="problems with energy plots">
+      <created>1667459848192</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1667459848193</updated>
+    </task>
+    <task id="LOCAL-00227" summary="change step to 10 orbits">
+      <created>1667461126246</created>
+      <option name="number" value="00227" />
+      <option name="presentableId" value="LOCAL-00227" />
+      <option name="project" value="LOCAL" />
+      <updated>1667461126246</updated>
+    </task>
+    <option name="localTasksCounter" value="228" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -509,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="contourf problems" />
     <MESSAGE value="added new ExamplePlotLib file for testing" />
     <MESSAGE value="added more example code" />
     <MESSAGE value="more testing" />
@@ -534,6 +531,7 @@
     <MESSAGE value="debug PencilRoutine.py" />
     <MESSAGE value="rates energy is kinda a problem" />
     <MESSAGE value="problems with energy plots" />
-    <option name="LAST_COMMIT_MESSAGE" value="problems with energy plots" />
+    <MESSAGE value="change step to 10 orbits" />
+    <option name="LAST_COMMIT_MESSAGE" value="change step to 10 orbits" />
   </component>
 </project>
