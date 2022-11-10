@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="change step to 10 orbits" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="no energy calculations for">
+      <change beforePath="$PROJECT_DIR$/PencilRoutine.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilRoutine.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,34 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00179" summary="worked, changed CONST_INTERVAL">
-      <created>1655882609228</created>
-      <option name="number" value="00179" />
-      <option name="presentableId" value="LOCAL-00179" />
-      <option name="project" value="LOCAL" />
-      <updated>1655882609228</updated>
-    </task>
-    <task id="LOCAL-00180" summary="test out new script">
-      <created>1659424642406</created>
-      <option name="number" value="00180" />
-      <option name="presentableId" value="LOCAL-00180" />
-      <option name="project" value="LOCAL" />
-      <updated>1659424642406</updated>
-    </task>
-    <task id="LOCAL-00181" summary="try again">
-      <created>1659425055263</created>
-      <option name="number" value="00181" />
-      <option name="presentableId" value="LOCAL-00181" />
-      <option name="project" value="LOCAL" />
-      <updated>1659425055263</updated>
-    </task>
-    <task id="LOCAL-00182" summary="always have the first point">
-      <created>1659425161778</created>
-      <option name="number" value="00182" />
-      <option name="presentableId" value="LOCAL-00182" />
-      <option name="project" value="LOCAL" />
-      <updated>1659425161778</updated>
     </task>
     <task id="LOCAL-00183" summary="small interval">
       <created>1659425221490</created>
@@ -492,7 +466,35 @@
       <option name="project" value="LOCAL" />
       <updated>1667461126246</updated>
     </task>
-    <option name="localTasksCounter" value="228" />
+    <task id="LOCAL-00228" summary="again debug energy plots">
+      <created>1667461575447</created>
+      <option name="number" value="00228" />
+      <option name="presentableId" value="LOCAL-00228" />
+      <option name="project" value="LOCAL" />
+      <updated>1667461575447</updated>
+    </task>
+    <task id="LOCAL-00229" summary="again debug energy plots">
+      <created>1667461931195</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1667461931195</updated>
+    </task>
+    <task id="LOCAL-00230" summary="max orbits 5">
+      <created>1667462317315</created>
+      <option name="number" value="00230" />
+      <option name="presentableId" value="LOCAL-00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1667462317315</updated>
+    </task>
+    <task id="LOCAL-00231" summary="no energy calculations for">
+      <created>1667462695045</created>
+      <option name="number" value="00231" />
+      <option name="presentableId" value="LOCAL-00231" />
+      <option name="project" value="LOCAL" />
+      <updated>1667462695045</updated>
+    </task>
+    <option name="localTasksCounter" value="232" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,9 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added new ExamplePlotLib file for testing" />
-    <MESSAGE value="added more example code" />
-    <MESSAGE value="more testing" />
     <MESSAGE value="use json.dumps and to data.json" />
     <MESSAGE value="good for prod" />
     <MESSAGE value="data for plots" />
@@ -532,6 +531,9 @@
     <MESSAGE value="rates energy is kinda a problem" />
     <MESSAGE value="problems with energy plots" />
     <MESSAGE value="change step to 10 orbits" />
-    <option name="LAST_COMMIT_MESSAGE" value="change step to 10 orbits" />
+    <MESSAGE value="again debug energy plots" />
+    <MESSAGE value="max orbits 5" />
+    <MESSAGE value="no energy calculations for" />
+    <option name="LAST_COMMIT_MESSAGE" value="no energy calculations for" />
   </component>
 </project>
