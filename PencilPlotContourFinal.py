@@ -57,8 +57,8 @@ def plotRunDensity(ivar):
 
     if ivar == 100:
         cax = plt.axes([0.85, 0.1, 0.075, 0.8])
-        cax.set_aspect(20)
-        cax.set_ylabel('Density in code units', fontsize=10)
+        cax.set_aspect(30)
+        cax.set_ylabel('Density in code units', fontsize=20)
         plt.colorbar(PL2, cax=cax)
 
     plt.suptitle('t= ' + str(np.round(ivar*2*np.pi)))
@@ -83,11 +83,11 @@ def plotRunTemperature(ivar):
 
     if ivar == 100:
         cax = plt.axes([0.85, 0.1, 0.075, 0.8])
-        cax.set_aspect(20)
-        cax.set_ylabel('temperature in code units', fontsize=10)
+        cax.set_aspect(30)
+        cax.set_ylabel('temperature in code units', fontsize=30)
         plt.colorbar(PL2, cax=cax)
 
-    plt.suptitle('t= ' + str(np.round(ivar*2*np.pi)))
+    plt.suptitle('t= ' + str(np.round(ivar*2*np.pi)),fontsize=30)
     plt.savefig(name + "-temperature-ivar-" + str(ivar) + ".png")
     plt.close()
 
