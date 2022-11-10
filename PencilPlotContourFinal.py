@@ -10,7 +10,7 @@ import sys
 # plot denisty, shock and temperature for the local orbit
 
 def plot():
-    root = os.getcwd() # root dir is fucked up due to a space
+    root = os.getcwd()  # root dir is fucked up due to a space
     dir_run_list = next(os.walk('.'))[1]
     print("============")
     print("entering plotRuns")
@@ -29,6 +29,7 @@ def plot():
     print("leaving plotRuns")
     print("============")
 
+
 def plotRun():
     ivar = [1, 50, 100]
     for i in range(len(ivar)):
@@ -38,6 +39,12 @@ def plotRun():
 def plotRuns(ivar):
     plotRunTemperature(ivar)
     plotRunDensity(ivar)
+
+
+def getEccInt():
+    par = pc.read_param()
+    ecc_int = par.eccentricity
+    return ecc_int
 
 
 def plotRunDensity(ivar):
@@ -50,7 +57,7 @@ def plotRunDensity(ivar):
     rad2d, theta2d = np.meshgrid(rad, theta)
     x2d = rad2d * np.cos(theta2d)
     y2d = rad2d * np.sin(theta2d)
-    fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
+    fig, (ax1) = plt.subplots(1, 1, figsize=(15, 15))
     fig.subplots_adjust(bottom=0.07, top=0.95)
     PL2 = ax1.contourf(x2d, y2d, dfrho, 256)
     ax1.set_aspect('equal')
@@ -58,10 +65,14 @@ def plotRunDensity(ivar):
     if ivar == 100:
         cax = plt.axes([0.85, 0.1, 0.075, 0.8])
         cax.set_aspect(30)
-        cax.set_ylabel('Density in code units', fontsize=20)
-        plt.colorbar(PL2, cax=cax)
+        cax.set_ylabel('Density in code units', fontsize=30)
+        cbar = plt.colorbar(PL2, cax=cax,format='%.0e')
+        for t in cbar.ax.get_yticklabels():
+            t.set_fontsize(30)
 
-    plt.suptitle('t= ' + str(np.round(ivar*2*np.pi)))
+
+    plt.suptitle('t= ' + str(np.round(ivar * 2 * np.pi) + " , " + r'$\varepsilon$' + " = " + str(getEccInt())),
+                 fontsize=50)
     plt.savefig(name + "-density-ivar-" + str(ivar) + ".png")
     plt.close()
 
@@ -76,18 +87,21 @@ def plotRunTemperature(ivar):
     rad2d, theta2d = np.meshgrid(rad, theta)
     x2d = rad2d * np.cos(theta2d)
     y2d = rad2d * np.sin(theta2d)
-    fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
+    fig, (ax1) = plt.subplots(1, 1, figsize=(15, 15))
     fig.subplots_adjust(bottom=0.07, top=0.95)
-    PL2 = ax1.contourf(x2d, y2d, dfT, 256)
+    PL2 = ax1.contourf(x2d, y2d, dfT, 256,cmap=plt.get_cmap('bwr'))
     ax1.set_aspect('equal')
 
     if ivar == 100:
         cax = plt.axes([0.85, 0.1, 0.075, 0.8])
         cax.set_aspect(30)
         cax.set_ylabel('temperature in code units', fontsize=30)
-        plt.colorbar(PL2, cax=cax)
+        cbar = plt.colorbar(PL2, cax=cax,format='%.0e')
+        for t in cbar.ax.get_yticklabels():
+            t.set_fontsize(30)
 
-    plt.suptitle('t= ' + str(np.round(ivar*2*np.pi)),fontsize=30)
+    plt.suptitle('t= ' + str(np.round(ivar * 2 * np.pi) + " , " + r'$\varepsilon$' + " = " + str(getEccInt())),
+                 fontsize=50)
     plt.savefig(name + "-temperature-ivar-" + str(ivar) + ".png")
     plt.close()
 
