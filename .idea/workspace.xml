@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="get orbital information">
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="fix the plots for contour temp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PencilPlotContourFinal.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilPlotContourFinal.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,13 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00185" summary="plotContourRates function added">
-      <created>1659506546700</created>
-      <option name="number" value="00185" />
-      <option name="presentableId" value="LOCAL-00185" />
-      <option name="project" value="LOCAL" />
-      <updated>1659506546701</updated>
     </task>
     <task id="LOCAL-00186" summary="contourf problems">
       <created>1659507919049</created>
@@ -495,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668060572662</updated>
     </task>
-    <option name="localTasksCounter" value="234" />
+    <task id="LOCAL-00234" summary="fix the plots for contour temp">
+      <created>1668071199083</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1668071199083</updated>
+    </task>
+    <option name="localTasksCounter" value="235" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -510,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="good for prod" />
     <MESSAGE value="data for plots" />
     <MESSAGE value="added more data to use, bunk scrape" />
     <MESSAGE value="try to scrap the data!" />
@@ -535,6 +533,7 @@
     <MESSAGE value="max orbits 5" />
     <MESSAGE value="no energy calculations for" />
     <MESSAGE value="get orbital information" />
-    <option name="LAST_COMMIT_MESSAGE" value="get orbital information" />
+    <MESSAGE value="fix the plots for contour temp" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix the plots for contour temp" />
   </component>
 </project>

@@ -71,7 +71,7 @@ def plotRunDensity(ivar):
             t.set_fontsize(30)
 
 
-    plt.suptitle('t= ' + str(np.round(ivar * 2 * np.pi) + " , " + r'$\varepsilon$' + " = " + str(getEccInt())),
+    plt.suptitle('t= ' + str(np.round(ivar * 2 * np.pi)) + " , " + r'$\varepsilon$' + " = " + str(getEccInt()),
                  fontsize=50)
     plt.savefig(name + "-density-ivar-" + str(ivar) + ".png")
     plt.close()
@@ -100,7 +100,7 @@ def plotRunTemperature(ivar):
         for t in cbar.ax.get_yticklabels():
             t.set_fontsize(30)
 
-    plt.suptitle('t= ' + str(np.round(ivar * 2 * np.pi) + " , " + r'$\varepsilon$' + " = " + str(getEccInt())),
+    plt.suptitle('t= ' + str(np.round(ivar * 2 * np.pi)) + " , " + r'$\varepsilon$' + " = " + str(getEccInt()),
                  fontsize=50)
     plt.savefig(name + "-temperature-ivar-" + str(ivar) + ".png")
     plt.close()
