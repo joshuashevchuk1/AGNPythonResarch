@@ -3582,17 +3582,13 @@ class Pencil_Analysis(object):
         eccentricity = data_frame[n]['eccentricity']
 
         # =========================
-        plt.set_aspect('equal')
         plt.tight_layout()
-        ax4.set_aspect('auto')
-        ax4.set_title('e vs t')
-        ax4.plot(time, eccentricity[:len(time)], color='orange')
-        ax4.set_xlabel('t')
-        ax4.set_ylabel('e')
-        plt.set_title(r'$\varepsilon$' + 'vs y')
+        plt.plot(time, eccentricity[:len(time)], color='orange')
+        plt.xlabel('t')
+        plt.ylabel('e')
+        plt.title(r'$\varepsilon$' + 'vs y')
         plt.grid(True)
-        plt.savefig('Standard_Orbit_Eccentricity' +
-                    str(data_frame[n]['DirName']) + '.png')
+        plt.savefig('Standard_Orbit_Eccentricity' + str(data_frame[n]['DirName']) + '.png')
         # too many figs may be open.
         # close plots once done
         plt.close(fig)
@@ -3614,15 +3610,14 @@ class Pencil_Analysis(object):
         eccentricity = data_frame[n]['eccentricity']
 
         # =========================
-        plt.set_aspect('equal')
+        plt.axis('scaled')
         plt.tight_layout()
         plt.plot(time, semi_major[:len(time)], color='orange')
-        plt.set_xlabel('t')
-        plt.set_ylabel('a')
-        plt.set_title('a vs t')
+        plt.xlabel('t')
+        plt.ylabel('a')
+        plt.title('a vs t')
         plt.grid(True)
-        plt.savefig('Standard_Orbit_SemiMajor' +
-                    str(data_frame[n]['DirName']) + '.png')
+        plt.savefig('Standard_Orbit_SemiMajor' + str(data_frame[n]['DirName']) + '.png')
         # too many figs may be open.
         # close plots once done
         plt.close(fig)
@@ -3630,35 +3625,18 @@ class Pencil_Analysis(object):
 
     def plotOrbitalTopDown(self, data_frame, n):
 
-        time = data_frame[n]['t']
-        eccentricity = data_frame[n]['eccentricity']
-        semi_major = data_frame[n]['semi_major']
-        cut_off = data_frame[n]['indexTimeCutOff']
-        time = time[:cut_off] / (2 * np.pi)
-
         xrq2 = data_frame[n]['xrq2']
         yrq2 = data_frame[n]['yrq2']
 
         # =========================
-        # legend handles
-        # =========================
-
-        # use this information when adding important parameters to the run
-
-        eccentricity = data_frame[n]['eccentricity']
-        DirMass = data_frame[n]['par1']
-        DirEcc = (round(eccentricity[0], 1))
-
-        # =========================
-        plt.set_aspect('equal')
         plt.tight_layout()
         plt.plot(xrq2, yrq2)
-        plt.set_xlabel('xrq2')
-        plt.set_ylabel('yrq2')
-        plt.set_title('x vs y')
+        plt.xlabel('xrq2')
+        plt.ylabel('yrq2')
+        plt.title('x vs y')
         plt.grid(True)
-        plt.savefig('Standard_Orbit_Info' +
-                    str(data_frame[n]['DirName']) + '.png')
+        plt.axis('scaled')
+        plt.savefig('Standard_Orbit_Info' + str(data_frame[n]['DirName']) + '.png')
         # too many figs may be open.
         # close plots once done
         plt.close(fig)
@@ -3697,9 +3675,9 @@ class Pencil_Analysis(object):
                         logging.info(n)
                         logging.info('========================')
 
-                    self.plotOrbitalTopDown(data_frame,n)
-                    self.plotOrbitalSemiMajor(data_frame,n)
-                    self.plotOrbitalEccentricity(data_frame,n)
+                    self.plotOrbitalTopDown(data_frame, n)
+                    self.plotOrbitalSemiMajor(data_frame, n)
+                    self.plotOrbitalEccentricity(data_frame, n)
 
                     # use this information when adding important parameters to the run
                     os.system('git add *.png')
