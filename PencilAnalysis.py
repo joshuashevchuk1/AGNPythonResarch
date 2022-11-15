@@ -3567,7 +3567,7 @@ class Pencil_Analysis(object):
             os.chdir('..')
             return False
 
-    def plotOrbitalEccentricity(self, data_frame):
+    def plotOrbitalEccentricity(self, data_frame, n):
 
         time = data_frame[n]['t']
         cut_off = data_frame[n]['indexTimeCutOff']
@@ -3598,7 +3598,7 @@ class Pencil_Analysis(object):
         plt.close(fig)
         return None
 
-    def plotOrbitalSemiMajor(self, data_frame):
+    def plotOrbitalSemiMajor(self, data_frame, n):
 
         time = data_frame[n]['t']
         semi_major = data_frame[n]['semi_major']
@@ -3628,7 +3628,7 @@ class Pencil_Analysis(object):
         plt.close(fig)
         return None
 
-    def plotOrbitalTopDown(self, data_frame):
+    def plotOrbitalTopDown(self, data_frame, n):
 
         time = data_frame[n]['t']
         eccentricity = data_frame[n]['eccentricity']
@@ -3697,9 +3697,9 @@ class Pencil_Analysis(object):
                         logging.info(n)
                         logging.info('========================')
 
-                    self.plotOrbitalTopDown(data_frame)
-                    self.plotOrbitalSemiMajor(data_frame)
-                    self.plotOrbitalEccentricity(data_frame)
+                    self.plotOrbitalTopDown(data_frame,n)
+                    self.plotOrbitalSemiMajor(data_frame,n)
+                    self.plotOrbitalEccentricity(data_frame,n)
 
                     # use this information when adding important parameters to the run
                     os.system('git add *.png')
