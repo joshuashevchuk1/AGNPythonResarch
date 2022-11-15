@@ -3701,9 +3701,9 @@ class Pencil_Analysis(object):
                         logging.info(n)
                         logging.info('========================')
 
-                    pingOrbitalTopDown(data_frame)
-                    pingOrbitalSemiMajor(data_frame)
-                    pingOrbitalEccentricity(data_frame)
+                    plotOrbitalTopDown(data_frame)
+                    plotOrbitalSemiMajor(data_frame)
+                    plotOrbitalEccentricity(data_frame)
 
                     # use this information when adding important parameters to the run
                     os.system('git add *.png')
