@@ -3591,7 +3591,7 @@ class Pencil_Analysis(object):
         plt.savefig('Standard_Orbit_Eccentricity' + str(data_frame[n]['DirName']) + '.png')
         # too many figs may be open.
         # close plots once done
-        plt.close(fig)
+        plt.close()
         return None
 
     def plotOrbitalSemiMajor(self, data_frame, n):
@@ -3620,7 +3620,7 @@ class Pencil_Analysis(object):
         plt.savefig('Standard_Orbit_SemiMajor' + str(data_frame[n]['DirName']) + '.png')
         # too many figs may be open.
         # close plots once done
-        plt.close(fig)
+        plt.close()
         return None
 
     def plotOrbitalTopDown(self, data_frame, n):
@@ -3639,7 +3639,7 @@ class Pencil_Analysis(object):
         plt.savefig('Standard_Orbit_Info' + str(data_frame[n]['DirName']) + '.png')
         # too many figs may be open.
         # close plots once done
-        plt.close(fig)
+        plt.close()
         return None
 
     def pingOrbital(self, data_frame):
