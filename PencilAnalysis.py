@@ -3701,71 +3701,11 @@ class Pencil_Analysis(object):
                         logging.info(n)
                         logging.info('========================')
 
-                    ax4.set_aspect('auto')
-                    ax4.set_title('e vs t')
-                    ax4.plot(time, eccentricity[:len(time)], color='orange')
-                    ax4.set_xlabel('t')
-                    ax4.set_ylabel('e')
-
-                    # =========================
-                    # legend handles
-                    # =========================
+                    pingOrbitalTopDown(data_frame)
+                    pingOrbitalSemiMajor(data_frame)
+                    pingOrbitalEccentricity(data_frame)
 
                     # use this information when adding important parameters to the run
-
-                    eccentricity = data_frame[n]['eccentricity']
-                    sound_speed = data_frame[n]['cs']
-                    aspect_ratio = data_frame[n]['aspect_ratio']
-                    initial_pressure = data_frame[n]['initial_pressure']
-                    Sigma = data_frame[n]['Sigma']
-                    rsmooth = data_frame[n]['rsmooth']
-                    gamma = data_frame[n]['gamma']
-                    alpha = data_frame[n]['alpha']
-                    beta = data_frame[n]['beta']
-
-                    DirMass = data_frame[n]['par1']
-                    DirEcc = (round(eccentricity[0], 1))
-
-                    DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
-                    DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
-                    Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
-                    Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
-                    DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
-                    Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
-                    Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
-                    Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
-                    Dir_cutoff_patches = mpatches.Patch(
-                        color='white', label=r'$t_{c}$ :' + str(time[cut_off-1]))
-
-
-                    plt.legend(handles=[DirMass_patches,
-                                        DirEcc_patches,
-                                        Dirsound_speed_patches,
-                                        Dirinitial_pressure_patches,
-                                        DirSigma_patches,
-                                        Dir_rsmooth_patches,
-                                        Dir_gamma_patches,
-                                        Dir_alpha_patches,
-                                        Dir_beta_patches,
-                                        Dir_cutoff_patches], loc=2)
-
-                    # =========================
-
-                    plt.savefig('Standard_Orbit_Info' +
-                                str(data_frame[n]['DirName'])+'.png')
-                    # too many figs may be open.
-                    # close plots once done
-                    plt.close(fig)
                     os.system('git add *.png')
                     os.chdir('..')
 

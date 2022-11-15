@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="incorrect paren">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="Seperate eccentricity plots">
       <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,13 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00187" summary="contourf problems">
-      <created>1659507986784</created>
-      <option name="number" value="00187" />
-      <option name="presentableId" value="LOCAL-00187" />
-      <option name="project" value="LOCAL" />
-      <updated>1659507986784</updated>
     </task>
     <task id="LOCAL-00188" summary="contourf problems">
       <created>1659508043394</created>
@@ -495,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668136754767</updated>
     </task>
-    <option name="localTasksCounter" value="236" />
+    <task id="LOCAL-00236" summary="Seperate eccentricity plots">
+      <created>1668488660256</created>
+      <option name="number" value="00236" />
+      <option name="presentableId" value="LOCAL-00236" />
+      <option name="project" value="LOCAL" />
+      <updated>1668488660256</updated>
+    </task>
+    <option name="localTasksCounter" value="237" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -510,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added more data to use, bunk scrape" />
     <MESSAGE value="try to scrap the data!" />
     <MESSAGE value="bug" />
     <MESSAGE value="added t=50 data" />
@@ -535,6 +533,7 @@
     <MESSAGE value="get orbital information" />
     <MESSAGE value="fix the plots for contour temp" />
     <MESSAGE value="incorrect paren" />
-    <option name="LAST_COMMIT_MESSAGE" value="incorrect paren" />
+    <MESSAGE value="Seperate eccentricity plots" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seperate eccentricity plots" />
   </component>
 </project>
