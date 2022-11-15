@@ -21,12 +21,14 @@ import scipy.interpolate
 import CheckArrayTest as chk
 import pandas as pd
 
-def find_nearest(array,value):
+
+def find_nearest(array, value):
     idx = np.searchsorted(array, value, side="left")
-    if idx > 0 and (idx == len(array) or math.fabs(value - array[idx-1]) < math.fabs(value - array[idx])):
-        return array[idx-1]
+    if idx > 0 and (idx == len(array) or math.fabs(value - array[idx - 1]) < math.fabs(value - array[idx])):
+        return array[idx - 1]
     else:
         return array[idx]
+
 
 class Pencil_Analysis(object):
 
@@ -99,7 +101,7 @@ class Pencil_Analysis(object):
         i = 0
         di = 1
 
-        while i <= len(dir_run_list)-1:
+        while i <= len(dir_run_list) - 1:
             var_dir_list.append(
                 data_functions.grepDATA(
                     dir_run_list[i],
@@ -115,7 +117,7 @@ class Pencil_Analysis(object):
             )
             data_functions.pingGit(dir_run_list[i])
             data_functions.pingTemp(dir_run_list[i])
-            i = i+di
+            i = i + di
 
         return var_dir_list
 
@@ -126,7 +128,7 @@ class Pencil_Analysis(object):
         try:
             n = 0
             dn = 1
-            while n <= len(data_frame)-1:
+            while n <= len(data_frame) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -163,7 +165,7 @@ class Pencil_Analysis(object):
                     fig.subplots_adjust(bottom=0.07, top=0.95)
                     PL2 = ax1.contourf(x2d, y2d, Toomre, ncolors)
                     ax1.set_aspect('equal')
-                    #plt.contourf(x2d, y2d, Toomre, ncolors)
+                    # plt.contourf(x2d, y2d, Toomre, ncolors)
 
                     # =========================
                     # legend handles
@@ -188,26 +190,26 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
+                        color='white', label='aspect_ratio :' + str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
+                    # DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -231,7 +233,7 @@ class Pencil_Analysis(object):
                     plt.xlabel(r'$\tau$')
                     plt.title('mean Toomre Q eff per orbit')
                     plt.savefig('Standard_ToomreQ_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
 
                     os.system('git add *.png')
                     os.chdir('..')
@@ -241,7 +243,7 @@ class Pencil_Analysis(object):
                     print('================')
                     traceback.print_exc()
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping ToomreQ Loop error')
@@ -257,7 +259,7 @@ class Pencil_Analysis(object):
         try:
             n = 0
             dn = 1
-            while n <= len(data_frame)-1:
+            while n <= len(data_frame) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -320,23 +322,23 @@ class Pencil_Analysis(object):
                     cut_off = data_frame[n]['indexTimeCutOff']
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
                     KE_Sum_Label = mpatches.Patch(
                         color='green', label='Kinetic')
                     UE_Sum_Label = mpatches.Patch(
@@ -390,7 +392,7 @@ class Pencil_Analysis(object):
                                         OE_Sum_Label,
                                         Dir_cutoff_patches], loc=2)
                     plt.savefig('Standard_ErgMC_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     plt.close()
 
                     # =========================
@@ -416,7 +418,7 @@ class Pencil_Analysis(object):
                                         Dir_beta_patches,
                                         Dir_cutoff_patches], loc=2)
                     plt.savefig('Standard_ErgTot_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     plt.close()
 
                     # =========================
@@ -446,7 +448,7 @@ class Pencil_Analysis(object):
                                         UE_Sum_Label,
                                         Dir_cutoff_patches], loc=2)
                     plt.savefig('Standard_ErgUE_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     plt.close()
 
                     # ========================
@@ -476,7 +478,7 @@ class Pencil_Analysis(object):
                                         KE_Sum_Label,
                                         Dir_cutoff_patches], loc=2)
                     plt.savefig('Standard_ErgKE_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     plt.close()
 
                     # ========================
@@ -507,7 +509,7 @@ class Pencil_Analysis(object):
                                         UINT_Sum_Label,
                                         Dir_cutoff_patches], loc=2)
                     plt.savefig('Standard_ErgUINT_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     plt.close()
 
                     # =========================
@@ -521,7 +523,7 @@ class Pencil_Analysis(object):
                     print('================')
                     traceback.print_exc()
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping Energy Loop error')
@@ -546,10 +548,10 @@ class Pencil_Analysis(object):
 
             i = 0
             di = 1
-            while i <= len(data_frame)-1:
+            while i <= len(data_frame) - 1:
                 try:
                     if data_frame[i]['tempdata'] == None:
-                        i = i+di
+                        i = i + di
                     else:
                         temp_dir_list.append(data_frame[i]['tempdata'])
                         try:
@@ -564,13 +566,13 @@ class Pencil_Analysis(object):
                         print('================')
                         print('Adding Temp Data')
                         print('================')
-                        i = i+di
+                        i = i + di
                 except:
                     traceback.print_exc()
                     print('================')
                     print('No Temp Data found to plot')
                     print('================')
-                i = i+di
+                i = i + di
 
         return temp_dir_list, ecc_dir_list, name_dir_list
 
@@ -597,21 +599,21 @@ class Pencil_Analysis(object):
             temp_ecc = []
             temp_name = []
 
-            while f <= len(temp_frame)-1:
+            while f <= len(temp_frame) - 1:
                 try:
                     if math.isnan(np.std(temp_frame[f][:])) == False:
                         temp_distribution.append(np.std(temp_frame[f][:]))
                         if ecc_frame == None or name_frame == None:
-                            f = f+df
+                            f = f + df
                         else:
                             temp_ecc.append(ecc_frame[f])
                             temp_name.append(name_frame[f])
-                            f = f+df
+                            f = f + df
                     else:
-                        f = f+df
+                        f = f + df
                 except:
                     print('f failed at ' + str(f))
-                    f = f+df
+                    f = f + df
         except:
             print('================')
             print('================')
@@ -633,7 +635,7 @@ class Pencil_Analysis(object):
         i = 0
         di = 1
 
-        while i <= len(data_frame)-1:
+        while i <= len(data_frame) - 1:
             try:
                 try:
                     GTM_Sigma_AllOrbits.append(data_frame[i]['GTM_Sigma'])
@@ -653,7 +655,7 @@ class Pencil_Analysis(object):
                 print('error in dir' + str(i))
                 print('================')
                 traceback.print_exc()
-            i = i+di
+            i = i + di
 
         try:
             try:
@@ -666,7 +668,7 @@ class Pencil_Analysis(object):
                 os.chdir('Pencil_Analysis')
 
             fig = plt.figure(figsize=(10, 10))
-            #ax = fig.add_subplot(111, projection='3d')
+            # ax = fig.add_subplot(111, projection='3d')
             ax = fig.add_subplot(111)
 
             DirEcc_GTM = np.ravel(DirEcc_GTM)
@@ -678,14 +680,14 @@ class Pencil_Analysis(object):
 
             ax.ticklabel_format(style='sci', axis='x', scilimits=(0, 0))
             ax.ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
-            #ax.ticklabel_format(style='sci', axis='z', scilimits=(0,0))
+            # ax.ticklabel_format(style='sci', axis='z', scilimits=(0,0))
             ax.set_ylim(0, 1e-4)
 
             plt.title(
                 r'global $\sigma_{T}$ as a function of mass ratio and eccentricity')
             ax.set_ylabel('q', fontsize=14)
             ax.set_xlabel(r'$\varepsilon$', fontsize=14)
-            #ax.set_zlabel(r'global $\sigma_{T}$',fontsize=14)
+            # ax.set_zlabel(r'global $\sigma_{T}$',fontsize=14)
             # plt.show()
 
             plt.savefig('Global_SigmaTemp(e,q)_Parameter_Space.png')
@@ -711,7 +713,7 @@ class Pencil_Analysis(object):
         try:
             n = 0
             dn = 1
-            while n <= len(DirEcc_GTM)-1:
+            while n <= len(DirEcc_GTM) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -761,13 +763,13 @@ class Pencil_Analysis(object):
                     i = 0
                     di = 1
 
-                    while i <= len(DirEcc_GTM)-1:
+                    while i <= len(DirEcc_GTM) - 1:
                         if DirEcc_GTM[i] == DirEcc_GTM[n]:
                             Mass_Slice.append(DirMass_GTM[i])
                             GTM_Sigma_Slice.append(GTM_Sigma_AllOrbits[i])
-                            i = i+di
+                            i = i + di
                         else:
-                            i = i+di
+                            i = i + di
 
                     plt.scatter(Mass_Slice, GTM_Sigma_Slice, color='purple')
                     plt.tight_layout()
@@ -804,26 +806,26 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
+                        color='white', label='aspect_ratio :' + str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
+                    # DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -838,7 +840,7 @@ class Pencil_Analysis(object):
                     # =========================
 
                     plt.savefig('Global_SigmaT_Slices_' +
-                                str(DirEcc_GTM[n])+'.png')
+                                str(DirEcc_GTM[n]) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -851,7 +853,7 @@ class Pencil_Analysis(object):
                     print('================')
                     traceback.print_exc()
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping Sigma Temp slices Loop error')
@@ -869,7 +871,7 @@ class Pencil_Analysis(object):
         i = 0
         di = 1
 
-        while i <= len(data_frame)-1:
+        while i <= len(data_frame) - 1:
             try:
                 try:
                     GTM_Sigma_AllOrbits.append(data_frame[i]['GTM_Sigma_O'])
@@ -890,7 +892,7 @@ class Pencil_Analysis(object):
                 print('================')
                 traceback.print_exc()
 
-            i = i+di
+            i = i + di
 
         try:
             try:
@@ -903,7 +905,7 @@ class Pencil_Analysis(object):
                 os.chdir('Pencil_Analysis')
 
             fig = plt.figure(figsize=(10, 10))
-            #ax = fig.add_subplot(111, projection='3d')
+            # ax = fig.add_subplot(111, projection='3d')
             ax = fig.add_subplot(111)
 
             # =========================
@@ -930,14 +932,14 @@ class Pencil_Analysis(object):
 
             ax.ticklabel_format(style='sci', axis='x', scilimits=(0, 0))
             ax.ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
-            #ax.ticklabel_format(style='sci', axis='z', scilimits=(0,0))
+            # ax.ticklabel_format(style='sci', axis='z', scilimits=(0,0))
             ax.set_ylim(0, 1e-4)
 
             plt.suptitle(
                 r'global $\sigma_{T}$ as a function of mass ratio and eccentricity')
             ax.set_ylabel('q', fontsize=14)
             ax.set_xlabel(r'$\varepsilon$', fontsize=14)
-            #ax.set_zlabel(r'global $\sigma_{T}$',fontsize=14)
+            # ax.set_zlabel(r'global $\sigma_{T}$',fontsize=14)
             # plt.show()
 
             plt.savefig('Global_SigmaTemp_O_(e,q)_Parameter_Space.png')
@@ -963,7 +965,7 @@ class Pencil_Analysis(object):
         try:
             n = 0
             dn = 1
-            while n <= len(DirEcc_GTM)-1:
+            while n <= len(DirEcc_GTM) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -1013,13 +1015,13 @@ class Pencil_Analysis(object):
                     i = 0
                     di = 1
 
-                    while i <= len(DirEcc_GTM)-1:
+                    while i <= len(DirEcc_GTM) - 1:
                         if DirEcc_GTM[i] == DirEcc_GTM[n]:
                             Mass_Slice.append(DirMass_GTM[i])
                             GTM_Sigma_Slice.append(GTM_Sigma_AllOrbits[i])
-                            i = i+di
+                            i = i + di
                         else:
-                            i = i+di
+                            i = i + di
 
                     plt.scatter(Mass_Slice, GTM_Sigma_Slice, color='purple')
                     plt.tight_layout()
@@ -1056,26 +1058,26 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
+                        color='white', label='aspect_ratio :' + str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
+                    # DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -1090,7 +1092,7 @@ class Pencil_Analysis(object):
                     # =========================
 
                     plt.savefig('Global_SigmaTi_O_Slices_' +
-                                str(DirEcc_GTM[n])+'.png')
+                                str(DirEcc_GTM[n]) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -1103,7 +1105,7 @@ class Pencil_Analysis(object):
                     print('================')
                     traceback.print_exc()
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping Sigma Temp slices Loop error')
@@ -1121,7 +1123,7 @@ class Pencil_Analysis(object):
         i = 0
         di = 1
 
-        while i <= len(data_frame)-1:
+        while i <= len(data_frame) - 1:
             try:
                 try:
                     GTM_Sigma_AllOrbits.append(data_frame[i]['DGTemp_Mean'])
@@ -1142,7 +1144,7 @@ class Pencil_Analysis(object):
                 print('================')
                 traceback.print_exc()
 
-            i = i+di
+            i = i + di
 
         try:
             try:
@@ -1155,7 +1157,7 @@ class Pencil_Analysis(object):
                 os.chdir('Pencil_Analysis')
 
             fig = plt.figure(figsize=(10, 10))
-            #ax = fig.add_subplot(111, projection='3d')
+            # ax = fig.add_subplot(111, projection='3d')
             ax = fig.add_subplot(111)
 
             # =========================
@@ -1182,14 +1184,14 @@ class Pencil_Analysis(object):
 
             ax.ticklabel_format(style='sci', axis='x', scilimits=(0, 0))
             ax.ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
-            #ax.ticklabel_format(style='sci', axis='z', scilimits=(0,0))
+            # ax.ticklabel_format(style='sci', axis='z', scilimits=(0,0))
             ax.set_ylim(0, 1e-4)
 
             plt.suptitle(
                 r'$\frac{\partial T}{\partial t}$ as a function of mass ratio and eccentricity')
             ax.set_ylabel('q', fontsize=14)
             ax.set_xlabel(r'$\varepsilon$', fontsize=14)
-            #ax.set_zlabel(r'global $\sigma_{T}$',fontsize=14)
+            # ax.set_zlabel(r'global $\sigma_{T}$',fontsize=14)
             # plt.show()
 
             plt.savefig('Global_dT_O_(e,q)_Parameter_Space.png')
@@ -1215,7 +1217,7 @@ class Pencil_Analysis(object):
         try:
             n = 0
             dn = 1
-            while n <= len(DirEcc_GTM)-1:
+            while n <= len(DirEcc_GTM) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -1265,13 +1267,13 @@ class Pencil_Analysis(object):
                     i = 0
                     di = 1
 
-                    while i <= len(DirEcc_GTM)-1:
+                    while i <= len(DirEcc_GTM) - 1:
                         if DirEcc_GTM[i] == DirEcc_GTM[n]:
                             Mass_Slice.append(DirMass_GTM[i])
                             GTM_Sigma_Slice.append(GTM_Sigma_AllOrbits[i])
-                            i = i+di
+                            i = i + di
                         else:
-                            i = i+di
+                            i = i + di
 
                     plt.scatter(Mass_Slice, GTM_Sigma_Slice, color='purple')
                     plt.tight_layout()
@@ -1305,26 +1307,26 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
+                        color='white', label='aspect_ratio :' + str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
+                    # DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -1339,7 +1341,7 @@ class Pencil_Analysis(object):
                     # =========================
 
                     plt.savefig('Global_dT_O_Slices_' +
-                                str(DirEcc_GTM[n])+'.png')
+                                str(DirEcc_GTM[n]) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -1352,7 +1354,7 @@ class Pencil_Analysis(object):
                     print('================')
                     traceback.print_exc()
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping d Temp slices Loop error')
@@ -1370,7 +1372,7 @@ class Pencil_Analysis(object):
         i = 0
         di = 1
 
-        while i <= len(data_frame)-1:
+        while i <= len(data_frame) - 1:
             try:
                 try:
                     GTM_Sigma_AllOrbits.append(data_frame[i]['GTM_Sigma'])
@@ -1390,7 +1392,7 @@ class Pencil_Analysis(object):
                 print('error in dir' + str(i))
                 print('================')
                 traceback.print_exc()
-            i = i+di
+            i = i + di
 
         try:
             try:
@@ -1404,7 +1406,7 @@ class Pencil_Analysis(object):
 
             fig = plt.figure(figsize=(10, 10))
             ax = fig.add_subplot(111, projection='3d')
-            #ax  = fig.add_subplot(111)
+            # ax  = fig.add_subplot(111)
             ax.scatter(DirEcc_GTM, DirMass_GTM,
                        GTM_Sigma_AllOrbits, marker='o')
 
@@ -1442,7 +1444,7 @@ class Pencil_Analysis(object):
         i = 0
         di = 1
 
-        while i <= len(data_frame)-1:
+        while i <= len(data_frame) - 1:
             try:
                 try:
                     GTM_Sigma_AllOrbits.append(data_frame[i]['GTM_Sigma_O'])
@@ -1454,7 +1456,7 @@ class Pencil_Analysis(object):
                     eccentricity = data_frame[i]['eccentricity']
                     DirEcc_GTM.append(round(eccentricity[0], 1))
                     print('================')
-                    print('no Data for GTM_Sigma in' )
+                    print('no Data for GTM_Sigma in')
                     print('================')
                     traceback.print_exc()
             except:
@@ -1462,7 +1464,7 @@ class Pencil_Analysis(object):
                 print('error in dir' + str(i))
                 print('================')
                 traceback.print_exc()
-            i = i+di
+            i = i + di
 
         try:
             try:
@@ -1476,7 +1478,7 @@ class Pencil_Analysis(object):
 
             fig = plt.figure(figsize=(10, 10))
             ax = fig.add_subplot(111, projection='3d')
-            #ax  = fig.add_subplot(111)
+            # ax  = fig.add_subplot(111)
             ax.scatter(DirEcc_GTM, DirMass_GTM,
                        GTM_Sigma_AllOrbits, marker='o')
 
@@ -1528,7 +1530,7 @@ class Pencil_Analysis(object):
             plt.grid(True)
             plt.xlabel('Data Directory')
             plt.ylabel(r'$\sigma$ (global)')
-            plt.title('Global Temp '+r'$\sigma$')
+            plt.title('Global Temp ' + r'$\sigma$')
             plt.subplots_adjust(bottom=0.05, top=0.95, left=0.10)
             plt.savefig('Global_Temp_Distribution.png')
             # too many figs may be open.
@@ -1561,7 +1563,7 @@ class Pencil_Analysis(object):
             try:
                 n = 0
                 dn = 1
-                while n <= len(data_frame)-1:
+                while n <= len(data_frame) - 1:
                     try:
                         try:
                             os.system('mkdir Pencil_Analysis')
@@ -1591,15 +1593,14 @@ class Pencil_Analysis(object):
 
                         time = data_frame[n]['t']
                         cut_off = data_frame[n]['indexTimeCutOff']
-                        time = time[:cut_off]/(2*np.pi)
+                        time = time[:cut_off] / (2 * np.pi)
 
-                        print('time is ',time)
-                        print('time[:cut_off] is',time[:cut_off])
+                        print('time is ', time)
+                        print('time[:cut_off] is', time[:cut_off])
 
                         GlobalTemp_Mean = data_frame[n]['GlobalTemp_Mean']
                         TTm = data_frame[n]['TTm']
                         TTm_rate = data_frame[n]['TTm_rate']
-
 
                         # =========================
                         # legend handles
@@ -1620,7 +1621,7 @@ class Pencil_Analysis(object):
                         alpha = data_frame[n]['alpha']
                         beta = data_frame[n]['beta']
 
-                        deltaTemp = GlobalTemp_Mean[:]-GlobalTemp_Mean[0]
+                        deltaTemp = GlobalTemp_Mean[:] - GlobalTemp_Mean[0]
 
                         # DEBUG
                         print(GlobalTemp_Mean)
@@ -1635,31 +1636,30 @@ class Pencil_Analysis(object):
                         plt.grid(True)
                         plt.xlim([0, time.max()])
 
-
                         DirEcc = (round(eccentricity[0], 1))
 
                         DirMass = data_frame[n]['par1']
 
                         DirMass_patches = mpatches.Patch(
-                            color='white', label='q :'+str(DirMass))
+                            color='white', label='q :' + str(DirMass))
                         DirEcc_patches = mpatches.Patch(
-                            color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                            color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                         Dirsound_speed_patches = mpatches.Patch(
-                            color='white', label='sound speed :'+str(sound_speed))
+                            color='white', label='sound speed :' + str(sound_speed))
                         Dirinitial_pressure_patches = mpatches.Patch(
-                            color='white', label='inital pressure :'+str(initial_pressure))
+                            color='white', label='inital pressure :' + str(initial_pressure))
                         DirSigma_patches = mpatches.Patch(
-                            color='white', label=r'$\Sigma$ :'+str(Sigma))
+                            color='white', label=r'$\Sigma$ :' + str(Sigma))
                         Dir_rsmooth_patches = mpatches.Patch(
-                            color='white', label='potential smoothing :'+str(rsmooth))
+                            color='white', label='potential smoothing :' + str(rsmooth))
                         Dir_gamma_patches = mpatches.Patch(
-                            color='white', label=r'$\gamma$ :'+str(gamma))
+                            color='white', label=r'$\gamma$ :' + str(gamma))
                         Dir_alpha_patches = mpatches.Patch(
-                            color='white', label=r'$\alpha$ :'+str(alpha))
+                            color='white', label=r'$\alpha$ :' + str(alpha))
                         Dir_beta_patches = mpatches.Patch(
-                            color='white', label=r'$\beta$ :'+str(beta))
+                            color='white', label=r'$\beta$ :' + str(beta))
                         Dir_TTm_patches = mpatches.Patch(
-                            color='white', label=r'$t_{m}$ :'+str(np.round(deltaTemp[:len(time)].max())))
+                            color='white', label=r'$t_{m}$ :' + str(np.round(deltaTemp[:len(time)].max())))
                         Dir_cutoff_patches = mpatches.Patch(
                             color='white', label=r'$t_{c}$ :' + str(time[cut_off - 1]))
 
@@ -1678,7 +1678,7 @@ class Pencil_Analysis(object):
                         # =========================
 
                         plt.savefig('Standard_TTm_' +
-                                    str(data_frame[n]['DirName'])+'.png')
+                                    str(data_frame[n]['DirName']) + '.png')
                         # too many figs may be open.
                         # close plots once done
                         plt.close()
@@ -1690,7 +1690,7 @@ class Pencil_Analysis(object):
                         print('================')
                         traceback.print_exc()
                         os.chdir('..')
-                    n = n+dn
+                    n = n + dn
             except:
                 print('================')
                 print('ping TTm Loop error')
@@ -1715,7 +1715,7 @@ class Pencil_Analysis(object):
         try:
             n = 0
             dn = 1
-            while n <= len(data_frame)-1:
+            while n <= len(data_frame) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -1744,7 +1744,7 @@ class Pencil_Analysis(object):
                         logging.info('========================')
 
                     plt.plot(data_frame[n]['t'], data_frame[n]
-                             ['long_perihelion'], color='red')
+                    ['long_perihelion'], color='red')
                     plt.title('Longitude of perihelion vs time')
                     plt.xlabel(r'$t/T_0$')
                     plt.ylabel(r'$\omega(rad)$')
@@ -1775,26 +1775,26 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
+                        color='white', label='aspect_ratio :' + str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
+                    # DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -1809,7 +1809,7 @@ class Pencil_Analysis(object):
                     # =========================
 
                     plt.savefig('Standard_Precession_Check_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close()
@@ -1821,7 +1821,7 @@ class Pencil_Analysis(object):
                     print('================')
                     traceback.print_exc()
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping Torque Loop error')
@@ -1842,7 +1842,7 @@ class Pencil_Analysis(object):
         try:
             n = 0
             dn = 1
-            while n <= len(data_frame)-1:
+            while n <= len(data_frame) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -1871,7 +1871,7 @@ class Pencil_Analysis(object):
                         logging.info('========================')
 
                     plt.plot(data_frame[n]['t'], data_frame[n]
-                             ['long_perihelion'], color='red')
+                    ['long_perihelion'], color='red')
                     plt.title('Longitude of perihelion vs time')
                     plt.xlabel(r'$t/T_0$')
                     plt.ylabel(r'$\omega(rad)$')
@@ -1902,26 +1902,26 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
+                        color='white', label='aspect_ratio :' + str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
+                    # DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -1936,7 +1936,7 @@ class Pencil_Analysis(object):
                     # =========================
 
                     plt.savefig('Standard_Precession_Check_10_Orbits' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close()
@@ -1948,7 +1948,7 @@ class Pencil_Analysis(object):
                     print('================')
                     traceback.print_exc()
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping Torque Loop error')
@@ -1961,7 +1961,7 @@ class Pencil_Analysis(object):
         try:
             n = 0
             dn = 1
-            while n <= len(data_frame)-1:
+            while n <= len(data_frame) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -1989,7 +1989,6 @@ class Pencil_Analysis(object):
                         logging.info('========================')
                         logging.info(n)
                         logging.info('========================')
-
 
                     time = data_frame[n]['time']
 
@@ -2034,28 +2033,28 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
+                        color='white', label='aspect_ratio :' + str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
+                    # DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
                     Dir_cutoff_patches = mpatches.Patch(
-                        color='white', label=r'$t_{c}$ :'+str(time[cut_off-1]))
+                        color='white', label=r'$t_{c}$ :' + str(time[cut_off - 1]))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -2073,10 +2072,10 @@ class Pencil_Analysis(object):
                     plt.title(r'Torques')
                     plt.xlabel(r'$t/T_0$')
                     plt.ylabel(r'$\Gamma$')
-                    plt.xlim([0, time[cut_off-1]])
+                    plt.xlim([0, time[cut_off - 1]])
                     plt.subplots_adjust(bottom=0.05, top=0.95)
                     plt.savefig('Standard_Torque_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -2088,7 +2087,7 @@ class Pencil_Analysis(object):
                     print('================')
                     traceback.print_exc()
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping Torque Loop error')
@@ -2106,7 +2105,7 @@ class Pencil_Analysis(object):
         try:
             n = 0
             dn = 1
-            while n <= len(data_frame)-1:
+            while n <= len(data_frame) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -2175,7 +2174,7 @@ class Pencil_Analysis(object):
                     print('Making Dynamic_Density')
                     print('================')
 
-                    while Dynamic_Loop <= len(Dynamic_Density)-1:
+                    while Dynamic_Loop <= len(Dynamic_Density) - 1:
                         # =========================
                         # =========================
                         # Density Contour
@@ -2189,26 +2188,26 @@ class Pencil_Analysis(object):
                         ax1.set_aspect('equal')
 
                         DirMass_patches = mpatches.Patch(
-                            color='white', label='q :'+str(DirMass))
+                            color='white', label='q :' + str(DirMass))
                         DirEcc_patches = mpatches.Patch(
-                            color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                            color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                         Dirsound_speed_patches = mpatches.Patch(
-                            color='white', label='sound speed :'+str(sound_speed))
+                            color='white', label='sound speed :' + str(sound_speed))
                         Diraspect_ratio_patches = mpatches.Patch(
-                            color='white', label='aspect_ratio :'+str(aspect_ratio))
+                            color='white', label='aspect_ratio :' + str(aspect_ratio))
                         Dirinitial_pressure_patches = mpatches.Patch(
-                            color='white', label='inital pressure :'+str(initial_pressure))
+                            color='white', label='inital pressure :' + str(initial_pressure))
                         DirSigma_patches = mpatches.Patch(
-                            color='white', label=r'$\Sigma$ :'+str(Sigma))
-                        #DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
+                            color='white', label=r'$\Sigma$ :' + str(Sigma))
+                        # DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                         Dir_rsmooth_patches = mpatches.Patch(
-                            color='white', label='potential smoothing :'+str(rsmooth))
+                            color='white', label='potential smoothing :' + str(rsmooth))
                         Dir_gamma_patches = mpatches.Patch(
-                            color='white', label=r'$\gamma$ :'+str(gamma))
+                            color='white', label=r'$\gamma$ :' + str(gamma))
                         Dir_alpha_patches = mpatches.Patch(
-                            color='white', label=r'$\alpha$ :'+str(alpha))
+                            color='white', label=r'$\alpha$ :' + str(alpha))
                         Dir_beta_patches = mpatches.Patch(
-                            color='white', label=r'$\beta$ :'+str(beta))
+                            color='white', label=r'$\beta$ :' + str(beta))
 
                         plt.legend(handles=[DirMass_patches,
                                             DirEcc_patches,
@@ -2227,11 +2226,11 @@ class Pencil_Analysis(object):
                         cax.set_aspect(20)
                         cax.set_ylabel('Density in code units', fontsize=10)
                         plt.colorbar(PL2, cax=cax)
-                        plt.suptitle('t='+str(data_frame[n]['ivar']))
+                        plt.suptitle('t=' + str(data_frame[n]['ivar']))
                         plt.subplots_adjust(bottom=0.05, top=0.95)
                         plt.savefig('Dynamic_Density_'
-                                    + str(data_frame[n]['DirName'])+'_'
-                                    + str(Dynamic_Loop*Standard_Orbit)
+                                    + str(data_frame[n]['DirName']) + '_'
+                                    + str(Dynamic_Loop * Standard_Orbit)
                                     + '.png')
                         # too many figs may be open.
                         # close plots once done
@@ -2247,8 +2246,7 @@ class Pencil_Analysis(object):
 
                     if Calc_Temp == True:
 
-                        while Dynamic_Loop <= len(Dynamic_Temperature)-1:
-
+                        while Dynamic_Loop <= len(Dynamic_Temperature) - 1:
                             # =========================
                             # =========================
                             # Temp Contour
@@ -2256,35 +2254,36 @@ class Pencil_Analysis(object):
                             # =========================
 
                             Normalized_Temp = (
-                                Dynamic_Temperature[Dynamic_Loop][:]-Init_Temp[:])/Init_Temp[:]
+                                                      Dynamic_Temperature[Dynamic_Loop][:] - Init_Temp[:]) / Init_Temp[
+                                                                                                             :]
 
                             fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
                             fig.subplots_adjust(bottom=0.07, top=0.95)
                             ax1.contourf(
-                                x2d, y2d, Dynamic_Temperature[Dynamic_Loop][:]/Init_Temp[:], ncolors)
+                                x2d, y2d, Dynamic_Temperature[Dynamic_Loop][:] / Init_Temp[:], ncolors)
                             ax1.set_aspect('equal')
 
                             DirMass_patches = mpatches.Patch(
-                                color='white', label='q :'+str(DirMass))
+                                color='white', label='q :' + str(DirMass))
                             DirEcc_patches = mpatches.Patch(
-                                color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                                color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                             Dirsound_speed_patches = mpatches.Patch(
-                                color='white', label='sound speed :'+str(sound_speed))
+                                color='white', label='sound speed :' + str(sound_speed))
                             Diraspect_ratio_patches = mpatches.Patch(
-                                color='white', label='aspect_ratio :'+str(aspect_ratio))
+                                color='white', label='aspect_ratio :' + str(aspect_ratio))
                             Dirinitial_pressure_patches = mpatches.Patch(
-                                color='white', label='inital pressure :'+str(initial_pressure))
+                                color='white', label='inital pressure :' + str(initial_pressure))
                             DirSigma_patches = mpatches.Patch(
-                                color='white', label=r'$\Sigma$ :'+str(Sigma))
-                            #DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
+                                color='white', label=r'$\Sigma$ :' + str(Sigma))
+                            # DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                             Dir_rsmooth_patches = mpatches.Patch(
-                                color='white', label='potential smoothing :'+str(rsmooth))
+                                color='white', label='potential smoothing :' + str(rsmooth))
                             Dir_gamma_patches = mpatches.Patch(
-                                color='white', label=r'$\gamma$ :'+str(gamma))
+                                color='white', label=r'$\gamma$ :' + str(gamma))
                             Dir_alpha_patches = mpatches.Patch(
-                                color='white', label=r'$\alpha$ :'+str(alpha))
+                                color='white', label=r'$\alpha$ :' + str(alpha))
                             Dir_beta_patches = mpatches.Patch(
-                                color='white', label=r'$\beta$ :'+str(beta))
+                                color='white', label=r'$\beta$ :' + str(beta))
 
                             plt.legend(handles=[DirMass_patches,
                                                 DirEcc_patches,
@@ -2301,13 +2300,13 @@ class Pencil_Analysis(object):
                             # cax=plt.axes([0.85,0.1,0.075,0.8])
                             # cax.set_label('Kelvin')
                             # cax.set_aspect(20)
-                            #cax.set_ylabel('Temp in code units',fontsize=10)
+                            # cax.set_ylabel('Temp in code units',fontsize=10)
                             plt.colorbar(PL2, ax=ax1)
-                            plt.suptitle('t='+str(data_frame[n]['ivar']))
+                            plt.suptitle('t=' + str(data_frame[n]['ivar']))
                             plt.subplots_adjust(bottom=0.05, top=0.95)
                             plt.savefig('Dynamic_Temperature_'
-                                        + str(data_frame[n]['DirName'])+'_'
-                                        + str(Dynamic_Loop*Standard_Orbit)
+                                        + str(data_frame[n]['DirName']) + '_'
+                                        + str(Dynamic_Loop * Standard_Orbit)
                                         + '.png')
                             # too many figs may be open.
                             # close plots once done
@@ -2326,7 +2325,7 @@ class Pencil_Analysis(object):
                     print('Making Dynamic_Shock')
                     print('================')
 
-                    while Dynamic_Loop <= len(Dynamic_Shock)-1:
+                    while Dynamic_Loop <= len(Dynamic_Shock) - 1:
                         # =========================
                         # =========================
                         # Shock Contour
@@ -2340,26 +2339,26 @@ class Pencil_Analysis(object):
                         ax1.set_aspect('equal')
 
                         DirMass_patches = mpatches.Patch(
-                            color='white', label='q :'+str(DirMass))
+                            color='white', label='q :' + str(DirMass))
                         DirEcc_patches = mpatches.Patch(
-                            color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                            color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                         Dirsound_speed_patches = mpatches.Patch(
-                            color='white', label='sound speed :'+str(sound_speed))
+                            color='white', label='sound speed :' + str(sound_speed))
                         Diraspect_ratio_patches = mpatches.Patch(
-                            color='white', label='aspect_ratio :'+str(aspect_ratio))
+                            color='white', label='aspect_ratio :' + str(aspect_ratio))
                         Dirinitial_pressure_patches = mpatches.Patch(
-                            color='white', label='inital pressure :'+str(initial_pressure))
+                            color='white', label='inital pressure :' + str(initial_pressure))
                         DirSigma_patches = mpatches.Patch(
-                            color='white', label=r'$\Sigma$ :'+str(Sigma))
-                        #DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
+                            color='white', label=r'$\Sigma$ :' + str(Sigma))
+                        # DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                         Dir_rsmooth_patches = mpatches.Patch(
-                            color='white', label='potential smoothing :'+str(rsmooth))
+                            color='white', label='potential smoothing :' + str(rsmooth))
                         Dir_gamma_patches = mpatches.Patch(
-                            color='white', label=r'$\gamma$ :'+str(gamma))
+                            color='white', label=r'$\gamma$ :' + str(gamma))
                         Dir_alpha_patches = mpatches.Patch(
-                            color='white', label=r'$\alpha$ :'+str(alpha))
+                            color='white', label=r'$\alpha$ :' + str(alpha))
                         Dir_beta_patches = mpatches.Patch(
-                            color='white', label=r'$\beta$ :'+str(beta))
+                            color='white', label=r'$\beta$ :' + str(beta))
 
                         plt.legend(handles=[DirMass_patches,
                                             DirEcc_patches,
@@ -2376,11 +2375,11 @@ class Pencil_Analysis(object):
                         cax.set_aspect(20)
                         cax.set_ylabel('shock in code units', fontsize=10)
                         plt.colorbar(PL2, cax=cax)
-                        plt.suptitle('t='+str(data_frame[n]['ivar']))
+                        plt.suptitle('t=' + str(data_frame[n]['ivar']))
                         plt.subplots_adjust(bottom=0.05, top=0.95)
                         plt.savefig('Dynamic_Shock_'
-                                    + str(data_frame[n]['DirName'])+'_'
-                                    + str(Dynamic_Loop*Standard_Orbit)
+                                    + str(data_frame[n]['DirName']) + '_'
+                                    + str(Dynamic_Loop * Standard_Orbit)
                                     + '.png')
                         plt.close(fig)
                         Dynamic_Loop = Dynamic_Loop + dLoop
@@ -2393,7 +2392,7 @@ class Pencil_Analysis(object):
                     print('================')
                     traceback.print_exc()
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping Dynamic Contour Loop error')
@@ -2417,7 +2416,7 @@ class Pencil_Analysis(object):
         try:
             n = 0
             dn = 1
-            while n <= len(data_frame)-1:
+            while n <= len(data_frame) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -2455,7 +2454,7 @@ class Pencil_Analysis(object):
                         temp_fv = data_frame[n]['temp_fv']
                         Init_Temp = data_frame[n]['Init_Temp']
                         Normalized_Temp = (
-                            temp_fv[:]-Init_Temp[:])/Init_Temp[:]
+                                                  temp_fv[:] - Init_Temp[:]) / Init_Temp[:]
                     else:
                         temp_fv = []
                         Init_Temp = []
@@ -2485,23 +2484,23 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     # =========================
 
@@ -2515,7 +2514,7 @@ class Pencil_Analysis(object):
                     fig.subplots_adjust(bottom=0.07, top=0.95)
                     PL2 = ax1.contourf(x_grid, y_grid, rho_fv, ncolors)
                     # ax1.set_aspect('equal')
-                    ax1.set_aspect(1/ax1.get_data_ratio())
+                    ax1.set_aspect(1 / ax1.get_data_ratio())
                     cax = plt.axes([0.85, 0.1, 0.075, 0.8])
                     # cax.set_label('Kelvin')
                     cax.set_aspect(20)
@@ -2530,10 +2529,10 @@ class Pencil_Analysis(object):
                                         Dir_alpha_patches,
                                         Dir_beta_patches], loc=2)
                     plt.colorbar(PL2, cax=cax)
-                    plt.suptitle('t='+str(data_frame[n]['ivar']))
+                    plt.suptitle('t=' + str(data_frame[n]['ivar']))
                     plt.subplots_adjust(bottom=0.05, top=0.95)
                     plt.savefig('Midplane_Contour_Density_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -2550,17 +2549,17 @@ class Pencil_Analysis(object):
                         #
 
                         Normalized_Temp = (
-                            temp_fv[:]-Init_Temp[:])/Init_Temp[:]
+                                                  temp_fv[:] - Init_Temp[:]) / Init_Temp[:]
 
                         fig, (ax1) = plt.subplots(1, 1, figsize=(20, 20))
                         fig.subplots_adjust(bottom=0.07, top=0.95)
                         ax1.contourf(x_grid, y_grid, Normalized_Temp, ncolors)
                         # ax1.set_aspect('equal')
-                        ax1.set_aspect(1/ax1.get_data_ratio())
+                        ax1.set_aspect(1 / ax1.get_data_ratio())
                         # cax=plt.axes([0.85,0.1,0.075,0.8])
                         # cax.set_label('Kelvin')
                         # cax.set_aspect(20)
-                        #cax.set_ylabel('Temp in code units',fontsize=10)
+                        # cax.set_ylabel('Temp in code units',fontsize=10)
                         plt.legend(handles=[DirMass_patches,
                                             DirEcc_patches,
                                             Dirsound_speed_patches,
@@ -2571,10 +2570,10 @@ class Pencil_Analysis(object):
                                             Dir_alpha_patches,
                                             Dir_beta_patches], loc=2)
                         plt.colorbar(PL2, ax=ax1)
-                        plt.suptitle('t='+str(data_frame[n]['ivar']))
+                        plt.suptitle('t=' + str(data_frame[n]['ivar']))
                         plt.subplots_adjust(bottom=0.05, top=0.95)
                         plt.savefig('Midplane_Contour_Temp_' +
-                                    str(data_frame[n]['DirName'])+'.png')
+                                    str(data_frame[n]['DirName']) + '.png')
                         # too many figs may be open.
                         # close plots once done
                         plt.close(fig)
@@ -2596,7 +2595,7 @@ class Pencil_Analysis(object):
                     fig.subplots_adjust(bottom=0.07, top=0.95)
                     ax1.contourf(x_grid, y_grid, shock_fv, ncolors)
                     # ax1.set_aspect('equal')
-                    ax1.set_aspect(1/ax1.get_data_ratio())
+                    ax1.set_aspect(1 / ax1.get_data_ratio())
                     cax = plt.axes([0.85, 0.1, 0.075, 0.8])
                     # cax.set_label('Kelvin')
                     cax.set_aspect(20)
@@ -2611,10 +2610,10 @@ class Pencil_Analysis(object):
                                         Dir_alpha_patches,
                                         Dir_beta_patches], loc=2)
                     plt.colorbar(PL2, cax=cax)
-                    plt.suptitle('t='+str(data_frame[n]['ivar']))
+                    plt.suptitle('t=' + str(data_frame[n]['ivar']))
                     plt.subplots_adjust(bottom=0.05, top=0.95)
                     plt.savefig('Midplane_Contour_Shock_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -2627,7 +2626,7 @@ class Pencil_Analysis(object):
                     print('================')
                     traceback.print_exc()
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping Contour Loop error')
@@ -2651,7 +2650,7 @@ class Pencil_Analysis(object):
         try:
             n = 0
             dn = 1
-            while n <= len(data_frame)-1:
+            while n <= len(data_frame) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -2730,26 +2729,26 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
+                        color='white', label='aspect_ratio :' + str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
+                    # DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -2768,10 +2767,10 @@ class Pencil_Analysis(object):
                     cax.set_aspect(20)
                     cax.set_ylabel('Density in code units', fontsize=10)
                     plt.colorbar(PL2, cax=cax)
-                    plt.suptitle('t='+str(data_frame[n]['ivar']))
+                    plt.suptitle('t=' + str(data_frame[n]['ivar']))
                     plt.subplots_adjust(bottom=0.05, top=0.95)
                     plt.savefig('Standard_Contour_Density_' +
-                                str(data_frame[n]['DirName']) + '_' + str(Standard_Orbit)+'.png')
+                                str(data_frame[n]['DirName']) + '_' + str(Standard_Orbit) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -2788,7 +2787,7 @@ class Pencil_Analysis(object):
                         #
 
                         Normalized_Temp = (
-                            temp_fv[:]-Init_Temp[:])/Init_Temp[:]
+                                                  temp_fv[:] - Init_Temp[:]) / Init_Temp[:]
 
                         fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
                         fig.subplots_adjust(bottom=0.07, top=0.95)
@@ -2815,23 +2814,23 @@ class Pencil_Analysis(object):
                         DirEcc = (round(eccentricity[0], 1))
 
                         DirMass_patches = mpatches.Patch(
-                            color='white', label='q :'+str(DirMass))
+                            color='white', label='q :' + str(DirMass))
                         DirEcc_patches = mpatches.Patch(
-                            color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                            color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                         Dirsound_speed_patches = mpatches.Patch(
-                            color='white', label='sound speed :'+str(sound_speed))
+                            color='white', label='sound speed :' + str(sound_speed))
                         Dirinitial_pressure_patches = mpatches.Patch(
-                            color='white', label='inital pressure :'+str(initial_pressure))
+                            color='white', label='inital pressure :' + str(initial_pressure))
                         DirSigma_patches = mpatches.Patch(
-                            color='white', label=r'$\Sigma$ :'+str(Sigma))
+                            color='white', label=r'$\Sigma$ :' + str(Sigma))
                         Dir_rsmooth_patches = mpatches.Patch(
-                            color='white', label='potential smoothing :'+str(rsmooth))
+                            color='white', label='potential smoothing :' + str(rsmooth))
                         Dir_gamma_patches = mpatches.Patch(
-                            color='white', label=r'$\gamma$ :'+str(gamma))
+                            color='white', label=r'$\gamma$ :' + str(gamma))
                         Dir_alpha_patches = mpatches.Patch(
-                            color='white', label=r'$\alpha$ :'+str(alpha))
+                            color='white', label=r'$\alpha$ :' + str(alpha))
                         Dir_beta_patches = mpatches.Patch(
-                            color='white', label=r'$\beta$ :'+str(beta))
+                            color='white', label=r'$\beta$ :' + str(beta))
 
                         plt.legend(handles=[DirMass_patches,
                                             DirEcc_patches,
@@ -2849,10 +2848,10 @@ class Pencil_Analysis(object):
                         # cax.set_label('Kelvin')
                         # cax.set_aspect(20)
                         plt.colorbar(PL2, ax=ax1)
-                        plt.suptitle('t='+str(data_frame[n]['ivar']))
+                        plt.suptitle('t=' + str(data_frame[n]['ivar']))
                         plt.subplots_adjust(bottom=0.05, top=0.95)
                         plt.savefig('Standard_Contour_Temp_' +
-                                    str(data_frame[n]['DirName'])  + '_' + str(Standard_Orbit) +'.png')
+                                    str(data_frame[n]['DirName']) + '_' + str(Standard_Orbit) + '.png')
                         # too many figs may be open.
                         # close plots once done
                         plt.close(fig)
@@ -2894,23 +2893,23 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -2928,10 +2927,10 @@ class Pencil_Analysis(object):
                     cax.set_aspect(20)
                     cax.set_ylabel('shock in code units', fontsize=10)
                     plt.colorbar(PL2, cax=cax)
-                    plt.suptitle('t='+str(data_frame[n]['ivar']))
+                    plt.suptitle('t=' + str(data_frame[n]['ivar']))
                     plt.subplots_adjust(bottom=0.05, top=0.95)
                     plt.savefig('Standard_Contour_Shock_' +
-                                str(data_frame[n]['DirName'])  + '_' + str(Standard_Orbit) +'.png')
+                                str(data_frame[n]['DirName']) + '_' + str(Standard_Orbit) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -2973,23 +2972,23 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -3007,10 +3006,10 @@ class Pencil_Analysis(object):
                     cax.set_aspect(20)
                     cax.set_ylabel('Density in code units', fontsize=10)
                     plt.colorbar(PL2, cax=cax)
-                    plt.suptitle('t='+str(data_frame[n]['ivar']))
+                    plt.suptitle('t=' + str(data_frame[n]['ivar']))
                     plt.subplots_adjust(bottom=0.05, top=0.95)
                     plt.savefig('Standard_Contour_Trace_Density_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -3027,7 +3026,7 @@ class Pencil_Analysis(object):
                         # =========================
 
                         Normalized_Temp = (
-                            temp_fv[:]-Init_Temp[:])/Init_Temp[:]
+                                                  temp_fv[:] - Init_Temp[:]) / Init_Temp[:]
 
                         fig, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
                         fig.subplots_adjust(bottom=0.07, top=0.95)
@@ -3058,26 +3057,26 @@ class Pencil_Analysis(object):
                         DirEcc = (round(eccentricity[0], 1))
 
                         DirMass_patches = mpatches.Patch(
-                            color='white', label='q :'+str(DirMass))
+                            color='white', label='q :' + str(DirMass))
                         DirEcc_patches = mpatches.Patch(
-                            color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                            color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                         Dirsound_speed_patches = mpatches.Patch(
-                            color='white', label='sound speed :'+str(sound_speed))
+                            color='white', label='sound speed :' + str(sound_speed))
                         Diraspect_ratio_patches = mpatches.Patch(
-                            color='white', label='aspect_ratio :'+str(aspect_ratio))
+                            color='white', label='aspect_ratio :' + str(aspect_ratio))
                         Dirinitial_pressure_patches = mpatches.Patch(
-                            color='white', label='inital pressure :'+str(initial_pressure))
+                            color='white', label='inital pressure :' + str(initial_pressure))
                         DirSigma_patches = mpatches.Patch(
-                            color='white', label=r'$\Sigma$ :'+str(Sigma))
-                        #DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
+                            color='white', label=r'$\Sigma$ :' + str(Sigma))
+                        # DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                         Dir_rsmooth_patches = mpatches.Patch(
-                            color='white', label='potential smoothing :'+str(rsmooth))
+                            color='white', label='potential smoothing :' + str(rsmooth))
                         Dir_gamma_patches = mpatches.Patch(
-                            color='white', label=r'$\gamma$ :'+str(gamma))
+                            color='white', label=r'$\gamma$ :' + str(gamma))
                         Dir_alpha_patches = mpatches.Patch(
-                            color='white', label=r'$\alpha$ :'+str(alpha))
+                            color='white', label=r'$\alpha$ :' + str(alpha))
                         Dir_beta_patches = mpatches.Patch(
-                            color='white', label=r'$\beta$ :'+str(beta))
+                            color='white', label=r'$\beta$ :' + str(beta))
 
                         plt.legend(handles=[DirMass_patches,
                                             DirEcc_patches,
@@ -3094,12 +3093,12 @@ class Pencil_Analysis(object):
                         # cax=plt.axes([0.85,0.1,0.075,0.8])
                         # cax.set_label('Kelvin')
                         # cax.set_aspect(20)
-                        #cax.set_ylabel('Temp in code units',fontsize=10)
+                        # cax.set_ylabel('Temp in code units',fontsize=10)
                         plt.colorbar(PL2, ax=ax1)
-                        plt.suptitle('t='+str(data_frame[n]['ivar']))
+                        plt.suptitle('t=' + str(data_frame[n]['ivar']))
                         plt.subplots_adjust(bottom=0.05, top=0.95)
                         plt.savefig('Standard_Contour_Trace_Temp_' +
-                                    str(data_frame[n]['DirName'])+'.png')
+                                    str(data_frame[n]['DirName']) + '.png')
                         # too many figs may be open.
                         # close plots once done
                         plt.close(fig)
@@ -3147,26 +3146,26 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :'+str(aspect_ratio))
+                        color='white', label='aspect_ratio :' + str(aspect_ratio))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
-                    #DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
+                    # DirEntropyIndex             = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -3185,10 +3184,10 @@ class Pencil_Analysis(object):
                     cax.set_aspect(20)
                     cax.set_ylabel('shock in code units', fontsize=10)
                     plt.colorbar(PL2, cax=cax)
-                    plt.suptitle('t='+str(data_frame[n]['ivar']))
+                    plt.suptitle('t=' + str(data_frame[n]['ivar']))
                     plt.subplots_adjust(bottom=0.05, top=0.95)
                     plt.savefig('Standard_Contour_Trace_Shock_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -3234,23 +3233,23 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -3264,10 +3263,10 @@ class Pencil_Analysis(object):
 
                     # =========================
 
-                    plt.suptitle('t='+str(data_frame[n]['ivar']))
+                    plt.suptitle('t=' + str(data_frame[n]['ivar']))
                     plt.subplots_adjust(bottom=0.05, top=0.95)
                     plt.savefig('Standard_Profile_Density_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -3310,23 +3309,23 @@ class Pencil_Analysis(object):
                         DirEcc = (round(eccentricity[0], 1))
 
                         DirMass_patches = mpatches.Patch(
-                            color='white', label='q :'+str(DirMass))
+                            color='white', label='q :' + str(DirMass))
                         DirEcc_patches = mpatches.Patch(
-                            color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                            color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                         Dirsound_speed_patches = mpatches.Patch(
-                            color='white', label='sound speed :'+str(sound_speed))
+                            color='white', label='sound speed :' + str(sound_speed))
                         Dirinitial_pressure_patches = mpatches.Patch(
-                            color='white', label='inital pressure :'+str(initial_pressure))
+                            color='white', label='inital pressure :' + str(initial_pressure))
                         DirSigma_patches = mpatches.Patch(
-                            color='white', label=r'$\Sigma$ :'+str(Sigma))
+                            color='white', label=r'$\Sigma$ :' + str(Sigma))
                         Dir_rsmooth_patches = mpatches.Patch(
-                            color='white', label='potential smoothing :'+str(rsmooth))
+                            color='white', label='potential smoothing :' + str(rsmooth))
                         Dir_gamma_patches = mpatches.Patch(
-                            color='white', label=r'$\gamma$ :'+str(gamma))
+                            color='white', label=r'$\gamma$ :' + str(gamma))
                         Dir_alpha_patches = mpatches.Patch(
-                            color='white', label=r'$\alpha$ :'+str(alpha))
+                            color='white', label=r'$\alpha$ :' + str(alpha))
                         Dir_beta_patches = mpatches.Patch(
-                            color='white', label=r'$\beta$ :'+str(beta))
+                            color='white', label=r'$\beta$ :' + str(beta))
 
                         plt.legend(handles=[DirMass_patches,
                                             DirEcc_patches,
@@ -3340,10 +3339,10 @@ class Pencil_Analysis(object):
 
                         # =========================
 
-                        plt.suptitle('t='+str(data_frame[n]['ivar']))
+                        plt.suptitle('t=' + str(data_frame[n]['ivar']))
                         plt.subplots_adjust(bottom=0.05, top=0.95)
                         plt.savefig('Standard_Profile_Temperature_' +
-                                    str(data_frame[n]['DirName'])+'.png')
+                                    str(data_frame[n]['DirName']) + '.png')
                         # too many figs may be open.
                         # close plots once done
                         plt.close(fig)
@@ -3389,23 +3388,23 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -3419,10 +3418,10 @@ class Pencil_Analysis(object):
 
                     # =========================
 
-                    plt.suptitle('t='+str(data_frame[n]['ivar']))
+                    plt.suptitle('t=' + str(data_frame[n]['ivar']))
                     plt.subplots_adjust(bottom=0.05, top=0.95)
                     plt.savefig('Standard_Profile_Shock_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -3435,7 +3434,7 @@ class Pencil_Analysis(object):
                     print('================')
                     traceback.print_exc()
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping Contour Loop error')
@@ -3448,7 +3447,7 @@ class Pencil_Analysis(object):
         try:
             n = 0
             dn = 1
-            while n <= len(data_frame)-1:
+            while n <= len(data_frame) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -3514,23 +3513,23 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -3545,7 +3544,7 @@ class Pencil_Analysis(object):
                     # =========================
 
                     plt.savefig('Standard_Ecc_Decay_' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
@@ -3559,7 +3558,7 @@ class Pencil_Analysis(object):
                     print('================')
                     traceback.print_exc()
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping Ecc Loop error')
@@ -3567,7 +3566,6 @@ class Pencil_Analysis(object):
             traceback.print_exc()
             os.chdir('..')
             return False
-
 
     def plotOrbitalEccentricity(self, data_frame):
 
@@ -3666,13 +3664,11 @@ class Pencil_Analysis(object):
         plt.close(fig)
         return None
 
-
-
     def pingOrbital(self, data_frame):
         try:
             n = 0
             dn = 1
-            while n <= len(data_frame)-1:
+            while n <= len(data_frame) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -3701,9 +3697,9 @@ class Pencil_Analysis(object):
                         logging.info(n)
                         logging.info('========================')
 
-                    plotOrbitalTopDown(data_frame)
-                    plotOrbitalSemiMajor(data_frame)
-                    plotOrbitalEccentricity(data_frame)
+                    plotOrbitalTopDown(self, data_frame)
+                    plotOrbitalSemiMajor(self, data_frame)
+                    plotOrbitalEccentricity(self, data_frame)
 
                     # use this information when adding important parameters to the run
                     os.system('git add *.png')
@@ -3715,7 +3711,7 @@ class Pencil_Analysis(object):
                     print('================')
                     traceback.print_exc()
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping Orbital Loop error')
@@ -3728,7 +3724,7 @@ class Pencil_Analysis(object):
         try:
             n = 0
             dn = 1
-            while n <= len(data_frame)-1:
+            while n <= len(data_frame) - 1:
                 try:
                     try:
                         os.system('mkdir Pencil_Analysis')
@@ -3766,7 +3762,7 @@ class Pencil_Analysis(object):
                                   str(round(eccentricity[0], 1)))
                     ax1.boxplot(tempdata)
                     ax1.set_ylabel('Temperature')
-                    ax1.set_xlabel(r'$\tau$*'+str(self.step))
+                    ax1.set_xlabel(r'$\tau$*' + str(self.step))
                     plt.xscale('linear')
                     plt.grid(True)
 
@@ -3790,23 +3786,23 @@ class Pencil_Analysis(object):
                     DirEcc = (round(eccentricity[0], 1))
 
                     DirMass_patches = mpatches.Patch(
-                        color='white', label='q :'+str(DirMass))
+                        color='white', label='q :' + str(DirMass))
                     DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :'+str(DirEcc))
+                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
                     Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :'+str(sound_speed))
+                        color='white', label='sound speed :' + str(sound_speed))
                     Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :'+str(initial_pressure))
+                        color='white', label='inital pressure :' + str(initial_pressure))
                     DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :'+str(Sigma))
+                        color='white', label=r'$\Sigma$ :' + str(Sigma))
                     Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :'+str(rsmooth))
+                        color='white', label='potential smoothing :' + str(rsmooth))
                     Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :'+str(gamma))
+                        color='white', label=r'$\gamma$ :' + str(gamma))
                     Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :'+str(alpha))
+                        color='white', label=r'$\alpha$ :' + str(alpha))
                     Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :'+str(beta))
+                        color='white', label=r'$\beta$ :' + str(beta))
 
                     plt.legend(handles=[DirMass_patches,
                                         DirEcc_patches,
@@ -3821,7 +3817,7 @@ class Pencil_Analysis(object):
                     # =========================
 
                     plt.savefig('Standard_Temp_Box' +
-                                str(data_frame[n]['DirName'])+'.png')
+                                str(data_frame[n]['DirName']) + '.png')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig1)
@@ -3844,7 +3840,7 @@ class Pencil_Analysis(object):
                     logging.info('========================')
                     logging.info('========================')
                     os.chdir('..')
-                n = n+dn
+                n = n + dn
         except:
             print('================')
             print('ping Temp Box Loop error')
