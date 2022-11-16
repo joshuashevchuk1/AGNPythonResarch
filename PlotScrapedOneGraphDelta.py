@@ -32,7 +32,7 @@ def plot():
 
         kernel = np.ones((N,))/N
 
-        temp = np.gradient(scrapeDict[key]["DTarray"][:]-scrapeDict[key]["DSharray"][:])
+        temp = np.gradient(scrapeDict[key]["DTSHarray"])
         temp = np.convolve(temp,kernel,mode='valid')
             
 

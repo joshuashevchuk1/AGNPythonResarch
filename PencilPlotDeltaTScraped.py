@@ -105,9 +105,10 @@ def addLastPoint(ivar, dir):
 
     DTarray = []
     DSharray = []
+    DTSHarray= []
     while ivar <= max_orbits:
         try:
-            DTarray, DSharray = getRunData(ivar, DTarray, DSharray)
+            DTarray, DSharray, DTSHarray = getRunData(ivar, DTarray, DSharray,DTSHarray)
         except:
             print("bad run or no run")
             traceback.print_exc()
@@ -117,7 +118,7 @@ def addLastPoint(ivar, dir):
     lastPointArray.append(lastPoint)
     qArray.append(q)
     eccIntArray.append(ecc_int)
-    localDict = {"lastPoint": lastPoint, "q": q, "ecc_int": ecc_int, "timeCutOff": timeCutOff, "DTarray": DTarray, "DSharray": DSharray}
+    localDict = {"lastPoint": lastPoint, "q": q, "ecc_int": ecc_int, "timeCutOff": timeCutOff, "DTarray": DTarray, "DSharray": DSharray,"DTSHarray":DTSHarray}
 
     scrapeDict[str(dir)] = localDict
 
@@ -165,7 +166,7 @@ def initPars():
     return timeCutOff
 
 
-def getRunData(ivar, paramDTarray, paramDSharray):
+def getRunData(ivar, paramDTarray, paramDSharray,paramDTSHarray):
     ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
@@ -174,11 +175,13 @@ def getRunData(ivar, paramDTarray, paramDSharray):
     dfUU = np.gradient(ff.uu[:] - ff0.uu[:])
 
     shock_heating = dfS * dfUU
+    dtsh = dfT - shock_heating
 
     paramDTarray.append(np.max(np.log(np.sum(dfT ** 2, axis=0))))
     paramDSharray.append(np.max(np.log(np.sum(shock_heating ** 2, axis=0))))
+    paramDSharray.append(np.max(np.log(np.sum(dtsh ** 2, axis=0))))
 
-    return paramDTarray,paramDSharray
+    return paramDTarray,paramDSharray,paramDTSHarray
 
 
 def getRateOfLastPoint(paramDTarray):
