@@ -175,7 +175,7 @@ def getRunData(ivar, paramDTarray, paramDSharray,paramDTSHarray):
     dfUU = np.gradient(ff.uu[:] - ff0.uu[:])
 
     shock_heating = dfS * dfUU
-    dtsh = dfT - shock_heating
+    dtsh = dfT[:] - shock_heating[:]
 
     paramDTarray.append(np.max(np.log(np.sum(dfT ** 2, axis=0))))
     paramDSharray.append(np.max(np.log(np.sum(shock_heating ** 2, axis=0))))
