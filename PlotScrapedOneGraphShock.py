@@ -32,7 +32,7 @@ def plot():
 
         kernel = np.ones((N,))/N
 
-        temp = np.gradient(scrapeDict[key]["DTarray"])
+        temp = np.gradient(scrapeDict[key]["DSharray"])
         temp = np.convolve(temp,kernel,mode='valid')
             
 
@@ -53,7 +53,7 @@ def plot():
     plt.ylabel(r'$\nabla'+'(Temperature)')
     plt.ylim(0,0.05)
     plt.tight_layout()
-    plt.savefig("ScrapedDeltaData_" + str(max_orbits) + "_plot" + ".png")
+    plt.savefig("ScrapedDeltaShockHeatingData_" + str(max_orbits) + "_plot" + ".png")
     plt.close()
 
     print("entering plot")
