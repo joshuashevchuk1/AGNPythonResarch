@@ -8,14 +8,15 @@ import sys
 import traceback
 import json
 
-lastPointArray=[]
-eccIntArray=[]
-qArray=[]
-q=0
-ecc_int=0
-scrapeDict={}
+lastPointArray = []
+eccIntArray = []
+qArray = []
+q = 0
+ecc_int = 0
+scrapeDict = {}
 max_orbits = int(input('max Orbits? : '))
-timeCutOff=0
+timeCutOff = 0
+
 
 def scrape():
     root = os.getcwd()  # root dir is fucked up due to a space
@@ -25,27 +26,29 @@ def scrape():
         os.chdir(dir_run_list[i])
         print("current cwd is " + os.path.split(os.getcwd())[1])
         try:
-            addLastPoint(inital_ivar,str(os.path.split(os.getcwd())[1]))
+            addLastPoint(inital_ivar, str(os.path.split(os.getcwd())[1]))
             os.chdir(root)
         except:
             print("============")
-            print("ignoring run ",os.path.split(os.getcwd())[1])
+            print("ignoring run ", os.path.split(os.getcwd())[1])
             print("============")
             traceback.print_exc()
             os.chdir(root)
     os.chdir(root)
 
-    print("lastPointArray is ",lastPointArray)
-    print("eccIntArray is ",eccIntArray)
-    print("qArray is ",qArray)
+    print("lastPointArray is ", lastPointArray)
+    print("eccIntArray is ", eccIntArray)
+    print("qArray is ", qArray)
 
     saveData()
+
 
 def saveData():
     global scrapeDict
     data = scrapeDict
-    with open('ScrapeDeltaTData_At'+str(max_orbits)+'.json', 'w') as f:
+    with open('ScrapeDeltaTData_At' + str(max_orbits) + '.json', 'w') as f:
         json.dump(data, f)
+
 
 def getCutOff():
     global q
@@ -83,10 +86,11 @@ def getCutOff():
                 break
 
     timeCutOff = t[indexTimeCutOff] / (np.pi * 2)
-    print('timeCutOff is ',np.round(timeCutOff))
+    print('timeCutOff is ', np.round(timeCutOff))
     print('leaving get cutoff')
 
-def addLastPoint(ivar,dir):
+
+def addLastPoint(ivar, dir):
     global lastPointArray
     global qArray
     global eccIntArray
@@ -100,9 +104,10 @@ def addLastPoint(ivar,dir):
     initPars()
 
     DTarray = []
+    DSharray = []
     while ivar <= max_orbits:
         try:
-            DTarray = getRunData(ivar, DTarray)
+            DTarray, DSharray = getRunData(ivar, DTarray, DSharray)
         except:
             print("bad run or no run")
             traceback.print_exc()
@@ -112,7 +117,7 @@ def addLastPoint(ivar,dir):
     lastPointArray.append(lastPoint)
     qArray.append(q)
     eccIntArray.append(ecc_int)
-    localDict={"lastPoint":lastPoint,"q":q,"ecc_int":ecc_int,"timeCutOff":timeCutOff,"DTarray":DTarray}
+    localDict = {"lastPoint": lastPoint, "q": q, "ecc_int": ecc_int, "timeCutOff": timeCutOff, "DTarray": DTarray, "DSharray": DSharray}
 
     scrapeDict[str(dir)] = localDict
 
@@ -155,21 +160,30 @@ def initPars():
                 break
 
     timeCutOff = t[indexTimeCutOff] / (np.pi * 2)
-    print('timeCutOff is ',np.round(timeCutOff))
+    print('timeCutOff is ', np.round(timeCutOff))
     print('leaving get cutoff')
     return timeCutOff
 
-def getRunData(ivar, paramDTarray):
+
+def getRunData(ivar, paramDTarray, paramDSharray):
     ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
 
+    dfS = ff.shock[:] - ff0.shock[:]
+    dfUU = np.gradient(ff.uu[:] - ff0.uu[:])
+
+    shock_heating = dfS * dfUU
+
     paramDTarray.append(np.max(np.log(np.sum(dfT ** 2, axis=0))))
-    return paramDTarray
+    paramDSharray.append(np.max(np.log(np.sum(shock_heating ** 2, axis=0))))
+
+    return paramDTarray,paramDSharray
+
 
 def getRateOfLastPoint(paramDTarray):
     gradientArray = np.gradient(paramDTarray)
-    lastRate = gradientArray[len(gradientArray)-1]
+    lastRate = gradientArray[len(gradientArray) - 1]
     return lastRate
 
 
