@@ -3583,10 +3583,12 @@ class Pencil_Analysis(object):
         print('eccentricity is ',eccentricity)
 
         # =========================
+        fig1, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
+        ax1.set_aspect('auto')
         plt.tight_layout()
         plt.plot(time, eccentricity[:len(time)], color='orange')
-        plt.xlabel('t')
-        plt.ylabel('e')
+        ax1.set_xlabel('t')
+        ax1.set_ylabel('e')
         plt.title(r'$\varepsilon$' + ' '+'vs y')
         plt.grid(True)
         plt.savefig('Standard_Orbit_Eccentricity' + str(data_frame[n]['DirName']) + '.png')
@@ -3621,7 +3623,6 @@ class Pencil_Analysis(object):
         ax1.set_ylabel('a')
         ax1.set_title('a vs t')
         plt.grid(True)
-        plt.show()
         plt.savefig('Standard_Orbit_SemiMajor' + str(data_frame[n]['DirName']) + '.png')
         plt.close(fig1)
         # too many figs may be open.
