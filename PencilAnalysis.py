@@ -3591,7 +3591,7 @@ class Pencil_Analysis(object):
         ax1.set_ylabel('e')
         ax1.set_title(r'$\varepsilon$' + ' '+' vs t',fontsize=20)
         plt.grid(True)
-        plt.savefig('Standard_Orbit_Eccentricity' + str(data_frame[n]['DirName']) + '.png')
+        plt.savefig('Standard_Orbit_Eccentricity' + str(data_frame[n]['DirName']) + '.png',bbox_inches='tight')
         plt.close(fig1)
         # too many figs may be open.
         # close plots once done
@@ -3623,7 +3623,7 @@ class Pencil_Analysis(object):
         ax1.set_ylabel('a')
         ax1.set_title('a vs t',fontsize=20)
         plt.grid(True)
-        plt.savefig('Standard_Orbit_SemiMajor' + str(data_frame[n]['DirName']) + '.png')
+        plt.savefig('Standard_Orbit_SemiMajor' + str(data_frame[n]['DirName']) + '.png',bbox_inches='tight')
         plt.close(fig1)
         # too many figs may be open.
         # close plots once done
@@ -3645,7 +3645,7 @@ class Pencil_Analysis(object):
         ax1.set_title('x vs y',fontsize=20)
         plt.grid(True)
         ax1.set_aspect('equal')
-        plt.savefig('Standard_Orbit_Info' + str(data_frame[n]['DirName']) + '.png')
+        plt.savefig('Standard_Orbit_Info' + str(data_frame[n]['DirName']) + '.png',bbox_inches='tight')
         plt.close(fig1)
         # too many figs may be open.
         # close plots once done

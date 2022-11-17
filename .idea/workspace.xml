@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="font STILL werid" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="still getting wierd font problems" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,13 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00219" summary="plot uno grapho">
-      <created>1664437597023</created>
-      <option name="number" value="00219" />
-      <option name="presentableId" value="LOCAL-00219" />
-      <option name="project" value="LOCAL" />
-      <updated>1664437597023</updated>
     </task>
     <task id="LOCAL-00220" summary="debug PencilRoutine.py">
       <created>1667371479457</created>
@@ -492,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668677321161</updated>
     </task>
-    <option name="localTasksCounter" value="268" />
+    <task id="LOCAL-00268" summary="still getting wierd font problems">
+      <created>1668677716299</created>
+      <option name="number" value="00268" />
+      <option name="presentableId" value="LOCAL-00268" />
+      <option name="project" value="LOCAL" />
+      <updated>1668677716299</updated>
+    </task>
+    <option name="localTasksCounter" value="269" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debug PencilRoutine.py" />
     <MESSAGE value="rates energy is kinda a problem" />
     <MESSAGE value="problems with energy plots" />
     <MESSAGE value="change step to 10 orbits" />
@@ -532,6 +531,7 @@
     <MESSAGE value="increase font size" />
     <MESSAGE value="overlay temp to get the density wave region occupied" />
     <MESSAGE value="font STILL werid" />
-    <option name="LAST_COMMIT_MESSAGE" value="font STILL werid" />
+    <MESSAGE value="still getting wierd font problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="still getting wierd font problems" />
   </component>
 </project>
