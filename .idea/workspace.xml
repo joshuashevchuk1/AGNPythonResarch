@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="FIG!">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PencilPlotDeltaTScraped.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilPlotDeltaTScraped.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="YOU ARE PLOTTING THE GRADIENTS" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,48 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00197" summary="good for prod">
-      <created>1659600465853</created>
-      <option name="number" value="00197" />
-      <option name="presentableId" value="LOCAL-00197" />
-      <option name="project" value="LOCAL" />
-      <updated>1659600465854</updated>
-    </task>
-    <task id="LOCAL-00198" summary="data for plots">
-      <created>1659665536170</created>
-      <option name="number" value="00198" />
-      <option name="presentableId" value="LOCAL-00198" />
-      <option name="project" value="LOCAL" />
-      <updated>1659665536170</updated>
-    </task>
-    <task id="LOCAL-00199" summary="added more data to use, bunk scrape">
-      <created>1659666325598</created>
-      <option name="number" value="00199" />
-      <option name="presentableId" value="LOCAL-00199" />
-      <option name="project" value="LOCAL" />
-      <updated>1659666325598</updated>
-    </task>
-    <task id="LOCAL-00200" summary="try to scrap the data!">
-      <created>1659666401817</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
-      <option name="project" value="LOCAL" />
-      <updated>1659666401818</updated>
-    </task>
-    <task id="LOCAL-00201" summary="bug">
-      <created>1659666563957</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
-      <option name="project" value="LOCAL" />
-      <updated>1659666563957</updated>
-    </task>
-    <task id="LOCAL-00202" summary="added t=50 data">
-      <created>1659725303066</created>
-      <option name="number" value="00202" />
-      <option name="presentableId" value="LOCAL-00202" />
-      <option name="project" value="LOCAL" />
-      <updated>1659725303066</updated>
     </task>
     <task id="LOCAL-00203" summary="add timeCutOff at ScarpGiven">
       <created>1659725875446</created>
@@ -495,7 +450,49 @@
       <option name="project" value="LOCAL" />
       <updated>1668496553322</updated>
     </task>
-    <option name="localTasksCounter" value="246" />
+    <task id="LOCAL-00246" summary="getRunData with shock heating">
+      <created>1668581672014</created>
+      <option name="number" value="00246" />
+      <option name="presentableId" value="LOCAL-00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1668581672015</updated>
+    </task>
+    <task id="LOCAL-00247" summary="YOU ARE PLOTTING THE GRADIENTS">
+      <created>1668583004742</created>
+      <option name="number" value="00247" />
+      <option name="presentableId" value="LOCAL-00247" />
+      <option name="project" value="LOCAL" />
+      <updated>1668583004742</updated>
+    </task>
+    <task id="LOCAL-00248" summary="YOU ARE PLOTTING THE GRADIENTS">
+      <created>1668583086509</created>
+      <option name="number" value="00248" />
+      <option name="presentableId" value="LOCAL-00248" />
+      <option name="project" value="LOCAL" />
+      <updated>1668583086509</updated>
+    </task>
+    <task id="LOCAL-00249" summary="YOU ARE PLOTTING THE GRADIENTS">
+      <created>1668583873149</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1668583873149</updated>
+    </task>
+    <task id="LOCAL-00250" summary="YOU ARE PLOTTING THE GRADIENTS">
+      <created>1668584143446</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
+      <option name="project" value="LOCAL" />
+      <updated>1668584143446</updated>
+    </task>
+    <task id="LOCAL-00251" summary="YOU ARE PLOTTING THE GRADIENTS">
+      <created>1668584567430</created>
+      <option name="number" value="00251" />
+      <option name="presentableId" value="LOCAL-00251" />
+      <option name="project" value="LOCAL" />
+      <updated>1668584567430</updated>
+    </task>
+    <option name="localTasksCounter" value="252" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -510,8 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="better name" />
-    <MESSAGE value="more code fixes" />
     <MESSAGE value="added at 100" />
     <MESSAGE value="more changes" />
     <MESSAGE value="scrape!" />
@@ -535,6 +530,8 @@
     <MESSAGE value="plot with classes" />
     <MESSAGE value="bugs in plotting" />
     <MESSAGE value="FIG!" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIG!" />
+    <MESSAGE value="getRunData with shock heating" />
+    <MESSAGE value="YOU ARE PLOTTING THE GRADIENTS" />
+    <option name="LAST_COMMIT_MESSAGE" value="YOU ARE PLOTTING THE GRADIENTS" />
   </component>
 </project>

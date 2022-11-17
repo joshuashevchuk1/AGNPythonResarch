@@ -3625,8 +3625,11 @@ class Pencil_Analysis(object):
 
     def plotOrbitalTopDown(self, data_frame, n):
 
-        xrq2 = data_frame[n]['xrq2']
-        yrq2 = data_frame[n]['yrq2']
+        xrq2 = data_frame[n]['xrq2'][:]
+        yrq2 = data_frame[n]['yrq2'][:]
+
+        print('xrq2', xrq2)
+        print('yrq2', yrq2)
 
         # =========================
         plt.tight_layout()
@@ -3674,6 +3677,12 @@ class Pencil_Analysis(object):
                         logging.info('========================')
                         logging.info(n)
                         logging.info('========================')
+
+                    xrq2 = data_frame[n]['xrq2'][:]
+                    yrq2 = data_frame[n]['yrq2'][:]
+
+                    print('xrq2 outside', xrq2)
+                    print('yrq2 outside', yrq2)
 
                     self.plotOrbitalTopDown(data_frame, n)
                     self.plotOrbitalSemiMajor(data_frame, n)
