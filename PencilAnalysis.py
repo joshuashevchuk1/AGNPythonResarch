@@ -3580,6 +3580,7 @@ class Pencil_Analysis(object):
         # use this information when adding important parameters to the run
 
         eccentricity = data_frame[n]['eccentricity']
+        print('eccentricity is ',eccentricity)
 
         # =========================
         plt.tight_layout()
@@ -3598,6 +3599,7 @@ class Pencil_Analysis(object):
 
         time = data_frame[n]['t']
         semi_major = data_frame[n]['semi_major']
+        print('semi_major is ', semi_major)
         cut_off = data_frame[n]['indexTimeCutOff']
         time = time[:cut_off] / (2 * np.pi)
 
@@ -3667,7 +3669,7 @@ class Pencil_Analysis(object):
                         print('================')
                     except:
                         print('================')
-                        print('Dir error')
+                        print('Dir error ', str(data_frame[n]['DirName']))
                         print('================')
                         print(n)
                         print('================')
