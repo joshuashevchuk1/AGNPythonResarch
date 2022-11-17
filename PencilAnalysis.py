@@ -3589,7 +3589,7 @@ class Pencil_Analysis(object):
         plt.plot(time, eccentricity[:len(time)], color='orange')
         ax1.set_xlabel('t')
         ax1.set_ylabel('e')
-        ax1.title(r'$\varepsilon$' + ' '+'vs t' + ', q  = ' + str(data_frame[n]['q']))
+        ax1.title(r'$\varepsilon$' + ' '+' vs t' + ', q = ' + str(data_frame[n]['q']))
         plt.grid(True)
         plt.savefig('Standard_Orbit_Eccentricity' + str(data_frame[n]['DirName']) + '.png')
         plt.close(fig1)
