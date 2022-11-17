@@ -3587,12 +3587,12 @@ class Pencil_Analysis(object):
         plt.plot(time, eccentricity[:len(time)], color='orange')
         plt.xlabel('t')
         plt.ylabel('e')
-        plt.title(r'$\varepsilon$' + 'vs y')
+        plt.title(r'$\varepsilon$' + ' '+'vs y')
         plt.grid(True)
+        plt.show()
         plt.savefig('Standard_Orbit_Eccentricity' + str(data_frame[n]['DirName']) + '.png')
         # too many figs may be open.
         # close plots once done
-        plt.close()
         return None
 
     def plotOrbitalSemiMajor(self, data_frame, n):
@@ -3622,11 +3622,10 @@ class Pencil_Analysis(object):
         plt.savefig('Standard_Orbit_SemiMajor' + str(data_frame[n]['DirName']) + '.png')
         # too many figs may be open.
         # close plots once done
-        plt.close()
-        return None
 
     def plotOrbitalTopDown(self, data_frame, n):
 
+        fig1, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
         xrq2 = data_frame[n]['xrq2'][:]
         yrq2 = data_frame[n]['yrq2'][:]
 
@@ -3636,16 +3635,15 @@ class Pencil_Analysis(object):
         # =========================
         plt.tight_layout()
         plt.plot(xrq2, yrq2)
-        plt.xlabel('xrq2')
-        plt.ylabel('yrq2')
-        plt.title('x vs y')
+        ax1.set_xlabel('xrq2')
+        ax1.set_ylabel('yrq2')
+        ax1.set_title('x vs y')
         plt.grid(True)
-        plt.axis('scaled')
+        ax1.set_aspect('equal')
         plt.savefig('Standard_Orbit_Info' + str(data_frame[n]['DirName']) + '.png')
+        plt.close(fig1)
         # too many figs may be open.
         # close plots once done
-        plt.close()
-        return None
 
     def pingOrbital(self, data_frame):
         try:
