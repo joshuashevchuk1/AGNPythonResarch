@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="YOU ARE PLOTTING THE GRADIENTS" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="insanity!">
+      <change afterPath="$PROJECT_DIR$/PencilPlotContourOverlay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,83 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00203" summary="add timeCutOff at ScarpGiven">
-      <created>1659725875446</created>
-      <option name="number" value="00203" />
-      <option name="presentableId" value="LOCAL-00203" />
-      <option name="project" value="LOCAL" />
-      <updated>1659725875447</updated>
-    </task>
-    <task id="LOCAL-00204" summary="plot at t=50">
-      <created>1659733637957</created>
-      <option name="number" value="00204" />
-      <option name="presentableId" value="LOCAL-00204" />
-      <option name="project" value="LOCAL" />
-      <updated>1659733637957</updated>
-    </task>
-    <task id="LOCAL-00205" summary="better name">
-      <created>1659733896518</created>
-      <option name="number" value="00205" />
-      <option name="presentableId" value="LOCAL-00205" />
-      <option name="project" value="LOCAL" />
-      <updated>1659733896518</updated>
-    </task>
-    <task id="LOCAL-00206" summary="more code fixes">
-      <created>1659900973267</created>
-      <option name="number" value="00206" />
-      <option name="presentableId" value="LOCAL-00206" />
-      <option name="project" value="LOCAL" />
-      <updated>1659900973268</updated>
-    </task>
-    <task id="LOCAL-00207" summary="added at 100">
-      <created>1660203236728</created>
-      <option name="number" value="00207" />
-      <option name="presentableId" value="LOCAL-00207" />
-      <option name="project" value="LOCAL" />
-      <updated>1660203236729</updated>
-    </task>
-    <task id="LOCAL-00208" summary="more changes">
-      <created>1661413562565</created>
-      <option name="number" value="00208" />
-      <option name="presentableId" value="LOCAL-00208" />
-      <option name="project" value="LOCAL" />
-      <updated>1661413562566</updated>
-    </task>
-    <task id="LOCAL-00209" summary="scrape!">
-      <created>1661413718287</created>
-      <option name="number" value="00209" />
-      <option name="presentableId" value="LOCAL-00209" />
-      <option name="project" value="LOCAL" />
-      <updated>1661413718287</updated>
-    </task>
-    <task id="LOCAL-00210" summary="scrape!">
-      <created>1662100732893</created>
-      <option name="number" value="00210" />
-      <option name="presentableId" value="LOCAL-00210" />
-      <option name="project" value="LOCAL" />
-      <updated>1662100732893</updated>
-    </task>
-    <task id="LOCAL-00211" summary="scrape!">
-      <created>1662101757080</created>
-      <option name="number" value="00211" />
-      <option name="presentableId" value="LOCAL-00211" />
-      <option name="project" value="LOCAL" />
-      <updated>1662101757081</updated>
-    </task>
-    <task id="LOCAL-00212" summary="try to plot them all">
-      <created>1662102622339</created>
-      <option name="number" value="00212" />
-      <option name="presentableId" value="LOCAL-00212" />
-      <option name="project" value="LOCAL" />
-      <updated>1662102622339</updated>
-    </task>
-    <task id="LOCAL-00213" summary="try to plot them all">
-      <created>1662102750958</created>
-      <option name="number" value="00213" />
-      <option name="presentableId" value="LOCAL-00213" />
-      <option name="project" value="LOCAL" />
-      <updated>1662102750958</updated>
     </task>
     <task id="LOCAL-00214" summary="try to plot them all">
       <created>1662102855538</created>
@@ -492,7 +418,84 @@
       <option name="project" value="LOCAL" />
       <updated>1668584567430</updated>
     </task>
-    <option name="localTasksCounter" value="252" />
+    <task id="LOCAL-00252" summary="YOU ARE PLOTTING THE GRADIENTS">
+      <created>1668668895299</created>
+      <option name="number" value="00252" />
+      <option name="presentableId" value="LOCAL-00252" />
+      <option name="project" value="LOCAL" />
+      <updated>1668668895300</updated>
+    </task>
+    <task id="LOCAL-00253" summary="YOU ARE PLOTTING THE GRADIENTS">
+      <created>1668669137928</created>
+      <option name="number" value="00253" />
+      <option name="presentableId" value="LOCAL-00253" />
+      <option name="project" value="LOCAL" />
+      <updated>1668669137928</updated>
+    </task>
+    <task id="LOCAL-00254" summary="werid self plotting issue">
+      <created>1668669570818</created>
+      <option name="number" value="00254" />
+      <option name="presentableId" value="LOCAL-00254" />
+      <option name="project" value="LOCAL" />
+      <updated>1668669570818</updated>
+    </task>
+    <task id="LOCAL-00255" summary="werid self plotting issue">
+      <created>1668669721654</created>
+      <option name="number" value="00255" />
+      <option name="presentableId" value="LOCAL-00255" />
+      <option name="project" value="LOCAL" />
+      <updated>1668669721654</updated>
+    </task>
+    <task id="LOCAL-00256" summary="werid self plotting issue">
+      <created>1668669872137</created>
+      <option name="number" value="00256" />
+      <option name="presentableId" value="LOCAL-00256" />
+      <option name="project" value="LOCAL" />
+      <updated>1668669872138</updated>
+    </task>
+    <task id="LOCAL-00257" summary="no show">
+      <created>1668670891529</created>
+      <option name="number" value="00257" />
+      <option name="presentableId" value="LOCAL-00257" />
+      <option name="project" value="LOCAL" />
+      <updated>1668670891530</updated>
+    </task>
+    <task id="LOCAL-00258" summary="no show">
+      <created>1668671173217</created>
+      <option name="number" value="00258" />
+      <option name="presentableId" value="LOCAL-00258" />
+      <option name="project" value="LOCAL" />
+      <updated>1668671173217</updated>
+    </task>
+    <task id="LOCAL-00259" summary="no show">
+      <created>1668671546457</created>
+      <option name="number" value="00259" />
+      <option name="presentableId" value="LOCAL-00259" />
+      <option name="project" value="LOCAL" />
+      <updated>1668671546457</updated>
+    </task>
+    <task id="LOCAL-00260" summary="ANNOYED">
+      <created>1668671767175</created>
+      <option name="number" value="00260" />
+      <option name="presentableId" value="LOCAL-00260" />
+      <option name="project" value="LOCAL" />
+      <updated>1668671767175</updated>
+    </task>
+    <task id="LOCAL-00261" summary="ANNOYED">
+      <created>1668671971068</created>
+      <option name="number" value="00261" />
+      <option name="presentableId" value="LOCAL-00261" />
+      <option name="project" value="LOCAL" />
+      <updated>1668671971068</updated>
+    </task>
+    <task id="LOCAL-00262" summary="insanity!">
+      <created>1668672213651</created>
+      <option name="number" value="00262" />
+      <option name="presentableId" value="LOCAL-00262" />
+      <option name="project" value="LOCAL" />
+      <updated>1668672213651</updated>
+    </task>
+    <option name="localTasksCounter" value="263" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,10 +510,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added at 100" />
-    <MESSAGE value="more changes" />
-    <MESSAGE value="scrape!" />
-    <MESSAGE value="try to plot them all" />
     <MESSAGE value="try to plot them all!" />
     <MESSAGE value="purrty grab" />
     <MESSAGE value="plot uno grapho" />
@@ -532,6 +531,10 @@
     <MESSAGE value="FIG!" />
     <MESSAGE value="getRunData with shock heating" />
     <MESSAGE value="YOU ARE PLOTTING THE GRADIENTS" />
-    <option name="LAST_COMMIT_MESSAGE" value="YOU ARE PLOTTING THE GRADIENTS" />
+    <MESSAGE value="werid self plotting issue" />
+    <MESSAGE value="no show" />
+    <MESSAGE value="ANNOYED" />
+    <MESSAGE value="insanity!" />
+    <option name="LAST_COMMIT_MESSAGE" value="insanity!" />
   </component>
 </project>
