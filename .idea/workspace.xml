@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="insanity!">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="font STILL werid" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,27 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00216" summary="purrty grab">
-      <created>1662103408051</created>
-      <option name="number" value="00216" />
-      <option name="presentableId" value="LOCAL-00216" />
-      <option name="project" value="LOCAL" />
-      <updated>1662103408051</updated>
-    </task>
-    <task id="LOCAL-00217" summary="purrty grab">
-      <created>1662147103664</created>
-      <option name="number" value="00217" />
-      <option name="presentableId" value="LOCAL-00217" />
-      <option name="project" value="LOCAL" />
-      <updated>1662147103664</updated>
-    </task>
-    <task id="LOCAL-00218" summary="purrty grab">
-      <created>1662147800290</created>
-      <option name="number" value="00218" />
-      <option name="presentableId" value="LOCAL-00218" />
-      <option name="project" value="LOCAL" />
-      <updated>1662147800290</updated>
     </task>
     <task id="LOCAL-00219" summary="plot uno grapho">
       <created>1664437597023</created>
@@ -495,7 +471,28 @@
       <option name="project" value="LOCAL" />
       <updated>1668676480143</updated>
     </task>
-    <option name="localTasksCounter" value="265" />
+    <task id="LOCAL-00265" summary="increase font size">
+      <created>1668676990188</created>
+      <option name="number" value="00265" />
+      <option name="presentableId" value="LOCAL-00265" />
+      <option name="project" value="LOCAL" />
+      <updated>1668676990188</updated>
+    </task>
+    <task id="LOCAL-00266" summary="overlay temp to get the density wave region occupied">
+      <created>1668677215388</created>
+      <option name="number" value="00266" />
+      <option name="presentableId" value="LOCAL-00266" />
+      <option name="project" value="LOCAL" />
+      <updated>1668677215388</updated>
+    </task>
+    <task id="LOCAL-00267" summary="font STILL werid">
+      <created>1668677321161</created>
+      <option name="number" value="00267" />
+      <option name="presentableId" value="LOCAL-00267" />
+      <option name="project" value="LOCAL" />
+      <updated>1668677321161</updated>
+    </task>
+    <option name="localTasksCounter" value="268" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -510,9 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="try to plot them all!" />
-    <MESSAGE value="purrty grab" />
-    <MESSAGE value="plot uno grapho" />
     <MESSAGE value="debug PencilRoutine.py" />
     <MESSAGE value="rates energy is kinda a problem" />
     <MESSAGE value="problems with energy plots" />
@@ -535,6 +529,9 @@
     <MESSAGE value="no show" />
     <MESSAGE value="ANNOYED" />
     <MESSAGE value="insanity!" />
-    <option name="LAST_COMMIT_MESSAGE" value="insanity!" />
+    <MESSAGE value="increase font size" />
+    <MESSAGE value="overlay temp to get the density wave region occupied" />
+    <MESSAGE value="font STILL werid" />
+    <option name="LAST_COMMIT_MESSAGE" value="font STILL werid" />
   </component>
 </project>
