@@ -90,6 +90,7 @@ def plotRunTemperature(ivar):
     fig, (ax1) = plt.subplots(1, 1, figsize=(15, 15))
     fig.subplots_adjust(bottom=0.07, top=0.95)
     PL2 = ax1.contourf(x2d, y2d, dfT, 256,cmap=plt.get_cmap('bwr'))
+    PL3 = ax1.contourf(x2d, y2d, dfrho, 256, cmap=plt.get_cmap('summer'))
     ax1.set_aspect('equal')
 
     if ivar == 100:
