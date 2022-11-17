@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="fix bbox inches setting">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="losing my fucking mind over here">
       <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,13 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00221" summary="debug PencilRoutine.py">
-      <created>1667371981807</created>
-      <option name="number" value="00221" />
-      <option name="presentableId" value="LOCAL-00221" />
-      <option name="project" value="LOCAL" />
-      <updated>1667371981807</updated>
     </task>
     <task id="LOCAL-00222" summary="debug PencilRoutine.py">
       <created>1667372145123</created>
@@ -495,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668677977934</updated>
     </task>
-    <option name="localTasksCounter" value="270" />
+    <task id="LOCAL-00270" summary="losing my fucking mind over here">
+      <created>1668678635454</created>
+      <option name="number" value="00270" />
+      <option name="presentableId" value="LOCAL-00270" />
+      <option name="project" value="LOCAL" />
+      <updated>1668678635454</updated>
+    </task>
+    <option name="localTasksCounter" value="271" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -510,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="problems with energy plots" />
     <MESSAGE value="change step to 10 orbits" />
     <MESSAGE value="again debug energy plots" />
     <MESSAGE value="max orbits 5" />
@@ -535,6 +533,7 @@
     <MESSAGE value="font STILL werid" />
     <MESSAGE value="still getting wierd font problems" />
     <MESSAGE value="fix bbox inches setting" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bbox inches setting" />
+    <MESSAGE value="losing my fucking mind over here" />
+    <option name="LAST_COMMIT_MESSAGE" value="losing my fucking mind over here" />
   </component>
 </project>
