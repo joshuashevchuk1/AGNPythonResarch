@@ -3612,14 +3612,17 @@ class Pencil_Analysis(object):
         eccentricity = data_frame[n]['eccentricity']
 
         # =========================
-        plt.axis('scaled')
+        fig1, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
+        ax1.set_aspect('auto')
         plt.tight_layout()
         plt.plot(time, semi_major[:len(time)], color='orange')
-        plt.xlabel('t')
-        plt.ylabel('a')
-        plt.title('a vs t')
+        ax1.set_xlabel('t')
+        ax1.set_ylabel('a')
+        ax1.set_title('a vs t')
         plt.grid(True)
+        plt.show()
         plt.savefig('Standard_Orbit_SemiMajor' + str(data_frame[n]['DirName']) + '.png')
+        plt.close(fig1)
         # too many figs may be open.
         # close plots once done
 
