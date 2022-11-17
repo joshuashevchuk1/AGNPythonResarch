@@ -3589,8 +3589,8 @@ class Pencil_Analysis(object):
         plt.ylabel('e')
         plt.title(r'$\varepsilon$' + ' '+'vs y')
         plt.grid(True)
-        plt.show()
         plt.savefig('Standard_Orbit_Eccentricity' + str(data_frame[n]['DirName']) + '.png')
+        plt.close()
         # too many figs may be open.
         # close plots once done
         return None
