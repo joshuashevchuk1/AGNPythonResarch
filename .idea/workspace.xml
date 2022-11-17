@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="still getting wierd font problems" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="fix bbox inches setting">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,13 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00220" summary="debug PencilRoutine.py">
-      <created>1667371479457</created>
-      <option name="number" value="00220" />
-      <option name="presentableId" value="LOCAL-00220" />
-      <option name="project" value="LOCAL" />
-      <updated>1667371479457</updated>
     </task>
     <task id="LOCAL-00221" summary="debug PencilRoutine.py">
       <created>1667371981807</created>
@@ -492,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668677716299</updated>
     </task>
-    <option name="localTasksCounter" value="269" />
+    <task id="LOCAL-00269" summary="fix bbox inches setting">
+      <created>1668677977934</created>
+      <option name="number" value="00269" />
+      <option name="presentableId" value="LOCAL-00269" />
+      <option name="project" value="LOCAL" />
+      <updated>1668677977934</updated>
+    </task>
+    <option name="localTasksCounter" value="270" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,7 +510,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rates energy is kinda a problem" />
     <MESSAGE value="problems with energy plots" />
     <MESSAGE value="change step to 10 orbits" />
     <MESSAGE value="again debug energy plots" />
@@ -532,6 +534,7 @@
     <MESSAGE value="overlay temp to get the density wave region occupied" />
     <MESSAGE value="font STILL werid" />
     <MESSAGE value="still getting wierd font problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="still getting wierd font problems" />
+    <MESSAGE value="fix bbox inches setting" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bbox inches setting" />
   </component>
 </project>

@@ -3583,13 +3583,14 @@ class Pencil_Analysis(object):
         print('eccentricity is ',eccentricity)
 
         # =========================
-        fig1, (ax1) = plt.subplots(1, 1, figsize=(15, 15))
+        fig1, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
         ax1.set_aspect('auto')
         plt.tight_layout()
         plt.plot(time, eccentricity[:len(time)], color='orange')
         ax1.set_xlabel('t')
         ax1.set_ylabel('e')
-        ax1.set_title(r'$\varepsilon$' + ' '+' vs t',fontsize=20)
+        ax1.set_title(r'$\varepsilon$' + ' '+' vs t',fontsize=50)
+        ax1.tick_params(axis='both', labelsize=20)
         plt.grid(True)
         plt.savefig('Standard_Orbit_Eccentricity' + str(data_frame[n]['DirName']) + '.png',bbox_inches='tight')
         plt.close(fig1)
@@ -3615,13 +3616,14 @@ class Pencil_Analysis(object):
         eccentricity = data_frame[n]['eccentricity']
 
         # =========================
-        fig1, (ax1) = plt.subplots(1, 1, figsize=(15, 15))
+        fig1, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
         ax1.set_aspect('auto')
         plt.tight_layout()
         plt.plot(time, semi_major[:len(time)], color='orange')
         ax1.set_xlabel('t')
         ax1.set_ylabel('a')
-        ax1.set_title('a vs t',fontsize=20)
+        ax1.set_title('a vs t',fontsize=50)
+        ax1.tick_params(axis='both', labelsize=20)
         plt.grid(True)
         plt.savefig('Standard_Orbit_SemiMajor' + str(data_frame[n]['DirName']) + '.png',bbox_inches='tight')
         plt.close(fig1)
@@ -3630,7 +3632,7 @@ class Pencil_Analysis(object):
 
     def plotOrbitalTopDown(self, data_frame, n):
 
-        fig1, (ax1) = plt.subplots(1, 1, figsize=(15, 15))
+        fig1, (ax1) = plt.subplots(1, 1, figsize=(10, 10))
         xrq2 = data_frame[n]['xrq2'][:]
         yrq2 = data_frame[n]['yrq2'][:]
 
@@ -3642,7 +3644,8 @@ class Pencil_Analysis(object):
         plt.plot(xrq2, yrq2)
         ax1.set_xlabel('xrq2')
         ax1.set_ylabel('yrq2')
-        ax1.set_title('x vs y',fontsize=20)
+        ax1.set_title('x vs y',fontsize=50)
+        ax1.tick_params(axis='both', labelsize=20)
         plt.grid(True)
         ax1.set_aspect('equal')
         plt.savefig('Standard_Orbit_Info' + str(data_frame[n]['DirName']) + '.png',bbox_inches='tight')
