@@ -2005,6 +2005,7 @@ class Pencil_Analysis(object):
                     ax1.plot(time, torqint[:len(time)], '--', label='Inner')
                     ax1.plot(time, torqext[:len(time)], '--', label='Outer')
                     ax1.plot(time, torqtotal[:len(time)], label='Total')
+                    ax1.tick_params(axis='both', labelsize=20)
                     ax1.set_aspect('auto')
                     plt.xlim([0, time.max()])
                     plt.tight_layout()
@@ -2017,65 +2018,18 @@ class Pencil_Analysis(object):
                     # use this information when adding important parameters to the run
 
                     eccentricity = data_frame[n]['eccentricity']
-                    sound_speed = data_frame[n]['cs']
-                    aspect_ratio = data_frame[n]['aspect_ratio']
-                    initial_pressure = data_frame[n]['initial_pressure']
-                    Sigma = data_frame[n]['Sigma']
-                    EntropyIndex = data_frame[n]['EntropyIndex']
-                    SpecificHeat = data_frame[n]['SpecificHeat']
-                    rsmooth = data_frame[n]['rsmooth']
-                    gamma = data_frame[n]['gamma']
-                    Gamma0 = data_frame[n]['Gamma0']
-                    alpha = data_frame[n]['alpha']
-                    beta = data_frame[n]['beta']
 
                     DirMass = data_frame[n]['par1']
                     DirEcc = (round(eccentricity[0], 1))
 
-                    DirMass_patches = mpatches.Patch(
-                        color='white', label='q :' + str(DirMass))
-                    DirEcc_patches = mpatches.Patch(
-                        color='white', label=r'$\varepsilon$ :' + str(DirEcc))
-                    Dirsound_speed_patches = mpatches.Patch(
-                        color='white', label='sound speed :' + str(sound_speed))
-                    Diraspect_ratio_patches = mpatches.Patch(
-                        color='white', label='aspect_ratio :' + str(aspect_ratio))
-                    Dirinitial_pressure_patches = mpatches.Patch(
-                        color='white', label='inital pressure :' + str(initial_pressure))
-                    DirSigma_patches = mpatches.Patch(
-                        color='white', label=r'$\Sigma$ :' + str(Sigma))
-                    # DirEntropyIndex  = mpatches.Patch(color='white',label='Entropy Index :'+str(EntropyIndex))
-                    Dir_rsmooth_patches = mpatches.Patch(
-                        color='white', label='potential smoothing :' + str(rsmooth))
-                    Dir_gamma_patches = mpatches.Patch(
-                        color='white', label=r'$\gamma$ :' + str(gamma))
-                    Dir_alpha_patches = mpatches.Patch(
-                        color='white', label=r'$\alpha$ :' + str(alpha))
-                    Dir_beta_patches = mpatches.Patch(
-                        color='white', label=r'$\beta$ :' + str(beta))
-                    Dir_cutoff_patches = mpatches.Patch(
-                        color='white', label=r'$t_{c}$ :' + str(time[cut_off - 1]))
-
-                    plt.legend(handles=[DirMass_patches,
-                                        DirEcc_patches,
-                                        Dirsound_speed_patches,
-                                        Dirinitial_pressure_patches,
-                                        DirSigma_patches,
-                                        Dir_rsmooth_patches,
-                                        Dir_gamma_patches,
-                                        Dir_alpha_patches,
-                                        Dir_beta_patches,
-                                        Dir_cutoff_patches], loc=2)
-
                     # =========================
 
-                    plt.title(r'Torques')
-                    plt.xlabel(r'$t/T_0$')
-                    plt.ylabel(r'$\Gamma$')
+                    plt.title(r'Torque vs time , ' + ' q = ' + str(DirMass) + r'$\varepsilon =$' + str(DirEcc),fontsize=50)
+                    plt.xlabel(r'$t/T_0$',fontsize=30)
+                    plt.ylabel(r'$\Gamma$',fontsize=30)
                     plt.xlim([0, time[cut_off - 1]])
                     plt.subplots_adjust(bottom=0.05, top=0.95)
-                    plt.savefig('Standard_Torque_' +
-                                str(data_frame[n]['DirName']) + '.png')
+                    plt.savefig('Standard_Torque_' + str(data_frame[n]['DirName']) + '.png',bbox_inches='tight')
                     # too many figs may be open.
                     # close plots once done
                     plt.close(fig)
