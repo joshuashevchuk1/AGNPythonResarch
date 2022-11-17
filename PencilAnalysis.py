@@ -3602,6 +3602,7 @@ class Pencil_Analysis(object):
         print('semi_major is ', semi_major)
         cut_off = data_frame[n]['indexTimeCutOff']
         time = time[:cut_off] / (2 * np.pi)
+        print('time in semi_major is ',time)
 
         # =========================
         # legend handles
