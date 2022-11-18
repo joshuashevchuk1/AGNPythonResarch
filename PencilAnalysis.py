@@ -2024,7 +2024,7 @@ class Pencil_Analysis(object):
 
                     # =========================
 
-                    plt.title(r'Torque vs time , ' + ' q = ' + str(DirMass) + r'$\varepsilon =$' + str(DirEcc),fontsize=50)
+                    plt.title(r'Torque vs time , ' + ' q = ' + str(DirMass) +' , '+ r'$\varepsilon =$' + str(DirEcc),fontsize=30)
                     plt.xlabel(r'$t/T_0$',fontsize=30)
                     plt.ylabel(r'$\Gamma$',fontsize=30)
                     plt.xlim([0, time[cut_off - 1]])

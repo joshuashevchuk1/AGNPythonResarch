@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="losing my fucking mind over here">
-      <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="Grab Torque plots" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -150,20 +148,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00222" summary="debug PencilRoutine.py">
-      <created>1667372145123</created>
-      <option name="number" value="00222" />
-      <option name="presentableId" value="LOCAL-00222" />
-      <option name="project" value="LOCAL" />
-      <updated>1667372145123</updated>
-    </task>
-    <task id="LOCAL-00223" summary="rates energy is kinda a problem">
-      <created>1667372463531</created>
-      <option name="number" value="00223" />
-      <option name="presentableId" value="LOCAL-00223" />
-      <option name="project" value="LOCAL" />
-      <updated>1667372463531</updated>
     </task>
     <task id="LOCAL-00224" summary="problems with energy plots">
       <created>1667372615900</created>
@@ -494,7 +478,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668678635454</updated>
     </task>
-    <option name="localTasksCounter" value="271" />
+    <task id="LOCAL-00271" summary="Clean up Torque plots">
+      <created>1668723435056</created>
+      <option name="number" value="00271" />
+      <option name="presentableId" value="LOCAL-00271" />
+      <option name="project" value="LOCAL" />
+      <updated>1668723435056</updated>
+    </task>
+    <task id="LOCAL-00272" summary="Grab Torque plots">
+      <created>1668723510143</created>
+      <option name="number" value="00272" />
+      <option name="presentableId" value="LOCAL-00272" />
+      <option name="project" value="LOCAL" />
+      <updated>1668723510143</updated>
+    </task>
+    <option name="localTasksCounter" value="273" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -509,8 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change step to 10 orbits" />
-    <MESSAGE value="again debug energy plots" />
     <MESSAGE value="max orbits 5" />
     <MESSAGE value="no energy calculations for" />
     <MESSAGE value="get orbital information" />
@@ -534,6 +530,8 @@
     <MESSAGE value="still getting wierd font problems" />
     <MESSAGE value="fix bbox inches setting" />
     <MESSAGE value="losing my fucking mind over here" />
-    <option name="LAST_COMMIT_MESSAGE" value="losing my fucking mind over here" />
+    <MESSAGE value="Clean up Torque plots" />
+    <MESSAGE value="Grab Torque plots" />
+    <option name="LAST_COMMIT_MESSAGE" value="Grab Torque plots" />
   </component>
 </project>
