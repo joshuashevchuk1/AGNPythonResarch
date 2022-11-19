@@ -55,7 +55,7 @@ for i in range(len(e)):
 timeCutOff = t03[indexTimeCutOff] / (np.pi * 2)
 timeCutOffLarge = t03[indexTimeCutOffLarge] / (np.pi * 2)
 
-max_lim = t03[indexTimeCutOff]
+max_lim = t03[indexTimeCutOff] / (2 * np.pi)
 
 ax2.set_xlim([0,max_lim])
 
