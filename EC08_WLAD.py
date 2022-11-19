@@ -48,7 +48,7 @@ indexTimeCutOff = 0
 indexTimeCutOffLarge = 0
 
 for i in range(len(e)):
-        if e[i] <= 0.05:
+        if e[i] <= 0.01:
             indexTimeCutOff = i
             break
 
