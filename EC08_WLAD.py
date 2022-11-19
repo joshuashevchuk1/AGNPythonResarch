@@ -2,8 +2,6 @@ import pencil as pc
 import pylab as plt
 import numpy as np
 
-max_lim=int(input('MAXLENGTH? : '))
-
 fig, (ax2) = plt.subplots(1, 1, figsize=(10, 10))
 
 ts03 = pc.read.ts()
@@ -41,10 +39,24 @@ ax2.set_ylim([0, .3])
 pe = 1 + (e / (2.25 * h)) ** 1.2 + (e / (2.84 * h)) ** 6 / (1 - (e / (2.02 * h)) ** 4)
 tm = 2 * twave / (2.7 + 1.1 * beta) * 1 / h ** 2 * (pe + pe / np.abs(pe))
 
-ax2.set_title('Eccentricity')
-ax2.set_xlabel(r'$t$')
-ax2.set_ylabel(r'$e$')
+ax2.set_title(r'$\varepsilon$ ' + 'vs t' + ' , ' + 'q=' + q,fontsize=30)
+ax2.set_xlabel(r'$t$',fontsize=20)
+ax2.set_ylabel(r'$e$',fontsize=20)
 ax2.legend()
-ax2.set_xlim([0,max_lim])
 
-plt.show()
+indexTimeCutOff = 0
+indexTimeCutOffLarge = 0
+
+for i in range(len(ecc)):
+    if ecc_int != 0:
+        if ecc[i] <= 0.01:
+            indexTimeCutOff = i
+            break
+
+timeCutOff = t[indexTimeCutOff] / (np.pi * 2)
+timeCutOffLarge = t[indexTimeCutOffLarge] / (np.pi * 2)
+
+ax2.set_xlim([0,t03[:indexTimeCutOff]])
+
+plt.grid(True)
+plt.savefig("EccDecay_"+max_lim+".png",bbox_inches='tight')
