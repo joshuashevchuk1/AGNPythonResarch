@@ -55,7 +55,9 @@ for i in range(len(e)):
 timeCutOff = t03[indexTimeCutOff] / (np.pi * 2)
 timeCutOffLarge = t03[indexTimeCutOffLarge] / (np.pi * 2)
 
-ax2.set_xlim([0,t03[indexTimeCutOff]])
+max_lim = t03[indexTimeCutOff]
+
+ax2.set_xlim([0,max_lim])
 
 plt.grid(True)
-plt.savefig("EccDecay_"+max_lim+".png",bbox_inches='tight')
+plt.savefig("EccDecay_" + str(max_lim) + ".png",bbox_inches='tight')
