@@ -52,8 +52,8 @@ for i in range(len(e)):
             indexTimeCutOff = i
             break
 
-timeCutOff = t[indexTimeCutOff] / (np.pi * 2)
-timeCutOffLarge = t[indexTimeCutOffLarge] / (np.pi * 2)
+timeCutOff = t03[indexTimeCutOff] / (np.pi * 2)
+timeCutOffLarge = t03[indexTimeCutOffLarge] / (np.pi * 2)
 
 ax2.set_xlim([0,t03[:indexTimeCutOff]])
 
