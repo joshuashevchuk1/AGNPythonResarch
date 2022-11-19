@@ -2,12 +2,14 @@ import pencil as pc
 import pylab as plt
 import numpy as np
 
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 6))
+max_lim=int(input('MAXLENGTH? : '))
 
-ts03 = pc.read.ts(datadir="CresswellNelson08/data", file_name="time_series.220715.2359");
+fig, (ax2) = plt.subplots(1, 1, figsize=(10, 10))
+
+ts03 = pc.read.ts()
 t03 = ts03.t
 
-par = pc.read.param(datadir="CresswellNelson08/data")
+par = pc.read.param()
 
 q = 1 - par.pmass[par.iprimary - 1]
 
@@ -23,11 +25,6 @@ def get_ecc(rr, vrad, vphi):
 
 a, e = get_ecc(ts03.xq2, ts03.vxq2, ts03.vyq2)
 
-ax1.plot(t03 / 2 / np.pi, a, label='a')
-ax1.set_title('Semimajor axis')
-ax1.set_xlabel(r'$t$')
-ax1.legend()
-
 ax2.plot(t03 / 2 / np.pi, e, label='e')
 
 beta = par.density_power_law
@@ -41,17 +38,13 @@ te = twave / 0.780 * (1 - 0.14 * (e / h) ** 2 + 0.06 * (e / h) ** 3)
 ax2.plot(t03 / 2 / np.pi, e[0] * np.exp(-t03 / te), linestyle='--', label='CN08 best fit (Eq 11)')
 ax2.set_ylim([0, .3])
 
-ax1.set_ylim([0.9, 1.01])
-
 pe = 1 + (e / (2.25 * h)) ** 1.2 + (e / (2.84 * h)) ** 6 / (1 - (e / (2.02 * h)) ** 4)
 tm = 2 * twave / (2.7 + 1.1 * beta) * 1 / h ** 2 * (pe + pe / np.abs(pe))
-
-ax1.plot(t03 / 2 / np.pi, a[0] * np.exp(-t03 / tm), linestyle='--')
 
 ax2.set_title('Eccentricity')
 ax2.set_xlabel(r'$t$')
 ax2.set_ylabel(r'$e$')
-
 ax2.legend()
+ax2.set_xlim([0,max_lim])
 
 plt.show()
