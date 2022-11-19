@@ -26,8 +26,6 @@ h = r**2*(vphi/r)
 ep1 = (h**2)/a
 e = (1-ep1)**0.5
 
-e = e[:]+0.02
-
 N = 100
 
 kernel = np.ones((N,))/N

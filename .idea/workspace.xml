@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="Change font size" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="Plot NOT the gradient">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,20 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00225" summary="problems with energy plots">
-      <created>1667373372580</created>
-      <option name="number" value="00225" />
-      <option name="presentableId" value="LOCAL-00225" />
-      <option name="project" value="LOCAL" />
-      <updated>1667373372580</updated>
-    </task>
-    <task id="LOCAL-00226" summary="problems with energy plots">
-      <created>1667459848192</created>
-      <option name="number" value="00226" />
-      <option name="presentableId" value="LOCAL-00226" />
-      <option name="project" value="LOCAL" />
-      <updated>1667459848193</updated>
     </task>
     <task id="LOCAL-00227" summary="change step to 10 orbits">
       <created>1667461126246</created>
@@ -492,7 +480,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668751568772</updated>
     </task>
-    <option name="localTasksCounter" value="274" />
+    <task id="LOCAL-00274" summary="Plot NOT the gradient">
+      <created>1668762372472</created>
+      <option name="number" value="00274" />
+      <option name="presentableId" value="LOCAL-00274" />
+      <option name="project" value="LOCAL" />
+      <updated>1668762372473</updated>
+    </task>
+    <task id="LOCAL-00275" summary="Plot NOT the gradient">
+      <created>1668762643005</created>
+      <option name="number" value="00275" />
+      <option name="presentableId" value="LOCAL-00275" />
+      <option name="project" value="LOCAL" />
+      <updated>1668762643005</updated>
+    </task>
+    <option name="localTasksCounter" value="276" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -507,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="no energy calculations for" />
     <MESSAGE value="get orbital information" />
     <MESSAGE value="fix the plots for contour temp" />
     <MESSAGE value="incorrect paren" />
@@ -532,6 +533,7 @@
     <MESSAGE value="Clean up Torque plots" />
     <MESSAGE value="Grab Torque plots" />
     <MESSAGE value="Change font size" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change font size" />
+    <MESSAGE value="Plot NOT the gradient" />
+    <option name="LAST_COMMIT_MESSAGE" value="Plot NOT the gradient" />
   </component>
 </project>
