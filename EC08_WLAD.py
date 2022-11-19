@@ -39,17 +39,16 @@ ax2.set_ylim([0, .3])
 pe = 1 + (e / (2.25 * h)) ** 1.2 + (e / (2.84 * h)) ** 6 / (1 - (e / (2.02 * h)) ** 4)
 tm = 2 * twave / (2.7 + 1.1 * beta) * 1 / h ** 2 * (pe + pe / np.abs(pe))
 
-ax2.set_title(r'$\varepsilon$ ' + 'vs t' + ' , ' + 'q=' + q,fontsize=30)
+ax2.set_title(r'$\varepsilon$' + ' vs t' + ' , ' + 'q=' + str(q),fontsize=30)
 ax2.set_xlabel(r'$t$',fontsize=20)
-ax2.set_ylabel(r'$e$',fontsize=20)
+ax2.set_ylabel(r'$\varepsilon$',fontsize=20)
 ax2.legend()
 
 indexTimeCutOff = 0
 indexTimeCutOffLarge = 0
 
-for i in range(len(ecc)):
-    if ecc_int != 0:
-        if ecc[i] <= 0.01:
+for i in range(len(e)):
+        if e[i] <= 0.01:
             indexTimeCutOff = i
             break
 
