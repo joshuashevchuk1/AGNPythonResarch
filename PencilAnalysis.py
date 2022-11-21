@@ -3596,8 +3596,8 @@ class Pencil_Analysis(object):
         # =========================
         plt.tight_layout()
         plt.plot(xrq2, yrq2)
-        ax1.set_xlabel('r',fontsize=30)
-        ax1.set_ylabel(r'$\phi$',fontsize=30)
+        ax1.set_xlabel('x',fontsize=30)
+        ax1.set_ylabel('y',fontsize=30)
         ax1.set_title('x vs y',fontsize=50)
         ax1.tick_params(axis='both', labelsize=20)
         plt.grid(True)

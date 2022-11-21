@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="fix up EC08.py">
-      <change afterPath="$PROJECT_DIR$/EC08_WLAD.py" afterDir="false" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="fix up EC08_WLAD.py">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PencilAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilAnalysis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,83 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00228" summary="again debug energy plots">
-      <created>1667461575447</created>
-      <option name="number" value="00228" />
-      <option name="presentableId" value="LOCAL-00228" />
-      <option name="project" value="LOCAL" />
-      <updated>1667461575447</updated>
-    </task>
-    <task id="LOCAL-00229" summary="again debug energy plots">
-      <created>1667461931195</created>
-      <option name="number" value="00229" />
-      <option name="presentableId" value="LOCAL-00229" />
-      <option name="project" value="LOCAL" />
-      <updated>1667461931195</updated>
-    </task>
-    <task id="LOCAL-00230" summary="max orbits 5">
-      <created>1667462317315</created>
-      <option name="number" value="00230" />
-      <option name="presentableId" value="LOCAL-00230" />
-      <option name="project" value="LOCAL" />
-      <updated>1667462317315</updated>
-    </task>
-    <task id="LOCAL-00231" summary="no energy calculations for">
-      <created>1667462695045</created>
-      <option name="number" value="00231" />
-      <option name="presentableId" value="LOCAL-00231" />
-      <option name="project" value="LOCAL" />
-      <updated>1667462695045</updated>
-    </task>
-    <task id="LOCAL-00232" summary="get orbital information">
-      <created>1668060495359</created>
-      <option name="number" value="00232" />
-      <option name="presentableId" value="LOCAL-00232" />
-      <option name="project" value="LOCAL" />
-      <updated>1668060495359</updated>
-    </task>
-    <task id="LOCAL-00233" summary="get orbital information">
-      <created>1668060572662</created>
-      <option name="number" value="00233" />
-      <option name="presentableId" value="LOCAL-00233" />
-      <option name="project" value="LOCAL" />
-      <updated>1668060572662</updated>
-    </task>
-    <task id="LOCAL-00234" summary="fix the plots for contour temp">
-      <created>1668071199083</created>
-      <option name="number" value="00234" />
-      <option name="presentableId" value="LOCAL-00234" />
-      <option name="project" value="LOCAL" />
-      <updated>1668071199083</updated>
-    </task>
-    <task id="LOCAL-00235" summary="incorrect paren">
-      <created>1668136754767</created>
-      <option name="number" value="00235" />
-      <option name="presentableId" value="LOCAL-00235" />
-      <option name="project" value="LOCAL" />
-      <updated>1668136754767</updated>
-    </task>
-    <task id="LOCAL-00236" summary="Seperate eccentricity plots">
-      <created>1668488660256</created>
-      <option name="number" value="00236" />
-      <option name="presentableId" value="LOCAL-00236" />
-      <option name="project" value="LOCAL" />
-      <updated>1668488660256</updated>
-    </task>
-    <task id="LOCAL-00237" summary="Seperate eccentricity plots">
-      <created>1668488800395</created>
-      <option name="number" value="00237" />
-      <option name="presentableId" value="LOCAL-00237" />
-      <option name="project" value="LOCAL" />
-      <updated>1668488800395</updated>
-    </task>
-    <task id="LOCAL-00238" summary="Only get orbital plots">
-      <created>1668488981083</created>
-      <option name="number" value="00238" />
-      <option name="presentableId" value="LOCAL-00238" />
-      <option name="project" value="LOCAL" />
-      <updated>1668488981083</updated>
     </task>
     <task id="LOCAL-00239" summary="just get orbital information">
       <created>1668489116924</created>
@@ -494,7 +418,84 @@
       <option name="project" value="LOCAL" />
       <updated>1668840814951</updated>
     </task>
-    <option name="localTasksCounter" value="277" />
+    <task id="LOCAL-00277" summary="fix up EC08.py">
+      <created>1668841083253</created>
+      <option name="number" value="00277" />
+      <option name="presentableId" value="LOCAL-00277" />
+      <option name="project" value="LOCAL" />
+      <updated>1668841083253</updated>
+    </task>
+    <task id="LOCAL-00278" summary="fix up EC08_WLAD.py">
+      <created>1668841473737</created>
+      <option name="number" value="00278" />
+      <option name="presentableId" value="LOCAL-00278" />
+      <option name="project" value="LOCAL" />
+      <updated>1668841473737</updated>
+    </task>
+    <task id="LOCAL-00279" summary="fix up EC08_WLAD.py">
+      <created>1668842038299</created>
+      <option name="number" value="00279" />
+      <option name="presentableId" value="LOCAL-00279" />
+      <option name="project" value="LOCAL" />
+      <updated>1668842038299</updated>
+    </task>
+    <task id="LOCAL-00280" summary="fix up EC08_WLAD.py">
+      <created>1668842225995</created>
+      <option name="number" value="00280" />
+      <option name="presentableId" value="LOCAL-00280" />
+      <option name="project" value="LOCAL" />
+      <updated>1668842225996</updated>
+    </task>
+    <task id="LOCAL-00281" summary="fix up EC08_WLAD.py">
+      <created>1668842332425</created>
+      <option name="number" value="00281" />
+      <option name="presentableId" value="LOCAL-00281" />
+      <option name="project" value="LOCAL" />
+      <updated>1668842332425</updated>
+    </task>
+    <task id="LOCAL-00282" summary="fix up EC08_WLAD.py">
+      <created>1668842407137</created>
+      <option name="number" value="00282" />
+      <option name="presentableId" value="LOCAL-00282" />
+      <option name="project" value="LOCAL" />
+      <updated>1668842407137</updated>
+    </task>
+    <task id="LOCAL-00283" summary="fix up EC08_WLAD.py">
+      <created>1668842525342</created>
+      <option name="number" value="00283" />
+      <option name="presentableId" value="LOCAL-00283" />
+      <option name="project" value="LOCAL" />
+      <updated>1668842525342</updated>
+    </task>
+    <task id="LOCAL-00284" summary="fix up EC08_WLAD.py">
+      <created>1668842598254</created>
+      <option name="number" value="00284" />
+      <option name="presentableId" value="LOCAL-00284" />
+      <option name="project" value="LOCAL" />
+      <updated>1668842598254</updated>
+    </task>
+    <task id="LOCAL-00285" summary="fix up EC08_WLAD.py">
+      <created>1668842670221</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1668842670221</updated>
+    </task>
+    <task id="LOCAL-00286" summary="fix up EC08_WLAD.py">
+      <created>1668842708158</created>
+      <option name="number" value="00286" />
+      <option name="presentableId" value="LOCAL-00286" />
+      <option name="project" value="LOCAL" />
+      <updated>1668842708158</updated>
+    </task>
+    <task id="LOCAL-00287" summary="fix up EC08_WLAD.py">
+      <created>1668842902116</created>
+      <option name="number" value="00287" />
+      <option name="presentableId" value="LOCAL-00287" />
+      <option name="project" value="LOCAL" />
+      <updated>1668842902116</updated>
+    </task>
+    <option name="localTasksCounter" value="288" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -509,7 +510,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix the plots for contour temp" />
     <MESSAGE value="incorrect paren" />
     <MESSAGE value="Seperate eccentricity plots" />
     <MESSAGE value="Only get orbital plots" />
@@ -534,6 +534,7 @@
     <MESSAGE value="Change font size" />
     <MESSAGE value="Plot NOT the gradient" />
     <MESSAGE value="fix up EC08.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix up EC08.py" />
+    <MESSAGE value="fix up EC08_WLAD.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix up EC08_WLAD.py" />
   </component>
 </project>
