@@ -107,9 +107,12 @@ def addLastPoint(ivar, dir):
     DSharray = []
     DTSHarray= []
     Tarray=[]
+    SDArray=[]
+    UUArray=[]
+    SArray=[]
     while ivar <= max_orbits:
         try:
-            DTarray, DSharray, DTSHarray,Tarray = getRunData(ivar, DTarray, DSharray,DTSHarray,Tarray)
+            DTarray, DSharray, DTSHarray,Tarray,SArray,UUArray,SDArray = getRunData(ivar, DTarray, DSharray,DTSHarray,Tarray)
         except:
             print("bad run or no run")
             traceback.print_exc()
@@ -126,7 +129,11 @@ def addLastPoint(ivar, dir):
                  "DTarray": DTarray,
                  "DSharray": DSharray,
                  "DTSHarray":DTSHarray,
-                 "TArray":Tarray}
+                 "TArray":Tarray,
+                 "SArray":SArray,
+                 "UUArray":UUArray,
+                 "SDArray":SDArray
+                 }
 
     scrapeDict[str(dir)] = localDict
 
@@ -174,7 +181,7 @@ def initPars():
     return timeCutOff
 
 
-def getRunData(ivar, paramDTarray, paramDSharray,paramDTSHarray,paramTArray,paramSArray):
+def getRunData(ivar, paramDTarray, paramDSharray,paramDTSHarray,paramTArray,paramSArray,paramUUArray,paramSDArray):
     ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
@@ -185,13 +192,15 @@ def getRunData(ivar, paramDTarray, paramDSharray,paramDTSHarray,paramTArray,para
     shock_heating = dfS * dfUU
     dtsh = dfT[:] - shock_heating[:]
 
+    paramUUArray.append(dfUU)
+    paramDSaray.append(dfS)
     paramTArray.append(np.log(np.sum(dfT **2,axis=0)))
-    paramSArray.append(np.log(np.sum(shock_heating**2,axis=0)))
+    paramSDArray.append(np.log(np.sum(shock_heating**2,axis=0)))
     paramDTarray.append(np.max(np.log(np.sum(dfT ** 2, axis=0))))
     paramDSharray.append(np.max(np.log(np.sum(shock_heating ** 2, axis=0))))
     paramDSharray.append(np.max(np.log(np.sum(dtsh ** 2, axis=0))))
 
-    return paramDTarray,paramDSharray,paramDTSHarray,paramTArray,paramSArray
+    return paramDTarray,paramDSharray,paramDTSHarray,paramTArray,paramSArray,paramUUArray,paramSDArray
 
 
 def getRateOfLastPoint(paramDTarray):
