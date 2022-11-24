@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="fix up pencil Analysis plot">
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="Start Pencil Routine with specific paramters">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,13 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00241" summary="plot with classes">
-      <created>1668490182150</created>
-      <option name="number" value="00241" />
-      <option name="presentableId" value="LOCAL-00241" />
-      <option name="project" value="LOCAL" />
-      <updated>1668490182150</updated>
     </task>
     <task id="LOCAL-00242" summary="plot with classes">
       <created>1668490238360</created>
@@ -494,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669017198282</updated>
     </task>
-    <option name="localTasksCounter" value="290" />
+    <task id="LOCAL-00290" summary="Start Pencil Routine with specific paramters">
+      <created>1669021437101</created>
+      <option name="number" value="00290" />
+      <option name="presentableId" value="LOCAL-00290" />
+      <option name="project" value="LOCAL" />
+      <updated>1669021437101</updated>
+    </task>
+    <option name="localTasksCounter" value="291" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -509,7 +509,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Seperate eccentricity plots" />
     <MESSAGE value="Only get orbital plots" />
     <MESSAGE value="just get orbital information" />
     <MESSAGE value="plot with classes" />
@@ -534,6 +533,7 @@
     <MESSAGE value="fix up EC08.py" />
     <MESSAGE value="fix up EC08_WLAD.py" />
     <MESSAGE value="fix up pencil Analysis plot" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix up pencil Analysis plot" />
+    <MESSAGE value="Start Pencil Routine with specific paramters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start Pencil Routine with specific paramters" />
   </component>
 </project>
