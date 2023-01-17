@@ -89,7 +89,7 @@ def getCutOff():
 
 
 def addLastPoint(ivar, dir):
-    global lastPointArray, DTarray
+    global lastPointArray
     global qArray
     global eccIntArray
     global scrapeDict
