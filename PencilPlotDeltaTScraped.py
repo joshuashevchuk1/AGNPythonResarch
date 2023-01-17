@@ -122,12 +122,7 @@ def addLastPoint(ivar, dir):
                  "ecc_int": ecc_int,
                  "timeCutOff": timeCutOff,
                  "DTarray": DTarray,
-                 "DSharray": DSharray,
-                 "DTSHarray":DTSHarray,
-                 "TArray":Tarray,
-                 "SArray":SArray,
-                 "UUArray":UUArray,
-                 "SDArray":SDArray
+                 "TArray":Tarray
                  }
 
     scrapeDict[str(dir)] = localDict
