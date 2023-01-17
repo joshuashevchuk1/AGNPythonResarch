@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="append more to json" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="local dict is wrong" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,27 +175,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00247" summary="YOU ARE PLOTTING THE GRADIENTS">
-      <created>1668583004742</created>
-      <option name="number" value="00247" />
-      <option name="presentableId" value="LOCAL-00247" />
-      <option name="project" value="LOCAL" />
-      <updated>1668583004742</updated>
-    </task>
-    <task id="LOCAL-00248" summary="YOU ARE PLOTTING THE GRADIENTS">
-      <created>1668583086509</created>
-      <option name="number" value="00248" />
-      <option name="presentableId" value="LOCAL-00248" />
-      <option name="project" value="LOCAL" />
-      <updated>1668583086509</updated>
-    </task>
-    <task id="LOCAL-00249" summary="YOU ARE PLOTTING THE GRADIENTS">
-      <created>1668583873149</created>
-      <option name="number" value="00249" />
-      <option name="presentableId" value="LOCAL-00249" />
-      <option name="project" value="LOCAL" />
-      <updated>1668583873149</updated>
     </task>
     <task id="LOCAL-00250" summary="YOU ARE PLOTTING THE GRADIENTS">
       <created>1668584143446</created>
@@ -519,7 +498,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673936692106</updated>
     </task>
-    <option name="localTasksCounter" value="296" />
+    <task id="LOCAL-00296" summary="append more to json">
+      <created>1673936774293</created>
+      <option name="number" value="00296" />
+      <option name="presentableId" value="LOCAL-00296" />
+      <option name="project" value="LOCAL" />
+      <updated>1673936774293</updated>
+    </task>
+    <task id="LOCAL-00297" summary="fix up number aqusition">
+      <created>1673936943914</created>
+      <option name="number" value="00297" />
+      <option name="presentableId" value="LOCAL-00297" />
+      <option name="project" value="LOCAL" />
+      <updated>1673936943914</updated>
+    </task>
+    <task id="LOCAL-00298" summary="local dict is wrong">
+      <created>1673937085705</created>
+      <option name="number" value="00298" />
+      <option name="presentableId" value="LOCAL-00298" />
+      <option name="project" value="LOCAL" />
+      <updated>1673937085706</updated>
+    </task>
+    <option name="localTasksCounter" value="299" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -534,8 +534,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="plot with classes" />
-    <MESSAGE value="bugs in plotting" />
     <MESSAGE value="FIG!" />
     <MESSAGE value="getRunData with shock heating" />
     <MESSAGE value="YOU ARE PLOTTING THE GRADIENTS" />
@@ -559,6 +557,8 @@
     <MESSAGE value="Start Pencil Routine with specific paramters" />
     <MESSAGE value="more params" />
     <MESSAGE value="append more to json" />
-    <option name="LAST_COMMIT_MESSAGE" value="append more to json" />
+    <MESSAGE value="fix up number aqusition" />
+    <MESSAGE value="local dict is wrong" />
+    <option name="LAST_COMMIT_MESSAGE" value="local dict is wrong" />
   </component>
 </project>

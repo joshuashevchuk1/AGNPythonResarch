@@ -28,6 +28,7 @@ def scrape():
         try:
             addLastPoint(inital_ivar, str(os.path.split(os.getcwd())[1]))
             os.chdir(root)
+            saveData()
         except:
             print("============")
             print("ignoring run ", os.path.split(os.getcwd())[1])
@@ -39,9 +40,6 @@ def scrape():
     print("lastPointArray is ", lastPointArray)
     print("eccIntArray is ", eccIntArray)
     print("qArray is ", qArray)
-
-    saveData()
-
 
 def saveData():
     global scrapeDict
@@ -91,7 +89,7 @@ def getCutOff():
 
 
 def addLastPoint(ivar, dir):
-    global lastPointArray
+    global lastPointArray, DTarray
     global qArray
     global eccIntArray
     global scrapeDict
@@ -107,7 +105,9 @@ def addLastPoint(ivar, dir):
     Tarray=[]
     while ivar <= max_orbits:
         try:
-            DTarray,Tarray = getRunData(ivar, DTarray, Tarray)
+            DTarray,Tarray = getRunData(ivar)
+            print('DTArray ' + DTarray)
+            print('TArray ' + Tarray)
         except:
             print("bad run or no run")
             traceback.print_exc()
@@ -171,7 +171,9 @@ def initPars():
     return timeCutOff
 
 
-def getRunData(ivar, paramDTarray,paramTArray):
+def getRunData(ivar):
+    DTarray = []
+    Tarray = []
     ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
@@ -185,7 +187,7 @@ def getRunData(ivar, paramDTarray,paramTArray):
     paramTArray.append(np.log(np.sum(dfT **2,axis=0)))
     paramDTarray.append(np.max(np.log(np.sum(dfT ** 2, axis=0))))
 
-    return paramDTarray,paramTArray
+    return DTarray, Tarray
 
 
 def getRateOfLastPoint(paramDTarray):
