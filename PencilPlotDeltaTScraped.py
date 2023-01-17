@@ -183,7 +183,7 @@ def getRunData(ivar,paramTArray,paramDTArray):
     dtsh = dfT[:] - shock_heating[:]
 
     paramTArray.append(np.log(np.sum(dfT **2,axis=0)))
-    paramDTarray.append(np.max(np.log(np.sum(dfT ** 2, axis=0))))
+    paramDTArray.append(np.max(np.log(np.sum(dfT ** 2, axis=0))))
 
     return paramDTArray, paramTArray
 
