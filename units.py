@@ -24,7 +24,7 @@ M = 1e8*Msun    # Central super-massive black hole
 
 rg = (G/c**2) * M
 
-r0 = 1e5*rg  # Reference radius
+r0 = 1e3*rg  # Reference radius
 aspect_ratio = 0.05     # H/r (in code units this is equal to cs0)
 
 # Calculate units
@@ -83,3 +83,6 @@ print("r0 in pc",r0/pc)
 print("rmin in pc",1e4*rg/pc)
 print("delta r is ",r0/pc - 1e4*rg/pc)
 print("log unit density is ",np.log(unit_density))
+
+if __name__ == '__main__':
+    print('calculated units!')
