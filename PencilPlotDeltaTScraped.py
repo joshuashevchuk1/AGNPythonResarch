@@ -106,8 +106,8 @@ def addLastPoint(ivar, dir):
     while ivar <= max_orbits:
         try:
             DTarray,Tarray = getRunData(ivar,DTarray,Tarray)
-            print('DTArray ' + DTarray)
-            print('TArray ' + Tarray)
+            print('DTArray ', DTarray)
+            print('TArray ' , Tarray)
         except:
             print("bad run or no run")
             traceback.print_exc()
