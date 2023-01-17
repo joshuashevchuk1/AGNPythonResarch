@@ -171,9 +171,7 @@ def initPars():
     return timeCutOff
 
 
-def getRunData(ivar):
-    DTarray = []
-    Tarray = []
+def getRunData(ivar,paramTArray,paramDTArray):
     ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
@@ -187,7 +185,7 @@ def getRunData(ivar):
     paramTArray.append(np.log(np.sum(dfT **2,axis=0)))
     paramDTarray.append(np.max(np.log(np.sum(dfT ** 2, axis=0))))
 
-    return DTarray, Tarray
+    return paramDTArray, paramTArray
 
 
 def getRateOfLastPoint(paramDTarray):
