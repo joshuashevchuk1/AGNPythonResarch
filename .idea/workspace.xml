@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="dynamically save" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="Take the average value instead(better representation)">
+      <change afterPath="$PROJECT_DIR$/CalculateA.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,33 +41,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Joshua/PycharmProjects/AGNPythonResarch",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Data_qNe4&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Joshua\PycharmProjects\AGNPythonResarch" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.units">
-    <configuration name="CheckArrayTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.CalculateA">
+    <configuration name="CalculateA" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AGNPythonResarch" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\Joshua\AppData\Local\Programs\Python\Python39\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\Joshua\PycharmProjects\pythonProject\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.11 (pythonProject)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="C:\Users\Joshua\PycharmProjects\AGNPythonResarch\CheckArrayTest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CalculateA.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.CalculateA" />
         <item itemvalue="Python.units" />
         <item itemvalue="Python.ContourLastPointRate" />
         <item itemvalue="Python.ExamplePlotLib" />
         <item itemvalue="Python.CheckLine" />
-        <item itemvalue="Python.CheckArrayTest" />
       </list>
     </recent_temporary>
   </component>
@@ -175,20 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00256" summary="werid self plotting issue">
-      <created>1668669872137</created>
-      <option name="number" value="00256" />
-      <option name="presentableId" value="LOCAL-00256" />
-      <option name="project" value="LOCAL" />
-      <updated>1668669872138</updated>
-    </task>
-    <task id="LOCAL-00257" summary="no show">
-      <created>1668670891529</created>
-      <option name="number" value="00257" />
-      <option name="presentableId" value="LOCAL-00257" />
-      <option name="project" value="LOCAL" />
-      <updated>1668670891530</updated>
     </task>
     <task id="LOCAL-00258" summary="no show">
       <created>1668671173217</created>
@@ -519,7 +509,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673940411440</updated>
     </task>
-    <option name="localTasksCounter" value="305" />
+    <task id="LOCAL-00305" summary="add old scrape and try again">
+      <created>1673940802553</created>
+      <option name="number" value="00305" />
+      <option name="presentableId" value="LOCAL-00305" />
+      <option name="project" value="LOCAL" />
+      <updated>1673940802553</updated>
+    </task>
+    <task id="LOCAL-00306" summary="Take the average value instead(better representation)">
+      <created>1673940854107</created>
+      <option name="number" value="00306" />
+      <option name="presentableId" value="LOCAL-00306" />
+      <option name="project" value="LOCAL" />
+      <updated>1673940854107</updated>
+    </task>
+    <option name="localTasksCounter" value="307" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -534,8 +538,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="getRunData with shock heating" />
-    <MESSAGE value="YOU ARE PLOTTING THE GRADIENTS" />
     <MESSAGE value="werid self plotting issue" />
     <MESSAGE value="no show" />
     <MESSAGE value="ANNOYED" />
@@ -559,6 +561,8 @@
     <MESSAGE value="fix up number aqusition" />
     <MESSAGE value="local dict is wrong" />
     <MESSAGE value="dynamically save" />
-    <option name="LAST_COMMIT_MESSAGE" value="dynamically save" />
+    <MESSAGE value="add old scrape and try again" />
+    <MESSAGE value="Take the average value instead(better representation)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Take the average value instead(better representation)" />
   </component>
 </project>
