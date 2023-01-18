@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="Take the average value instead(better representation)">
-      <change afterPath="$PROJECT_DIR$/CalculateA.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="CalculateA.py">
+      <change beforePath="$PROJECT_DIR$/CalculateA.py" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateA.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,13 +178,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00258" summary="no show">
-      <created>1668671173217</created>
-      <option name="number" value="00258" />
-      <option name="presentableId" value="LOCAL-00258" />
-      <option name="project" value="LOCAL" />
-      <updated>1668671173217</updated>
     </task>
     <task id="LOCAL-00259" summary="no show">
       <created>1668671546457</created>
@@ -523,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673940854107</updated>
     </task>
-    <option name="localTasksCounter" value="307" />
+    <task id="LOCAL-00307" summary="CalculateA.py">
+      <created>1674024949732</created>
+      <option name="number" value="00307" />
+      <option name="presentableId" value="LOCAL-00307" />
+      <option name="project" value="LOCAL" />
+      <updated>1674024949733</updated>
+    </task>
+    <option name="localTasksCounter" value="308" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -538,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="werid self plotting issue" />
     <MESSAGE value="no show" />
     <MESSAGE value="ANNOYED" />
     <MESSAGE value="insanity!" />
@@ -563,6 +561,7 @@
     <MESSAGE value="dynamically save" />
     <MESSAGE value="add old scrape and try again" />
     <MESSAGE value="Take the average value instead(better representation)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Take the average value instead(better representation)" />
+    <MESSAGE value="CalculateA.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="CalculateA.py" />
   </component>
 </project>
