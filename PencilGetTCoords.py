@@ -44,7 +44,7 @@ def scrape():
 def saveData():
     global scrapeDict
     data = scrapeDict
-    with open('ScrapeDeltaTData_At'+str(max_orbits)+'.json', 'w') as f:
+    with open('PencilGetTCoords'+str(max_orbits)+'.json', 'w') as f:
         json.dump(data, f)
 
 def getCutOff():
