@@ -16,6 +16,7 @@ ecc_int=0
 scrapeDict={}
 max_orbits = int(input('max Orbits? : '))
 timeCutOff=0
+indexTimeCutOff=0
 
 def scrape():
     root = os.getcwd()  # root dir is fucked up due to a space
@@ -51,6 +52,7 @@ def getCutOff():
     global q
     global ecc_int
     global timeCutOff
+    global indexTimeCutOff
     print('entering getCutOff')
     ts = pc.read_ts()
     t = ts.t
