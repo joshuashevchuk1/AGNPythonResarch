@@ -155,10 +155,15 @@ def initPars():
 
 def getRunData(ivar, paramDTarray):
     ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
+    ff1 = pc.read_var(trimall=True, ivar=1, magic=["TT"], quiet=True)
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
+    df1 = ff.TT[:] - ff0.TT[:]
+    DTivar = np.mean(np.log(dfT ** 2, axis=0))
+    DT1 = np.mean(np.log(df1 ** 2, axis=0))
 
-    paramDTarray.append(np.mean(np.log(dfT ** 2, axis=0)))
+    paramDTarray.append(df1)
+    paramDTarray.append(dfT)
     return paramDTarray
 
 
