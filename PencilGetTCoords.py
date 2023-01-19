@@ -160,8 +160,8 @@ def getRunData(ivar, paramDTarray):
     dfT = ff.TT[:] - ff0.TT[:]
     df1 = ff.TT[:] - ff0.TT[:]
 
-    paramDTarray.append(np.log(np.sum(df1 ** 2, axis=0)))
-    paramDTarray.append(np.log(np.sum(dfT ** 2, axis=0)))
+    paramDTarray.append(np.log(np.sum(np.sum(df1 ** 2, axis=0))))
+    paramDTarray.append(np.log(np.sum(np.sum(dfT ** 2, axis=0))))
     plt.plot(paramDTarray[0])
     plt.plot(paramDTarray[1])
     plt.show()
