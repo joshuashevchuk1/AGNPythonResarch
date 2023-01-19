@@ -17,7 +17,6 @@ scrapeDict={}
 max_orbits = int(input('max Orbits? : '))
 timeCutOff=0
 indexTimeCutOff=0
-
 def scrape():
     root = os.getcwd()  # root dir is fucked up due to a space
     dir_run_list = next(os.walk('.'))[1]
@@ -47,46 +46,6 @@ def saveData():
     data = scrapeDict
     with open('PencilGetTCoords'+str(max_orbits)+'.json', 'w') as f:
         json.dump(data, f)
-
-def getCutOff():
-    global q
-    global ecc_int
-    global timeCutOff
-    global indexTimeCutOff
-    print('entering getCutOff')
-    ts = pc.read_ts()
-    t = ts.t
-
-    radius = ts.xq2
-    LinearVelocity = ts.vxq2
-    AngularVelocity = ts.vyq2
-
-    par = pc.read_param()
-
-    if (par.iprimary == 1):
-        q = par.pmass[1]
-    else:
-        q = par.pmass[0]
-
-    v2 = LinearVelocity ** 2 + AngularVelocity ** 2
-    semi_major = 1. / (2 / radius - v2)
-    DArclength = radius ** 2 * (AngularVelocity / radius)
-    ep1 = (DArclength ** 2) / semi_major
-    eccentricity = (1 - ep1) ** 0.5
-    ecc_int = par.eccentricity
-    ecc = eccentricity
-
-    indexTimeCutOff = 0
-
-    for i in range(len(ecc)):
-        if ecc_int != 0:
-            if ecc[i] <= 0.01:
-                indexTimeCutOff = i
-                break
-
-    timeCutOff = t[indexTimeCutOff] / (np.pi * 2)
-    print('timeCutOff is ',np.round(timeCutOff))
-    print('leaving get cutoff')
 
 def addLastPoint(ivar,dir):
     global lastPointArray
@@ -119,6 +78,7 @@ def addLastPoint(ivar,dir):
 def initPars():
     global q
     global ecc_int
+    global indexTimeCutOff
     print('entering getCutOff')
     ts = pc.read_ts()
     t = ts.t
