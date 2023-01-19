@@ -137,7 +137,7 @@ def initPars():
         else:
             i = i + di
 
-    OrbitTimeCutOff = Orbit_Len[199]
+    OrbitTimeCutOff = Orbit_Len[len(Orbit_Len)-1]
 
     return timeCutOff
 
