@@ -159,11 +159,9 @@ def getRunData(ivar, paramDTarray):
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
     df1 = ff.TT[:] - ff0.TT[:]
-    DTivar = np.mean(np.log(dfT ** 2, axis=0))
-    DT1 = np.mean(np.log(df1 ** 2, axis=0))
 
-    paramDTarray.append(df1)
-    paramDTarray.append(dfT)
+    paramDTarray.append(np.log(np.sum(df1 ** 2, axis=0)))
+    paramDTarray.append(np.log(np.sum(dfT ** 2, axis=0)))
     return paramDTarray
 
 
