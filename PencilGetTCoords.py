@@ -157,6 +157,9 @@ def initPars():
 
 def getRunData(ivar, paramDTarray):
     ts = pc.read_ts()
+    print('indexTimeCutOff :',indexTimeCutOff)
+    print('ts.TTm[0] : ',ts.TTm[0])
+    print('ts.TTm[0] : ', ts.TTm[indexTimeCutOff])
     paramDTarray.append(ts.TTm[0])
     paramDTarray.append(ts.TTm[indexTimeCutOff])
     print('===================================')
