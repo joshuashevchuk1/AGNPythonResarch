@@ -121,7 +121,7 @@ def getRunData(ivar, paramDTarray):
     print('ts.TTm[0] : ',ts.TTm[0])
     print('ts.TTm[0] : ', ts.TTm[indexTimeCutOff])
     paramDTarray.append(ts.TTm[0])
-    paramDTarray.append(ts.TTm[indexTimeCutOff])
+    paramDTarray.append(ts.TTm[indexTimeCutOff]-ts.TTm[0])
     print('===================================')
     print('paramDTArray is ', paramDTarray)
     print('===================================')
