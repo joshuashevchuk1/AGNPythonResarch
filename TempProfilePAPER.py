@@ -1,4 +1,4 @@
-import pencil as pc
+import pencil_old as pc
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -55,14 +55,14 @@ def plotTemp():
     temp_max = ts.TTmax
     temp_min = ts.TTmin
 
+    t = t / (2*np.pi)
+
     plt.plot(t, temp)
-    plt.plot(t, temp_max)
-    plt.plot(t, temp_min)
     plt.xlabel(r'$t/T_0$')
     plt.ylabel('Temperature')
     plt.tight_layout()
     plt.grid(True)
-    plt.xlim([0, time.max()])
+    plt.xlim([0, t.max()])
     plt.title("T(q=" + str(q) + r'$\varepsilon$'+")")
     plt.show()
 
