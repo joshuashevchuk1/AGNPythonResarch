@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="CalculateA.py" />
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="DTArray should have only 2 points">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PencilScrapeOld.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilScrapeOld.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,14 +41,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Joshua/PycharmProjects/AGNPythonResarch",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Joshua/PycharmProjects/AGNPythonResarch&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Joshua\PycharmProjects\AGNPythonResarch" />
@@ -176,48 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00265" summary="increase font size">
-      <created>1668676990188</created>
-      <option name="number" value="00265" />
-      <option name="presentableId" value="LOCAL-00265" />
-      <option name="project" value="LOCAL" />
-      <updated>1668676990188</updated>
-    </task>
-    <task id="LOCAL-00266" summary="overlay temp to get the density wave region occupied">
-      <created>1668677215388</created>
-      <option name="number" value="00266" />
-      <option name="presentableId" value="LOCAL-00266" />
-      <option name="project" value="LOCAL" />
-      <updated>1668677215388</updated>
-    </task>
-    <task id="LOCAL-00267" summary="font STILL werid">
-      <created>1668677321161</created>
-      <option name="number" value="00267" />
-      <option name="presentableId" value="LOCAL-00267" />
-      <option name="project" value="LOCAL" />
-      <updated>1668677321161</updated>
-    </task>
-    <task id="LOCAL-00268" summary="still getting wierd font problems">
-      <created>1668677716299</created>
-      <option name="number" value="00268" />
-      <option name="presentableId" value="LOCAL-00268" />
-      <option name="project" value="LOCAL" />
-      <updated>1668677716299</updated>
-    </task>
-    <task id="LOCAL-00269" summary="fix bbox inches setting">
-      <created>1668677977934</created>
-      <option name="number" value="00269" />
-      <option name="presentableId" value="LOCAL-00269" />
-      <option name="project" value="LOCAL" />
-      <updated>1668677977934</updated>
-    </task>
-    <task id="LOCAL-00270" summary="losing my fucking mind over here">
-      <created>1668678635454</created>
-      <option name="number" value="00270" />
-      <option name="presentableId" value="LOCAL-00270" />
-      <option name="project" value="LOCAL" />
-      <updated>1668678635454</updated>
     </task>
     <task id="LOCAL-00271" summary="Clean up Torque plots">
       <created>1668723435056</created>
@@ -520,7 +481,49 @@
       <option name="project" value="LOCAL" />
       <updated>1674028542994</updated>
     </task>
-    <option name="localTasksCounter" value="314" />
+    <task id="LOCAL-00314" summary="DTArray should have only 2 points">
+      <created>1674108639787</created>
+      <option name="number" value="00314" />
+      <option name="presentableId" value="LOCAL-00314" />
+      <option name="project" value="LOCAL" />
+      <updated>1674108639787</updated>
+    </task>
+    <task id="LOCAL-00315" summary="DTArray should have only 2 points">
+      <created>1674108765273</created>
+      <option name="number" value="00315" />
+      <option name="presentableId" value="LOCAL-00315" />
+      <option name="project" value="LOCAL" />
+      <updated>1674108765273</updated>
+    </task>
+    <task id="LOCAL-00316" summary="DTArray should have only 2 points">
+      <created>1674109239121</created>
+      <option name="number" value="00316" />
+      <option name="presentableId" value="LOCAL-00316" />
+      <option name="project" value="LOCAL" />
+      <updated>1674109239121</updated>
+    </task>
+    <task id="LOCAL-00317" summary="DTArray should have only 2 points">
+      <created>1674109275494</created>
+      <option name="number" value="00317" />
+      <option name="presentableId" value="LOCAL-00317" />
+      <option name="project" value="LOCAL" />
+      <updated>1674109275494</updated>
+    </task>
+    <task id="LOCAL-00318" summary="DTArray should have only 2 points">
+      <created>1674109463481</created>
+      <option name="number" value="00318" />
+      <option name="presentableId" value="LOCAL-00318" />
+      <option name="project" value="LOCAL" />
+      <updated>1674109463481</updated>
+    </task>
+    <task id="LOCAL-00319" summary="DTArray should have only 2 points">
+      <created>1674109493952</created>
+      <option name="number" value="00319" />
+      <option name="presentableId" value="LOCAL-00319" />
+      <option name="project" value="LOCAL" />
+      <updated>1674109493953</updated>
+    </task>
+    <option name="localTasksCounter" value="320" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -535,7 +538,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="no show" />
     <MESSAGE value="ANNOYED" />
     <MESSAGE value="insanity!" />
     <MESSAGE value="increase font size" />
@@ -560,6 +562,7 @@
     <MESSAGE value="add old scrape and try again" />
     <MESSAGE value="Take the average value instead(better representation)" />
     <MESSAGE value="CalculateA.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="CalculateA.py" />
+    <MESSAGE value="DTArray should have only 2 points" />
+    <option name="LAST_COMMIT_MESSAGE" value="DTArray should have only 2 points" />
   </component>
 </project>

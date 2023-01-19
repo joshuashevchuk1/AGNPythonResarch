@@ -164,7 +164,7 @@ def getRunData(ivar, paramDTarray):
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
     dfT = ff.TT[:] - ff0.TT[:]
 
-    paramDTarray.append(np.log(np.sum(np.sum(dfT ** 2, axis=0))))
+    paramDTarray.append(np.mean(np.log(np.sum(dfT ** 2, axis=0))))
     return paramDTarray
 
 def getRateOfLastPoint(paramDTarray):
