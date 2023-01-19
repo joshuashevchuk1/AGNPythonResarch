@@ -157,6 +157,9 @@ def getRunData(ivar, paramDTarray):
     ts = pc.read_ts()
     paramDTarray.append(ts.TTm[0])
     paramDTarray.append(ts.TTm[indexTimeCutOff])
+    print('===================================')
+    print('paramDTArray is ', paramDTarray)
+    print('===================================')
     return paramDTarray
 
 
