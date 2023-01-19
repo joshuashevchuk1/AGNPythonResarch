@@ -17,6 +17,7 @@ scrapeDict={}
 max_orbits = int(input('max Orbits? : '))
 timeCutOff=0
 indexTimeCutOff=0
+OrbitTimeCutOff=0
 def scrape():
     root = os.getcwd()  # root dir is fucked up due to a space
     dir_run_list = next(os.walk('.'))[1]
@@ -79,6 +80,7 @@ def initPars():
     global q
     global ecc_int
     global indexTimeCutOff
+    global OrbitTimeCutOff
     print('entering getCutOff')
     ts = pc.read_ts()
     t = ts.t
@@ -113,15 +115,39 @@ def initPars():
     timeCutOff = t[indexTimeCutOff] / (np.pi * 2)
     print('timeCutOff is ',np.round(timeCutOff))
     print('leaving get cutoff')
+
+    time = t / (2 * np.pi)
+    len_t = len(ts.t)
+
+    Max_Orbits = 200
+
+    n = 1
+    dn = 1
+
+    i = 0
+    di = 1
+
+    Orbit_Len = []
+
+    while i <= len(time) - 1:
+        if np.round(n * 2.0 * np.pi) == np.round(t[i]):
+            Orbit_Len.append(len(t[:i]))
+            n = n + dn
+            i = i + di
+        else:
+            i = i + di
+
+    OrbitTimeCutOff = Orbit_Len[199]
+
     return timeCutOff
 
 def getRunData(ivar, paramDTarray):
     ts = pc.read_ts()
-    print('indexTimeCutOff :',indexTimeCutOff)
+    print('indexTimeCutOff :',OrbitTimeCutOff)
     print('ts.TTm[0] : ',ts.TTm[0])
-    print('ts.TTm[0] : ', ts.TTm[indexTimeCutOff])
+    print('ts.TTm[0] : ', ts.TTm[OrbitTimeCutOff])
     paramDTarray.append(ts.TTm[0])
-    paramDTarray.append(ts.TTm[indexTimeCutOff]-ts.TTm[0])
+    paramDTarray.append(ts.TTm[OrbitTimeCutOff]-ts.TTm[0])
     print('===================================')
     print('paramDTArray is ', paramDTarray)
     print('===================================')
