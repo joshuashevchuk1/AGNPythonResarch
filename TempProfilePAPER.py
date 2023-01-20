@@ -65,11 +65,12 @@ def plotTemp():
 
     A = 1
 
-    ticks = np.arange(0, end, 1)
-    line = A * ticks
+    ticks = np.arange(0, t[len(t)-1], 1)
+    line = A * ticks + 0.004464
 
     plt.plot(t, temp)
-    plt.plot(A)
+    plt.plot(line)
+    plt.legend()
     plt.xlabel(r'$t/T_0$')
     plt.ylabel('Temperature')
     plt.tight_layout()
