@@ -57,6 +57,11 @@ def plotTemp():
 
     t = t / (2*np.pi)
 
+    A = 1
+
+    ticks=np.arange(0,200,1)
+    line = A * ticks
+
     plt.plot(t, temp)
     plt.xlabel(r'$t/T_0$')
     plt.ylabel('Temperature')
