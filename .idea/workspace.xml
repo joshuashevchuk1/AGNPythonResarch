@@ -180,27 +180,6 @@
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
     </task>
-    <task id="LOCAL-00278" summary="fix up EC08_WLAD.py">
-      <created>1668841473737</created>
-      <option name="number" value="00278" />
-      <option name="presentableId" value="LOCAL-00278" />
-      <option name="project" value="LOCAL" />
-      <updated>1668841473737</updated>
-    </task>
-    <task id="LOCAL-00279" summary="fix up EC08_WLAD.py">
-      <created>1668842038299</created>
-      <option name="number" value="00279" />
-      <option name="presentableId" value="LOCAL-00279" />
-      <option name="project" value="LOCAL" />
-      <updated>1668842038299</updated>
-    </task>
-    <task id="LOCAL-00280" summary="fix up EC08_WLAD.py">
-      <created>1668842225995</created>
-      <option name="number" value="00280" />
-      <option name="presentableId" value="LOCAL-00280" />
-      <option name="project" value="LOCAL" />
-      <updated>1668842225996</updated>
-    </task>
     <task id="LOCAL-00281" summary="fix up EC08_WLAD.py">
       <created>1668842332425</created>
       <option name="number" value="00281" />
@@ -523,7 +502,28 @@
       <option name="project" value="LOCAL" />
       <updated>1674113126554</updated>
     </task>
-    <option name="localTasksCounter" value="327" />
+    <task id="LOCAL-00327" summary="missing time cutoff to save points">
+      <created>1674115099103</created>
+      <option name="number" value="00327" />
+      <option name="presentableId" value="LOCAL-00327" />
+      <option name="project" value="LOCAL" />
+      <updated>1674115099103</updated>
+    </task>
+    <task id="LOCAL-00328" summary="missing time cutoff to save points">
+      <created>1674115153927</created>
+      <option name="number" value="00328" />
+      <option name="presentableId" value="LOCAL-00328" />
+      <option name="project" value="LOCAL" />
+      <updated>1674115153927</updated>
+    </task>
+    <task id="LOCAL-00329" summary="missing time cutoff to save points">
+      <created>1674115347481</created>
+      <option name="number" value="00329" />
+      <option name="presentableId" value="LOCAL-00329" />
+      <option name="project" value="LOCAL" />
+      <updated>1674115347481</updated>
+    </task>
+    <option name="localTasksCounter" value="330" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
