@@ -69,6 +69,7 @@ def plotTemp():
     plt.grid(True)
     plt.xlim([0, t.max()])
     plt.title("T(q=" + str(q) + r'$\varepsilon$'+")")
-    plt.show()
+    plt.savefig('Standard_TTm_.png')
+    plt.close()
 
 plotTemp()
