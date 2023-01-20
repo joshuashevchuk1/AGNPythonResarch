@@ -7,7 +7,7 @@ ecc_int = 0
 ts = None
 t = None
 name = 'test'
-
+end=200
 
 def initPars():
     global q
@@ -56,6 +56,7 @@ def plotTemp():
     global ts
     global t
     global name
+    global end
     temp = ts.TTm
     temp_max = ts.TTmax
     temp_min = ts.TTmin
@@ -64,10 +65,11 @@ def plotTemp():
 
     A = 1
 
-    ticks = np.arange(0, 200, 1)
+    ticks = np.arange(0, end, 1)
     line = A * ticks
 
     plt.plot(t, temp)
+    plt.plot(A)
     plt.xlabel(r'$t/T_0$')
     plt.ylabel('Temperature')
     plt.tight_layout()
