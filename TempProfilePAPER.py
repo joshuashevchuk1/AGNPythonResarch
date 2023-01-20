@@ -2,10 +2,13 @@ import pencil_old as pc
 import numpy as np
 import matplotlib.pyplot as plt
 
-q=0
-ecc_int=0
-ts=None
-t=None
+q = 0
+ecc_int = 0
+ts = None
+t = None
+name = test
+
+
 def initPars():
     global q
     global ecc_int
@@ -43,23 +46,25 @@ def initPars():
                 break
 
     timeCutOff = t[indexTimeCutOff] / (np.pi * 2)
-    print('timeCutOff is ',np.round(timeCutOff))
+    print('timeCutOff is ', np.round(timeCutOff))
     print('leaving get cutoff')
+
 
 def plotTemp():
     global q
     global ecc_int
     global ts
     global t
+    global name
     temp = ts.TTm
     temp_max = ts.TTmax
     temp_min = ts.TTmin
 
-    t = t / (2*np.pi)
+    t = t / (2 * np.pi)
 
     A = 1
 
-    ticks=np.arange(0,200,1)
+    ticks = np.arange(0, 200, 1)
     line = A * ticks
 
     plt.plot(t, temp)
@@ -68,8 +73,10 @@ def plotTemp():
     plt.tight_layout()
     plt.grid(True)
     plt.xlim([0, t.max()])
-    plt.title("T(q=" + str(q) + r'$\varepsilon$'+")")
-    plt.savefig('Standard_TTm_.png')
+    plt.title("T(q=" + str(q) + r'$\varepsilon$' + ")")
+    # save figure
+    plt.savefig('PAPER_TTm' + str(name) + '.png')
     plt.close()
+
 
 plotTemp()
