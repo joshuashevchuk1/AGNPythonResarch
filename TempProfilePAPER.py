@@ -6,7 +6,7 @@ q = 0
 ecc_int = 0
 ts = None
 t = None
-name = test
+name = 'test'
 
 
 def initPars():
