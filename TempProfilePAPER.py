@@ -78,5 +78,5 @@ def plotTemp():
     plt.savefig('PAPER_TTm' + str(name) + '.png')
     plt.close()
 
-
+initPars()
 plotTemp()
