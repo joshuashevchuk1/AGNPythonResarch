@@ -73,9 +73,9 @@ def plotTemp():
     plt.tight_layout()
     plt.grid(True)
     plt.xlim([0, t.max()])
-    plt.title("T(q=" + str(q) + r'$\varepsilon$' + ")")
+    plt.title("T(q=" + str(q) +" , " +r'$\varepsilon$' + "="+ str(ecc_int) + ")")
     # save figure
-    plt.savefig('PAPER_TTm' + str(name) + '.png')
+    plt.savefig('PAPER_TTm' + str(name) + '.png',bbox_inches="tight")
     plt.close()
 
 initPars()
