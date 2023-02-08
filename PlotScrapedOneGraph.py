@@ -48,9 +48,9 @@ def plot():
 
     plt.grid(True)
     plt.legend()
-    plt.title('data')
+    plt.title('Log Temperature vs time')
     plt.xlabel(r'$t/T_0$')
-    plt.ylabel(r'$\nabla'+'(Temperature)')
+    plt.ylabel(r'$\nabla$'+'(Temperature)')
     plt.ylim(0,0.05)
     plt.tight_layout()
     plt.savefig("ScrapedDeltaData_" + str(max_orbits) + "_plot" + ".png")
