@@ -95,7 +95,7 @@ def plotRunShock(ivar):
     if ivar == 100:
         cax = plt.axes([0.85, 0.1, 0.075, 0.8])
         cax.set_aspect(30)
-        cax.set_ylabel('temperature in code units', fontsize=30)
+        cax.set_ylabel('shock viscosity in code units', fontsize=30)
         cbar = plt.colorbar(PL2, cax=cax,format='%.0e')
         for t in cbar.ax.get_yticklabels():
             t.set_fontsize(30)
