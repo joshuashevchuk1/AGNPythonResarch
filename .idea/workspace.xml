@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="follow pep8 and debug the file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CalculateA.py" beforeDir="false" afterPath="$PROJECT_DIR$/CalculateA.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,13 +181,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00291" summary="more params">
-      <created>1669260331619</created>
-      <option name="number" value="00291" />
-      <option name="presentableId" value="LOCAL-00291" />
-      <option name="project" value="LOCAL" />
-      <updated>1669260331619</updated>
     </task>
     <task id="LOCAL-00292" summary="append more to json">
       <created>1669260602140</created>
@@ -526,7 +518,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674189193504</updated>
     </task>
-    <option name="localTasksCounter" value="340" />
+    <task id="LOCAL-00340" summary="follow pep8 and debug the file">
+      <created>1675834997723</created>
+      <option name="number" value="00340" />
+      <option name="presentableId" value="LOCAL-00340" />
+      <option name="project" value="LOCAL" />
+      <updated>1675834997723</updated>
+    </task>
+    <option name="localTasksCounter" value="341" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
