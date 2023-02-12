@@ -39,6 +39,7 @@ def plotRun():
 def plotRuns(ivar):
     plotRunTemperature(ivar)
     plotRunDensity(ivar)
+    plotRunShock(ivar)
 
 
 def getEccInt():
