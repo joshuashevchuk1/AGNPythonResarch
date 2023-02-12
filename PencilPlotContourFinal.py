@@ -89,7 +89,7 @@ def plotRunShock(ivar):
     y2d = rad2d * np.sin(theta2d)
     fig, (ax1) = plt.subplots(1, 1, figsize=(15, 15))
     fig.subplots_adjust(bottom=0.07, top=0.95)
-    PL2 = ax1.contourf(x2d, y2d, dfT, 256,cmap=plt.get_cmap('plasma'))
+    PL2 = ax1.contourf(x2d, y2d, dfT, 256,cmap=plt.get_cmap('cividis'))
     ax1.set_aspect('equal')
 
     if ivar == 100:
