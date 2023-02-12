@@ -81,7 +81,7 @@ def plotRunShock(ivar):
     name = os.path.split(os.getcwd())[1]
     ff = pc.read_var(trimall=True, ivar=ivar, magic=["TT"], quiet=True)
     ff0 = pc.read_var(trimall=True, ivar=0, magic=["TT"], quiet=True)
-    dfT = ff.ss[:] - ff0.ss[:]
+    dfT = ff.shock[:] - ff0.shock[:]
     rad = ff.x
     theta = ff.y
     rad2d, theta2d = np.meshgrid(rad, theta)
