@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="follow pep8 and debug the file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="cividis" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,41 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00292" summary="append more to json">
-      <created>1669260602140</created>
-      <option name="number" value="00292" />
-      <option name="presentableId" value="LOCAL-00292" />
-      <option name="project" value="LOCAL" />
-      <updated>1669260602141</updated>
-    </task>
-    <task id="LOCAL-00293" summary="append more to json">
-      <created>1669261149876</created>
-      <option name="number" value="00293" />
-      <option name="presentableId" value="LOCAL-00293" />
-      <option name="project" value="LOCAL" />
-      <updated>1669261149876</updated>
-    </task>
-    <task id="LOCAL-00294" summary="append more to json">
-      <created>1673935916102</created>
-      <option name="number" value="00294" />
-      <option name="presentableId" value="LOCAL-00294" />
-      <option name="project" value="LOCAL" />
-      <updated>1673935916103</updated>
-    </task>
-    <task id="LOCAL-00295" summary="append more to json">
-      <created>1673936692106</created>
-      <option name="number" value="00295" />
-      <option name="presentableId" value="LOCAL-00295" />
-      <option name="project" value="LOCAL" />
-      <updated>1673936692106</updated>
-    </task>
-    <task id="LOCAL-00296" summary="append more to json">
-      <created>1673936774293</created>
-      <option name="number" value="00296" />
-      <option name="presentableId" value="LOCAL-00296" />
-      <option name="project" value="LOCAL" />
-      <updated>1673936774293</updated>
     </task>
     <task id="LOCAL-00297" summary="fix up number aqusition">
       <created>1673936943914</created>
@@ -525,7 +488,42 @@
       <option name="project" value="LOCAL" />
       <updated>1675834997723</updated>
     </task>
-    <option name="localTasksCounter" value="341" />
+    <task id="LOCAL-00341" summary="shocks but with plasma">
+      <created>1676185777268</created>
+      <option name="number" value="00341" />
+      <option name="presentableId" value="LOCAL-00341" />
+      <option name="project" value="LOCAL" />
+      <updated>1676185777268</updated>
+    </task>
+    <task id="LOCAL-00342" summary="shocks but with plasma">
+      <created>1676185943225</created>
+      <option name="number" value="00342" />
+      <option name="presentableId" value="LOCAL-00342" />
+      <option name="project" value="LOCAL" />
+      <updated>1676185943225</updated>
+    </task>
+    <task id="LOCAL-00343" summary="shocks but with plasma">
+      <created>1676186433425</created>
+      <option name="number" value="00343" />
+      <option name="presentableId" value="LOCAL-00343" />
+      <option name="project" value="LOCAL" />
+      <updated>1676186433425</updated>
+    </task>
+    <task id="LOCAL-00344" summary="shocks but with plasma">
+      <created>1676188277175</created>
+      <option name="number" value="00344" />
+      <option name="presentableId" value="LOCAL-00344" />
+      <option name="project" value="LOCAL" />
+      <updated>1676188277176</updated>
+    </task>
+    <task id="LOCAL-00345" summary="cividis">
+      <created>1676188406851</created>
+      <option name="number" value="00345" />
+      <option name="presentableId" value="LOCAL-00345" />
+      <option name="project" value="LOCAL" />
+      <updated>1676188406851</updated>
+    </task>
+    <option name="localTasksCounter" value="346" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -540,8 +538,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="increase font size" />
-    <MESSAGE value="overlay temp to get the density wave region occupied" />
     <MESSAGE value="font STILL werid" />
     <MESSAGE value="still getting wierd font problems" />
     <MESSAGE value="fix bbox inches setting" />
@@ -565,6 +561,8 @@
     <MESSAGE value="DTArray should have only 2 points" />
     <MESSAGE value="missing time cutoff to save points" />
     <MESSAGE value="follow pep8 and debug the file" />
-    <option name="LAST_COMMIT_MESSAGE" value="follow pep8 and debug the file" />
+    <MESSAGE value="shocks but with plasma" />
+    <MESSAGE value="cividis" />
+    <option name="LAST_COMMIT_MESSAGE" value="cividis" />
   </component>
 </project>
