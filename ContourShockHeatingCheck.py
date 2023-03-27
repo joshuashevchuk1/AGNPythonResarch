@@ -24,6 +24,6 @@ print('T0 : ',T0)
 print('TT : ',TT)
 
 plt.plot(rad,T0,label='T0')
-plt.plot(rad,TT,label='TT)
+plt.plot(rad,TT,label='TT')
 plt.show()
 
