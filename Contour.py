@@ -11,7 +11,6 @@ Orbits = int(input('Orbits?:'))
 
 f0=pc.read_var(trimall=True,ivar=Orbits,magic=['TT'])
 ff = pc.read_var(trimall=True, ivar=Orbits,magic=['TT'])
-
 #print np.amax(ff.rho), np.amin(ff.rho)
 #print ff.t
 
