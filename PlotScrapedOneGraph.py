@@ -42,9 +42,24 @@ def plot():
         ecc = r"$\varepsilon$ = " + str(scrapeDict[key]["ecc_int"])
 
         if (qnum == 2e-4):
-            plt.plot(temp, label=ecc + q,ls=":")
-        else: 
-            plt.plot(temp, label=ecc + q)
+            if (ecc == 0.1):
+                plt.plot(temp, label=ecc + q, ls=":",color="blue")
+            if (ecc == 0.3):
+                plt.plot(temp, label=ecc + q, ls=":", color="red")
+            if (ecc == 0.5):
+                plt.plot(temp, label=ecc + q, ls=":", color="orange")
+            if (ecc == 0.7):
+                plt.plot(temp, label=ecc + q, ls=":", color="green")
+        else:
+            if (ecc == 0.1):
+                plt.plot(temp, label=ecc + q,color="blue")
+            if (ecc == 0.3):
+                plt.plot(temp, label=ecc + q, color="red")
+            if (ecc == 0.5):
+                plt.plot(temp, label=ecc + q, color="orange")
+            if (ecc == 0.7):
+                plt.plot(temp, label=ecc + q, color="green")
+
 
     plt.grid(True)
     plt.legend()

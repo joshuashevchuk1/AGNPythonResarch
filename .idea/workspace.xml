@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b401757a-0003-45bc-838e-dc9c4677ac58" name="Changes" comment="cividis">
-      <change beforePath="$PROJECT_DIR$/PencilPlotSingleContourShockFinal.py" beforeDir="false" afterPath="$PROJECT_DIR$/PencilPlotSingleContourShockFinal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,34 +181,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647328264135</updated>
-    </task>
-    <task id="LOCAL-00298" summary="local dict is wrong">
-      <created>1673937085705</created>
-      <option name="number" value="00298" />
-      <option name="presentableId" value="LOCAL-00298" />
-      <option name="project" value="LOCAL" />
-      <updated>1673937085706</updated>
-    </task>
-    <task id="LOCAL-00299" summary="dynamically save">
-      <created>1673939438112</created>
-      <option name="number" value="00299" />
-      <option name="presentableId" value="LOCAL-00299" />
-      <option name="project" value="LOCAL" />
-      <updated>1673939438113</updated>
-    </task>
-    <task id="LOCAL-00300" summary="dynamically save">
-      <created>1673939949173</created>
-      <option name="number" value="00300" />
-      <option name="presentableId" value="LOCAL-00300" />
-      <option name="project" value="LOCAL" />
-      <updated>1673939949173</updated>
-    </task>
-    <task id="LOCAL-00301" summary="dynamically save">
-      <created>1673940037109</created>
-      <option name="number" value="00301" />
-      <option name="presentableId" value="LOCAL-00301" />
-      <option name="project" value="LOCAL" />
-      <updated>1673940037110</updated>
     </task>
     <task id="LOCAL-00302" summary="dynamically save">
       <created>1673940248755</created>
@@ -525,7 +497,35 @@
       <option name="project" value="LOCAL" />
       <updated>1676678959662</updated>
     </task>
-    <option name="localTasksCounter" value="347" />
+    <task id="LOCAL-00347" summary="cividis">
+      <created>1679879774376</created>
+      <option name="number" value="00347" />
+      <option name="presentableId" value="LOCAL-00347" />
+      <option name="project" value="LOCAL" />
+      <updated>1679879774376</updated>
+    </task>
+    <task id="LOCAL-00348" summary="cividis">
+      <created>1679879984624</created>
+      <option name="number" value="00348" />
+      <option name="presentableId" value="LOCAL-00348" />
+      <option name="project" value="LOCAL" />
+      <updated>1679879984624</updated>
+    </task>
+    <task id="LOCAL-00349" summary="cividis">
+      <created>1679880111288</created>
+      <option name="number" value="00349" />
+      <option name="presentableId" value="LOCAL-00349" />
+      <option name="project" value="LOCAL" />
+      <updated>1679880111288</updated>
+    </task>
+    <task id="LOCAL-00350" summary="cividis">
+      <created>1679880142751</created>
+      <option name="number" value="00350" />
+      <option name="presentableId" value="LOCAL-00350" />
+      <option name="project" value="LOCAL" />
+      <updated>1679880142752</updated>
+    </task>
+    <option name="localTasksCounter" value="351" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
