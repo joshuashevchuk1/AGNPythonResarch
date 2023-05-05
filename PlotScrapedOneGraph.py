@@ -39,25 +39,26 @@ def plot():
         qnum = scrapeDict[key]["q"]
 
         q = "; q = " + str(scrapeDict[key]["q"])
-        ecc = r"$\varepsilon$ = " + str(scrapeDict[key]["ecc_int"])
+        ecc_int = scrapeDict[key]["ecc_int"]
+        ecc = r"$\varepsilon$ = " + str(ecc_int)
 
         if (qnum == 2e-4):
-            if (ecc == 0.1):
+            if ecc_int == 0.1:
                 plt.plot(temp, label=ecc + q, ls=":",color="blue")
-            if (ecc == 0.3):
+            if (ecc_int == 0.3):
                 plt.plot(temp, label=ecc + q, ls=":", color="red")
-            if (ecc == 0.5):
+            if (ecc_int == 0.5):
                 plt.plot(temp, label=ecc + q, ls=":", color="orange")
-            if (ecc == 0.7):
+            if (ecc_int == 0.7):
                 plt.plot(temp, label=ecc + q, ls=":", color="green")
         else:
-            if (ecc == 0.1):
+            if (ecc_int == 0.1):
                 plt.plot(temp, label=ecc + q,color="blue")
-            if (ecc == 0.3):
+            if (ecc_int == 0.3):
                 plt.plot(temp, label=ecc + q, color="red")
-            if (ecc == 0.5):
+            if (ecc_int == 0.5):
                 plt.plot(temp, label=ecc + q, color="orange")
-            if (ecc == 0.7):
+            if (ecc_int == 0.7):
                 plt.plot(temp, label=ecc + q, color="green")
 
 
